@@ -1675,7 +1675,7 @@
       <div class="section-header">
         <div class="section-title">
           <i data-lucide="bar-chart-2" style="width: 14px; height: 14px;"></i>
-          <span>KPIs Regionales PBA</span>
+          <span id="regionTitleSection">KPIs Nacional / Región</span>
         </div>
         <span class="badge-count">6 Indicadores</span>
       </div>
@@ -1688,9 +1688,9 @@
         <div class="chart-header">
           <div class="chart-title">
             <i data-lucide="trending-up" style="width: 15px; height: 15px; color: var(--brand-blue-light);"></i>
-            <span>Evolución Histórica PBA</span>
+            <span id="regionChartTitle">Evolución Histórica</span>
           </div>
-          <select class="chart-select" id="regionalChartKpiSelector">
+          <select class="chart-select" id="regionalChartSelect">
             <option value="slaPaq">SLA Paq.AR</option>
             <option value="fvPaq">FV Paq.AR</option>
             <option value="slaPas">SLA PAS</option>
@@ -1706,7 +1706,7 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- VIEW 2: NODOS PBA (Segundo Zócalo)         -->
+    <!-- VIEW 2: NODOS NACIONAL (Segundo Zócalo)    -->
     <!-- ========================================== -->
     <section class="app-view" id="viewNodos">
       <div class="section-header">
@@ -1748,7 +1748,7 @@
             <i data-lucide="line-chart" style="width: 15px; height: 15px; color: var(--brand-blue-light);"></i>
             <span id="nodeChartTitle">Evolución: MDQ</span>
           </div>
-          <select class="chart-select" id="nodeChartKpiSelector">
+          <select class="chart-select" id="nodeChartSelect">
             <option value="sla_paqar">SLA Paq.AR</option>
             <option value="fv_paqar">FV Paq.AR</option>
             <option value="sla_pas">SLA PAS</option>
@@ -1828,7 +1828,7 @@
           <i data-lucide="alert-triangle" style="width: 15px; height: 15px; color: #ef4444;"></i>
           <span>Desvíos y Focos Operativos</span>
         </div>
-        <span class="badge-count" id="desviosTotalBadge">0 Desvíos</span>
+        <span class="badge-count" id="desviosCountBadge">0 Desvíos</span>
       </div>
 
       <!-- Botón Destacado de Envío Inmediato de Desvíos por WhatsApp -->
@@ -1859,7 +1859,7 @@
       </div>
 
       <!-- Lista de Tarjetas de Desvíos -->
-      <div class="desvios-list-container" id="desviosListContainer">
+      <div class="desvios-list-container" id="desviosCardsContainer">
         <!-- Rendered dynamically via JS -->
       </div>
 
@@ -1906,7 +1906,7 @@
     <button class="nav-btn" data-view="viewDesvios" id="navBtnDesvios">
       <div style="position: relative; display: inline-flex;">
         <i data-lucide="alert-triangle"></i>
-        <span class="desvios-nav-badge" id="bottomNavDesviosBadge">0</span>
+        <span class="desvios-nav-badge" id="desviosNavBadge">0</span>
       </div>
       <span>Desvíos</span>
     </button>
@@ -3282,44 +3282,70 @@
     });
 
     // Selects
-    document.getElementById('regionalChartSelect').addEventListener('change', (e) => {
-      state.regionalChartKpi = e.target.value;
-      updateRegionalChart();
-    });
+    const regSelect = document.getElementById('regionalChartSelect');
+    if (regSelect) {
+      regSelect.addEventListener('change', (e) => {
+        state.regionalChartKpi = e.target.value;
+        updateRegionalChart();
+      });
+    }
 
-    document.getElementById('nodeChartSelect').addEventListener('change', (e) => {
-      state.nodeChartKpi = e.target.value;
-      updateNodeChart();
-    });
+    const nodeSelect = document.getElementById('nodeChartSelect');
+    if (nodeSelect) {
+      nodeSelect.addEventListener('change', (e) => {
+        state.nodeChartKpi = e.target.value;
+        updateNodeChart();
+      });
+    }
 
-    document.getElementById('rankingKpiSelect').addEventListener('change', (e) => {
-      state.rankingKpi = e.target.value;
-      renderRankingView();
-    });
+    const rkSelect = document.getElementById('rankingKpiSelect');
+    if (rkSelect) {
+      rkSelect.addEventListener('change', (e) => {
+        state.rankingKpi = e.target.value;
+        renderRankingView();
+      });
+    }
 
     // Theme Toggle
-    document.getElementById('btnThemeToggle').addEventListener('click', () => {
-      state.theme = state.theme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', state.theme);
-      const icon = document.getElementById('themeIcon');
-      icon.setAttribute('data-lucide', state.theme === 'light' ? 'sun' : 'moon');
-      lucide.createIcons();
-      updateRegionalChart();
-      updateNodeChart();
-    });
+    const btnTheme = document.getElementById('btnThemeToggle');
+    if (btnTheme) {
+      btnTheme.addEventListener('click', () => {
+        state.theme = state.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', state.theme);
+        const icon = document.getElementById('themeIcon');
+        if (icon) icon.setAttribute('data-lucide', state.theme === 'light' ? 'sun' : 'moon');
+        lucide.createIcons();
+        updateRegionalChart();
+        updateNodeChart();
+      });
+    }
 
     // Header Sync Button 🔄
-    document.getElementById('btnSyncData').addEventListener('click', () => {
-      const activeUrl = localStorage.getItem('NACIONAL_SYNC_URL') || DEFAULT_MAESTRO_URL;
-      syncFromUrl(activeUrl, false);
-    });
+    const btnSync = document.getElementById('btnSyncData');
+    if (btnSync) {
+      btnSync.addEventListener('click', () => {
+        let activeUrl = localStorage.getItem('NACIONAL_SYNC_URL') || DEFAULT_MAESTRO_URL;
+        if (activeUrl.includes('sharepoint.com')) {
+          activeUrl = DEFAULT_MAESTRO_URL;
+          localStorage.setItem('NACIONAL_SYNC_URL', DEFAULT_MAESTRO_URL);
+        }
+        syncFromUrl(activeUrl, false);
+      });
+    }
 
     // Share Modal Listeners
-    document.getElementById('btnShareWhatsApp').addEventListener('click', openShareModal);
-    document.getElementById('btnShareModalClose').addEventListener('click', closeShareModal);
-    document.getElementById('shareModalOverlay').addEventListener('click', (e) => {
-      if (e.target.id === 'shareModalOverlay') closeShareModal();
-    });
+    const btnShareWa = document.getElementById('btnShareWhatsApp');
+    if (btnShareWa) btnShareWa.addEventListener('click', openShareModal);
+
+    const btnShareClose = document.getElementById('btnShareModalClose');
+    if (btnShareClose) btnShareClose.addEventListener('click', closeShareModal);
+
+    const shareOverlay = document.getElementById('shareModalOverlay');
+    if (shareOverlay) {
+      shareOverlay.addEventListener('click', (e) => {
+        if (e.target.id === 'shareModalOverlay') closeShareModal();
+      });
+    }
 
     document.querySelectorAll('#sharePeriodPills .share-period-pill').forEach(pill => {
       pill.addEventListener('click', (e) => {
@@ -3335,19 +3361,46 @@
       });
     });
 
-    document.getElementById('shareSelectNode').addEventListener('change', (e) => {
-      state.shareTargetNode = e.target.value;
-      renderWhatsAppPreview();
-    });
+    const shareNodeSel = document.getElementById('shareSelectNode');
+    if (shareNodeSel) {
+      shareNodeSel.addEventListener('change', (e) => {
+        state.shareTargetNode = e.target.value;
+        renderWhatsAppPreview();
+      });
+    }
 
-    document.getElementById('btnShareDirectWa').addEventListener('click', sendWhatsAppDirect);
-    document.getElementById('btnShareCopyText').addEventListener('click', copyWhatsAppMessage);
-    document.getElementById('btnShareDownloadImg').addEventListener('click', downloadInfographicImage);
+    // Acciones de Compartir (compatibles con ambos conjuntos de IDs)
+    const btnDirectWa = document.getElementById('btnSendWhatsAppDirect') || document.getElementById('btnShareDirectWa');
+    if (btnDirectWa) btnDirectWa.addEventListener('click', sendWhatsAppDirect);
+
+    const btnCopyTxt = document.getElementById('btnCopyFormattedText') || document.getElementById('btnShareCopyText');
+    if (btnCopyTxt) btnCopyTxt.addEventListener('click', copyWhatsAppMessage);
+
+    const btnDownloadImg = document.getElementById('btnDownloadPlacaImage') || document.getElementById('btnShareDownloadImg');
+    if (btnDownloadImg) btnDownloadImg.addEventListener('click', downloadInfographicImage);
 
     // Sync Modal Listeners
-    document.getElementById('btnSyncModalClose').addEventListener('click', closeSyncModal);
-    document.getElementById('syncModalOverlay').addEventListener('click', (e) => {
-      if (e.target.id === 'syncModalOverlay') closeSyncModal();
+    const btnSyncClose = document.getElementById('btnSyncModalClose');
+    if (btnSyncClose) btnSyncClose.addEventListener('click', closeSyncModal);
+
+    const syncModalOverlay = document.getElementById('syncModalOverlay');
+    if (syncModalOverlay) {
+      syncModalOverlay.addEventListener('click', (e) => {
+        if (e.target.id === 'syncModalOverlay') closeSyncModal();
+      });
+    }
+
+    const btnTriggerSync = document.getElementById('btnTriggerRemoteSync');
+    if (btnTriggerSync) {
+      btnTriggerSync.addEventListener('click', () => {
+        let activeUrl = localStorage.getItem('NACIONAL_SYNC_URL') || DEFAULT_MAESTRO_URL;
+        if (activeUrl.includes('sharepoint.com')) {
+          activeUrl = DEFAULT_MAESTRO_URL;
+          localStorage.setItem('NACIONAL_SYNC_URL', DEFAULT_MAESTRO_URL);
+        }
+        syncFromUrl(activeUrl, false);
+      });
+    }
     });
     document.getElementById('btnTriggerRemoteSync').addEventListener('click', () => {
       const activeUrl = localStorage.getItem('NACIONAL_SYNC_URL') || DEFAULT_MAESTRO_URL;
