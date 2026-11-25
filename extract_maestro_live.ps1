@@ -288,28 +288,56 @@ if (-not (Test-Path $excelPath)) {
 $zip = [System.IO.Compression.ZipFile]::OpenRead($excelPath)
 $sst = [FastMaestroExtractor4]::LoadSst($zip)
 
-# 1. Paq.AR & Clásico - Acumulado Mes (sheet9)
-$acumAll = [FastMaestroExtractor4]::ReadAllMetricRows($zip, "xl/worksheets/sheet9.xml", $sst)
+# Resolución dinámica de hojas por nombre (a prueba de reordenamientos del Maestro de Matías)
+$sheetsXml = [xml](New-Object IO.StreamReader($zip.GetEntry('xl/workbook.xml').Open())).ReadToEnd()
+$relsXml = [xml](New-Object IO.StreamReader($zip.GetEntry('xl/_rels/workbook.xml.rels').Open())).ReadToEnd()
+$mapRel = @{}
+foreach ($r in $relsXml.Relationships.Relationship) {
+    $mapRel[$r.Id] = "xl/" + $r.Target.Replace("\", "/")
+}
+$sheetAcumPath = "xl/worksheets/sheet10.xml"
+$sheetDiaPath = "xl/worksheets/sheet11.xml"
+$sheetExpAcumPath = "xl/worksheets/sheet8.xml"
+$sheetExpDiaPath = "xl/worksheets/sheet9.xml"
+$sheetPasPath = "xl/worksheets/sheet16.xml"
+
+foreach ($s in $sheetsXml.workbook.sheets.sheet) {
+    if ($s.name -eq "SLA FV Acumulado") { $sheetAcumPath = $mapRel[$s.id] }
+    elseif ($s.name -eq "SLA FV Diario") { $sheetDiaPath = $mapRel[$s.id] }
+    elseif ($s.name -eq "expreso_acum") { $sheetExpAcumPath = $mapRel[$s.id] }
+    elseif ($s.name -eq "expreso_diario") { $sheetExpDiaPath = $mapRel[$s.id] }
+    elseif ($s.name -eq "pas_sla_fv") { $sheetPasPath = $mapRel[$s.id] }
+}
+
+Write-Host "   -> Hojas detectadas dinámicamente:"
+Write-Host "      * SLA FV Acumulado: $sheetAcumPath"
+Write-Host "      * SLA FV Diario:    $sheetDiaPath"
+Write-Host "      * Expreso Acum:     $sheetExpAcumPath"
+Write-Host "      * Expreso Diario:   $sheetExpDiaPath"
+Write-Host "      * PAS SLA FV:       $sheetPasPath"
+
+# 1. Paq.AR & Clásico - Acumulado Mes
+$acumAll = [FastMaestroExtractor4]::ReadAllMetricRows($zip, $sheetAcumPath, $sst)
 $maxAcumDate = ($acumAll | Measure-Object -Property FechaSerial -Maximum).Maximum
 $acumLatest = $acumAll | Where-Object { $_.FechaSerial -eq $maxAcumDate }
 
-# 2. Paq.AR & Clásico - Diario Dia (sheet10)
-$diaAll = [FastMaestroExtractor4]::ReadAllMetricRows($zip, "xl/worksheets/sheet10.xml", $sst)
+# 2. Paq.AR & Clásico - Diario Dia
+$diaAll = [FastMaestroExtractor4]::ReadAllMetricRows($zip, $sheetDiaPath, $sst)
 $maxDiaDate = ($diaAll | Measure-Object -Property FechaSerial -Maximum).Maximum
 $diaLatest = $diaAll | Where-Object { $_.FechaSerial -eq $maxDiaDate }
 
-# 3. Expreso - Acumulado Mes (sheet7)
-$expAcumAll = [FastMaestroExtractor4]::ReadAllExpresoRows($zip, "xl/worksheets/sheet7.xml", $sst)
+# 3. Expreso - Acumulado Mes
+$expAcumAll = [FastMaestroExtractor4]::ReadAllExpresoRows($zip, $sheetExpAcumPath, $sst)
 $maxExpAcumDate = ($expAcumAll | Measure-Object -Property FechaSerial -Maximum).Maximum
 $expAcumLatest = $expAcumAll | Where-Object { $_.FechaSerial -eq $maxExpAcumDate }
 
-# 4. Expreso - Diario Dia (sheet8)
-$expDiaAll = [FastMaestroExtractor4]::ReadAllExpresoRows($zip, "xl/worksheets/sheet8.xml", $sst)
+# 4. Expreso - Diario Dia
+$expDiaAll = [FastMaestroExtractor4]::ReadAllExpresoRows($zip, $sheetExpDiaPath, $sst)
 $maxExpDiaDate = ($expDiaAll | Measure-Object -Property FechaSerial -Maximum).Maximum
 $expDiaLatest = $expDiaAll | Where-Object { $_.FechaSerial -eq $maxExpDiaDate }
 
-# 5. PAS (Cartas) - sheet15
-$pasAll = [FastMaestroExtractor4]::ReadAllPasRows($zip, "xl/worksheets/sheet15.xml", $sst)
+# 5. PAS (Cartas)
+$pasAll = [FastMaestroExtractor4]::ReadAllPasRows($zip, $sheetPasPath, $sst)
 $pasDia = $pasAll | Where-Object { $_.FechaSerial -eq $maxDiaDate }
 $pasMes = $pasAll | Where-Object { $_.FechaSerial -ge $maxAcumDate }
 

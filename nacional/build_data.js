@@ -36,16 +36,29 @@ const maestroPath = 'C:/Users/gmontes/OneDrive - Correo Argentino/Documentos/Cop
 const nodesRaw = JSON.parse(fs.readFileSync(srcNodesPath, 'utf8'));
 const regRaw = JSON.parse(fs.readFileSync(srcRegPath, 'utf8'));
 
-// Format timestamps
-let maestroFileDate = '16/11/2026 12:56 hs';
-const onlineMaestro = path.join(__dirname, 'downloaded_maestro.xlsx');
-if (fs.existsSync(onlineMaestro)) {
-  maestroFileDate = '16/11/2026 12:56 hs';
-} else if (fs.existsSync(maestroPath)) {
-  const stat = fs.statSync(maestroPath);
-  const d = stat.mtime;
-  const pad = n => String(n).padStart(2, '0');
-  maestroFileDate = `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())} hs`;
+// Format timestamps dinámicos desde SharePoint
+let maestroFileDate = '24/11/2026 15:37 hs';
+const metaPath = path.join(__dirname, 'maestro_meta.json');
+const spPagePath = path.join(__dirname, 'sp_page.html');
+
+if (fs.existsSync(metaPath)) {
+  try {
+    const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8').replace(/^\uFEFF/, ''));
+    if (meta.lastModified) maestroFileDate = meta.lastModified;
+  } catch(e) {}
+} else if (fs.existsSync(spPagePath)) {
+  try {
+    const content = fs.readFileSync(spPagePath, 'utf8');
+    const m = content.match(/var _wopiContextJson\s*=\s*({[\s\S]*?});/);
+    if (m) {
+      const json = JSON.parse(m[1]);
+      if (json.LastModified) {
+        const d = new Date(Number(json.LastModified));
+        const pad = n => String(n).padStart(2, '0');
+        maestroFileDate = `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())} hs`;
+      }
+    }
+  } catch(e) {}
 }
 
 const now = new Date();

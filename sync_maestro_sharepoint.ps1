@@ -1,4 +1,4 @@
-﻿[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 Write-Host "============================================================================"
 Write-Host "  CONECTANDO DIRECTAMENTE A SHAREPOINT (SIN DEPENDER DEL DISCO RIGIDO)     "
 Write-Host "  URL Oficial: Matías Peralta - Maestro_Base.xlsx                          "
@@ -24,6 +24,14 @@ if (Test-Path $pageFile) {
         $modFormatted = $lastModDate.ToString("dd/MM/yyyy HH:mm") + " hs"
         Write-Host "      -> Archivo Maestro detectado: $($json.FileName) ($([Math]::Round($json.FileSize/1MB, 1)) MB)"
         Write-Host "      -> Último corte oficial en SharePoint: $modFormatted"
+        
+        $metaObj = @{
+            lastModified = $modFormatted
+            fileName = $json.FileName
+            fileSize = $json.FileSize
+            timestampMs = $lastModMs
+        }
+        $metaObj | ConvertTo-Json | Set-Content (Join-Path $PSScriptRoot "maestro_meta.json") -Encoding UTF8
         
         Write-Host "[2/4] Descargando corte en vivo de SharePoint..."
         curl.exe -s -b $cookiesFile -L -o $excelFile $fileGetUrl

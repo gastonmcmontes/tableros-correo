@@ -1,10 +1,10 @@
 {
   "region": "Región PBA",
   "regionFull": "Provincia de Buenos Aires / La Pampa",
-  "maestroLastUpload": "16/11/2026 12:56 hs",
-  "lastSyncMoment": "24/11/2026 21:48 hs",
-  "lastUpdate": "16/11/2026 12:56 hs",
-  "pureDayLabel": "Día Hábil Anterior (01/11/2026)",
+  "maestroLastUpload": "25/11/2026 12:30 hs",
+  "lastSyncMoment": "25/11/2026 15:19 hs",
+  "lastUpdate": "25/11/2026 12:30 hs",
+  "pureDayLabel": "Día Hábil Anterior (24/11/2026)",
   "monthLabel": "Mes en Curso Acumulado (Noviembre 2026)",
   "targets": {
     "sla_paqar": 95,
@@ -19,18 +19,23 @@
       "periodName": "Mes en Curso",
       "periodCode": "mes_anterior",
       "periodDetail": "Acumulado Noviembre 2026",
+      "totalVolume": 409507,
+      "vencidos": 409507,
       "backlog": 1224,
       "a_vencer": 150002,
       "guarda_vencida": 1292,
       "q": {
-        "pas": 0,
-        "expreso": 0
+        "total": 409507,
+        "paq_ar": 342463,
+        "pas": 67044,
+        "expreso": 17784
       },
       "sla_paqar": {
-        "value": 0,
+        "value": 97.42,
         "target": 95,
-        "status": "danger",
-        "delta": -95,
+        "volume": 342463,
+        "status": "ok",
+        "delta": 2.42,
         "activacion": 97.41,
         "encaminamiento": 97.38
       },
@@ -41,36 +46,37 @@
         "delta": 3.46
       },
       "sla_expreso": {
-        "value": 78.99,
+        "value": 80.35,
         "target": 95,
+        "volume": 17784,
         "status": "danger",
-        "delta": -16.01
+        "delta": -14.65
       },
       "fv_expreso": {
-        "value": 88.3,
+        "value": 85.45,
         "target": 90,
-        "volume": 521,
-        "status": "warning",
-        "delta": -1.7
+        "volume": 17784,
+        "status": "danger",
+        "delta": -4.55
       },
       "fv_paqar": {
-        "value": 0,
+        "value": 88.8,
         "target": 90,
         "volume": 169895,
-        "status": "danger",
-        "delta": -90
+        "status": "warning",
+        "delta": -1.2
       },
       "sla_pas": {
         "value": 88.69,
         "target": 95,
-        "volume": 955,
+        "volume": 67044,
         "status": "warning",
         "delta": -6.31
       },
       "fv_pas": {
         "value": 63.94,
         "target": 90,
-        "volume": 955,
+        "volume": 67044,
         "status": "danger",
         "delta": -26.06
       },
@@ -84,24 +90,24 @@
     "dia_puro": {
       "periodName": "Día Hábil Anterior",
       "periodCode": "dia_puro",
-      "periodDetail": "01/11/2026 (Última jornada cerrada)",
-      "totalVolume": 316517,
-      "vencidos": 316517,
+      "periodDetail": "24/11/2026 (Última jornada cerrada)",
+      "totalVolume": 31477,
+      "vencidos": 31477,
       "backlog": 1224,
       "a_vencer": 150002,
       "guarda_vencida": 1292,
       "q": {
-        "total": 316517,
-        "paq_ar": 316517,
-        "pas": 0,
-        "expreso": 16762
+        "total": 31477,
+        "paq_ar": 25946,
+        "pas": 5531,
+        "expreso": 1022
       },
       "sla_paqar": {
-        "value": 97.44,
+        "value": 96.78,
         "target": 95,
-        "volume": 316517,
+        "volume": 25946,
         "status": "ok",
-        "delta": 2.44,
+        "delta": 1.78,
         "activacion": 97.28,
         "encaminamiento": 97.26
       },
@@ -112,37 +118,37 @@
         "delta": 3.5
       },
       "sla_expreso": {
-        "value": 80.41,
+        "value": 77.98,
         "target": 95,
-        "volume": 16762,
+        "volume": 1022,
         "status": "danger",
-        "delta": -14.59
+        "delta": -17.02
       },
       "fv_expreso": {
-        "value": 85.61,
+        "value": 82.52,
         "target": 90,
-        "volume": 16762,
+        "volume": 1022,
         "status": "danger",
-        "delta": -4.39
+        "delta": -7.48
       },
       "fv_paqar": {
-        "value": 88.79,
+        "value": 89.28,
         "target": 90,
         "volume": 24295,
         "status": "warning",
-        "delta": -1.21
+        "delta": -0.72
       },
       "sla_pas": {
         "value": 79.92,
         "target": 95,
-        "volume": 955,
+        "volume": 5531,
         "status": "danger",
         "delta": -15.08
       },
       "fv_pas": {
         "value": 64.08,
         "target": 90,
-        "volume": 955,
+        "volume": 5531,
         "status": "danger",
         "delta": -25.92
       },
@@ -162,9 +168,9 @@
       "city": "Bahía Blanca",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 95.96,
+          "value": 97.13,
           "target": 95,
-          "delta": 0.96,
+          "delta": 2.13,
           "status": "ok",
           "series": [
             {
@@ -244,13 +250,14 @@
               "target": 95,
               "volume": 27532
             }
-          ]
+          ],
+          "volume": 56307
         },
         "fv_paqar": {
-          "value": 89.34,
+          "value": 90.23,
           "target": 90,
-          "delta": -0.66,
-          "status": "warning",
+          "delta": 0.23,
+          "status": "ok",
           "series": [
             {
               "dateLabel": "Ene",
@@ -329,12 +336,13 @@
               "target": 90,
               "volume": 15248
             }
-          ]
+          ],
+          "volume": 56307
         },
         "sla_pas": {
-          "value": 88.17,
+          "value": 75.54,
           "target": 95,
-          "delta": -6.83,
+          "delta": -19.46,
           "status": "danger",
           "series": [
             {
@@ -414,12 +422,13 @@
               "target": 95,
               "volume": 5717
             }
-          ]
+          ],
+          "volume": 9988
         },
         "fv_pas": {
-          "value": 63.78,
+          "value": 72.73,
           "target": 90,
-          "delta": -26.22,
+          "delta": -17.27,
           "status": "danger",
           "series": [
             {
@@ -499,191 +508,36 @@
               "target": 90,
               "volume": 5717
             }
-          ]
+          ],
+          "volume": 9988
         },
         "sla_expreso": {
-          "value": 59.29,
+          "value": 71.25,
           "target": 95,
-          "delta": -35.71,
+          "volume": 2188,
           "status": "danger",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 58.79,
-              "target": 95,
-              "volume": 2651
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 61.09,
-              "target": 95,
-              "volume": 2388
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 61.8,
-              "target": 95,
-              "volume": 2718
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 53.09,
-              "target": 95,
-              "volume": 2499
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 60.66,
-              "target": 95,
-              "volume": 2692
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 64.9,
-              "target": 95,
-              "volume": 2751
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 62.11,
-              "target": 95,
-              "volume": 2834
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 65.76,
-              "target": 95,
-              "volume": 2710
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 54.15,
-              "target": 95,
-              "volume": 2834
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 59.29,
-              "target": 95,
-              "volume": 3193
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 70.07,
-              "target": 95,
-              "volume": 1146
-            }
-          ]
+          "delta": -23.75
         },
         "fv_expreso": {
-          "value": 90.73,
+          "value": 88.13,
           "target": 90,
-          "delta": 0.73,
-          "status": "ok",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 81.78,
-              "target": 90,
-              "volume": 1857
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 83.06,
-              "target": 90,
-              "volume": 1629
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 81.02,
-              "target": 90,
-              "volume": 1770
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 82.37,
-              "target": 90,
-              "volume": 1571
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 83.11,
-              "target": 90,
-              "volume": 1717
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 86.32,
-              "target": 90,
-              "volume": 1806
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 87.42,
-              "target": 90,
-              "volume": 1876
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 88.52,
-              "target": 90,
-              "volume": 1769
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 88.96,
-              "target": 90,
-              "volume": 1869
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 90.73,
-              "target": 90,
-              "volume": 2135
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 88.52,
-              "target": 90,
-              "volume": 697
-            }
-          ]
+          "volume": 2188,
+          "status": "warning",
+          "delta": -1.87
         },
-        "volume": 0,
+        "volume": 66295,
         "q": {
-          "total": 0,
-          "paq_ar": 0,
-          "pas": 0,
-          "expreso": 0
+          "total": 66295,
+          "paq_ar": 56307,
+          "pas": 9988,
+          "expreso": 2188
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 97.14,
+          "value": 96.99,
           "target": 95,
-          "delta": 2.14,
+          "delta": 1.99,
           "status": "ok",
           "series": [
             {
@@ -757,13 +611,13 @@
               "volume": 2921
             }
           ],
-          "volume": 51956
+          "volume": 4351
         },
         "fv_paqar": {
-          "value": 90.31,
+          "value": 89.45,
           "target": 90,
-          "delta": 0.31,
-          "status": "ok",
+          "delta": -0.55,
+          "status": "warning",
           "series": [
             {
               "dateLabel": "22 Oct",
@@ -836,12 +690,12 @@
               "volume": 1665
             }
           ],
-          "volume": 51956
+          "volume": 4351
         },
         "sla_pas": {
-          "value": 81.7,
+          "value": 81.25,
           "target": 95,
-          "delta": -13.3,
+          "delta": -13.75,
           "status": "danger",
           "series": [
             {
@@ -914,12 +768,13 @@
               "target": 95,
               "volume": 726
             }
-          ]
+          ],
+          "volume": 785
         },
         "fv_pas": {
-          "value": 66.81,
+          "value": 75.55,
           "target": 90,
-          "delta": -23.19,
+          "delta": -14.45,
           "status": "danger",
           "series": [
             {
@@ -992,28 +847,29 @@
               "target": 90,
               "volume": 726
             }
-          ]
+          ],
+          "volume": 785
         },
         "sla_expreso": {
-          "value": 71.51,
+          "value": 66.94,
           "target": 95,
-          "volume": 2064,
+          "volume": 124,
           "status": "danger",
-          "delta": -23.49
+          "delta": -28.06
         },
         "fv_expreso": {
-          "value": 88.27,
+          "value": 88,
           "target": 90,
-          "volume": 2064,
+          "volume": 124,
           "status": "warning",
-          "delta": -1.73
+          "delta": -2
         },
-        "volume": 51956,
+        "volume": 5136,
         "q": {
-          "total": 51956,
-          "paq_ar": 51956,
-          "pas": 0,
-          "expreso": 2064
+          "total": 5136,
+          "paq_ar": 4351,
+          "pas": 785,
+          "expreso": 124
         }
       }
     },
@@ -1024,9 +880,9 @@
       "city": "La Plata",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 97.37,
+          "value": 97.16,
           "target": 95,
-          "delta": 2.37,
+          "delta": 2.16,
           "status": "ok",
           "series": [
             {
@@ -1106,12 +962,13 @@
               "target": 95,
               "volume": 33660
             }
-          ]
+          ],
+          "volume": 67904
         },
         "fv_paqar": {
-          "value": 87.97,
+          "value": 89.02,
           "target": 90,
-          "delta": -2.03,
+          "delta": -0.98,
           "status": "warning",
           "series": [
             {
@@ -1191,13 +1048,14 @@
               "target": 90,
               "volume": 16372
             }
-          ]
+          ],
+          "volume": 67904
         },
         "sla_pas": {
-          "value": 95.12,
+          "value": 91.37,
           "target": 95,
-          "delta": 0.12,
-          "status": "ok",
+          "delta": -3.63,
+          "status": "danger",
           "series": [
             {
               "dateLabel": "Ene",
@@ -1276,12 +1134,13 @@
               "target": 95,
               "volume": 9142
             }
-          ]
+          ],
+          "volume": 17993
         },
         "fv_pas": {
-          "value": 62.76,
+          "value": 67.8,
           "target": 90,
-          "delta": -27.24,
+          "delta": -22.2,
           "status": "danger",
           "series": [
             {
@@ -1361,191 +1220,36 @@
               "target": 90,
               "volume": 9142
             }
-          ]
+          ],
+          "volume": 17993
         },
         "sla_expreso": {
-          "value": 81.1,
+          "value": 81.48,
           "target": 95,
-          "delta": -13.9,
+          "volume": 3763,
           "status": "danger",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 79.26,
-              "target": 95,
-              "volume": 4505
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 76.22,
-              "target": 95,
-              "volume": 4198
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 80.26,
-              "target": 95,
-              "volume": 4739
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 52.5,
-              "target": 95,
-              "volume": 4141
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 75.05,
-              "target": 95,
-              "volume": 4722
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 78.69,
-              "target": 95,
-              "volume": 5342
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 79.61,
-              "target": 95,
-              "volume": 5269
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 79.59,
-              "target": 95,
-              "volume": 4939
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 78.72,
-              "target": 95,
-              "volume": 5044
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 81.1,
-              "target": 95,
-              "volume": 5625
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 78.82,
-              "target": 95,
-              "volume": 1950
-            }
-          ]
+          "delta": -13.52
         },
         "fv_expreso": {
-          "value": 90.93,
+          "value": 90.48,
           "target": 90,
-          "delta": 0.93,
+          "volume": 3763,
           "status": "ok",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 83.67,
-              "target": 90,
-              "volume": 3174
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 82.29,
-              "target": 90,
-              "volume": 2999
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 82.46,
-              "target": 90,
-              "volume": 3249
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 79.95,
-              "target": 90,
-              "volume": 2783
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 83.22,
-              "target": 90,
-              "volume": 2992
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 86.66,
-              "target": 90,
-              "volume": 3621
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 86.51,
-              "target": 90,
-              "volume": 3431
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 84.71,
-              "target": 90,
-              "volume": 3251
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 88.26,
-              "target": 90,
-              "volume": 3306
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 90.93,
-              "target": 90,
-              "volume": 3560
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 89.65,
-              "target": 90,
-              "volume": 1082
-            }
-          ]
+          "delta": 0.48
         },
-        "volume": 0,
+        "volume": 85897,
         "q": {
-          "total": 0,
-          "paq_ar": 0,
-          "pas": 0,
-          "expreso": 0
+          "total": 85897,
+          "paq_ar": 67904,
+          "pas": 17993,
+          "expreso": 3763
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 97.17,
+          "value": 96.71,
           "target": 95,
-          "delta": 2.17,
+          "delta": 1.71,
           "status": "ok",
           "series": [
             {
@@ -1619,12 +1323,12 @@
               "volume": 3676
             }
           ],
-          "volume": 62913
+          "volume": 4991
         },
         "fv_paqar": {
-          "value": 89.04,
+          "value": 89.17,
           "target": 90,
-          "delta": -0.96,
+          "delta": -0.83,
           "status": "warning",
           "series": [
             {
@@ -1698,12 +1402,12 @@
               "volume": 1843
             }
           ],
-          "volume": 62913
+          "volume": 4991
         },
         "sla_pas": {
-          "value": 94.68,
+          "value": 94.73,
           "target": 95,
-          "delta": -0.32,
+          "delta": -0.27,
           "status": "warning",
           "series": [
             {
@@ -1776,12 +1480,13 @@
               "target": 95,
               "volume": 1060
             }
-          ]
+          ],
+          "volume": 1291
         },
         "fv_pas": {
-          "value": 66.36,
+          "value": 69.9,
           "target": 90,
-          "delta": -23.64,
+          "delta": -20.1,
           "status": "danger",
           "series": [
             {
@@ -1854,28 +1559,29 @@
               "target": 90,
               "volume": 1060
             }
-          ]
+          ],
+          "volume": 1291
         },
         "sla_expreso": {
-          "value": 81.69,
+          "value": 76.92,
           "target": 95,
-          "volume": 3555,
+          "volume": 208,
           "status": "danger",
-          "delta": -13.31
+          "delta": -18.08
         },
         "fv_expreso": {
-          "value": 90.63,
+          "value": 88.31,
           "target": 90,
-          "volume": 3555,
-          "status": "ok",
-          "delta": 0.63
+          "volume": 208,
+          "status": "warning",
+          "delta": -1.69
         },
-        "volume": 62913,
+        "volume": 6282,
         "q": {
-          "total": 62913,
-          "paq_ar": 62913,
-          "pas": 0,
-          "expreso": 3555
+          "total": 6282,
+          "paq_ar": 4991,
+          "pas": 1291,
+          "expreso": 208
         }
       }
     },
@@ -1886,9 +1592,9 @@
       "city": "Mar del Plata",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 96.58,
+          "value": 97.64,
           "target": 95,
-          "delta": 1.58,
+          "delta": 2.64,
           "status": "ok",
           "series": [
             {
@@ -1968,13 +1674,14 @@
               "target": 95,
               "volume": 29144
             }
-          ]
+          ],
+          "volume": 59780
         },
         "fv_paqar": {
-          "value": 91.17,
+          "value": 88.15,
           "target": 90,
-          "delta": 1.17,
-          "status": "ok",
+          "delta": -1.85,
+          "status": "warning",
           "series": [
             {
               "dateLabel": "Ene",
@@ -2053,13 +1760,14 @@
               "target": 90,
               "volume": 16768
             }
-          ]
+          ],
+          "volume": 59780
         },
         "sla_pas": {
-          "value": 93.68,
+          "value": 76.38,
           "target": 95,
-          "delta": -1.32,
-          "status": "warning",
+          "delta": -18.62,
+          "status": "danger",
           "series": [
             {
               "dateLabel": "Ene",
@@ -2138,12 +1846,13 @@
               "target": 95,
               "volume": 8168
             }
-          ]
+          ],
+          "volume": 13696
         },
         "fv_pas": {
-          "value": 55.59,
+          "value": 62.91,
           "target": 90,
-          "delta": -34.41,
+          "delta": -27.09,
           "status": "danger",
           "series": [
             {
@@ -2223,191 +1932,36 @@
               "target": 90,
               "volume": 8168
             }
-          ]
+          ],
+          "volume": 13696
         },
         "sla_expreso": {
-          "value": 69.51,
+          "value": 74.97,
           "target": 95,
-          "delta": -25.49,
+          "volume": 2805,
           "status": "danger",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 64.26,
-              "target": 95,
-              "volume": 4651
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 65.66,
-              "target": 95,
-              "volume": 4122
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 64.95,
-              "target": 95,
-              "volume": 3756
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 60.87,
-              "target": 95,
-              "volume": 3270
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 60.2,
-              "target": 95,
-              "volume": 3403
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 63.64,
-              "target": 95,
-              "volume": 3532
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 66.57,
-              "target": 95,
-              "volume": 3668
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 66.69,
-              "target": 95,
-              "volume": 3485
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 65.04,
-              "target": 95,
-              "volume": 3626
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 69.51,
-              "target": 95,
-              "volume": 4254
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 72.95,
-              "target": 95,
-              "volume": 1512
-            }
-          ]
+          "delta": -20.03
         },
         "fv_expreso": {
-          "value": 88.7,
+          "value": 82.42,
           "target": 90,
-          "delta": -1.3,
-          "status": "warning",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 83.86,
-              "target": 90,
-              "volume": 3390
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 85.91,
-              "target": 90,
-              "volume": 2995
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 83.28,
-              "target": 90,
-              "volume": 2578
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 84.43,
-              "target": 90,
-              "volume": 2196
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 82.9,
-              "target": 90,
-              "volume": 2217
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 86.96,
-              "target": 90,
-              "volume": 2378
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 86.01,
-              "target": 90,
-              "volume": 2480
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 87.09,
-              "target": 90,
-              "volume": 2370
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 90.8,
-              "target": 90,
-              "volume": 2463
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 88.7,
-              "target": 90,
-              "volume": 2840
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 84.09,
-              "target": 90,
-              "volume": 943
-            }
-          ]
+          "volume": 2805,
+          "status": "danger",
+          "delta": -7.58
         },
-        "volume": 0,
+        "volume": 73476,
         "q": {
-          "total": 0,
-          "paq_ar": 0,
-          "pas": 0,
-          "expreso": 0
+          "total": 73476,
+          "paq_ar": 59780,
+          "pas": 13696,
+          "expreso": 2805
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 97.63,
+          "value": 97.6,
           "target": 95,
-          "delta": 2.63,
+          "delta": 2.6,
           "status": "ok",
           "series": [
             {
@@ -2481,12 +2035,12 @@
               "volume": 3069
             }
           ],
-          "volume": 55408
+          "volume": 4372
         },
         "fv_paqar": {
-          "value": 88.21,
+          "value": 87.72,
           "target": 90,
-          "delta": -1.79,
+          "delta": -2.28,
           "status": "warning",
           "series": [
             {
@@ -2560,12 +2114,12 @@
               "volume": 1810
             }
           ],
-          "volume": 55408
+          "volume": 4372
         },
         "sla_pas": {
-          "value": 89.44,
+          "value": 76.92,
           "target": 95,
-          "delta": -5.56,
+          "delta": -18.08,
           "status": "danger",
           "series": [
             {
@@ -2638,12 +2192,13 @@
               "target": 95,
               "volume": 1320
             }
-          ]
+          ],
+          "volume": 1205
         },
         "fv_pas": {
-          "value": 60.06,
+          "value": 66.86,
           "target": 90,
-          "delta": -29.94,
+          "delta": -23.14,
           "status": "danger",
           "series": [
             {
@@ -2716,28 +2271,29 @@
               "target": 90,
               "volume": 1320
             }
-          ]
+          ],
+          "volume": 1205
         },
         "sla_expreso": {
-          "value": 74.63,
+          "value": 80.13,
           "target": 95,
-          "volume": 2649,
+          "volume": 156,
           "status": "danger",
-          "delta": -20.37
+          "delta": -14.87
         },
         "fv_expreso": {
-          "value": 82.6,
+          "value": 79.07,
           "target": 90,
-          "volume": 2649,
+          "volume": 156,
           "status": "danger",
-          "delta": -7.4
+          "delta": -10.93
         },
-        "volume": 55408,
+        "volume": 5577,
         "q": {
-          "total": 55408,
-          "paq_ar": 55408,
-          "pas": 0,
-          "expreso": 2649
+          "total": 5577,
+          "paq_ar": 4372,
+          "pas": 1205,
+          "expreso": 156
         }
       }
     },
@@ -2748,9 +2304,9 @@
       "city": "Mercedes",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 97.77,
+          "value": 97.6,
           "target": 95,
-          "delta": 2.77,
+          "delta": 2.6,
           "status": "ok",
           "series": [
             {
@@ -2830,13 +2386,14 @@
               "target": 95,
               "volume": 29676
             }
-          ]
+          ],
+          "volume": 59358
         },
         "fv_paqar": {
-          "value": 86.9,
+          "value": 89.62,
           "target": 90,
-          "delta": -3.1,
-          "status": "danger",
+          "delta": -0.38,
+          "status": "warning",
           "series": [
             {
               "dateLabel": "Ene",
@@ -2915,13 +2472,14 @@
               "target": 90,
               "volume": 18495
             }
-          ]
+          ],
+          "volume": 59358
         },
         "sla_pas": {
-          "value": 94.75,
+          "value": 86.59,
           "target": 95,
-          "delta": -0.25,
-          "status": "warning",
+          "delta": -8.41,
+          "status": "danger",
           "series": [
             {
               "dateLabel": "Ene",
@@ -3000,12 +2558,13 @@
               "target": 95,
               "volume": 6541
             }
-          ]
+          ],
+          "volume": 11995
         },
         "fv_pas": {
-          "value": 62.02,
+          "value": 71.82,
           "target": 90,
-          "delta": -27.98,
+          "delta": -18.18,
           "status": "danger",
           "series": [
             {
@@ -3085,191 +2644,36 @@
               "target": 90,
               "volume": 6541
             }
-          ]
+          ],
+          "volume": 11995
         },
         "sla_expreso": {
-          "value": 85.1,
+          "value": 83.79,
           "target": 95,
-          "delta": -9.9,
+          "volume": 2881,
           "status": "danger",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 80.02,
-              "target": 95,
-              "volume": 4037
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 84.25,
-              "target": 95,
-              "volume": 3728
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 89.04,
-              "target": 95,
-              "volume": 4070
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 82.62,
-              "target": 95,
-              "volume": 3701
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 84.4,
-              "target": 95,
-              "volume": 3936
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 86.44,
-              "target": 95,
-              "volume": 4494
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 85.61,
-              "target": 95,
-              "volume": 4406
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 87.68,
-              "target": 95,
-              "volume": 4229
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 86.15,
-              "target": 95,
-              "volume": 4209
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 85.1,
-              "target": 95,
-              "volume": 4663
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 82.5,
-              "target": 95,
-              "volume": 1537
-            }
-          ]
+          "delta": -11.21
         },
         "fv_expreso": {
-          "value": 88.17,
+          "value": 85.63,
           "target": 90,
-          "delta": -1.83,
-          "status": "warning",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 80.19,
-              "target": 90,
-              "volume": 3031
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 82.05,
-              "target": 90,
-              "volume": 2803
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 81.43,
-              "target": 90,
-              "volume": 2983
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 80.19,
-              "target": 90,
-              "volume": 2595
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 79.06,
-              "target": 90,
-              "volume": 2880
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 80.26,
-              "target": 90,
-              "volume": 3368
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 82.13,
-              "target": 90,
-              "volume": 3318
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 83.49,
-              "target": 90,
-              "volume": 3174
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 85.7,
-              "target": 90,
-              "volume": 3040
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 88.17,
-              "target": 90,
-              "volume": 3357
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 85.35,
-              "target": 90,
-              "volume": 1017
-            }
-          ]
+          "volume": 2881,
+          "status": "danger",
+          "delta": -4.37
         },
-        "volume": 0,
+        "volume": 71353,
         "q": {
-          "total": 0,
-          "paq_ar": 0,
-          "pas": 0,
-          "expreso": 0
+          "total": 71353,
+          "paq_ar": 59358,
+          "pas": 11995,
+          "expreso": 2881
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 97.63,
+          "value": 96.87,
           "target": 95,
-          "delta": 2.63,
+          "delta": 1.87,
           "status": "ok",
           "series": [
             {
@@ -3343,13 +2747,13 @@
               "volume": 3144
             }
           ],
-          "volume": 54764
+          "volume": 4594
         },
         "fv_paqar": {
-          "value": 89.59,
+          "value": 90.61,
           "target": 90,
-          "delta": -0.41,
-          "status": "warning",
+          "delta": 0.61,
+          "status": "ok",
           "series": [
             {
               "dateLabel": "22 Oct",
@@ -3422,13 +2826,13 @@
               "volume": 1933
             }
           ],
-          "volume": 54764
+          "volume": 4594
         },
         "sla_pas": {
-          "value": 93.91,
+          "value": 88.5,
           "target": 95,
-          "delta": -1.09,
-          "status": "warning",
+          "delta": -6.5,
+          "status": "danger",
           "series": [
             {
               "dateLabel": "23 Oct",
@@ -3500,12 +2904,13 @@
               "target": 95,
               "volume": 936
             }
-          ]
+          ],
+          "volume": 1082
         },
         "fv_pas": {
-          "value": 72.1,
+          "value": 72.19,
           "target": 90,
-          "delta": -17.9,
+          "delta": -17.81,
           "status": "danger",
           "series": [
             {
@@ -3578,28 +2983,29 @@
               "target": 90,
               "volume": 936
             }
-          ]
+          ],
+          "volume": 1082
         },
         "sla_expreso": {
-          "value": 83.41,
+          "value": 86.62,
           "target": 95,
-          "volume": 2724,
+          "volume": 157,
           "status": "danger",
-          "delta": -11.59
+          "delta": -8.38
         },
         "fv_expreso": {
-          "value": 85.73,
+          "value": 84.27,
           "target": 90,
-          "volume": 2724,
+          "volume": 157,
           "status": "danger",
-          "delta": -4.27
+          "delta": -5.73
         },
-        "volume": 54764,
+        "volume": 5676,
         "q": {
-          "total": 54764,
-          "paq_ar": 54764,
-          "pas": 0,
-          "expreso": 2724
+          "total": 5676,
+          "paq_ar": 4594,
+          "pas": 1082,
+          "expreso": 157
         }
       }
     },
@@ -3610,9 +3016,9 @@
       "city": "Pergamino",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 98.31,
+          "value": 97.72,
           "target": 95,
-          "delta": 3.31,
+          "delta": 2.72,
           "status": "ok",
           "series": [
             {
@@ -3692,12 +3098,13 @@
               "target": 95,
               "volume": 34843
             }
-          ]
+          ],
+          "volume": 72372
         },
         "fv_paqar": {
-          "value": 89.28,
+          "value": 88.84,
           "target": 90,
-          "delta": -0.72,
+          "delta": -1.16,
           "status": "warning",
           "series": [
             {
@@ -3777,13 +3184,14 @@
               "target": 90,
               "volume": 23390
             }
-          ]
+          ],
+          "volume": 72372
         },
         "sla_pas": {
-          "value": 95.73,
+          "value": 91.72,
           "target": 95,
-          "delta": 0.73,
-          "status": "ok",
+          "delta": -3.28,
+          "status": "danger",
           "series": [
             {
               "dateLabel": "Ene",
@@ -3862,12 +3270,13 @@
               "target": 95,
               "volume": 6517
             }
-          ]
+          ],
+          "volume": 12811
         },
         "fv_pas": {
-          "value": 63.14,
+          "value": 68.22,
           "target": 90,
-          "delta": -26.86,
+          "delta": -21.78,
           "status": "danger",
           "series": [
             {
@@ -3947,191 +3356,36 @@
               "target": 90,
               "volume": 6517
             }
-          ]
+          ],
+          "volume": 12811
         },
         "sla_expreso": {
-          "value": 90.66,
+          "value": 86.58,
           "target": 95,
-          "delta": -4.34,
+          "volume": 5434,
           "status": "danger",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 61.22,
-              "target": 95,
-              "volume": 5976
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 87.23,
-              "target": 95,
-              "volume": 5462
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 87.73,
-              "target": 95,
-              "volume": 5863
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 86.56,
-              "target": 95,
-              "volume": 5671
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 86.34,
-              "target": 95,
-              "volume": 6305
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 88.61,
-              "target": 95,
-              "volume": 7152
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 88.37,
-              "target": 95,
-              "volume": 7073
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 89.47,
-              "target": 95,
-              "volume": 6476
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 91.03,
-              "target": 95,
-              "volume": 6566
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 90.66,
-              "target": 95,
-              "volume": 7556
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 87.16,
-              "target": 95,
-              "volume": 2687
-            }
-          ]
+          "delta": -8.42
         },
         "fv_expreso": {
-          "value": 88.61,
+          "value": 83.63,
           "target": 90,
-          "delta": -1.39,
-          "status": "warning",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 83.1,
-              "target": 90,
-              "volume": 4141
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 82.67,
-              "target": 90,
-              "volume": 3820
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 82.2,
-              "target": 90,
-              "volume": 4011
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 83.17,
-              "target": 90,
-              "volume": 3750
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 85.48,
-              "target": 90,
-              "volume": 4099
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 86.06,
-              "target": 90,
-              "volume": 4735
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 86.96,
-              "target": 90,
-              "volume": 4724
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 87.51,
-              "target": 90,
-              "volume": 4283
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 87.4,
-              "target": 90,
-              "volume": 4376
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 88.61,
-              "target": 90,
-              "volume": 5030
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 88.77,
-              "target": 90,
-              "volume": 1621
-            }
-          ]
+          "volume": 5434,
+          "status": "danger",
+          "delta": -6.37
         },
-        "volume": 0,
+        "volume": 85183,
         "q": {
-          "total": 0,
-          "paq_ar": 0,
-          "pas": 0,
-          "expreso": 0
+          "total": 85183,
+          "paq_ar": 72372,
+          "pas": 12811,
+          "expreso": 5434
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 97.8,
+          "value": 95.8,
           "target": 95,
-          "delta": 2.8,
+          "delta": 0.8,
           "status": "ok",
           "series": [
             {
@@ -4205,13 +3459,13 @@
               "volume": 3829
             }
           ],
-          "volume": 66780
+          "volume": 5592
         },
         "fv_paqar": {
-          "value": 88.74,
+          "value": 90.19,
           "target": 90,
-          "delta": -1.26,
-          "status": "warning",
+          "delta": 0.19,
+          "status": "ok",
           "series": [
             {
               "dateLabel": "22 Oct",
@@ -4284,13 +3538,13 @@
               "volume": 2655
             }
           ],
-          "volume": 66780
+          "volume": 5592
         },
         "sla_pas": {
-          "value": 93.38,
+          "value": 85.89,
           "target": 95,
-          "delta": -1.62,
-          "status": "warning",
+          "delta": -9.11,
+          "status": "danger",
           "series": [
             {
               "dateLabel": "23 Oct",
@@ -4362,12 +3616,13 @@
               "target": 95,
               "volume": 970
             }
-          ]
+          ],
+          "volume": 1145
         },
         "fv_pas": {
-          "value": 63.3,
+          "value": 62.26,
           "target": 90,
-          "delta": -26.7,
+          "delta": -27.74,
           "status": "danger",
           "series": [
             {
@@ -4440,28 +3695,29 @@
               "target": 90,
               "volume": 970
             }
-          ]
+          ],
+          "volume": 1145
         },
         "sla_expreso": {
-          "value": 86.97,
+          "value": 79.35,
           "target": 95,
-          "volume": 5095,
+          "volume": 339,
           "status": "danger",
-          "delta": -8.03
+          "delta": -15.65
         },
         "fv_expreso": {
-          "value": 83.7,
+          "value": 82.35,
           "target": 90,
-          "volume": 5095,
+          "volume": 339,
           "status": "danger",
-          "delta": -6.3
+          "delta": -7.65
         },
-        "volume": 66780,
+        "volume": 6737,
         "q": {
-          "total": 66780,
-          "paq_ar": 66780,
-          "pas": 0,
-          "expreso": 5095
+          "total": 6737,
+          "paq_ar": 5592,
+          "pas": 1145,
+          "expreso": 339
         }
       }
     },
@@ -4472,9 +3728,9 @@
       "city": "Santa Rosa",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 96.75,
+          "value": 96.95,
           "target": 95,
-          "delta": 1.75,
+          "delta": 1.95,
           "status": "ok",
           "series": [
             {
@@ -4554,12 +3810,13 @@
               "target": 95,
               "volume": 15040
             }
-          ]
+          ],
+          "volume": 26742
         },
         "fv_paqar": {
-          "value": 83.14,
+          "value": 85,
           "target": 90,
-          "delta": -6.86,
+          "delta": -5,
           "status": "danger",
           "series": [
             {
@@ -4639,12 +3896,13 @@
               "target": 90,
               "volume": 8978
             }
-          ]
+          ],
+          "volume": 26742
         },
         "sla_pas": {
-          "value": 78.21,
+          "value": 69.2,
           "target": 95,
-          "delta": -16.79,
+          "delta": -25.8,
           "status": "danger",
           "series": [
             {
@@ -4724,12 +3982,13 @@
               "target": 95,
               "volume": 360
             }
-          ]
+          ],
+          "volume": 561
         },
         "fv_pas": {
-          "value": 60.55,
+          "value": 64.83,
           "target": 90,
-          "delta": -29.45,
+          "delta": -25.17,
           "status": "danger",
           "series": [
             {
@@ -4809,191 +4068,36 @@
               "target": 90,
               "volume": 360
             }
-          ]
+          ],
+          "volume": 561
         },
         "sla_expreso": {
-          "value": 60.75,
+          "value": 61.99,
           "target": 95,
-          "delta": -34.25,
+          "volume": 713,
           "status": "danger",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 59.96,
-              "target": 95,
-              "volume": 942
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 59.18,
-              "target": 95,
-              "volume": 811
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 61.82,
-              "target": 95,
-              "volume": 867
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 58.88,
-              "target": 95,
-              "volume": 815
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 54.34,
-              "target": 95,
-              "volume": 933
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 59.76,
-              "target": 95,
-              "volume": 952
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 57.17,
-              "target": 95,
-              "volume": 934
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 57.33,
-              "target": 95,
-              "volume": 928
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 60.21,
-              "target": 95,
-              "volume": 890
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 60.75,
-              "target": 95,
-              "volume": 1060
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 60.24,
-              "target": 95,
-              "volume": 410
-            }
-          ]
+          "delta": -33.01
         },
         "fv_expreso": {
-          "value": 83.44,
+          "value": 75.78,
           "target": 90,
-          "delta": -6.56,
+          "volume": 713,
           "status": "danger",
-          "series": [
-            {
-              "dateLabel": "Ene",
-              "isoDate": "2026-01-01",
-              "value": 70.81,
-              "target": 90,
-              "volume": 556
-            },
-            {
-              "dateLabel": "Feb",
-              "isoDate": "2026-02-01",
-              "value": 70.96,
-              "target": 90,
-              "volume": 458
-            },
-            {
-              "dateLabel": "Mar",
-              "isoDate": "2026-03-01",
-              "value": 56.24,
-              "target": 90,
-              "volume": 489
-            },
-            {
-              "dateLabel": "Abr",
-              "isoDate": "2026-04-01",
-              "value": 70.74,
-              "target": 90,
-              "volume": 434
-            },
-            {
-              "dateLabel": "May",
-              "isoDate": "2026-05-01",
-              "value": 66.43,
-              "target": 90,
-              "volume": 554
-            },
-            {
-              "dateLabel": "Jun",
-              "isoDate": "2026-06-01",
-              "value": 78.39,
-              "target": 90,
-              "volume": 509
-            },
-            {
-              "dateLabel": "Jul",
-              "isoDate": "2026-07-01",
-              "value": 73.94,
-              "target": 90,
-              "volume": 541
-            },
-            {
-              "dateLabel": "Ago",
-              "isoDate": "2026-08-01",
-              "value": 76.83,
-              "target": 90,
-              "volume": 505
-            },
-            {
-              "dateLabel": "Sep",
-              "isoDate": "2026-09-01",
-              "value": 78.83,
-              "target": 90,
-              "volume": 521
-            },
-            {
-              "dateLabel": "Oct",
-              "isoDate": "2026-10-01",
-              "value": 83.44,
-              "target": 90,
-              "volume": 598
-            },
-            {
-              "dateLabel": "Nov",
-              "isoDate": "2026-11-01",
-              "value": 82.18,
-              "target": 90,
-              "volume": 202
-            }
-          ]
+          "delta": -14.22
         },
-        "volume": 0,
+        "volume": 27303,
         "q": {
-          "total": 0,
-          "paq_ar": 0,
-          "pas": 0,
-          "expreso": 0
+          "total": 27303,
+          "paq_ar": 26742,
+          "pas": 561,
+          "expreso": 713
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 96.91,
+          "value": 97.21,
           "target": 95,
-          "delta": 1.91,
+          "delta": 2.21,
           "status": "ok",
           "series": [
             {
@@ -5067,12 +4171,12 @@
               "volume": 1328
             }
           ],
-          "volume": 24696
+          "volume": 2046
         },
         "fv_paqar": {
-          "value": 84.87,
+          "value": 86.57,
           "target": 90,
-          "delta": -5.13,
+          "delta": -3.43,
           "status": "danger",
           "series": [
             {
@@ -5146,12 +4250,12 @@
               "volume": 783
             }
           ],
-          "volume": 24696
+          "volume": 2046
         },
         "sla_pas": {
-          "value": 85,
+          "value": 75.83,
           "target": 95,
-          "delta": -10,
+          "delta": -19.17,
           "status": "danger",
           "series": [
             {
@@ -5224,12 +4328,13 @@
               "target": 95,
               "volume": 37
             }
-          ]
+          ],
+          "volume": 23
         },
         "fv_pas": {
-          "value": 75,
+          "value": 50.67,
           "target": 90,
-          "delta": -15,
+          "delta": -39.33,
           "status": "danger",
           "series": [
             {
@@ -5302,28 +4407,29 @@
               "target": 90,
               "volume": 37
             }
-          ]
+          ],
+          "volume": 23
         },
         "sla_expreso": {
-          "value": 61.93,
+          "value": 63.16,
           "target": 95,
-          "volume": 675,
+          "volume": 38,
           "status": "danger",
-          "delta": -33.07
+          "delta": -31.84
         },
         "fv_expreso": {
-          "value": 76.73,
+          "value": 42.86,
           "target": 90,
-          "volume": 675,
+          "volume": 38,
           "status": "danger",
-          "delta": -13.27
+          "delta": -47.14
         },
-        "volume": 24696,
+        "volume": 2069,
         "q": {
-          "total": 24696,
-          "paq_ar": 24696,
-          "pas": 0,
-          "expreso": 675
+          "total": 2069,
+          "paq_ar": 2046,
+          "pas": 23,
+          "expreso": 38
         }
       }
     }
