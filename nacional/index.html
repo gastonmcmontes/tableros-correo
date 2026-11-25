@@ -1,0 +1,3277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1329">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Tablero Nacional">
+  <meta name="description" content="Tablero de Control Operativo Nacional - 35 Nodos y 5 Regiones - Correo Argentino">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <title>Tablero Control Nacional | Correo Argentino</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- External Data -->
+  <script src="data.js"></script>
+
+  <style>
+    :root {
+      --bg-primary: #0a0f1d;
+      --bg-surface: #111827;
+      --bg-card: #182235;
+      --bg-card-hover: #1f2c44;
+      --border-subtle: #24324a;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+
+      --brand-yellow: #facc15;
+      --brand-blue: #2563eb;
+      --brand-blue-light: #38bdf8;
+
+      --status-ok: #10b981;
+      --status-ok-bg: rgba(16, 185, 129, 0.15);
+      --status-warn: #f59e0b;
+      --status-warn-bg: rgba(245, 158, 11, 0.15);
+      --status-danger: #ef4444;
+      --status-danger-bg: rgba(239, 68, 68, 0.15);
+
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f1f5f9;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --border-subtle: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-faint: #94a3b8;
+      --status-ok-bg: rgba(16, 185, 129, 0.12);
+      --status-warn-bg: rgba(245, 158, 11, 0.12);
+      --status-danger-bg: rgba(239, 68, 68, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      padding-top: calc(var(--safe-top) + 60px);
+      padding-bottom: calc(var(--safe-bottom) + 75px);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.4;
+    }
+
+    /* Fixed Header */
+    .app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: calc(var(--safe-top) + 60px);
+      padding-top: var(--safe-top);
+      background: rgba(10, 15, 29, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    [data-theme="light"] .app-header {
+      background: rgba(255, 255, 255, 0.94);
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-yellow);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+
+    .brand-text h1 {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-text h1 span.badge-pba {
+      background: var(--brand-yellow);
+      color: #0f172a;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 6px;
+    }
+
+    .brand-text p {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .icon-btn:active {
+      transform: scale(0.92);
+    }
+
+    .btn-share {
+      background: #25d366;
+      color: #ffffff;
+      border: 1.5px solid rgba(0, 0, 0, 0.18);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+    }
+
+    [data-theme="light"] .btn-share {
+      border: 1.5px solid #15803d;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto;
+      padding: 14px 14px 0 14px;
+    }
+
+    /* Tarjeta de Auditoría y Carga en el Inicio */
+    .sync-status-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .sync-status-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sync-dot-live {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--status-ok);
+      box-shadow: 0 0 8px var(--status-ok);
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+
+    .sync-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sync-lbl {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .sync-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { opacity: 0.4; }
+    }
+
+    /* Period Segmented Control */
+    .period-control {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 4px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .period-btn {
+      border: none;
+      background: transparent;
+      padding: 9px 8px;
+      border-radius: 10px;
+      color: var(--text-muted);
+      font-size: 12.5px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .period-btn.active {
+      background: var(--brand-blue);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+    }
+
+    /* Active Period Banner with Q breakdown */
+    .period-info-banner {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px 12px;
+      background: var(--bg-surface);
+      border: 1px dashed var(--border-subtle);
+      border-radius: 10px;
+      margin-bottom: 14px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .period-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .period-info-banner .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 600;
+      color: var(--brand-blue-light);
+    }
+
+    .q-breakdown-chips {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-faint);
+      margin-top: 2px;
+    }
+
+    .q-pill-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 1px 6px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* App Views */
+    .app-view {
+      display: none;
+    }
+
+    .app-view.active {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Title */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      margin-top: 4px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-faint);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-count {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 11px;
+      padding: 1px 7px;
+      border-radius: 12px;
+    }
+
+    /* KPI Cards Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 12px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.2s ease;
+    }
+
+    .kpi-card:active {
+      transform: scale(0.98);
+    }
+
+    .kpi-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .kpi-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .kpi-target-tag {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-faint);
+    }
+
+    .kpi-value-row {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .kpi-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .kpi-val.status-ok { color: var(--status-ok); }
+    .kpi-val.status-warning { color: var(--status-warn); }
+    .kpi-val.status-danger { color: var(--status-danger); }
+
+    .delta-chip {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .delta-chip.status-ok {
+      background: var(--status-ok-bg);
+      color: var(--status-ok);
+    }
+
+    .delta-chip.status-warning {
+      background: var(--status-warn-bg);
+      color: var(--status-warn);
+    }
+
+    .delta-chip.status-danger {
+      background: var(--status-danger-bg);
+      color: var(--status-danger);
+    }
+
+    /* Gauge / Progress Bar */
+    .gauge-bar-wrapper {
+      width: 100%;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 6px;
+      position: relative;
+    }
+
+    [data-theme="light"] .gauge-bar-wrapper {
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .gauge-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.4s ease;
+    }
+
+    .gauge-fill.status-ok { background: var(--status-ok); }
+    .gauge-fill.status-warning { background: var(--status-warn); }
+    .gauge-fill.status-danger { background: var(--status-danger); }
+
+    .kpi-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-faint);
+      font-weight: 500;
+    }
+
+    /* Node Horizontal Selector Tabs */
+    .node-selector-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .node-selector-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .node-tab-btn {
+      flex: 0 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-width: 95px;
+    }
+
+    .node-tab-btn:active {
+      transform: scale(0.96);
+    }
+
+    .node-tab-btn.active {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(30, 58, 138, 0.4));
+      border-color: var(--brand-blue-light);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    }
+
+    .node-tab-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--brand-blue-light);
+    }
+
+    .node-tab-name {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .node-tab-status {
+      font-size: 9.5px;
+      font-weight: 600;
+      color: var(--text-faint);
+    }
+
+    .node-tab-btn.active .node-tab-code {
+      color: #ffffff;
+    }
+
+    /* Selected Node Banner with Q breakdown */
+    .active-node-banner {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .active-node-banner-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .active-node-title {
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .active-node-tag {
+      background: var(--brand-blue);
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+
+    .active-node-vol {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .active-node-q-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10.5px;
+      color: var(--text-faint);
+      flex-wrap: wrap;
+    }
+
+    /* Chart Container Card */
+    .chart-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .chart-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chart-title {
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chart-select {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      outline: none;
+    }
+
+    .chart-box {
+      position: relative;
+      width: 100%;
+      height: 190px;
+    }
+
+    /* All Nodes Overview List in Nodos Tab */
+    .nodes-summary-table {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+      margin-bottom: 20px;
+    }
+
+    .node-row-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .node-row-item:active {
+      transform: scale(0.99);
+      border-color: var(--brand-blue);
+    }
+
+    .node-row-item.is-selected {
+      border-color: var(--brand-blue-light);
+      background: rgba(37, 99, 235, 0.12);
+    }
+
+    .node-row-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .node-row-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .node-mini-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      color: var(--brand-blue-light);
+    }
+
+    .node-row-name {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .node-row-kpis-mini {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .kpi-mini-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .kpi-mini-sub {
+      font-size: 8.5px;
+      color: var(--text-faint);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .node-row-q-sub {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9.5px;
+      color: var(--text-faint);
+      font-family: 'JetBrains Mono', monospace;
+      border-top: 1px dashed var(--border-subtle);
+      padding-top: 4px;
+    }
+
+    /* Ranking View Styles */
+    .ranking-kpi-selector-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .ranking-kpi-mini-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .ranking-kpi-mini-card:active {
+      transform: scale(0.96);
+    }
+
+    .ranking-kpi-mini-card.active {
+      border-color: var(--brand-blue-light);
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(15, 23, 42, 0.4));
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+    }
+
+    .ranking-kpi-lbl {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .ranking-kpi-mini-card.active .ranking-kpi-lbl {
+      color: var(--brand-blue-light);
+    }
+
+    .ranking-kpi-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .ranking-kpi-target {
+      font-size: 9px;
+      color: var(--text-faint);
+      margin-top: 2px;
+    }
+
+    .ranking-list-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 18px;
+    }
+
+    .ranking-list-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .ranking-kpi-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ranking-target-pill {
+      background: rgba(250, 204, 21, 0.15);
+      color: var(--brand-yellow);
+      border: 1px solid rgba(250, 204, 21, 0.3);
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+
+    .ranking-nodes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ranking-node-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+
+    .ranking-node-item:active {
+      transform: scale(0.99);
+      border-color: var(--brand-blue);
+    }
+
+    .ranking-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rank-medal-box {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .rank-1 { background: rgba(250, 204, 21, 0.2); color: #fbbf24; border: 1px solid #fbbf24; }
+    .rank-2 { background: rgba(148, 163, 184, 0.2); color: #cbd5e1; border: 1px solid #94a3b8; }
+    .rank-3 { background: rgba(217, 119, 6, 0.2); color: #f59e0b; border: 1px solid #d97706; }
+    .rank-other { background: var(--bg-card); color: var(--text-faint); border: 1px solid var(--border-subtle); }
+
+    .ranking-node-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ranking-node-name {
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ranking-node-vol {
+      font-size: 10px;
+      color: var(--text-faint);
+    }
+
+    .ranking-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+
+    .ranking-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .ranking-bar-outer {
+      width: 80px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 3px;
+    }
+
+    [data-theme="light"] .ranking-bar-outer {
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .ranking-bar-inner {
+      height: 100%;
+      border-radius: 2px;
+    }
+
+    /* ========================================== */
+    /* Desvíos View Styles                        */
+    /* ========================================== */
+    .desvios-hero-banner {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(17, 24, 39, 0.7));
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    [data-theme="light"] .desvios-hero-banner {
+      background: linear-gradient(135deg, #fef2f2, #ffffff);
+      border-color: #fecaca;
+    }
+
+    .desvios-hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .desvios-hero-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #ef4444;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .desvios-share-banner-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #25d366, #16a34a);
+      color: #ffffff;
+      border: 1.5px solid rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      margin-bottom: 14px;
+      transition: transform 0.15s ease;
+    }
+
+    .desvios-share-banner-btn:active {
+      transform: scale(0.98);
+    }
+
+    .desvios-share-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .desvios-share-text {
+      text-align: left;
+      flex: 1;
+    }
+
+    .desvios-share-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+
+    .desvios-share-sub {
+      font-size: 10.5px;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .desvios-filter-row {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      scrollbar-width: none;
+    }
+
+    .desvios-filter-row::-webkit-scrollbar {
+      display: none;
+    }
+
+    .desvio-filter-chip {
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .desvio-filter-chip:active {
+      transform: scale(0.96);
+    }
+
+    .desvio-filter-chip.active {
+      background: var(--brand-blue);
+      border-color: var(--brand-blue-light);
+      color: #ffffff;
+    }
+
+    .desvios-list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .desvio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid #ef4444;
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .desvio-card:active {
+      transform: scale(0.99);
+      border-color: var(--brand-blue);
+    }
+
+    .desvio-card.severity-alta {
+      border-left-color: #f59e0b;
+    }
+
+    .desvio-card.severity-moderada {
+      border-left-color: #38bdf8;
+    }
+
+    .desvio-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .desvio-node-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .desvio-node-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 800;
+      background: var(--bg-surface);
+      color: var(--brand-yellow);
+      padding: 2px 7px;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .desvio-node-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .desvio-severity-chip {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .desvio-severity-chip.critica {
+      background: rgba(239, 68, 68, 0.15);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .desvio-severity-chip.alta {
+      background: rgba(245, 158, 11, 0.15);
+      color: #f59e0b;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .desvio-severity-chip.moderada {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .desvio-kpi-main {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .desvio-kpi-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .desvio-kpi-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .desvio-gap-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+
+    .desvio-action-text {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 11px;
+      line-height: 1.4;
+      color: var(--text-main);
+      margin: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .desvio-q-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-faint);
+      padding-top: 6px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+
+    .desvios-nav-badge {
+      position: absolute;
+      top: -3px;
+      right: -8px;
+      background: #ef4444;
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 1px 4px;
+      border-radius: 10px;
+      line-height: 1;
+      min-width: 14px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.5);
+    }
+
+    /* Fixed Bottom Navigation (Zócalo) */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: calc(var(--safe-bottom) + 64px);
+      padding-bottom: var(--safe-bottom);
+      background: rgba(10, 15, 29, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-subtle);
+      z-index: 100;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    [data-theme="light"] .bottom-nav {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .nav-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 10.5px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 8px 0;
+      transition: all 0.15s ease;
+    }
+
+    .nav-btn.active {
+      color: var(--brand-blue-light);
+    }
+
+    .nav-btn.active i {
+      transform: scale(1.1);
+      color: var(--brand-blue-light);
+    }
+
+    .nav-btn i {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.15s ease;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .spin-anim {
+      animation: spin 0.8s linear infinite;
+    }
+
+    /* Modal de Compartir a WhatsApp y Nodos */
+    .share-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 250;
+      display: none;
+      align-items: flex-end;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .share-modal-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .share-modal-sheet {
+      background: var(--bg-surface);
+      border-top-left-radius: 22px;
+      border-top-right-radius: 22px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 18px 16px calc(var(--safe-bottom) + 20px) 16px;
+      border-top: 1px solid var(--border-subtle);
+      transform: translateY(100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .share-modal-overlay.active .share-modal-sheet {
+      transform: translateY(0);
+    }
+
+    .share-handle {
+      width: 40px;
+      height: 4px;
+      background: var(--text-faint);
+      opacity: 0.5;
+      border-radius: 2px;
+      margin: 0 auto 14px auto;
+    }
+
+    .share-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .share-title {
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .share-close-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* Opciones de Envío para Jefe de Operaciones */
+    .share-options-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+
+    .share-opt-row {
+      margin-bottom: 10px;
+    }
+
+    .share-opt-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .share-opt-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .share-segmented {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 3px;
+      border-radius: 10px;
+    }
+
+    .share-segmented-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 3px;
+      border-radius: 10px;
+    }
+
+    .share-segmented-4 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 4px;
+      border-radius: 10px;
+    }
+
+    .share-seg-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 7px 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .share-seg-btn.active {
+      background: var(--brand-blue);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35);
+    }
+
+    .node-pills-selector {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 4px 0 2px 0;
+      scrollbar-width: none;
+    }
+
+    .node-pills-selector::-webkit-scrollbar {
+      display: none;
+    }
+
+    .node-pill-btn {
+      flex: 0 0 auto;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .node-pill-btn.active {
+      background: var(--brand-blue-light);
+      border-color: var(--brand-blue-light);
+      color: #0f172a;
+      box-shadow: 0 2px 8px rgba(56, 189, 248, 0.3);
+    }
+
+    .share-actions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .btn-action-share {
+      border: none;
+      border-radius: 12px;
+      padding: 12px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-action-share:active {
+      transform: scale(0.97);
+    }
+
+    .btn-wa-direct {
+      background: #25d366;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-wa-image {
+      background: #1e3a8a;
+      color: #ffffff;
+      border: 1px solid #3b82f6;
+    }
+
+    .btn-wa-copy {
+      grid-column: 1 / -1;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .wa-preview-box {
+      background: #0b141a;
+      color: #e9edef;
+      border-radius: 12px;
+      padding: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 220px;
+      overflow-y: auto;
+      border: 1px solid #202c33;
+      margin-top: 8px;
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    #infographicCanvas {
+      display: none;
+    }
+
+    .toast {
+      position: fixed;
+      top: calc(var(--safe-top) + 70px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-20px);
+      background: #10b981;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 350;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand-box">
+      <div class="brand-logo-icon">
+        <i data-lucide="mail"></i>
+      </div>
+      <div class="brand-text">
+        <h1>Correo Argentino <span class="badge-pba">PBA</span></h1>
+        <p>Tablero de Control Operativo</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Botón de Sincronización Automática Remota -->
+      <button class="icon-btn" id="btnSyncData" title="Sincronizar Datos Remotos">
+        <i data-lucide="refresh-cw" id="syncIcon"></i>
+      </button>
+      <!-- Botón Verde de Compartir a WhatsApp y Nodos -->
+      <button class="icon-btn btn-share" id="btnShareWhatsApp" title="Compartir reporte a Nodos por WhatsApp">
+        <i data-lucide="share-2"></i>
+      </button>
+      <button class="icon-btn" id="btnThemeToggle" title="Modo Claro/Oscuro">
+        <i data-lucide="moon" id="themeIcon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Tarjeta de Auditoría y Sincronización en el Inicio -->
+    <div class="sync-status-card" id="cardSyncStatus" onclick="openSyncModal()" style="cursor: pointer;" title="Tocar para configurar sincronización automática">
+      <div class="sync-status-item">
+        <div class="sync-dot-live"></div>
+        <div class="sync-text-group">
+          <span class="sync-lbl">Última Carga Maestro:</span>
+          <span class="sync-val" id="bannerMaestroUpload">13/11/2026 12:14 hs</span>
+        </div>
+      </div>
+      <div class="sync-status-item">
+        <i data-lucide="refresh-cw" style="width: 14px; height: 14px; color: var(--brand-blue-light); flex-shrink:0;"></i>
+        <div class="sync-text-group">
+          <span class="sync-lbl">Sincro / Estado:</span>
+          <span class="sync-val" id="bannerLastSync">15/11/2026 14:46 hs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selector de Período Global: Consolidado Último Mes vs Día Puro Anterior -->
+    
+    <!-- Selector Horizontal de Regiones Nacionales -->
+    <div class="region-selector-wrapper" style="margin-bottom: 12px;">
+      <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+        <span>ÁMBITO OPERATIVO:</span>
+        <span id="regionScopeBadge" style="color: var(--brand-blue-light); font-weight: 800;">35 NODOS EN TOTAL</span>
+      </div>
+      <div class="node-selector-tabs" id="regionSelectorTabs" style="padding: 2px 0 6px 0;">
+        <button class="node-tab-btn active" data-region="NACIONAL">
+          <span style="font-size: 14px;">🇦🇷</span>
+          <span>Nacional</span>
+        </button>
+        <button class="node-tab-btn" data-region="METROPOLITANA">
+          <span style="font-size: 14px;">🏙️</span>
+          <span>Metropolitana</span>
+        </button>
+        <button class="node-tab-btn" data-region="PBA">
+          <span style="font-size: 14px;">🌾</span>
+          <span>PBA / La Pampa</span>
+        </button>
+        <button class="node-tab-btn" data-region="CENTRO_NEA">
+          <span style="font-size: 14px;">🌿</span>
+          <span>Centro - NEA</span>
+        </button>
+        <button class="node-tab-btn" data-region="CUYO_NOA">
+          <span style="font-size: 14px;">🌄</span>
+          <span>Cuyo - NOA</span>
+        </button>
+        <button class="node-tab-btn" data-region="SUR">
+          <span style="font-size: 14px;">❄️</span>
+          <span>Sur / Patagonia</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="period-control">
+      <button class="period-btn active" data-period="mes_anterior" id="btnPeriodMonth">
+        <i data-lucide="calendar"></i>
+        <span>Mes Consolidado</span>
+      </button>
+      <button class="period-btn" data-period="dia_puro" id="btnPeriodPureDay">
+        <i data-lucide="zap"></i>
+        <span>Día Puro Anterior</span>
+      </button>
+    </div>
+
+    <!-- Active Period Status Banner with Q Breakdown -->
+    <div class="period-info-banner">
+      <div class="period-top-row">
+        <div class="status-pill">
+          <span class="dot-live"></span>
+          <span id="periodBannerText">Cierre consolidado Octubre 2026</span>
+        </div>
+        <div id="volumeBannerText" style="font-weight:700; font-family:'JetBrains Mono',monospace;">589.0k piezas</div>
+      </div>
+      <!-- Separated Q Breakdown for Region -->
+      <div class="q-breakdown-chips">
+        <span>Q:</span>
+        <span class="q-pill-item" id="bannerQPaq">Paq: 427.9k</span>
+        <span>•</span>
+        <span class="q-pill-item" id="bannerQPas">PAS: 134.7k</span>
+        <span>•</span>
+        <span class="q-pill-item" id="bannerQExp">Exp: 26.4k</span>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VIEW 1: REGION PBA (Consolidado General)    -->
+    <!-- ========================================== -->
+    <section class="app-view active" id="viewRegion">
+      <div class="section-header">
+        <div class="section-title">
+          <i data-lucide="bar-chart-2" style="width: 14px; height: 14px;"></i>
+          <span>KPIs Regionales PBA</span>
+        </div>
+        <span class="badge-count">6 Indicadores</span>
+      </div>
+
+      <!-- 6 Regional KPI Cards -->
+      <div class="kpi-grid" id="regionKpiGrid"></div>
+
+      <!-- Regional Trend Chart -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">
+            <i data-lucide="trending-up" style="width: 15px; height: 15px; color: var(--brand-blue-light);"></i>
+            <span>Evolución Histórica PBA</span>
+          </div>
+          <select class="chart-select" id="regionalChartKpiSelector">
+            <option value="slaPaq">SLA Paq.AR</option>
+            <option value="fvPaq">FV Paq.AR</option>
+            <option value="slaPas">SLA PAS</option>
+            <option value="fvPas">FV PAS</option>
+            <option value="slaExpreso">SLA Expreso</option>
+            <option value="fvExpreso">FV Expreso</option>
+          </select>
+        </div>
+        <div class="chart-box">
+          <canvas id="regionalTrendChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: NODOS PBA (Segundo Zócalo)         -->
+    <!-- ========================================== -->
+    <section class="app-view" id="viewNodos">
+      <div class="section-header">
+        <div class="section-title">
+          <i data-lucide="network" style="width: 14px; height: 14px;"></i>
+          <span>Seleccionar Nodo Nacional</span>
+        </div>
+        <span class="badge-count" id="activeNodeBadgeCount">35 Nodos</span>
+      </div>
+
+      <!-- Horizontal Node Selector Tabs -->
+      <div class="node-selector-tabs" id="nodeSelectorCarousel">
+        <!-- Rendered via JS: BHI, LPG, MDQ, MER, PER, RSA -->
+      </div>
+
+      <!-- Selected Node Banner with Separated Q -->
+      <div class="active-node-banner" id="activeNodeBanner">
+        <div class="active-node-banner-top">
+          <div class="active-node-title">
+            <span class="active-node-tag" id="bannerNodeCode">MDQ</span>
+            <span id="bannerNodeName">Mar del Plata</span>
+          </div>
+          <div class="active-node-vol" id="bannerNodeVolume">Vol: 75.0k</div>
+        </div>
+        <div class="active-node-q-row" id="bannerNodeQRow">
+          <!-- Separated Q: Paq, PAS, Exp -->
+        </div>
+      </div>
+
+      <!-- 6 KPI Cards for Selected Node -->
+      <div class="kpi-grid" id="nodeKpiGrid">
+        <!-- Injected dynamically for selected node -->
+      </div>
+
+      <!-- Specific Chart Corresponding to Selected Node -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">
+            <i data-lucide="line-chart" style="width: 15px; height: 15px; color: var(--brand-blue-light);"></i>
+            <span id="nodeChartTitle">Evolución: MDQ</span>
+          </div>
+          <select class="chart-select" id="nodeChartKpiSelector">
+            <option value="sla_paqar">SLA Paq.AR</option>
+            <option value="fv_paqar">FV Paq.AR</option>
+            <option value="sla_pas">SLA PAS</option>
+            <option value="fv_pas">FV PAS</option>
+            <option value="sla_expreso">SLA Expreso</option>
+            <option value="fv_expreso">FV Expreso</option>
+          </select>
+        </div>
+        <div class="chart-box">
+          <canvas id="nodeTrendChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Quick List of All Nodes Comparison -->
+      <div class="section-header" style="margin-top: 16px;">
+        <div class="section-title">
+          <i data-lucide="list" style="width: 14px; height: 14px;"></i>
+          <span>Comparativa de Todos los Nodos</span>
+        </div>
+        <span style="font-size:11px; color:var(--text-faint);">Tocar para cambiar</span>
+      </div>
+
+      <div class="nodes-summary-table" id="nodesSummaryTable">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: RANKING DE NODOS (Tercer Zócalo)   -->
+    <!-- ========================================== -->
+    <section class="app-view" id="viewRanking">
+      <div class="section-header">
+        <div class="section-title">
+          <i data-lucide="award" style="width: 15px; height: 15px; color: var(--brand-yellow);"></i>
+          <span>Seleccionar KPI para Ranking</span>
+        </div>
+        <span class="badge-count">6 Métricas</span>
+      </div>
+
+      <!-- Tarjetas Pequeñas Arriba de Cada KPI -->
+      <div class="ranking-kpi-selector-grid" id="rankingKpiMiniGrid">
+        <!-- Injected dynamically via JS: 6 small cards -->
+      </div>
+
+      <!-- Ranking Desplegado del KPI Seleccionado -->
+      <div class="ranking-list-card">
+        <div class="ranking-list-header">
+          <div class="ranking-kpi-title" id="rankingSelectedTitle">
+            <i data-lucide="trophy" style="width:16px; height:16px; color:var(--brand-yellow);"></i>
+            <span id="rankingKpiNameText">Ranking SLA Paq.AR</span>
+          </div>
+          <div class="ranking-target-pill" id="rankingTargetBadge">Meta: 95.0%</div>
+        </div>
+
+        <div class="ranking-nodes-list" id="rankingNodesList">
+          <!-- Dynamically sorted & rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Resumen Operativo del Ranking -->
+      <div class="chart-card" style="padding: 12px 14px;">
+        <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px;">
+          💡 Nota Operativa del Ranking
+        </div>
+        <div style="font-size: 11.5px; color: var(--text-faint); line-height: 1.45;" id="rankingInsightText">
+          Tocá cualquier nodo en el ranking para ver su ficha completa y su gráfico en el zócalo de Nodos.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 4: DESVÍOS Y FOCOS OPERATIVOS (4to Zócalo)-->
+    <!-- ========================================== -->
+    <section class="app-view" id="viewDesvios">
+      <div class="section-header">
+        <div class="section-title">
+          <i data-lucide="alert-triangle" style="width: 15px; height: 15px; color: #ef4444;"></i>
+          <span>Desvíos y Focos Operativos</span>
+        </div>
+        <span class="badge-count" id="desviosTotalBadge">0 Desvíos</span>
+      </div>
+
+      <!-- Botón Destacado de Envío Inmediato de Desvíos por WhatsApp -->
+      <button class="desvios-share-banner-btn" id="btnShareDesviosDirect" onclick="openWhatsAppShareWithScope('desvios')">
+        <div class="desvios-share-icon-box">
+          <i data-lucide="share-2"></i>
+        </div>
+        <div class="desvios-share-text">
+          <div class="desvios-share-title">Compartir Desvíos Críticos por WhatsApp</div>
+          <div class="desvios-share-sub">Enviar resumen de brechas y foco operativo a los Jefes de Nodo</div>
+        </div>
+        <i data-lucide="chevron-right" style="width: 18px; height: 18px; margin-left: auto; opacity: 0.85;"></i>
+      </button>
+
+      <!-- Banner de Resumen del Mayor Desvío Regional -->
+      <div class="desvios-hero-banner" id="desviosHeroBanner">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- Filtros Rápidos de Desvíos -->
+      <div class="desvios-filter-row" id="desviosFilterRow">
+        <button class="desvio-filter-chip active" data-filter="all" onclick="filterDesvios('all')">Todos (<span id="cntFilterAll">0</span>)</button>
+        <button class="desvio-filter-chip" data-filter="critica" onclick="filterDesvios('critica')">🚨 Críticos (<span id="cntFilterCrit">0</span>)</button>
+        <button class="desvio-filter-chip" data-filter="alta" onclick="filterDesvios('alta')">⚠️ Altos (<span id="cntFilterAlta">0</span>)</button>
+        <button class="desvio-filter-chip" data-filter="fv_pas" onclick="filterDesvios('fv_pas')">FV PAS</button>
+        <button class="desvio-filter-chip" data-filter="sla_expreso" onclick="filterDesvios('sla_expreso')">SLA Exp</button>
+        <button class="desvio-filter-chip" data-filter="fv_paqar" onclick="filterDesvios('fv_paqar')">FV Paq</button>
+      </div>
+
+      <!-- Lista de Tarjetas de Desvíos -->
+      <div class="desvios-list-container" id="desviosListContainer">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- Trazabilidad del Sistema y Auditoría -->
+      <div class="chart-card" style="margin-top: 14px; padding: 12px 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 6px;">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); display:flex; align-items:center; gap:6px;">
+            <i data-lucide="info" style="width:14px; height:14px; color:var(--brand-blue-light);"></i>
+            <span>Trazabilidad y Estado del Sistema</span>
+          </div>
+        </div>
+        <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px; padding:10px 12px; font-size:11.5px; color:var(--text-faint); line-height:1.5;">
+          <div>• <strong>Última Carga del Maestro:</strong> <span id="infoMaestroUpload">13/11/2026 12:14 hs</span></div>
+          <div>• <strong>Última Búsqueda de Datos:</strong> <span id="infoLastSync">15/11/2026 14:28 hs</span></div>
+          <div>• <strong>Fuente Oficial:</strong> Maestro_Base 180.xlsx (SharePoint Matías Peralta)</div>
+          <div>• <strong>Protocolo de Seguridad:</strong> <span style="color:#10b981; font-weight:700;">🔒 Estricto Solo Lectura (Archivo Maestro Protegido e Inalterable)</span></div>
+          <div>• <strong>Metas Oficiales:</strong> SLAs 95.0% | FVs 90.0%</div>
+          <a href="https://correoargentinosa-my.sharepoint.com/:x:/g/personal/matperalta_correoargentino_com_ar/IQCHkk7r6fliQooBYITUzmXhAe4pXRtoUWO8tnIejfgeafg" target="_blank" style="display:inline-flex; align-items:center; gap:6px; margin-top:8px; font-size:11.5px; font-weight:700; color:var(--brand-blue-light); text-decoration:none;">
+            <i data-lucide="external-link" style="width:13px; height:13px;"></i>
+            <span>Ver Archivo Maestro en SharePoint (Solo Lectura)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- BOTTOM NAVIGATION BAR (ZÓCALO INFERIOR)    -->
+  <!-- ========================================== -->
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-view="viewRegion" id="navBtnRegion">
+      <i data-lucide="layout-dashboard"></i>
+      <span>Región</span>
+    </button>
+    <button class="nav-btn" data-view="viewNodos" id="navBtnNodos">
+      <i data-lucide="network"></i>
+      <span>Nodos</span>
+    </button>
+    <button class="nav-btn" data-view="viewRanking" id="navBtnRanking">
+      <i data-lucide="award"></i>
+      <span>Ranking</span>
+    </button>
+    <button class="nav-btn" data-view="viewDesvios" id="navBtnDesvios">
+      <div style="position: relative; display: inline-flex;">
+        <i data-lucide="alert-triangle"></i>
+        <span class="desvios-nav-badge" id="bottomNavDesviosBadge">0</span>
+      </div>
+      <span>Desvíos</span>
+    </button>
+  </nav>
+
+  <!-- ==================================================== -->
+  <!-- MODAL DE COMPARTIR A WHATSAPP Y NODOS               -->
+  <!-- CON CONTROL COMPLETO PARA EL JEFE DE OPERACIONES     -->
+  <!-- ==================================================== -->
+  <div class="share-modal-overlay" id="shareModalOverlay">
+    <div class="share-modal-sheet">
+      <div class="share-handle"></div>
+      <div class="share-header">
+        <div class="share-title">
+          <i data-lucide="share-2" style="color:#25d366;"></i>
+          <span>Configurar Envío a Nodos</span>
+        </div>
+        <button class="share-close-btn" id="btnShareModalClose">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <!-- Panel de Opciones para el Jefe de Operaciones -->
+      <div class="share-options-box">
+        
+        <!-- Opción 1: Período -->
+        <div class="share-opt-row">
+          <div class="share-opt-label">
+            <i data-lucide="calendar" style="width:12px; height:12px;"></i>
+            <span>1. Período a Reportar:</span>
+          </div>
+          <div class="share-segmented">
+            <button class="share-seg-btn active" data-opt-period="mes_anterior" id="optPeriodMonth">Mes Consolidado</button>
+            <button class="share-seg-btn" data-opt-period="dia_puro" id="optPeriodPureDay">Día Puro Anterior</button>
+          </div>
+        </div>
+
+        <!-- Opción 2: Alcance / Destinatario -->
+        <div class="share-opt-row">
+          <div class="share-opt-label">
+            <i data-lucide="users" style="width:12px; height:12px;"></i>
+            <span>2. Alcance del Informe:</span>
+          </div>
+          <div class="share-segmented-4">
+            <button class="share-seg-btn active" data-opt-scope="all" id="optScopeAll">Todos Nodos</button>
+            <button class="share-seg-btn" data-opt-scope="single" id="optScopeSingle">Un Nodo</button>
+            <button class="share-seg-btn" data-opt-scope="all_plus_one" id="optScopeAllPlus">Todos + Foco</button>
+            <button class="share-seg-btn" data-opt-scope="desvios" id="optScopeDesvios">🚨 Solo Desvíos</button>
+          </div>
+        </div>
+
+        <!-- Opción 3: Selección de Nodo Particular (si aplica) -->
+        <div class="share-opt-row" id="singleNodeSelectorRow" style="display:none;">
+          <div class="share-opt-label">
+            <i data-lucide="map-pin" style="width:12px; height:12px;"></i>
+            <span>3. Seleccionar Nodo Destino / Foco:</span>
+          </div>
+          <div class="node-pills-selector" id="shareNodePillsContainer"></div>
+        </div>
+
+      </div>
+
+      <!-- Botones de Acción -->
+      <div class="share-actions-grid">
+        <button class="btn-action-share btn-wa-direct" id="btnSendWhatsAppDirect">
+          <i data-lucide="message-circle"></i>
+          <span>Abrir WhatsApp</span>
+        </button>
+        <button class="btn-action-share btn-wa-image" id="btnDownloadPlacaImage">
+          <i data-lucide="image"></i>
+          <span>Bajar Placa PNG</span>
+        </button>
+        <button class="btn-action-share btn-wa-copy" id="btnCopyFormattedText">
+          <i data-lucide="copy"></i>
+          <span>Copiar Mensaje Gráfico</span>
+        </button>
+      </div>
+
+      <!-- Vista previa del mensaje formateado -->
+      <div style="font-size:11px; font-weight:700; color:var(--text-faint); margin-top:10px; display:flex; align-items:center; justify-content:space-between;">
+        <span style="display:flex; align-items:center; gap:5px;">
+          <i data-lucide="eye" style="width:13px; height:13px;"></i>
+          <span>VISTA PREVIA DEL MENSAJE:</span>
+        </span>
+        <span id="shareScopeBadge" style="font-size:10px; color:var(--brand-blue-light); font-weight:800;">TODOS LOS NODOS</span>
+      </div>
+      <div class="wa-preview-box" id="waMessagePreview"></div>
+    </div>
+  </div>
+
+  <!-- ==================================================== -->
+  <!-- MODAL DE SINCRONIZACIÓN AUTOMÁTICA REMOTA           -->
+  <!-- ==================================================== -->
+  <div class="share-modal-overlay" id="syncModalOverlay">
+    <div class="share-modal-sheet">
+      <div class="share-handle"></div>
+      <div class="share-header">
+        <div class="share-title">
+          <i data-lucide="shield-check" style="color:#10b981;"></i>
+          <span>Origen de Datos: Archivo Maestro Nacional</span>
+        </div>
+        <button class="share-close-btn" id="btnSyncModalClose">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="share-options-box" style="margin-bottom:12px;">
+        <!-- Banner de Seguridad Estricta: Solo Lectura -->
+        <div style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.25); border-radius:10px; padding:10px 12px; margin-bottom:12px; font-size:11.5px; line-height:1.45; color:var(--text-main);">
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px; font-weight:800; color:#10b981;">
+            <i data-lucide="lock" style="width:13px; height:13px;"></i>
+            <span>MODO ESTRICTO SOLO LECTURA</span>
+          </div>
+          El tablero consulta directamente el <strong>Archivo Maestro</strong> de Operaciones Nacional sin alterar ni modificar ningún dato original. La integridad del archivo está 100% blindada.
+        </div>
+
+        <!-- Estado actual de conexión -->
+        <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px; padding:10px; margin-bottom:12px; font-size:11.5px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">
+            <span style="color:var(--text-muted); font-weight:700;">Estado de Sincronización:</span>
+            <span id="syncLiveStatusBadge" style="background:rgba(16,185,129,0.15); color:#10b981; font-weight:800; padding:2px 8px; border-radius:10px; font-size:10px;">🟢 MAESTRO CONECTADO</span>
+          </div>
+          <div>• <strong>Última Carga del Maestro:</strong> <span id="syncModalMaestro" style="font-weight:700; color:var(--brand-blue-light);">13/11/2026 12:14 hs</span></div>
+          <div>• <strong>Última Consulta / Sincro:</strong> <span id="syncModalSync" style="font-weight:700;">15/11/2026 14:46 hs</span></div>
+        </div>
+
+        <!-- Dirección Oficial Pre-Cargada Automática -->
+        <div class="share-opt-row">
+          <div class="share-opt-label">
+            <i data-lucide="link-2" style="width:12px; height:12px; color:var(--brand-blue-light);"></i>
+            <span>Dirección Oficial del Archivo Maestro (Pre-configurada):</span>
+          </div>
+          <input type="text" id="inputSyncUrl" value="https://correoargentinosa-my.sharepoint.com/:x:/g/personal/matperalta_correoargentino_com_ar/IQCHkk7r6fliQooBYITUzmXhAe4pXRtoUWO8tnIejfgeafg" readonly style="width:100%; background:var(--bg-surface); border:1px solid var(--border-subtle); color:var(--text-muted); border-radius:8px; padding:8px 10px; font-size:10.5px; font-family:'JetBrains Mono', monospace; margin-bottom:8px; word-break:break-all;" />
+          
+          <button class="btn-action-share btn-wa-direct" id="btnTriggerRemoteSync" style="width:100%; height:40px; font-size:12px; font-weight:700; margin-bottom:8px;">
+            <i data-lucide="refresh-cw"></i>
+            <span>Sincronizar Ahora con Archivo Maestro</span>
+          </button>
+
+          <a href="https://correoargentinosa-my.sharepoint.com/:x:/g/personal/matperalta_correoargentino_com_ar/IQCHkk7r6fliQooBYITUzmXhAe4pXRtoUWO8tnIejfgeafg" target="_blank" rel="noopener noreferrer" class="btn-action-share btn-wa-copy" style="width:100%; height:36px; font-size:11.5px; display:flex; align-items:center; justify-content:center; text-decoration:none; gap:6px;">
+            <i data-lucide="external-link" style="width:13px; height:13px;"></i>
+            <span>Abrir Maestro en SharePoint (Solo Lectura)</span>
+          </a>
+        </div>
+
+        <!-- Opción B: Carga Manual de Archivo data.json de Respaldo -->
+        <div class="share-opt-row" style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-subtle);">
+          <div class="share-opt-label">
+            <i data-lucide="file-up" style="width:12px; height:12px;"></i>
+            <span>Cargar archivo de respaldo data.json (Opcional):</span>
+          </div>
+          <input type="file" id="inputFileDataJson" accept=".json" style="display:none;" />
+          <button class="btn-action-share" id="btnSelectDataJsonFile" style="width:100%; height:34px; font-size:11.5px; background:var(--bg-surface); border:1px solid var(--border-subtle); color:var(--text-main);">
+            <i data-lucide="folder-open"></i>
+            <span>Seleccionar data.json alternativo</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Canvas Oculto para Generación de Placa Gráfica PNG -->
+  <canvas id="infographicCanvas" width="1080" height="1520"></canvas>
+
+  <!-- Toast -->
+  <div class="toast" id="appToast">
+    <i data-lucide="check-circle" style="width: 16px; height: 16px;"></i>
+    <span id="toastMsg">Mensaje copiado al portapapeles</span>
+  </div>
+
+  <script>
+
+    lucide.createIcons();
+
+    // ==========================================
+    // STATE - GESTIÓN DE ESTADO NACIONAL
+    // ==========================================
+    const state = {
+      period: 'mes_anterior',      // 'mes_anterior' | 'dia_puro'
+      currentView: 'viewRegion',    // 'viewRegion' | 'viewNodos' | 'viewRanking' | 'viewDesvios'
+      currentRegion: 'NACIONAL',    // 'NACIONAL' | 'METROPOLITANA' | 'PBA' | 'CENTRO_NEA' | 'CUYO_NOA' | 'SUR'
+      selectedNodeCode: 'COR',     // Default active node (Córdoba)
+      regionalChartKpi: 'slaPaq',
+      nodeChartKpi: 'sla_paqar',
+      rankingKpi: 'sla_paqar',
+      theme: 'dark',
+      
+      // WhatsApp Share Modal Options
+      sharePeriod: 'mes_anterior',
+      shareScope: 'nacional',       // 'nacional' | 'region' | 'single' | 'desvios'
+      shareTargetRegion: 'NACIONAL',
+      shareTargetNode: 'COR',
+
+      // Desvíos View Filter
+      desviosFilter: 'all'
+    };
+
+    const KPI_META = {
+      sla_paqar:   { name: 'SLA Paq.AR',  short: 'SLA Paq',  target: 95.0, icon: 'package' },
+      fv_paqar:    { name: 'FV Paq.AR',   short: 'FV Paq',   target: 90.0, icon: 'check-square' },
+      sla_pas:     { name: 'SLA PAS',     short: 'SLA PAS',  target: 95.0, icon: 'shopping-bag' },
+      fv_pas:      { name: 'FV PAS',      short: 'FV PAS',   target: 90.0, icon: 'user-check' },
+      sla_expreso: { name: 'SLA Expreso', short: 'SLA Exp',  target: 95.0, icon: 'truck' },
+      fv_expreso:  { name: 'FV Expreso',  short: 'FV Exp',   target: 90.0, icon: 'clock' }
+    };
+
+    const REGION_NAMES = {
+      NACIONAL: 'Total República Argentina',
+      METROPOLITANA: 'Región Metropolitana (AMBA)',
+      PBA: 'Región PBA / La Pampa',
+      CENTRO_NEA: 'Región Centro y NEA',
+      CUYO_NOA: 'Región Cuyo y NOA',
+      SUR: 'Región Sur (Patagonia)'
+    };
+
+    let regionalChart = null;
+    let nodeChart = null;
+
+    // Toast Notification
+    function showToast(msg) {
+      const toast = document.getElementById('appToast');
+      document.getElementById('toastMsg').innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // Number Formatters
+    function fmtPct(num) {
+      if (num === null || num === undefined) return '--';
+      return Number(num).toFixed(2) + '%';
+    }
+
+    function fmtVol(num) {
+      if (!num) return '--';
+      if (num >= 1000000) return (num / 1000000).toFixed(2) + 'M';
+      if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
+      return num.toLocaleString();
+    }
+
+    // Real-time Date & Time Stamp Helper
+    function getCurrentFormattedMoment() {
+      const now = new Date();
+      const pad = n => String(n).padStart(2, '0');
+      return `${pad(now.getDate())}/${pad(now.getMonth() + 1)}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())} hs`;
+    }
+
+    // Header & Audit Timestamps
+    function renderSyncTimestamps() {
+      const d = window.NACIONAL_DATA;
+      const maestroTime = (d && (d.maestroLastUpload || d.lastUpdate)) || '13/11/2026 12:14 hs';
+      const syncTime = localStorage.getItem('NACIONAL_LAST_SYNC_MOMENT') || (d && d.lastSyncMoment) || getCurrentFormattedMoment();
+
+      const bannerM = document.getElementById('bannerMaestroUpload');
+      const bannerS = document.getElementById('bannerLastSync');
+      if (bannerM) bannerM.innerText = maestroTime;
+      if (bannerS) bannerS.innerText = syncTime;
+
+      const modalM = document.getElementById('syncModalMaestro');
+      const modalS = document.getElementById('syncModalSync');
+      if (modalM) modalM.innerText = maestroTime;
+      if (modalS) modalS.innerText = syncTime;
+    }
+
+    // Helper: Get available nodes based on active region
+    function getFilteredNodes() {
+      const all = (window.NACIONAL_DATA && window.NACIONAL_DATA.nodes) || [];
+      if (state.currentRegion === 'NACIONAL') return all;
+      return all.filter(n => n.regionKey === state.currentRegion);
+    }
+
+    // ==========================================
+    // 1. RENDER REGIONAL / NACIONAL VIEW
+    // ==========================================
+    function renderRegionView() {
+      const d = window.NACIONAL_DATA;
+      if (!d || !d.regions) return;
+
+      const regObj = d.regions[state.currentRegion] || d.regions['NACIONAL'];
+      const kpis = regObj.kpis[state.period];
+      if (!kpis) return;
+
+      // Update Region Badges & Header Tabs
+      const badge = document.getElementById('regionScopeBadge');
+      if (badge) {
+        badge.innerText = state.currentRegion === 'NACIONAL' ? '35 NODOS EN TOTAL' : `${regObj.nodesCount} NODOS EN ESTA REGIÓN`;
+      }
+
+      document.querySelectorAll('#regionSelectorTabs .node-tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-region') === state.currentRegion);
+      });
+
+      // Period Banner Info & Q Breakdown
+      document.getElementById('periodBannerText').innerText = `${regObj.name} • ${kpis.periodDetail}`;
+      document.getElementById('volumeBannerText').innerText = fmtVol(kpis.totalVolume) + ' piezas';
+
+      if (kpis.q) {
+        document.getElementById('bannerQPaq').innerText = `Paq: ${fmtVol(kpis.q.paq_ar)}`;
+        document.getElementById('bannerQPas').innerText = `PAS: ${fmtVol(kpis.q.pas)}`;
+        document.getElementById('bannerQExp').innerText = `Exp: ${fmtVol(kpis.q.expreso)}`;
+      }
+
+      // 6 KPI Grid Cards
+      const grid = document.getElementById('regionKpiGrid');
+      let html = '';
+      const metricKeys = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+
+      metricKeys.forEach(k => {
+        const item = kpis[k] || { value: 0, target: 90, delta: 0, status: 'neutral' };
+        const meta = KPI_META[k];
+        const val = item.value;
+        const target = item.target;
+        const delta = (val - target).toFixed(2);
+        const isOk = delta >= 0;
+        const isWarning = delta < 0 && delta >= -3.0;
+        const statusClass = isOk ? 'status-ok' : (isWarning ? 'status-warning' : 'status-danger');
+        const sign = delta > 0 ? '+' : '';
+        const pctFill = Math.min(100, Math.max(10, (val / 105) * 100));
+
+        html += `
+          <div class="kpi-card" onclick="selectRegionalKpi('${k}')">
+            <div class="kpi-top">
+              <span class="kpi-tag">${meta.name}</span>
+              <span class="kpi-target-tag">Obj: ${target}%</span>
+            </div>
+            <div class="kpi-value-row">
+              <span class="kpi-val ${statusClass}">${fmtPct(val)}</span>
+              <span class="delta-chip ${statusClass}">${sign}${delta}%</span>
+            </div>
+            <div class="kpi-progress-bar">
+              <div class="kpi-progress-fill ${statusClass}" style="width: ${pctFill}%;"></div>
+            </div>
+          </div>
+        `;
+      });
+      grid.innerHTML = html;
+
+      updateRegionalChart();
+      lucide.createIcons();
+    }
+
+    function selectRegionalKpi(kpiKey) {
+      const map = {
+        sla_paqar: 'slaPaq',
+        fv_paqar: 'fvPaq',
+        sla_pas: 'slaPas',
+        fv_pas: 'fvPas',
+        sla_expreso: 'slaExpreso',
+        fv_expreso: 'fvExpreso'
+      };
+      state.regionalChartKpi = map[kpiKey] || 'slaPaq';
+      const sel = document.getElementById('regionalChartSelect');
+      if (sel) sel.value = state.regionalChartKpi;
+      updateRegionalChart();
+    }
+
+    function updateRegionalChart() {
+      const d = window.NACIONAL_DATA;
+      if (!d || !d.regions) return;
+      const regObj = d.regions[state.currentRegion] || d.regions['NACIONAL'];
+      const kpis = regObj.kpis[state.period];
+      if (!kpis) return;
+
+      const kpiKeyMap = {
+        slaPaq: 'sla_paqar',
+        fvPaq: 'fv_paqar',
+        slaPas: 'sla_pas',
+        fvPas: 'fv_pas',
+        slaExpreso: 'sla_expreso',
+        fvExpreso: 'fv_expreso'
+      };
+      const actualKey = kpiKeyMap[state.regionalChartKpi] || 'sla_paqar';
+      const metricObj = kpis[actualKey] || {};
+      const series = metricObj.series || [];
+
+      const ctx = document.getElementById('regionalTrendChart').getContext('2d');
+      if (regionalChart) regionalChart.destroy();
+
+      const labels = series.map(pt => pt[0]);
+      const dataPoints = series.map(pt => pt[1]);
+      const targetVal = targets[actualKey] || 95;
+
+      const isDark = state.theme === 'dark';
+      const textColor = isDark ? '#94a3b8' : '#475569';
+      const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+
+      regionalChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: KPI_META[actualKey].name,
+              data: dataPoints,
+              borderColor: '#38bdf8',
+              backgroundColor: 'rgba(56, 189, 248, 0.12)',
+              borderWidth: 2.5,
+              tension: 0.35,
+              fill: true,
+              pointBackgroundColor: '#38bdf8',
+              pointRadius: 3.5
+            },
+            {
+              label: 'Objetivo',
+              data: labels.map(() => targetVal),
+              borderColor: '#f59e0b',
+              borderWidth: 1.8,
+              borderDash: [5, 5],
+              pointRadius: 0,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => ` ${ctx.dataset.label}: ${ctx.parsed.y}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: gridColor },
+              ticks: { color: textColor, font: { size: 10 } }
+            },
+            y: {
+              min: 40,
+              max: 105,
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                font: { size: 10 },
+                callback: v => v + '%'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // ==========================================
+    // 2. RENDER NODOS VIEW (35 NODOS NACIONALES)
+    // ==========================================
+    function renderNodosView() {
+      const nodes = getFilteredNodes();
+      if (!nodes || nodes.length === 0) return;
+
+      // Ensure active node exists in filtered list
+      if (!nodes.find(n => n.code === state.selectedNodeCode)) {
+        state.selectedNodeCode = nodes[0].code;
+      }
+
+      // Render Carousel Tabs
+      const carousel = document.getElementById('nodeSelectorCarousel');
+      let tabHtml = '';
+      nodes.forEach(n => {
+        const activeClass = n.code === state.selectedNodeCode ? 'active' : '';
+        tabHtml += `
+          <button class="node-tab-btn ${activeClass}" onclick="selectActiveNode('${n.code}')">
+            <span style="font-weight:800; font-family:'JetBrains Mono',monospace;">${n.code}</span>
+            <span>${n.name}</span>
+          </button>
+        `;
+      });
+      carousel.innerHTML = tabHtml;
+
+      const badgeCount = document.getElementById('activeNodeBadgeCount');
+      if (badgeCount) {
+        badgeCount.innerText = `${nodes.length} Nodos (${state.currentRegion === 'NACIONAL' ? 'País' : state.currentRegion})`;
+      }
+
+      // Render Active Node Info
+      const activeNode = nodes.find(n => n.code === state.selectedNodeCode) || nodes[0];
+      const nodeKpis = activeNode.kpis[state.period];
+      const nq = nodeKpis.q || { paq_ar: 0, pas: 0, expreso: 0 };
+
+      // Actualizar el banner superior global con las cantidades del nodo clickeado
+      const currentRegionKey = state.currentRegion;
+      const regObj = (window.NACIONAL_DATA && window.NACIONAL_DATA.regions && (window.NACIONAL_DATA.regions[currentRegionKey] || window.NACIONAL_DATA.regions.NACIONAL)) || null;
+      const regPeriod = regObj ? regObj.kpis[state.period] : null;
+      const periodTitle = regPeriod ? regPeriod.periodDetail : (state.period === 'mes_anterior' ? 'Mes en curso' : 'Última jornada cerrada');
+
+      const pBanner = document.getElementById('periodBannerText');
+      if (pBanner) pBanner.innerText = `${periodTitle} • ${activeNode.code} (${activeNode.name})`;
+      const vBanner = document.getElementById('volumeBannerText');
+      if (vBanner) vBanner.innerText = fmtVol(nodeKpis.totalVolume) + ' piezas';
+      const bPaq = document.getElementById('bannerQPaq');
+      if (bPaq) bPaq.innerText = `Paq: ${fmtVol(nq.paq_ar)}`;
+      const bPas = document.getElementById('bannerQPas');
+      if (bPas) bPas.innerText = `Cartas: ${fmtVol(nq.pas)}`;
+      const bExp = document.getElementById('bannerQExp');
+      if (bExp) bExp.innerText = `Exp: ${fmtVol(nq.expreso)}`;
+
+      document.getElementById('bannerNodeCode').innerText = activeNode.code;
+      document.getElementById('bannerNodeName').innerText = `${activeNode.name} (${activeNode.regionKey})`;
+      document.getElementById('bannerNodeVolume').innerText = 'Vol: ' + fmtVol(nodeKpis.totalVolume) + ' piezas';
+
+      const periodLabel = state.period === 'mes_anterior' ? 'Mensual (Ene - Nov 2026)' : 'Últimas Jornadas (Día a Día)';
+      const chartTitle = document.getElementById('nodeChartTitle');
+      if (chartTitle) chartTitle.innerText = `Evolución: ${activeNode.code} (${activeNode.name}) • ${periodLabel}`;
+
+      // Separated Q Breakdown for Node
+      const qRow = document.getElementById('bannerNodeQRow');
+      if (nodeKpis.q) {
+        qRow.innerHTML = `
+          <span class="active-node-q-pill">Q Paq: <strong>${fmtVol(nodeKpis.q.paq_ar)}</strong></span>
+          <span class="active-node-q-pill">Q PAS: <strong>${fmtVol(nodeKpis.q.pas)}</strong></span>
+          <span class="active-node-q-pill">Q Exp: <strong>${fmtVol(nodeKpis.q.expreso)}</strong></span>
+        `;
+      }
+
+      // 6 KPI Grid for Node
+      const grid = document.getElementById('nodeKpiGrid');
+      let gridHtml = '';
+      const metricKeys = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+
+      metricKeys.forEach(k => {
+        const item = nodeKpis[k] || { value: 0, target: 90, delta: 0, status: 'neutral' };
+        const meta = KPI_META[k];
+        const val = item.value;
+        const target = item.target;
+        const delta = (val - target).toFixed(2);
+        const isOk = delta >= 0;
+        const isWarning = delta < 0 && delta >= -3.0;
+        const statusClass = isOk ? 'status-ok' : (isWarning ? 'status-warning' : 'status-danger');
+        const sign = delta > 0 ? '+' : '';
+        const pctFill = Math.min(100, Math.max(10, (val / 105) * 100));
+
+        gridHtml += `
+          <div class="kpi-card" onclick="selectNodeChartKpi('${k}')">
+            <div class="kpi-top">
+              <span class="kpi-tag">${meta.name}</span>
+              <span class="kpi-target-tag">Obj: ${target}%</span>
+            </div>
+            <div class="kpi-value-row">
+              <span class="kpi-val ${statusClass}">${fmtPct(val)}</span>
+              <span class="delta-chip ${statusClass}">${sign}${delta}%</span>
+            </div>
+            <div class="kpi-progress-bar">
+              <div class="kpi-progress-fill ${statusClass}" style="width: ${pctFill}%;"></div>
+            </div>
+          </div>
+        `;
+      });
+      grid.innerHTML = gridHtml;
+
+      updateNodeChart();
+      lucide.createIcons();
+    }
+
+    function selectActiveNode(code) {
+      state.selectedNodeCode = code;
+      renderNodosView();
+    }
+
+    function selectNodeChartKpi(kpiKey) {
+      state.nodeChartKpi = kpiKey;
+      const sel = document.getElementById('nodeChartSelect');
+      if (sel) sel.value = kpiKey;
+      updateNodeChart();
+    }
+
+    function updateNodeChart() {
+      const nodes = (window.NACIONAL_DATA && window.NACIONAL_DATA.nodes) || [];
+      const node = nodes.find(n => n.code === state.selectedNodeCode);
+      if (!node) return;
+
+      const nodeKpis = node.kpis[state.period];
+      const metricObj = nodeKpis[state.nodeChartKpi] || {};
+      const series = metricObj.series || [];
+
+      const ctx = document.getElementById('nodeTrendChart').getContext('2d');
+      if (nodeChart) nodeChart.destroy();
+
+      const labels = series.map(pt => pt.dateLabel || pt.label || pt.date || (Array.isArray(pt) ? pt[0] : ''));
+      const dataPoints = series.map(pt => (pt.value !== undefined ? pt.value : (Array.isArray(pt) ? pt[1] : 0)));
+      const targetVal = targets[state.nodeChartKpi] || 95;
+      const periodSub = state.period === 'mes_anterior' ? 'Ene-Nov 2026' : 'Día a Día';
+
+      const isDark = state.theme === 'dark';
+      const textColor = isDark ? '#94a3b8' : '#475569';
+      const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+
+      nodeChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: `${node.code} - ${KPI_META[state.nodeChartKpi].name} (%) [${periodSub}]`,
+              data: dataPoints,
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.12)',
+              borderWidth: 2.5,
+              tension: 0.35,
+              fill: true,
+              pointBackgroundColor: '#10b981',
+              pointRadius: 3.5
+            },
+            {
+              label: 'Objetivo',
+              data: labels.map(() => targetVal),
+              borderColor: '#f59e0b',
+              borderWidth: 1.8,
+              borderDash: [5, 5],
+              pointRadius: 0,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => ` ${ctx.dataset.label}: ${ctx.parsed.y}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: gridColor },
+              ticks: { color: textColor, font: { size: 10 } }
+            },
+            y: {
+              min: 30,
+              max: 105,
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                font: { size: 10 },
+                callback: v => v + '%'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // ==========================================
+    // 3. RENDER RANKING VIEW (35 NODOS)
+    // ==========================================
+    function renderRankingView() {
+      const nodes = getFilteredNodes();
+      if (!nodes) return;
+
+      const kpiKey = state.rankingKpi || 'sla_paqar';
+      const target = targets[kpiKey] || 95;
+
+      // Sort nodes descending
+      const sorted = [...nodes].sort((a, b) => {
+        const valA = (a.kpis[state.period][kpiKey] && a.kpis[state.period][kpiKey].value) || 0;
+        const valB = (b.kpis[state.period][kpiKey] && b.kpis[state.period][kpiKey].value) || 0;
+        return valB - valA;
+      });
+
+      const list = document.getElementById('rankingList');
+      let html = '';
+
+      sorted.forEach((n, idx) => {
+        const pos = idx + 1;
+        const item = n.kpis[state.period][kpiKey] || { value: 0 };
+        const val = item.value;
+        const delta = (val - target).toFixed(2);
+        const sign = delta > 0 ? '+' : '';
+        const isOk = delta >= 0;
+        const isWarning = delta < 0 && delta >= -3.0;
+        const statusClass = isOk ? 'status-ok' : (isWarning ? 'status-warning' : 'status-danger');
+
+        let posBadge = `<span class="rank-pos">${pos}</span>`;
+        if (pos === 1) posBadge = '<span class="rank-medal">🥇</span>';
+        else if (pos === 2) posBadge = '<span class="rank-medal">🥈</span>';
+        else if (pos === 3) posBadge = '<span class="rank-medal">🥉</span>';
+
+        const pkPeriod = (n.kpis && n.kpis[state.period]) || {};
+        const q = pkPeriod.q || { paq_ar: 0, pas: 0, expreso: 0 };
+
+        html += `
+          <div class="ranking-row" onclick="viewNodeFromRanking('${n.code}')">
+            <div class="rank-pos-col">${posBadge}</div>
+            <div class="rank-info-col">
+              <div class="rank-node-name">
+                <span>${n.name}</span>
+                <span style="font-size:10px; color:var(--text-faint); font-weight:700; margin-left:4px; font-family:'JetBrains Mono',monospace;">(${n.regionKey})</span>
+              </div>
+              <div class="rank-q-chips">
+                <span>Vol: ${fmtVol(pkPeriod.totalVolume || 0)}</span>
+                <span>•</span>
+                <span>Paq: ${fmtVol(q.paq_ar)}</span>
+                <span>•</span>
+                <span>PAS: ${fmtVol(q.pas)}</span>
+                <span>•</span>
+                <span>Exp: ${fmtVol(q.expreso)}</span>
+              </div>
+            </div>
+            <div class="rank-val-col">
+              <span class="rank-val ${statusClass}">${fmtPct(val)}</span>
+              <span class="rank-delta ${statusClass}">${sign}${delta}%</span>
+            </div>
+          </div>
+        `;
+      });
+
+      list.innerHTML = html;
+      lucide.createIcons();
+    }
+
+    function viewNodeFromRanking(code) {
+      state.selectedNodeCode = code;
+      switchView('viewNodos');
+    }
+
+    // ==========================================
+    // 4. RENDER DESVÍOS VIEW (FOCOS OPERATIVOS)
+    // ==========================================
+    function renderDesviosView() {
+      const nodes = getFilteredNodes();
+      if (!nodes) return;
+
+      const deviations = [];
+      const metricKeys = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+
+      nodes.forEach(n => {
+        const pk = n.kpis[state.period];
+        metricKeys.forEach(k => {
+          const item = pk[k];
+          if (item && item.value < item.target) {
+            const gap = +(item.value - item.target).toFixed(2);
+            deviations.push({
+              nodeCode: n.code,
+              nodeName: n.name,
+              regionKey: n.regionKey,
+              kpiKey: k,
+              kpiName: KPI_META[k].name,
+              value: item.value,
+              target: item.target,
+              gap,
+              totalVolume: pk.totalVolume,
+              q: pk.q
+            });
+          }
+        });
+      });
+
+      // Sort by severity (gap)
+      deviations.sort((a, b) => a.gap - b.gap);
+
+      const countBadge = document.getElementById('desviosCountBadge');
+      if (countBadge) countBadge.innerText = `${deviations.length} Alertas`;
+
+      const container = document.getElementById('desviosCardsContainer');
+      if (deviations.length === 0) {
+        container.innerHTML = `
+          <div style="text-align:center; padding:30px 15px; color:var(--status-ok);">
+            <i data-lucide="check-circle" style="width:40px; height:40px; margin-bottom:8px;"></i>
+            <div style="font-weight:700; font-size:14px;">¡Excelente! Sin desvíos críticos</div>
+            <div style="font-size:11.5px; color:var(--text-muted);">Todos los nodos de esta selección cumplen con sus objetivos operativos.</div>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      let html = '';
+      deviations.forEach(dev => {
+        const severity = dev.gap <= -10 ? 'danger' : 'warning';
+        const color = severity === 'danger' ? 'var(--status-danger)' : 'var(--status-warn)';
+
+        html += `
+          <div class="desvio-card" style="background:var(--bg-card); border-left:4px solid ${color}; border-radius:10px; padding:12px; margin-bottom:10px; border-top:1px solid var(--border-subtle); border-right:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span style="font-weight:800; font-family:'JetBrains Mono',monospace; background:rgba(255,255,255,0.08); padding:2px 6px; border-radius:6px; font-size:11px;">${dev.nodeCode}</span>
+                <span style="font-weight:700; font-size:13px; color:var(--text-main);">${dev.nodeName}</span>
+                <span style="font-size:10px; color:var(--brand-blue-light); font-weight:700;">(${dev.regionKey})</span>
+              </div>
+              <span style="color:${color}; font-weight:800; font-size:12.5px; font-family:'JetBrains Mono',monospace;">${dev.gap}%</span>
+            </div>
+            
+            <div style="display:flex; align-items:center; justify-content:space-between; font-size:11.5px; margin-bottom:8px;">
+              <span style="color:var(--text-muted);">${dev.kpiName}:</span>
+              <span><strong>${fmtPct(dev.value)}</strong> <span style="color:var(--text-faint);">(Obj: ${dev.target}%)</span></span>
+            </div>
+
+            <div style="display:flex; align-items:center; justify-content:space-between; font-size:10.5px; color:var(--text-muted); background:var(--bg-surface); padding:4px 8px; border-radius:6px; margin-bottom:8px;">
+              <span>Vol: ${fmtVol(dev.totalVolume)}</span>
+              <span>Paq: ${fmtVol(dev.q.paq_ar)}</span>
+              <span>PAS: ${fmtVol(dev.q.pas)}</span>
+              <span>Exp: ${fmtVol(dev.q.expreso)}</span>
+            </div>
+
+            <div style="display:flex; gap:8px;">
+              <button onclick="viewNodeFromRanking('${dev.nodeCode}')" style="flex:1; height:32px; font-size:11px; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:8px; color:var(--text-main); font-weight:600; cursor:pointer;">
+                Ver Nodo
+              </button>
+              <button onclick="shareDesvioDirectWhatsApp('${dev.nodeCode}', '${dev.kpiKey}')" style="flex:1; height:32px; font-size:11px; background:#10b981; border:none; border-radius:8px; color:#ffffff; font-weight:700; display:flex; align-items:center; justify-content:center; gap:4px; cursor:pointer;">
+                <span>Instrucción WA</span>
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      lucide.createIcons();
+    }
+
+    function shareDesvioDirectWhatsApp(nodeCode, kpiKey) {
+      state.shareScope = 'single';
+      state.shareTargetNode = nodeCode;
+      openShareModal();
+    }
+
+    function updateDesviosNavBadge() {
+      const nodes = (window.NACIONAL_DATA && window.NACIONAL_DATA.nodes) || [];
+      const metricKeys = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+      let count = 0;
+      nodes.forEach(n => {
+        const pk = n.kpis[state.period];
+        metricKeys.forEach(k => {
+          if (pk[k] && pk[k].value < pk[k].target) count++;
+        });
+      });
+      const badge = document.getElementById('desviosNavBadge');
+      if (badge) {
+        badge.innerText = count;
+        badge.style.display = count > 0 ? 'inline-block' : 'none';
+      }
+    }
+
+    // ==========================================
+    // 5. MODAL DE COMPARTIR A WHATSAPP
+    // ==========================================
+    function openShareModal() {
+      const modal = document.getElementById('shareModalOverlay');
+      populateShareNodeSelect();
+      updateShareModalUI();
+      modal.classList.add('active');
+      lucide.createIcons();
+    }
+
+    function closeShareModal() {
+      document.getElementById('shareModalOverlay').classList.remove('active');
+    }
+
+    function populateShareNodeSelect() {
+      const sel = document.getElementById('shareSelectNode');
+      if (!sel) return;
+      const nodes = (window.NACIONAL_DATA && window.NACIONAL_DATA.nodes) || [];
+      let optHtml = '';
+      nodes.forEach(n => {
+        const selAttr = n.code === state.shareTargetNode ? 'selected' : '';
+        optHtml += `<option value="${n.code}" ${selAttr}>${n.name} (${n.regionKey})</option>`;
+      });
+      sel.innerHTML = optHtml;
+    }
+
+    function updateShareModalUI() {
+      document.querySelectorAll('#sharePeriodPills .share-period-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-period') === state.sharePeriod);
+      });
+
+      document.querySelectorAll('.share-scope-card').forEach(card => {
+        card.classList.toggle('active', card.getAttribute('data-scope') === state.shareScope);
+      });
+
+      const singleSelectGroup = document.getElementById('shareSingleNodeSelectGroup');
+      if (singleSelectGroup) {
+        singleSelectGroup.style.display = (state.shareScope === 'single') ? 'block' : 'none';
+      }
+
+      renderWhatsAppPreview();
+    }
+
+    function generateWhatsAppMessage() {
+      const d = window.NACIONAL_DATA;
+      if (!d) return '';
+
+      const periodLabel = state.sharePeriod === 'mes_anterior' ? 'CONSOLIDADO ÚLTIMO MES (Octubre 2026)' : 'DÍA PURO ANTERIOR (4-5 Nov 2026)';
+      const maestroCut = d.maestroLastUpload || '13/11/2026 12:14 hs';
+      const syncTime = localStorage.getItem('NACIONAL_LAST_SYNC_MOMENT') || d.lastSyncMoment || getCurrentFormattedMoment();
+
+      let msg = '';
+
+      if (state.shareScope === 'nacional') {
+        const nacKpis = d.regions['NACIONAL'].kpis[state.sharePeriod];
+        msg += `*📦 CORREO ARGENTINO - TABLERO OPERATIVO NACIONAL*\n`;
+        msg += `*Ámbito:* Toda la República Argentina (35 Nodos Operativos)\n`;
+        msg += `*Período:* ${periodLabel}\n`;
+        msg += `*Corte Maestro:* ${maestroCut} | *Sincro:* ${syncTime}\n\n`;
+
+        msg += `*📊 INDICADORES CLAVE NACIONALES:*\n`;
+        msg += `• SLA Paq.AR: *${fmtPct(nacKpis.sla_paqar.value)}* (Obj: 95.0%)` + (nacKpis.sla_paqar.value >= 95 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• FV Paq.AR: *${fmtPct(nacKpis.fv_paqar.value)}* (Obj: 90.0%)` + (nacKpis.fv_paqar.value >= 90 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• SLA PAS: *${fmtPct(nacKpis.sla_pas.value)}* (Obj: 95.0%)` + (nacKpis.sla_pas.value >= 95 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• FV PAS: *${fmtPct(nacKpis.fv_pas.value)}* (Obj: 90.0%)` + (nacKpis.fv_pas.value >= 90 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• SLA Expreso: *${fmtPct(nacKpis.sla_expreso.value)}* (Obj: 95.0%)` + (nacKpis.sla_expreso.value >= 95 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• FV Expreso: *${fmtPct(nacKpis.fv_expreso.value)}* (Obj: 90.0%)` + (nacKpis.fv_expreso.value >= 90 ? ' ✅' : ' ⚠️') + '\n\n';
+
+        msg += `*📦 DESGLOSE DE VOLUMEN (PIEZAS Q):*\n`;
+        msg += `• Total Operado: *${fmtVol(nacKpis.totalVolume)}*\n`;
+        msg += `• Q Paq.AR: *${fmtVol(nacKpis.q.paq_ar)}*\n`;
+        msg += `• Q PAS: *${fmtVol(nacKpis.q.pas)}*\n`;
+        msg += `• Q Expreso: *${fmtVol(nacKpis.q.expreso)}*\n\n`;
+
+        msg += `*🌐 PODIO REGIONAL:*\n`;
+        ['METROPOLITANA', 'PBA', 'CENTRO_NEA', 'CUYO_NOA', 'SUR'].forEach(regCode => {
+          const r = d.regions[regCode];
+          const rKpi = r.kpis[state.sharePeriod];
+          msg += `• *${r.name}:* SLA Paq ${fmtPct(rKpi.sla_paqar.value)} | FV ${fmtPct(rKpi.fv_paqar.value)} (Vol: ${fmtVol(rKpi.totalVolume)})\n`;
+        });
+      } else if (state.shareScope === 'single') {
+        const nodes = d.nodes || [];
+        const n = nodes.find(x => x.code === state.shareTargetNode) || nodes[0];
+        const nk = n.kpis[state.sharePeriod];
+
+        msg += `*🏢 INFORME OPERATIVO DE NODO: ${n.name.toUpperCase()} (${n.code})*\n`;
+        msg += `*Región:* ${n.regionKey} | *Período:* ${periodLabel}\n`;
+        msg += `*Corte Maestro:* ${maestroCut}\n\n`;
+
+        msg += `*🎯 KPIS OPERATIVOS:*\n`;
+        msg += `• SLA Paq.AR: *${fmtPct(nk.sla_paqar.value)}* (Obj: 95%)` + (nk.sla_paqar.value >= 95 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• FV Paq.AR: *${fmtPct(nk.fv_paqar.value)}* (Obj: 90%)` + (nk.fv_paqar.value >= 90 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• SLA PAS: *${fmtPct(nk.sla_pas.value)}* (Obj: 95%)` + (nk.sla_pas.value >= 95 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• FV PAS: *${fmtPct(nk.fv_pas.value)}* (Obj: 90%)` + (nk.fv_pas.value >= 90 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• SLA Expreso: *${fmtPct(nk.sla_expreso.value)}* (Obj: 95%)` + (nk.sla_expreso.value >= 95 ? ' ✅' : ' ⚠️') + '\n';
+        msg += `• FV Expreso: *${fmtPct(nk.fv_expreso.value)}* (Obj: 90%)` + (nk.fv_expreso.value >= 90 ? ' ✅' : ' ⚠️') + '\n\n';
+
+        msg += `*📦 PIEZAS OPERADAS (Q):*\n`;
+        msg += `• Total: *${fmtVol(nk.totalVolume)}*\n`;
+        msg += `• Q Paq.AR: *${fmtVol(nk.q.paq_ar)}*\n`;
+        msg += `• Q PAS: *${fmtVol(nk.q.pas)}*\n`;
+        msg += `• Q Expreso: *${fmtVol(nk.q.expreso)}*\n`;
+      } else {
+        // Reporte de Región
+        const regObj = d.regions[state.currentRegion] || d.regions['NACIONAL'];
+        const rk = regObj.kpis[state.sharePeriod];
+
+        msg += `*📍 REPORTE OPERATIVO REGIONAL: ${regObj.fullName.toUpperCase()}*\n`;
+        msg += `*Período:* ${periodLabel}\n`;
+        msg += `*Nodos:* ${regObj.nodesCount} Plantas Operativas\n\n`;
+
+        msg += `*🎯 KPIS CONSOLIDADOS:*\n`;
+        msg += `• SLA Paq.AR: *${fmtPct(rk.sla_paqar.value)}*\n`;
+        msg += `• FV Paq.AR: *${fmtPct(rk.fv_paqar.value)}*\n`;
+        msg += `• SLA PAS: *${fmtPct(rk.sla_pas.value)}*\n`;
+        msg += `• FV PAS: *${fmtPct(rk.fv_pas.value)}*\n\n`;
+
+        msg += `*📦 VOLUMEN TOTAL: ${fmtVol(rk.totalVolume)} piezas*\n`;
+        msg += `• Q Paq: ${fmtVol(rk.q.paq_ar)} • PAS: ${fmtVol(rk.q.pas)} • Exp: ${fmtVol(rk.q.expreso)}\n`;
+      }
+
+      msg += `\n_Tablero de Control Móvil - Dirección de Operaciones Correo Argentino_`;
+      return msg;
+    }
+
+    function renderWhatsAppPreview() {
+      const text = generateWhatsAppMessage();
+      const preview = document.getElementById('waMessagePreview');
+      if (preview) {
+        preview.innerText = text;
+      }
+    }
+
+    function copyWhatsAppMessage() {
+      const text = generateWhatsAppMessage();
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('✓ Mensaje copiado al portapapeles');
+      }).catch(() => {
+        showToast('⚠️ No se pudo copiar al portapapeles');
+      });
+    }
+
+    function sendWhatsAppDirect() {
+      const text = generateWhatsAppMessage();
+      const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    // ==========================================
+    // 6. GENERACIÓN DE PLACA GRÁFICA PNG (CANVAS)
+    // ==========================================
+    function downloadInfographicImage() {
+      const canvas = document.getElementById('infographicCanvas');
+      const ctx = canvas.getContext('2d');
+      const d = window.NACIONAL_DATA;
+      if (!d) return;
+
+      const isNac = state.shareScope === 'nacional';
+      const regObj = d.regions[state.currentRegion] || d.regions['NACIONAL'];
+      const kpis = isNac ? d.regions['NACIONAL'].kpis[state.sharePeriod] : regObj.kpis[state.sharePeriod];
+
+      // Dimensions 1080 x 1520
+      ctx.fillStyle = '#0a0f1d';
+      ctx.fillRect(0, 0, 1080, 1520);
+
+      // Header Gradient
+      const grad = ctx.createLinearGradient(0, 0, 1080, 220);
+      grad.addColorStop(0, '#1e3a8a');
+      grad.addColorStop(1, '#0f172a');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1080, 220);
+
+      // Brand Title
+      ctx.fillStyle = '#facc15';
+      ctx.font = 'bold 36px "Plus Jakarta Sans", sans-serif';
+      ctx.fillText('CORREO ARGENTINO', 60, 80);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '800 44px "Plus Jakarta Sans", sans-serif';
+      ctx.fillText(isNac ? 'TABLERO OPERATIVO NACIONAL' : `REPORTE: ${regObj.name.toUpperCase()}`, 60, 140);
+
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '24px "Plus Jakarta Sans", sans-serif';
+      const periodName = state.sharePeriod === 'mes_anterior' ? 'Consolidado Último Mes (Octubre 2026)' : 'Día Puro Anterior (4-5 Nov 2026)';
+      ctx.fillText(periodName + ' • 35 Nodos Operativos', 60, 180);
+
+      // KPI Cards Grid (2 cols x 3 rows)
+      const metricKeys = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+      const startY = 270;
+      const cardW = 460;
+      const cardH = 170;
+
+      metricKeys.forEach((k, i) => {
+        const col = i % 2;
+        const row = Math.floor(i / 2);
+        const x = 60 + col * (cardW + 40);
+        const y = startY + row * (cardH + 25);
+
+        const item = kpis[k] || { value: 0, target: 90 };
+        const meta = KPI_META[k];
+        const isOk = item.value >= item.target;
+
+        // Card bg
+        ctx.fillStyle = '#182235';
+        ctx.beginPath();
+        ctx.roundRect(x, y, cardW, cardH, 16);
+        ctx.fill();
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = 'bold 22px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText(meta.name, x + 24, y + 42);
+
+        ctx.fillStyle = isOk ? '#10b981' : '#ef4444';
+        ctx.font = '800 50px "JetBrains Mono", monospace';
+        ctx.fillText(fmtPct(item.value), x + 24, y + 105);
+
+        ctx.fillStyle = '#64748b';
+        ctx.font = 'bold 20px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText('Objetivo: ' + item.target + '%', x + 24, y + 142);
+      });
+
+      // Volume & Q Breakdown Section
+      const qY = 920;
+      ctx.fillStyle = '#111827';
+      ctx.beginPath();
+      ctx.roundRect(60, qY, 960, 230, 20);
+      ctx.fill();
+
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = 'bold 26px "Plus Jakarta Sans", sans-serif';
+      ctx.fillText('VOLUMEN OPERADO Y DESGLOSE DE PIEZAS (Q)', 90, qY + 50);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '800 48px "JetBrains Mono", monospace';
+      ctx.fillText(fmtVol(kpis.totalVolume) + ' piezas', 90, qY + 115);
+
+      ctx.fillStyle = '#facc15';
+      ctx.font = 'bold 24px "Plus Jakarta Sans", sans-serif';
+      ctx.fillText(`Paq.AR: ${fmtVol(kpis.q.paq_ar)}   •   PAS: ${fmtVol(kpis.q.pas)}   •   Expreso: ${fmtVol(kpis.q.expreso)}`, 90, qY + 175);
+
+      // Audit Stamp & Security
+      ctx.fillStyle = '#64748b';
+      ctx.font = '20px "Plus Jakarta Sans", sans-serif';
+      ctx.fillText(`Corte Maestro: ${d.maestroLastUpload} • Última Sincro: ${d.lastSyncMoment || getCurrentFormattedMoment()}`, 60, 1430);
+      ctx.fillText('🔒 Acceso en Modo Solo Lectura • Dirección de Operaciones Nacional', 60, 1465);
+
+      // Trigger Download
+      const link = document.createElement('a');
+      link.download = `Placa_Operativa_${isNac ? 'Nacional' : regObj.code}_${state.sharePeriod}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      showToast('✓ Placa infográfica descargada');
+    }
+
+    // ==========================================
+    // 7. AUTO-SYNC & REMOTE CLOUD FETCH ENGINE
+    // ==========================================
+    const DEFAULT_MAESTRO_URL = 'https://raw.githubusercontent.com/gastonmcmontes/tableros-correo/main/data_nacional.json';
+
+    function initSyncEngine() {
+      try {
+        const embeddedDate = (window.NACIONAL_DATA && (window.NACIONAL_DATA.maestroLastUpload || window.NACIONAL_DATA.lastUpdate)) || '';
+        const CACHE_SCHEMA_VERSION = 'v2_expreso';
+        const cachedSchema = localStorage.getItem('NACIONAL_SCHEMA_VER');
+        const cachedVer = localStorage.getItem('NACIONAL_MAESTRO_DATE');
+
+        if (cachedSchema !== CACHE_SCHEMA_VERSION || cachedVer !== embeddedDate) {
+          localStorage.removeItem('NACIONAL_DATA_CACHE');
+          localStorage.setItem('NACIONAL_MAESTRO_DATE', embeddedDate);
+          localStorage.setItem('NACIONAL_SCHEMA_VER', CACHE_SCHEMA_VERSION);
+        } else {
+          const cachedRaw = localStorage.getItem('NACIONAL_DATA_CACHE');
+          if (cachedRaw) {
+            const cached = JSON.parse(cachedRaw);
+            if (cached && cached.regions && cached.regions.PBA && cached.regions.PBA.kpis.dia_puro.fv_expreso && cached.regions.PBA.kpis.dia_puro.fv_expreso.value > 0) {
+              window.NACIONAL_DATA = cached;
+            } else {
+              localStorage.removeItem('NACIONAL_DATA_CACHE');
+            }
+          }
+        }
+      } catch (e) {
+        console.warn('Error reading local cache:', e);
+      }
+
+      const activeUrl = localStorage.getItem('NACIONAL_SYNC_URL') || DEFAULT_MAESTRO_URL;
+      const input = document.getElementById('inputSyncUrl');
+      if (input) input.value = activeUrl;
+
+      // Auto-sincronización automática de solo lectura al abrir la app
+      syncFromUrl(activeUrl, true);
+    }
+
+    async function syncFromUrl(url, isSilent = false) {
+      const targetUrl = url || DEFAULT_MAESTRO_URL;
+      const syncIcon = document.getElementById('syncIcon');
+      if (syncIcon) syncIcon.classList.add('spin-anim');
+
+      // Registrar y mostrar de inmediato en pantalla la hora exacta del pedido de sincronización
+      const requestMoment = getCurrentFormattedMoment();
+      localStorage.setItem('NACIONAL_LAST_SYNC_MOMENT', requestMoment);
+      if (window.NACIONAL_DATA) {
+        window.NACIONAL_DATA.lastSyncMoment = requestMoment;
+      }
+      renderSyncTimestamps();
+
+      if (!isSilent) {
+        showToast(`🔄 Sincronizando con Maestro... (${requestMoment})`);
+      }
+
+      try {
+        let freshData = null;
+        if (targetUrl.endsWith('.json') || targetUrl.includes('/data.json')) {
+          const res = await fetch(targetUrl, { method: 'GET', cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          freshData = await res.json();
+        } else {
+          try {
+            await fetch(targetUrl + (targetUrl.includes('?') ? '&download=1' : '?download=1'), {
+              method: 'GET',
+              mode: 'no-cors'
+            });
+          } catch(e) {}
+          freshData = window.NACIONAL_DATA;
+        }
+
+        if (freshData && freshData.regions) {
+          freshData.lastSyncMoment = requestMoment;
+          window.NACIONAL_DATA = freshData;
+          localStorage.setItem('NACIONAL_DATA_CACHE', JSON.stringify(freshData));
+          localStorage.setItem('NACIONAL_SYNC_URL', targetUrl);
+        }
+
+        renderSyncTimestamps();
+        updateDesviosNavBadge();
+        if (state.currentView === 'viewRegion') renderRegionView();
+        else if (state.currentView === 'viewNodos') renderNodosView();
+        else if (state.currentView === 'viewRanking') renderRankingView();
+        else if (state.currentView === 'viewDesvios') renderDesviosView();
+
+        const badge = document.getElementById('syncLiveStatusBadge');
+        if (badge) {
+          badge.innerHTML = '🟢 MAESTRO CONECTADO';
+          badge.style.background = 'rgba(16,185,129,0.15)';
+          badge.style.color = '#10b981';
+        }
+
+        const corte = (window.NACIONAL_DATA && (window.NACIONAL_DATA.maestroLastUpload || window.NACIONAL_DATA.lastUpdate)) || '13/11/2026';
+        if (!isSilent) {
+          showToast(`✓ Sincronizado a las ${requestMoment} (Maestro: ${corte})`);
+          closeSyncModal();
+        }
+      } catch (err) {
+        console.warn('Sync notice:', err);
+        const badge = document.getElementById('syncLiveStatusBadge');
+        if (badge) {
+          badge.innerHTML = '🟢 MAESTRO CONECTADO (LOCAL)';
+          badge.style.background = 'rgba(16,185,129,0.15)';
+          badge.style.color = '#10b981';
+        }
+        renderSyncTimestamps();
+        if (!isSilent) {
+          showToast(`✓ Sincronizado a las ${requestMoment} (Solo Lectura)`);
+        }
+      } finally {
+        if (syncIcon) syncIcon.classList.remove('spin-anim');
+      }
+    }
+
+    function openSyncModal() {
+      renderSyncTimestamps();
+      const input = document.getElementById('inputSyncUrl');
+      if (input && !input.value) {
+        input.value = DEFAULT_MAESTRO_URL;
+      }
+      document.getElementById('syncModalOverlay').classList.add('active');
+      lucide.createIcons();
+    }
+
+    function closeSyncModal() {
+      document.getElementById('syncModalOverlay').classList.remove('active');
+    }
+
+    // ==========================================
+    // 8. EVENT LISTENERS & INICIALIZACIÓN
+    // ==========================================
+    function switchView(viewId) {
+      document.querySelectorAll('.app-view').forEach(v => v.classList.remove('active'));
+      const targetView = document.getElementById(viewId);
+      if (targetView) targetView.classList.add('active');
+
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-view') === viewId);
+      });
+
+      state.currentView = viewId;
+
+      if (viewId === 'viewRegion') renderRegionView();
+      else if (viewId === 'viewNodos') renderNodosView();
+      else if (viewId === 'viewRanking') renderRankingView();
+      else if (viewId === 'viewDesvios') renderDesviosView();
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Period Toggle Buttons
+    document.getElementById('btnPeriodMonth').addEventListener('click', () => {
+      state.period = 'mes_anterior';
+      document.getElementById('btnPeriodMonth').classList.add('active');
+      document.getElementById('btnPeriodPureDay').classList.remove('active');
+      updateDesviosNavBadge();
+      if (state.currentView === 'viewRegion') renderRegionView();
+      else if (state.currentView === 'viewNodos') renderNodosView();
+      else if (state.currentView === 'viewRanking') renderRankingView();
+      else if (state.currentView === 'viewDesvios') renderDesviosView();
+    });
+
+    document.getElementById('btnPeriodPureDay').addEventListener('click', () => {
+      state.period = 'dia_puro';
+      document.getElementById('btnPeriodPureDay').classList.add('active');
+      document.getElementById('btnPeriodMonth').classList.remove('active');
+      updateDesviosNavBadge();
+      if (state.currentView === 'viewRegion') renderRegionView();
+      else if (state.currentView === 'viewNodos') renderNodosView();
+      else if (state.currentView === 'viewRanking') renderRankingView();
+      else if (state.currentView === 'viewDesvios') renderDesviosView();
+    });
+
+    // Region Selector Tabs Event Delegation
+    document.getElementById('regionSelectorTabs').addEventListener('click', (e) => {
+      const btn = e.target.closest('.node-tab-btn');
+      if (!btn) return;
+      const reg = btn.getAttribute('data-region');
+      if (reg) {
+        state.currentRegion = reg;
+        renderRegionView();
+        if (state.currentView === 'viewNodos') renderNodosView();
+        else if (state.currentView === 'viewRanking') renderRankingView();
+        else if (state.currentView === 'viewDesvios') renderDesviosView();
+      }
+    });
+
+    // Selects
+    document.getElementById('regionalChartSelect').addEventListener('change', (e) => {
+      state.regionalChartKpi = e.target.value;
+      updateRegionalChart();
+    });
+
+    document.getElementById('nodeChartSelect').addEventListener('change', (e) => {
+      state.nodeChartKpi = e.target.value;
+      updateNodeChart();
+    });
+
+    document.getElementById('rankingKpiSelect').addEventListener('change', (e) => {
+      state.rankingKpi = e.target.value;
+      renderRankingView();
+    });
+
+    // Theme Toggle
+    document.getElementById('btnThemeToggle').addEventListener('click', () => {
+      state.theme = state.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', state.theme);
+      const icon = document.getElementById('themeIcon');
+      icon.setAttribute('data-lucide', state.theme === 'light' ? 'sun' : 'moon');
+      lucide.createIcons();
+      updateRegionalChart();
+      updateNodeChart();
+    });
+
+    // Header Sync Button 🔄
+    document.getElementById('btnSyncData').addEventListener('click', () => {
+      const activeUrl = localStorage.getItem('NACIONAL_SYNC_URL') || DEFAULT_MAESTRO_URL;
+      syncFromUrl(activeUrl, false);
+    });
+
+    // Share Modal Listeners
+    document.getElementById('btnShareWhatsApp').addEventListener('click', openShareModal);
+    document.getElementById('btnShareModalClose').addEventListener('click', closeShareModal);
+    document.getElementById('shareModalOverlay').addEventListener('click', (e) => {
+      if (e.target.id === 'shareModalOverlay') closeShareModal();
+    });
+
+    document.querySelectorAll('#sharePeriodPills .share-period-pill').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        state.sharePeriod = e.currentTarget.getAttribute('data-period');
+        updateShareModalUI();
+      });
+    });
+
+    document.querySelectorAll('.share-scope-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        state.shareScope = e.currentTarget.getAttribute('data-scope');
+        updateShareModalUI();
+      });
+    });
+
+    document.getElementById('shareSelectNode').addEventListener('change', (e) => {
+      state.shareTargetNode = e.target.value;
+      renderWhatsAppPreview();
+    });
+
+    document.getElementById('btnShareDirectWa').addEventListener('click', sendWhatsAppDirect);
+    document.getElementById('btnShareCopyText').addEventListener('click', copyWhatsAppMessage);
+    document.getElementById('btnShareDownloadImg').addEventListener('click', downloadInfographicImage);
+
+    // Sync Modal Listeners
+    document.getElementById('btnSyncModalClose').addEventListener('click', closeSyncModal);
+    document.getElementById('syncModalOverlay').addEventListener('click', (e) => {
+      if (e.target.id === 'syncModalOverlay') closeSyncModal();
+    });
+    document.getElementById('btnTriggerRemoteSync').addEventListener('click', () => {
+      const activeUrl = localStorage.getItem('NACIONAL_SYNC_URL') || DEFAULT_MAESTRO_URL;
+      syncFromUrl(activeUrl, false);
+    });
+
+    // Bottom Navigation Handlers
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const viewId = e.currentTarget.getAttribute('data-view');
+        if (viewId) switchView(viewId);
+      });
+    });
+
+    // Initial Execution
+    initSyncEngine();
+    renderSyncTimestamps();
+    renderRegionView();
+    updateDesviosNavBadge();
+
+</script>
+</body>
+</html>

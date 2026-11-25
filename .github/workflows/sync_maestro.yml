@@ -21,15 +21,24 @@ jobs:
         with:
           node-version: 20
 
-      - name: Conectar a SharePoint y procesar corte oficial
+      - name: Sincronizar PBA en vivo contra SharePoint
         shell: powershell
         run: |
           powershell -NoProfile -ExecutionPolicy Bypass -File .\sync_maestro_sharepoint.ps1
+
+      - name: Sincronizar Nacional en vivo contra SharePoint
+        shell: powershell
+        run: |
+          cd nacional
+          powershell -NoProfile -ExecutionPolicy Bypass -File .\sync_maestro_sharepoint.ps1
+          Copy-Item "data.json" "..\data_nacional.json" -Force
+          Copy-Item "Tablero_Nacional.html" "..\Tablero_Nacional.html" -Force
+          cd ..
 
       - name: Guardar y publicar datos actualizados
         shell: bash
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json data.js Tablero_PBA.html live_maestro_summary.json
-          git diff --staged --quiet || (git commit -m "Auto-sync Maestro en vivo [skip ci]" && git push)
+          git add data.json data_nacional.json data.js Tablero_PBA.html Tablero_Nacional.html live_maestro_summary.json nacional/
+          git diff --staged --quiet || (git commit -m "Auto-sync PBA y Nacional en vivo [skip ci]" && git push)

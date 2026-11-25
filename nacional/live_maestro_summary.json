@@ -1,0 +1,206 @@
+{
+    "maxAcumDateSerial":  null,
+    "maxAcumDateIso":  "1899-12-30",
+    "maxDiaDateSerial":  46327,
+    "maxDiaDateIso":  "2026-11-01",
+    "mes":  {
+                "CENTRO_NEA":  {
+                                   "volumen":  0,
+                                   "sla_paqar":  0,
+                                   "fv_paqar":  0,
+                                   "sla_clasico":  0,
+                                   "sla_expreso":  0,
+                                   "fv_expreso":  0,
+                                   "q_expreso":  0,
+                                   "qgest_expreso":  0
+                               },
+                "SUR":  {
+                            "volumen":  0,
+                            "sla_paqar":  0,
+                            "fv_paqar":  0,
+                            "sla_clasico":  0,
+                            "sla_expreso":  0,
+                            "fv_expreso":  0,
+                            "q_expreso":  0,
+                            "qgest_expreso":  0
+                        },
+                "PBA":  {
+                            "volumen":  0,
+                            "sla_paqar":  0,
+                            "fv_paqar":  0,
+                            "sla_clasico":  0,
+                            "sla_expreso":  0,
+                            "fv_expreso":  0,
+                            "q_expreso":  0,
+                            "qgest_expreso":  0
+                        },
+                "NACIONAL":  {
+                                 "volumen":  0,
+                                 "sla_paqar":  0,
+                                 "fv_paqar":  0,
+                                 "sla_clasico":  0,
+                                 "sla_expreso":  0,
+                                 "fv_expreso":  0,
+                                 "q_expreso":  0,
+                                 "qgest_expreso":  0
+                             },
+                "METRO":  {
+                              "volumen":  0,
+                              "sla_paqar":  0,
+                              "fv_paqar":  0,
+                              "sla_clasico":  0,
+                              "sla_expreso":  0,
+                              "fv_expreso":  0,
+                              "q_expreso":  0,
+                              "qgest_expreso":  0
+                          },
+                "CUYO_NOA":  {
+                                 "volumen":  0,
+                                 "sla_paqar":  0,
+                                 "fv_paqar":  0,
+                                 "sla_clasico":  0,
+                                 "sla_expreso":  0,
+                                 "fv_expreso":  0,
+                                 "q_expreso":  0,
+                                 "qgest_expreso":  0
+                             }
+            },
+    "dia":  {
+                "CENTRO_NEA":  {
+                                   "volumen":  441244,
+                                   "sla_paqar":  96.41,
+                                   "fv_paqar":  87.3,
+                                   "sla_clasico":  97.76,
+                                   "sla_expreso":  63.8,
+                                   "fv_expreso":  88.34,
+                                   "q_expreso":  17573,
+                                   "qgest_expreso":  10187
+                               },
+                "SUR":  {
+                            "volumen":  199375,
+                            "sla_paqar":  93.25,
+                            "fv_paqar":  83.99,
+                            "sla_clasico":  94.09,
+                            "sla_expreso":  49.25,
+                            "fv_expreso":  88.21,
+                            "q_expreso":  3722,
+                            "qgest_expreso":  2188
+                        },
+                "PBA":  {
+                            "volumen":  316517,
+                            "sla_paqar":  97.44,
+                            "fv_paqar":  88.79,
+                            "sla_clasico":  98.39,
+                            "sla_expreso":  80.41,
+                            "fv_expreso":  85.61,
+                            "q_expreso":  16762,
+                            "qgest_expreso":  10338
+                        },
+                "NACIONAL":  {
+                                 "volumen":  1626459,
+                                 "sla_paqar":  96.09,
+                                 "fv_paqar":  87.77,
+                                 "sla_clasico":  97.5,
+                                 "sla_expreso":  66.82,
+                                 "fv_expreso":  85.82,
+                                 "q_expreso":  74804,
+                                 "qgest_expreso":  40202
+                             },
+                "METRO":  {
+                              "volumen":  473265,
+                              "sla_paqar":  96.08,
+                              "fv_paqar":  88.39,
+                              "sla_clasico":  98.42,
+                              "sla_expreso":  64.23,
+                              "fv_expreso":  83.92,
+                              "q_expreso":  32450,
+                              "qgest_expreso":  15089
+                          },
+                "CUYO_NOA":  {
+                                 "volumen":  196036,
+                                 "sla_paqar":  96.11,
+                                 "fv_paqar":  89.11,
+                                 "sla_clasico":  96.9,
+                                 "sla_expreso":  60.9,
+                                 "fv_expreso":  85.82,
+                                 "q_expreso":  4294,
+                                 "qgest_expreso":  2397
+                             }
+            },
+    "nodes_expreso_mes":  {
+                              "PER":  {
+                                          "sla_expreso":  0,
+                                          "fv_expreso":  0,
+                                          "q":  0,
+                                          "qgest":  0
+                                      },
+                              "MDQ":  {
+                                          "sla_expreso":  0,
+                                          "fv_expreso":  0,
+                                          "q":  0,
+                                          "qgest":  0
+                                      },
+                              "MER":  {
+                                          "sla_expreso":  0,
+                                          "fv_expreso":  0,
+                                          "q":  0,
+                                          "qgest":  0
+                                      },
+                              "BHI":  {
+                                          "sla_expreso":  0,
+                                          "fv_expreso":  0,
+                                          "q":  0,
+                                          "qgest":  0
+                                      },
+                              "RSA":  {
+                                          "sla_expreso":  0,
+                                          "fv_expreso":  0,
+                                          "q":  0,
+                                          "qgest":  0
+                                      },
+                              "LPG":  {
+                                          "sla_expreso":  0,
+                                          "fv_expreso":  0,
+                                          "q":  0,
+                                          "qgest":  0
+                                      }
+                          },
+    "nodes_expreso_dia":  {
+                              "PER":  {
+                                          "sla_expreso":  86.97,
+                                          "fv_expreso":  83.7,
+                                          "q":  5095,
+                                          "qgest":  3068
+                                      },
+                              "MDQ":  {
+                                          "sla_expreso":  74.63,
+                                          "fv_expreso":  82.6,
+                                          "q":  2649,
+                                          "qgest":  1695
+                                      },
+                              "MER":  {
+                                          "sla_expreso":  83.41,
+                                          "fv_expreso":  85.73,
+                                          "q":  2724,
+                                          "qgest":  1850
+                                      },
+                              "BHI":  {
+                                          "sla_expreso":  71.51,
+                                          "fv_expreso":  88.27,
+                                          "q":  2064,
+                                          "qgest":  1262
+                                      },
+                              "RSA":  {
+                                          "sla_expreso":  61.93,
+                                          "fv_expreso":  76.73,
+                                          "q":  675,
+                                          "qgest":  361
+                                      },
+                              "LPG":  {
+                                          "sla_expreso":  81.69,
+                                          "fv_expreso":  90.63,
+                                          "q":  3555,
+                                          "qgest":  2102
+                                      }
+                          }
+}
