@@ -2204,7 +2204,7 @@
 
       if (kpis.q) {
         document.getElementById('bannerQPaq').innerText = `Paq: ${fmtVol(kpis.q.paq_ar)}`;
-        document.getElementById('bannerQPas').innerText = `PAS: ${fmtVol(kpis.q.pas)}`;
+        document.getElementById('bannerQPas').innerText = `Cartas: ${fmtVol(kpis.q.pas)}`;
         document.getElementById('bannerQExp').innerText = `Exp: ${fmtVol(kpis.q.expreso)}`;
       }
 
@@ -2415,33 +2415,42 @@
       const qRow = document.getElementById('bannerNodeQRow');
       if (nodeKpis.q) {
         qRow.innerHTML = `
-          <span class="active-node-q-pill">Q Paq: <strong>${fmtVol(nodeKpis.q.paq_ar)}</strong></span>
-          <span class="active-node-q-pill">Q PAS: <strong>${fmtVol(nodeKpis.q.pas)}</strong></span>
-          <span class="active-node-q-pill">Q Exp: <strong>${fmtVol(nodeKpis.q.expreso)}</strong></span>
+          <span class="active-node-q-pill">Paquetes: <strong>${fmtVol(nodeKpis.q.paq_ar)}</strong></span>
+          <span class="active-node-q-pill">Cartas: <strong>${fmtVol(nodeKpis.q.pas)}</strong></span>
+          <span class="active-node-q-pill">Expreso: <strong>${fmtVol(nodeKpis.q.expreso)}</strong></span>
         `;
       }
 
       // 6 KPI Grid for Node
       const grid = document.getElementById('nodeKpiGrid');
       let gridHtml = '';
-      const metricKeys = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+      const metricDefs = [
+        { k: 'sla_paqar', label: 'SLA Paq.AR', meta: 95.0, qKey: 'paq_ar' },
+        { k: 'fv_paqar',  label: 'FV Paq.AR',  meta: 90.0, qKey: 'paq_ar' },
+        { k: 'sla_pas',   label: 'SLA PAS (Cartas)', meta: 95.0, qKey: 'pas' },
+        { k: 'fv_pas',    label: 'FV PAS (Cartas)',  meta: 90.0, qKey: 'pas' },
+        { k: 'sla_expreso', label: 'SLA Exp', meta: 95.0, qKey: 'expreso' },
+        { k: 'fv_expreso',  label: 'FV Exp',  meta: 90.0, qKey: 'expreso' }
+      ];
 
-      metricKeys.forEach(k => {
-        const item = nodeKpis[k] || { value: 0, target: 90, delta: 0, status: 'neutral' };
+      metricDefs.forEach(item => {
+        const k = item.k;
+        const kObj = nodeKpis[k] || { value: 0, target: item.meta, delta: 0, status: 'neutral' };
         const meta = KPI_META[k];
-        const val = item.value;
-        const target = item.target;
+        const val = kObj.value;
+        const target = kObj.target || meta.target;
         const delta = (val - target).toFixed(2);
         const isOk = delta >= 0;
         const isWarning = delta < 0 && delta >= -3.0;
         const statusClass = isOk ? 'status-ok' : (isWarning ? 'status-warning' : 'status-danger');
         const sign = delta > 0 ? '+' : '';
         const pctFill = Math.min(100, Math.max(10, (val / 105) * 100));
+        const itemQ = (kObj.volume !== undefined && kObj.volume > 0) ? fmtVol(kObj.volume) : (nq[item.qKey] ? fmtVol(nq[item.qKey]) : '--');
 
         gridHtml += `
           <div class="kpi-card" onclick="selectNodeChartKpi('${k}')">
             <div class="kpi-top">
-              <span class="kpi-tag">${meta.name}</span>
+              <span class="kpi-tag">${item.label}</span>
               <span class="kpi-target-tag">Obj: ${target}%</span>
             </div>
             <div class="kpi-value-row">
@@ -2450,6 +2459,10 @@
             </div>
             <div class="kpi-progress-bar">
               <div class="kpi-progress-fill ${statusClass}" style="width: ${pctFill}%;"></div>
+            </div>
+            <div class="kpi-footer">
+              <span>Q: ${itemQ}</span>
+              <span>${isOk ? '✓ Cumple' : (isWarning ? '⚠ Alerta' : '✕ Desvío')}</span>
             </div>
           </div>
         `;
@@ -2555,73 +2568,156 @@
     // 3. RENDER RANKING VIEW (35 NODOS)
     // ==========================================
     function renderRankingView() {
-      const nodes = getFilteredNodes();
-      if (!nodes) return;
+      const d = window.NACIONAL_DATA;
+      if (!d || !d.regions) return;
 
-      const kpiKey = state.rankingKpi || 'sla_paqar';
-      const target = targets[kpiKey] || 95;
+      const regObj = d.regions[state.currentRegion] || d.regions['NACIONAL'];
+      const kpis = regObj ? regObj.kpis[state.period] : null;
+      const kpiKeys = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
 
-      // Sort nodes descending
-      const sorted = [...nodes].sort((a, b) => {
-        const valA = (a.kpis[state.period][kpiKey] && a.kpis[state.period][kpiKey].value) || 0;
-        const valB = (b.kpis[state.period][kpiKey] && b.kpis[state.period][kpiKey].value) || 0;
+      if (kpis) {
+        const pBanner = document.getElementById('periodBannerText');
+        if (pBanner) pBanner.innerText = `${regObj.name} • ${kpis.periodDetail}`;
+        const vBanner = document.getElementById('volumeBannerText');
+        if (vBanner) vBanner.innerText = fmtVol(kpis.totalVolume) + ' piezas';
+        if (kpis.q) {
+          const bPaq = document.getElementById('bannerQPaq');
+          if (bPaq) bPaq.innerText = `Paq: ${fmtVol(kpis.q.paq_ar)}`;
+          const bPas = document.getElementById('bannerQPas');
+          if (bPas) bPas.innerText = `Cartas: ${fmtVol(kpis.q.pas)}`;
+          const bExp = document.getElementById('bannerQExp');
+          if (bExp) bExp.innerText = `Exp: ${fmtVol(kpis.q.expreso)}`;
+        }
+      }
+
+      // 1. Render Mini KPI Grid (6 Tarjetas Superiores Seleccionables)
+      const miniGrid = document.getElementById('rankingKpiMiniGrid');
+      let miniHtml = '';
+
+      kpiKeys.forEach(k => {
+        const meta = KPI_META[k] || { name: k, short: k, target: 90 };
+        const item = (kpis && kpis[k]) || { value: 0 };
+        const rVal = item.value !== undefined ? item.value : 0;
+        const isActive = k === state.rankingKpi;
+        const delta = (rVal - meta.target).toFixed(1);
+        const isOk = delta >= 0;
+        const isWarn = delta < 0 && delta >= -3.0;
+        const stClass = isOk ? 'status-ok' : (isWarn ? 'status-warning' : 'status-danger');
+
+        miniHtml += `
+          <div class="ranking-kpi-mini-card ${isActive ? 'active' : ''}" onclick="selectRankingKpi('${k}')">
+            <span class="ranking-kpi-lbl">${meta.short || meta.name}</span>
+            <span class="ranking-kpi-val ${stClass}">${fmtPct(rVal)}</span>
+            <span class="ranking-kpi-target">Meta: ${meta.target}%</span>
+          </div>
+        `;
+      });
+      if (miniGrid) miniGrid.innerHTML = miniHtml;
+
+      // 2. Encabezado del KPI seleccionado
+      const activeMeta = KPI_META[state.rankingKpi] || { name: state.rankingKpi, target: 90 };
+      const titleEl = document.getElementById('rankingKpiNameText');
+      if (titleEl) titleEl.innerText = `Ranking ${activeMeta.name}`;
+      const badgeEl = document.getElementById('rankingTargetBadge');
+      if (badgeEl) badgeEl.innerText = `Meta: ${activeMeta.target}%`;
+
+      // 3. Filtrar y Ordenar Nodos
+      const nodes = getFilteredNodes() || [];
+      const getNodeVal = (node, kpi) => {
+        if (!node || !node.kpis || !node.kpis[state.period] || !node.kpis[state.period][kpi]) return 0;
+        const v = node.kpis[state.period][kpi].value;
+        return v !== undefined && !isNaN(v) ? Number(v) : 0;
+      };
+
+      const sortedNodes = [...nodes].sort((a, b) => {
+        const valA = getNodeVal(a, state.rankingKpi);
+        const valB = getNodeVal(b, state.rankingKpi);
         return valB - valA;
       });
 
-      const list = document.getElementById('rankingList');
-      let html = '';
+      // 4. Renderizar Filas de Ranking en rankingNodesList
+      const rankingContainer = document.getElementById('rankingNodesList');
+      let rankHtml = '';
 
-      sorted.forEach((n, idx) => {
-        const pos = idx + 1;
-        const item = n.kpis[state.period][kpiKey] || { value: 0 };
-        const val = item.value;
+      sortedNodes.forEach((node, index) => {
+        const val = getNodeVal(node, state.rankingKpi);
+        const target = activeMeta.target;
         const delta = (val - target).toFixed(2);
-        const sign = delta > 0 ? '+' : '';
         const isOk = delta >= 0;
         const isWarning = delta < 0 && delta >= -3.0;
-        const statusClass = isOk ? 'status-ok' : (isWarning ? 'status-warning' : 'status-danger');
+        const stClass = isOk ? 'status-ok' : (isWarning ? 'status-warning' : 'status-danger');
+        const sign = delta > 0 ? '+' : '';
+        const pctBar = Math.min(100, Math.max(10, (val / 105) * 100));
 
-        let posBadge = `<span class="rank-pos">${pos}</span>`;
-        if (pos === 1) posBadge = '<span class="rank-medal">🥇</span>';
-        else if (pos === 2) posBadge = '<span class="rank-medal">🥈</span>';
-        else if (pos === 3) posBadge = '<span class="rank-medal">🥉</span>';
+        let medalClass = 'rank-other';
+        let medalText = `${index + 1}º`;
+        if (index === 0) { medalClass = 'rank-1'; medalText = '🥇 1º'; }
+        else if (index === 1) { medalClass = 'rank-2'; medalText = '🥈 2º'; }
+        else if (index === 2) { medalClass = 'rank-3'; medalText = '🥉 3º'; }
 
-        const pkPeriod = (n.kpis && n.kpis[state.period]) || {};
-        const q = pkPeriod.q || { paq_ar: 0, pas: 0, expreso: 0 };
+        const periodData = (node.kpis && node.kpis[state.period]) || {};
+        const nq = periodData.q || { paq_ar: 0, pas: 0, expreso: 0 };
+        const nodeVol = periodData.totalVolume !== undefined ? periodData.totalVolume : 0;
 
-        html += `
-          <div class="ranking-row" onclick="viewNodeFromRanking('${n.code}')">
-            <div class="rank-pos-col">${posBadge}</div>
-            <div class="rank-info-col">
-              <div class="rank-node-name">
-                <span>${n.name}</span>
-                <span style="font-size:10px; color:var(--text-faint); font-weight:700; margin-left:4px; font-family:'JetBrains Mono',monospace;">(${n.regionKey})</span>
-              </div>
-              <div class="rank-q-chips">
-                <span>Vol: ${fmtVol(pkPeriod.totalVolume || 0)}</span>
-                <span>•</span>
-                <span>Paq: ${fmtVol(q.paq_ar)}</span>
-                <span>•</span>
-                <span>PAS: ${fmtVol(q.pas)}</span>
-                <span>•</span>
-                <span>Exp: ${fmtVol(q.expreso)}</span>
+        rankHtml += `
+          <div class="ranking-node-item" onclick="goToNodeFromRanking('${node.code}')">
+            <div class="ranking-left">
+              <div class="rank-medal-box ${medalClass}">${medalText}</div>
+              <div class="ranking-node-info">
+                <div class="ranking-node-name">
+                  <span>${node.name}</span>
+                  <span class="node-mini-badge" style="font-size:10px; color:var(--text-faint); font-weight:700; margin-left:4px; font-family:'JetBrains Mono',monospace;">(${node.regionKey})</span>
+                </div>
+                <div class="ranking-node-vol">Vol: ${fmtVol(nodeVol)} • Paq: ${fmtVol(nq.paq_ar)} | Cartas: ${fmtVol(nq.pas)} | Exp: ${fmtVol(nq.expreso)}</div>
               </div>
             </div>
-            <div class="rank-val-col">
-              <span class="rank-val ${statusClass}">${fmtPct(val)}</span>
-              <span class="rank-delta ${statusClass}">${sign}${delta}%</span>
+            <div class="ranking-right">
+              <div class="ranking-val ${stClass}">${fmtPct(val)}</div>
+              <span class="delta-chip ${stClass}" style="font-size:9.5px; padding:1px 5px;">
+                ${sign}${delta}% vs meta
+              </span>
+              <div class="ranking-bar-outer">
+                <div class="ranking-bar-inner gauge-fill ${stClass}" style="width: ${pctBar}%"></div>
+              </div>
             </div>
           </div>
         `;
       });
 
-      list.innerHTML = html;
-      lucide.createIcons();
+      if (rankingContainer) rankingContainer.innerHTML = rankHtml;
+
+      // 5. Nota Operativa con Mejor y Peor Nodo
+      if (sortedNodes.length > 0) {
+        const best = sortedNodes[0];
+        const worst = sortedNodes[sortedNodes.length - 1];
+        const bestVal = getNodeVal(best, state.rankingKpi);
+        const worstVal = getNodeVal(worst, state.rankingKpi);
+        const insightEl = document.getElementById('rankingInsightText');
+        if (insightEl) {
+          insightEl.innerHTML = `
+            En <strong>${activeMeta.name}</strong> (${regObj.name}), el nodo con mejor desempeño es <strong>${best.name}</strong> (${fmtPct(bestVal)}), mientras que el mayor desvío u oportunidad está en <strong>${worst.name}</strong> (${fmtPct(worstVal)}). Tocar cualquier nodo abre su detalle en la solapa Nodos.
+          `;
+        }
+      }
+
+      if (window.lucide && lucide.createIcons) {
+        lucide.createIcons();
+      }
+    }
+
+    function selectRankingKpi(kpiKey) {
+      state.rankingKpi = kpiKey;
+      renderRankingView();
+    }
+
+    function goToNodeFromRanking(code) {
+      state.selectedNodeCode = code;
+      state.nodeChartKpi = state.rankingKpi;
+      switchView('viewNodos');
     }
 
     function viewNodeFromRanking(code) {
-      state.selectedNodeCode = code;
-      switchView('viewNodos');
+      goToNodeFromRanking(code);
     }
 
     // ==========================================
