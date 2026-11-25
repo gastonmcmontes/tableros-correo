@@ -1,0 +1,35 @@
+name: Sincronizacion Automatica 24/7 con SharePoint
+
+on:
+  schedule:
+    # Corre cada 1 hora automáticamente en la nube (24/7 sin PC encendida)
+    - cron: '0 * * * *'
+  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub cuando se desee
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: windows-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Conectar a SharePoint y procesar corte oficial
+        shell: powershell
+        run: |
+          powershell -NoProfile -ExecutionPolicy Bypass -File .\sync_maestro_sharepoint.ps1
+
+      - name: Guardar y publicar datos actualizados
+        shell: bash
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json data.js Tablero_PBA.html live_maestro_summary.json
+          git diff --staged --quiet || (git commit -m "Auto-sync Maestro en vivo [skip ci]" && git push)
