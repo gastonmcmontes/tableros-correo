@@ -1,4 +1,4 @@
-﻿param(
+param(
     [string]$excelPath = "$PSScriptRoot\downloaded_maestro.xlsx",
     [string]$outJsonPath = "$PSScriptRoot\live_maestro_summary.json"
 )
