@@ -2,7 +2,7 @@ window.NACIONAL_DATA = {
   "title": "Tablero de Control Operativo Nacional",
   "scope": "República Argentina - Correo Argentino",
   "maestroLastUpload": "26/11/2026 11:56 hs",
-  "lastSyncMoment": "26/11/2026 13:26 hs",
+  "lastSyncMoment": "26/11/2026 13:31 hs",
   "lastUpdate": "26/11/2026 11:56 hs",
   "pureDayLabel": "Día Hábil Anterior (25/11/2026)",
   "monthLabel": "Mes en Curso Acumulado (Noviembre 2026)",
@@ -51,11 +51,12 @@ window.NACIONAL_DATA = {
           "periodName": "Consolidado Último Mes",
           "periodCode": "mes_anterior",
           "periodDetail": "Cierre mensual consolidado Octubre 2026",
+          "totalVolume": 661659,
           "q": {
-            "total": 655356,
-            "paq_ar": 511178,
-            "pas": 111412,
-            "expreso": 32768
+            "total": 661659,
+            "paq_ar": 538650,
+            "pas": 123009,
+            "expreso": 37704
           },
           "sla_paqar": {
             "value": 96.05,
@@ -184,10 +185,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 96.91,
+            "value": 91.57,
             "target": 95,
-            "delta": 1.91,
-            "status": "ok",
+            "delta": -3.43,
+            "status": "danger",
             "series": [
               [
                 "Feb",
@@ -242,9 +243,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 60.3,
+            "value": 64.27,
             "target": 90,
-            "delta": -29.7,
+            "delta": -25.73,
             "status": "danger",
             "series": [
               [
@@ -300,9 +301,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 66.88,
+            "value": 64.71,
             "target": 95,
-            "delta": -28.12,
+            "delta": -30.29,
             "status": "danger",
             "series": [
               [
@@ -363,9 +364,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 84.83,
+            "value": 84.24,
             "target": 90,
-            "delta": -5.17,
+            "delta": -5.76,
             "status": "danger",
             "series": [
               [
@@ -424,17 +425,19 @@ window.NACIONAL_DATA = {
                 9162
               ]
             ]
-          }
+          },
+          "vencidos": 661659
         },
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
           "periodDetail": "25/11/2026 (Última jornada cerrada)",
+          "totalVolume": 40994,
           "q": {
-            "total": 25678,
-            "paq_ar": 20029,
-            "pas": 4365,
-            "expreso": 1284
+            "total": 40994,
+            "paq_ar": 30444,
+            "pas": 10550,
+            "expreso": 3327
           },
           "sla_paqar": {
             "value": 94.69,
@@ -553,10 +556,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 95.59,
+            "value": 91.41,
             "target": 95,
-            "delta": 0.59,
-            "status": "ok",
+            "delta": -3.59,
+            "status": "danger",
             "series": [
               [
                 "11 Nov",
@@ -611,9 +614,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 64.57,
+            "value": 59.62,
             "target": 90,
-            "delta": -25.43,
+            "delta": -30.38,
             "status": "danger",
             "series": [
               [
@@ -669,9 +672,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 54.16,
+            "value": 63,
             "target": 95,
-            "delta": -40.84,
+            "delta": -32,
             "status": "danger",
             "series": [
               [
@@ -727,9 +730,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 86.65,
+            "value": 86.25,
             "target": 90,
-            "delta": -3.35,
+            "delta": -3.75,
             "status": "danger",
             "series": [
               [
@@ -783,7 +786,8 @@ window.NACIONAL_DATA = {
                 3327
               ]
             ]
-          }
+          },
+          "vencidos": 40994
         }
       }
     },
@@ -797,11 +801,12 @@ window.NACIONAL_DATA = {
           "periodName": "Consolidado Último Mes",
           "periodCode": "mes_anterior",
           "periodDetail": "Cierre mensual consolidado Octubre 2026",
+          "totalVolume": 440545,
           "q": {
-            "total": 427949,
-            "paq_ar": 333801,
-            "pas": 72752,
-            "expreso": 21397
+            "total": 440545,
+            "paq_ar": 367617,
+            "pas": 72928,
+            "expreso": 18924
           },
           "sla_paqar": {
             "value": 97.45,
@@ -930,10 +935,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 93.61,
+            "value": 82.96,
             "target": 95,
-            "delta": -1.39,
-            "status": "warning",
+            "delta": -12.04,
+            "status": "danger",
             "series": [
               [
                 "Feb",
@@ -988,9 +993,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 61.3,
+            "value": 68.34,
             "target": 90,
-            "delta": -28.7,
+            "delta": -21.66,
             "status": "danger",
             "series": [
               [
@@ -1046,9 +1051,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 79.22,
+            "value": 80.27,
             "target": 95,
-            "delta": -15.78,
+            "delta": -14.73,
             "status": "danger",
             "series": [
               [
@@ -1109,10 +1114,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 89.09,
+            "value": 85.46,
             "target": 90,
-            "delta": -0.91,
-            "status": "warning",
+            "delta": -4.54,
+            "status": "danger",
             "series": [
               [
                 "Ene",
@@ -1170,17 +1175,19 @@ window.NACIONAL_DATA = {
                 5562
               ]
             ]
-          }
+          },
+          "vencidos": 440545
         },
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
           "periodDetail": "25/11/2026 (Última jornada cerrada)",
+          "totalVolume": 30850,
           "q": {
-            "total": 22199,
-            "paq_ar": 17316,
-            "pas": 3774,
-            "expreso": 1110
+            "total": 30850,
+            "paq_ar": 25154,
+            "pas": 5696,
+            "expreso": 1140
           },
           "sla_paqar": {
             "value": 97.13,
@@ -1299,9 +1306,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 85.57,
+            "value": 88.02,
             "target": 95,
-            "delta": -9.43,
+            "delta": -6.98,
             "status": "danger",
             "series": [
               [
@@ -1357,9 +1364,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 66.92,
+            "value": 66.43,
             "target": 90,
-            "delta": -23.08,
+            "delta": -23.57,
             "status": "danger",
             "series": [
               [
@@ -1415,9 +1422,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 77.69,
+            "value": 76.14,
             "target": 95,
-            "delta": -17.31,
+            "delta": -18.86,
             "status": "danger",
             "series": [
               [
@@ -1473,10 +1480,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 87.54,
+            "value": 85.54,
             "target": 90,
-            "delta": -2.46,
-            "status": "warning",
+            "delta": -4.46,
+            "status": "danger",
             "series": [
               [
                 "11 Nov",
@@ -1529,7 +1536,8 @@ window.NACIONAL_DATA = {
                 1140
               ]
             ]
-          }
+          },
+          "vencidos": 30850
         }
       }
     },
@@ -1543,11 +1551,12 @@ window.NACIONAL_DATA = {
           "periodName": "Consolidado Último Mes",
           "periodCode": "mes_anterior",
           "periodDetail": "Cierre mensual consolidado Octubre 2026",
+          "totalVolume": 521623,
           "q": {
-            "total": 598443,
-            "paq_ar": 466786,
-            "pas": 101736,
-            "expreso": 29923
+            "total": 521623,
+            "paq_ar": 507478,
+            "pas": 14145,
+            "expreso": 20023
           },
           "sla_paqar": {
             "value": 96.35,
@@ -1676,10 +1685,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 93.93,
+            "value": 89.07,
             "target": 95,
-            "delta": -1.07,
-            "status": "warning",
+            "delta": -5.93,
+            "status": "danger",
             "series": [
               [
                 "Feb",
@@ -1734,9 +1743,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 58.14,
+            "value": 63.26,
             "target": 90,
-            "delta": -31.86,
+            "delta": -26.74,
             "status": "danger",
             "series": [
               [
@@ -1792,9 +1801,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 65.11,
+            "value": 63.25,
             "target": 95,
-            "delta": -29.89,
+            "delta": -31.75,
             "status": "danger",
             "series": [
               [
@@ -1855,9 +1864,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 88.76,
+            "value": 88.34,
             "target": 90,
-            "delta": -1.24,
+            "delta": -1.66,
             "status": "warning",
             "series": [
               [
@@ -1916,17 +1925,19 @@ window.NACIONAL_DATA = {
                 6035
               ]
             ]
-          }
+          },
+          "vencidos": 521623
         },
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
           "periodDetail": "25/11/2026 (Última jornada cerrada)",
+          "totalVolume": 35646,
           "q": {
-            "total": 30820,
-            "paq_ar": 24039,
-            "pas": 5238,
-            "expreso": 1540
+            "total": 35646,
+            "paq_ar": 34556,
+            "pas": 1090,
+            "expreso": 1352
           },
           "sla_paqar": {
             "value": 95.3,
@@ -2045,10 +2056,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 92.45,
+            "value": 91.85,
             "target": 95,
-            "delta": -2.55,
-            "status": "warning",
+            "delta": -3.15,
+            "status": "danger",
             "series": [
               [
                 "11 Nov",
@@ -2103,9 +2114,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 65.02,
+            "value": 64.9,
             "target": 90,
-            "delta": -24.98,
+            "delta": -25.1,
             "status": "danger",
             "series": [
               [
@@ -2161,9 +2172,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 62.64,
+            "value": 55.1,
             "target": 95,
-            "delta": -32.36,
+            "delta": -39.9,
             "status": "danger",
             "series": [
               [
@@ -2219,10 +2230,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 90.3,
+            "value": 88.79,
             "target": 90,
-            "delta": 0.3,
-            "status": "ok",
+            "delta": -1.21,
+            "status": "warning",
             "series": [
               [
                 "11 Nov",
@@ -2275,7 +2286,8 @@ window.NACIONAL_DATA = {
                 1352
               ]
             ]
-          }
+          },
+          "vencidos": 35646
         }
       }
     },
@@ -2289,11 +2301,12 @@ window.NACIONAL_DATA = {
           "periodName": "Consolidado Último Mes",
           "periodCode": "mes_anterior",
           "periodDetail": "Cierre mensual consolidado Octubre 2026",
+          "totalVolume": 236689,
           "q": {
-            "total": 266660,
-            "paq_ar": 207994,
-            "pas": 45332,
-            "expreso": 13332
+            "total": 236689,
+            "paq_ar": 226285,
+            "pas": 10404,
+            "expreso": 4883
           },
           "sla_paqar": {
             "value": 96.09,
@@ -2422,10 +2435,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 95.28,
+            "value": 93.23,
             "target": 95,
-            "delta": 0.28,
-            "status": "ok",
+            "delta": -1.77,
+            "status": "warning",
             "series": [
               [
                 "Feb",
@@ -2480,9 +2493,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 56.25,
+            "value": 63.64,
             "target": 90,
-            "delta": -33.75,
+            "delta": -26.36,
             "status": "danger",
             "series": [
               [
@@ -2538,9 +2551,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 67.53,
+            "value": 61.77,
             "target": 95,
-            "delta": -27.47,
+            "delta": -33.23,
             "status": "danger",
             "series": [
               [
@@ -2601,9 +2614,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 79.48,
+            "value": 86.22,
             "target": 90,
-            "delta": -10.52,
+            "delta": -3.78,
             "status": "danger",
             "series": [
               [
@@ -2662,17 +2675,19 @@ window.NACIONAL_DATA = {
                 1410
               ]
             ]
-          }
+          },
+          "vencidos": 236689
         },
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
           "periodDetail": "25/11/2026 (Última jornada cerrada)",
+          "totalVolume": 15900,
           "q": {
-            "total": 13462,
-            "paq_ar": 10499,
-            "pas": 2287,
-            "expreso": 674
+            "total": 15900,
+            "paq_ar": 15158,
+            "pas": 742,
+            "expreso": 333
           },
           "sla_paqar": {
             "value": 95.52,
@@ -2791,9 +2806,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 96.21,
+            "value": 95.3,
             "target": 95,
-            "delta": 1.21,
+            "delta": 0.3,
             "status": "ok",
             "series": [
               [
@@ -2849,9 +2864,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 63.76,
+            "value": 63.91,
             "target": 90,
-            "delta": -26.24,
+            "delta": -26.09,
             "status": "danger",
             "series": [
               [
@@ -2907,9 +2922,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 57.55,
+            "value": 64.56,
             "target": 95,
-            "delta": -37.45,
+            "delta": -30.44,
             "status": "danger",
             "series": [
               [
@@ -2965,9 +2980,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 87.58,
+            "value": 89.13,
             "target": 90,
-            "delta": -2.42,
+            "delta": -0.87,
             "status": "warning",
             "series": [
               [
@@ -3021,7 +3036,8 @@ window.NACIONAL_DATA = {
                 333
               ]
             ]
-          }
+          },
+          "vencidos": 15900
         }
       }
     },
@@ -3035,11 +3051,12 @@ window.NACIONAL_DATA = {
           "periodName": "Consolidado Último Mes",
           "periodCode": "mes_anterior",
           "periodDetail": "Cierre mensual consolidado Octubre 2026",
+          "totalVolume": 247681,
           "q": {
-            "total": 260959,
-            "paq_ar": 203550,
-            "pas": 44363,
-            "expreso": 13048
+            "total": 247681,
+            "paq_ar": 230961,
+            "pas": 16720,
+            "expreso": 4194
           },
           "sla_paqar": {
             "value": 92.84,
@@ -3168,9 +3185,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 82.32,
+            "value": 84.23,
             "target": 95,
-            "delta": -12.68,
+            "delta": -10.77,
             "status": "danger",
             "series": [
               [
@@ -3226,9 +3243,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 55.11,
+            "value": 64.57,
             "target": 90,
-            "delta": -34.89,
+            "delta": -25.43,
             "status": "danger",
             "series": [
               [
@@ -3284,9 +3301,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 49.85,
+            "value": 48.95,
             "target": 95,
-            "delta": -45.15,
+            "delta": -46.05,
             "status": "danger",
             "series": [
               [
@@ -3347,9 +3364,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 87.42,
+            "value": 88.44,
             "target": 90,
-            "delta": -2.58,
+            "delta": -1.56,
             "status": "warning",
             "series": [
               [
@@ -3408,17 +3425,19 @@ window.NACIONAL_DATA = {
                 1283
               ]
             ]
-          }
+          },
+          "vencidos": 247681
         },
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
           "periodDetail": "25/11/2026 (Última jornada cerrada)",
+          "totalVolume": 17168,
           "q": {
-            "total": 12676,
-            "paq_ar": 9887,
-            "pas": 2155,
-            "expreso": 634
+            "total": 17168,
+            "paq_ar": 15537,
+            "pas": 1631,
+            "expreso": 252
           },
           "sla_paqar": {
             "value": 88.45,
@@ -3537,9 +3556,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 84.6,
+            "value": 89.04,
             "target": 95,
-            "delta": -10.4,
+            "delta": -5.96,
             "status": "danger",
             "series": [
               [
@@ -3595,9 +3614,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 56.31,
+            "value": 63.81,
             "target": 90,
-            "delta": -33.69,
+            "delta": -26.19,
             "status": "danger",
             "series": [
               [
@@ -3653,9 +3672,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 43.27,
+            "value": 43.25,
             "target": 95,
-            "delta": -51.73,
+            "delta": -51.75,
             "status": "danger",
             "series": [
               [
@@ -3711,9 +3730,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 90.99,
+            "value": 92.65,
             "target": 90,
-            "delta": 0.99,
+            "delta": 2.65,
             "status": "ok",
             "series": [
               [
@@ -3767,7 +3786,8 @@ window.NACIONAL_DATA = {
                 252
               ]
             ]
-          }
+          },
+          "vencidos": 17168
         }
       }
     },
@@ -3781,14 +3801,16 @@ window.NACIONAL_DATA = {
           "periodName": "Mes en Curso",
           "periodCode": "mes_anterior",
           "periodDetail": "Acumulado Noviembre 2026",
+          "totalVolume": 1874226,
+          "vencidos": 1874226,
           "backlog": 8842,
           "a_vencer": 682450,
           "guarda_vencida": 6743,
           "q": {
-            "total": 912532,
-            "paq_ar": 912532,
-            "pas": 3023,
-            "expreso": 521
+            "total": 1874226,
+            "paq_ar": 1874226,
+            "pas": 0,
+            "expreso": 85731
           },
           "sla_paqar": {
             "value": 96.02,
@@ -3917,9 +3939,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 91.89,
+            "value": 0,
             "target": 95,
-            "delta": -3.11,
+            "delta": -95,
             "status": "danger",
             "series": [
               [
@@ -3975,9 +3997,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 62.37,
+            "value": 0,
             "target": 90,
-            "delta": -27.63,
+            "delta": -90,
             "status": "danger",
             "series": [
               [
@@ -4033,9 +4055,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 67.38,
+            "value": 66.86,
             "target": 95,
-            "delta": -27.62,
+            "delta": -28.14,
             "status": "danger",
             "series": [
               [
@@ -4096,9 +4118,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 86.38,
+            "value": 85.93,
             "target": 90,
-            "delta": -3.62,
+            "delta": -4.07,
             "status": "danger",
             "series": [
               [
@@ -4163,14 +4185,16 @@ window.NACIONAL_DATA = {
           "periodName": "Día Hábil Anterior",
           "periodCode": "dia_puro",
           "periodDetail": "25/11/2026 (Última jornada cerrada)",
+          "totalVolume": 120850,
+          "vencidos": 120850,
           "backlog": 8842,
           "a_vencer": 682450,
           "guarda_vencida": 6743,
           "q": {
-            "total": 123446,
-            "paq_ar": 123446,
-            "pas": 3023,
-            "expreso": 74
+            "total": 120850,
+            "paq_ar": 120850,
+            "pas": 0,
+            "expreso": 6404
           },
           "sla_paqar": {
             "value": 94.67,
@@ -4289,9 +4313,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_pas": {
-            "value": 86.98,
+            "value": 0,
             "target": 95,
-            "delta": -8.02,
+            "delta": -95,
             "status": "danger",
             "series": [
               [
@@ -4347,9 +4371,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_pas": {
-            "value": 62.71,
+            "value": 0,
             "target": 90,
-            "delta": -27.29,
+            "delta": -90,
             "status": "danger",
             "series": [
               [
@@ -4405,9 +4429,9 @@ window.NACIONAL_DATA = {
             ]
           },
           "sla_expreso": {
-            "value": 65.28,
+            "value": 62.98,
             "target": 95,
-            "delta": -29.72,
+            "delta": -32.02,
             "status": "danger",
             "series": [
               [
@@ -4463,10 +4487,10 @@ window.NACIONAL_DATA = {
             ]
           },
           "fv_expreso": {
-            "value": 88.56,
+            "value": 86.93,
             "target": 90,
-            "delta": -1.44,
-            "status": "warning",
+            "delta": -3.07,
+            "status": "danger",
             "series": [
               [
                 "11 Nov",
