@@ -1,10 +1,10 @@
 window.PBA_DATA = {
   "region": "Región PBA",
   "regionFull": "Provincia de Buenos Aires / La Pampa",
-  "maestroLastUpload": "25/11/2026 12:30 hs",
-  "lastSyncMoment": "26/11/2026 01:03 hs",
-  "lastUpdate": "25/11/2026 12:30 hs",
-  "pureDayLabel": "Día Hábil Anterior (24/11/2026)",
+  "maestroLastUpload": "26/11/2026 11:56 hs",
+  "lastSyncMoment": "26/11/2026 13:25 hs",
+  "lastUpdate": "26/11/2026 11:56 hs",
+  "pureDayLabel": "Día Hábil Anterior (25/11/2026)",
   "monthLabel": "Mes en Curso Acumulado (Noviembre 2026)",
   "targets": {
     "sla_paqar": 95,
@@ -19,64 +19,64 @@ window.PBA_DATA = {
       "periodName": "Mes en Curso",
       "periodCode": "mes_anterior",
       "periodDetail": "Acumulado Noviembre 2026",
-      "totalVolume": 409507,
-      "vencidos": 409507,
+      "totalVolume": 440545,
+      "vencidos": 440545,
       "backlog": 1224,
       "a_vencer": 150002,
       "guarda_vencida": 1292,
       "q": {
-        "total": 409507,
-        "paq_ar": 342463,
-        "pas": 67044,
-        "expreso": 17784
+        "total": 440545,
+        "paq_ar": 367617,
+        "pas": 72928,
+        "expreso": 18924
       },
       "sla_paqar": {
-        "value": 97.42,
+        "value": 97.45,
         "target": 95,
-        "volume": 342463,
+        "volume": 367617,
         "status": "ok",
-        "delta": 2.42,
+        "delta": 2.45,
         "activacion": 97.41,
         "encaminamiento": 97.38
       },
       "sla_clasico": {
-        "value": 98.35,
+        "value": 98.46,
         "target": 95,
-        "delta": 3.35,
-        "status": "ok"
+        "status": "ok",
+        "delta": 3.46
       },
       "sla_expreso": {
-        "value": 80.35,
+        "value": 80.27,
         "target": 95,
-        "volume": 17784,
+        "volume": 18924,
         "status": "danger",
-        "delta": -14.65
+        "delta": -14.73
       },
       "fv_expreso": {
-        "value": 85.45,
+        "value": 85.46,
         "target": 90,
-        "volume": 17784,
+        "volume": 18924,
         "status": "danger",
-        "delta": -4.55
+        "delta": -4.54
       },
       "fv_paqar": {
-        "value": 88.8,
+        "value": 88.78,
         "target": 90,
         "volume": 169895,
         "status": "warning",
-        "delta": -1.2
+        "delta": -1.22
       },
       "sla_pas": {
         "value": 88.69,
         "target": 95,
-        "volume": 67044,
+        "volume": 72928,
         "status": "warning",
         "delta": -6.31
       },
       "fv_pas": {
         "value": 63.94,
         "target": 90,
-        "volume": 67044,
+        "volume": 72928,
         "status": "danger",
         "delta": -26.06
       },
@@ -90,65 +90,65 @@ window.PBA_DATA = {
     "dia_puro": {
       "periodName": "Día Hábil Anterior",
       "periodCode": "dia_puro",
-      "periodDetail": "24/11/2026 (Última jornada cerrada)",
-      "totalVolume": 31477,
-      "vencidos": 31477,
+      "periodDetail": "25/11/2026 (Última jornada cerrada)",
+      "totalVolume": 30850,
+      "vencidos": 30850,
       "backlog": 1224,
       "a_vencer": 150002,
       "guarda_vencida": 1292,
       "q": {
-        "total": 31477,
-        "paq_ar": 25946,
-        "pas": 5531,
-        "expreso": 1022
+        "total": 30850,
+        "paq_ar": 25154,
+        "pas": 5696,
+        "expreso": 1140
       },
       "sla_paqar": {
-        "value": 96.78,
+        "value": 97.13,
         "target": 95,
-        "volume": 25946,
+        "volume": 25154,
         "status": "ok",
-        "delta": 1.78,
+        "delta": 2.13,
         "activacion": 97.28,
         "encaminamiento": 97.26
       },
       "sla_clasico": {
-        "value": 97.55,
+        "value": 98.5,
         "target": 95,
-        "delta": 2.55,
-        "status": "ok"
+        "status": "ok",
+        "delta": 3.5
       },
       "sla_expreso": {
-        "value": 77.98,
+        "value": 76.14,
         "target": 95,
-        "volume": 1022,
+        "volume": 1140,
         "status": "danger",
-        "delta": -17.02
+        "delta": -18.86
       },
       "fv_expreso": {
-        "value": 82.52,
+        "value": 85.54,
         "target": 90,
-        "volume": 1022,
+        "volume": 1140,
         "status": "danger",
-        "delta": -7.48
+        "delta": -4.46
       },
       "fv_paqar": {
-        "value": 89.28,
+        "value": 88.82,
         "target": 90,
         "volume": 24295,
         "status": "warning",
-        "delta": -0.72
+        "delta": -1.18
       },
       "sla_pas": {
         "value": 79.92,
         "target": 95,
-        "volume": 5531,
+        "volume": 5696,
         "status": "danger",
         "delta": -15.08
       },
       "fv_pas": {
         "value": 64.08,
         "target": 90,
-        "volume": 5531,
+        "volume": 5696,
         "status": "danger",
         "delta": -25.92
       },
@@ -168,9 +168,9 @@ window.PBA_DATA = {
       "city": "Bahía Blanca",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 97.13,
+          "value": 97.09,
           "target": 95,
-          "delta": 2.13,
+          "delta": 2.09,
           "status": "ok",
           "series": [
             {
@@ -251,12 +251,12 @@ window.PBA_DATA = {
               "volume": 27532
             }
           ],
-          "volume": 56307
+          "volume": 60413
         },
         "fv_paqar": {
-          "value": 90.23,
+          "value": 90.09,
           "target": 90,
-          "delta": 0.23,
+          "delta": 0.09,
           "status": "ok",
           "series": [
             {
@@ -337,12 +337,12 @@ window.PBA_DATA = {
               "volume": 15248
             }
           ],
-          "volume": 56307
+          "volume": 60413
         },
         "sla_pas": {
-          "value": 75.54,
+          "value": 76.47,
           "target": 95,
-          "delta": -19.46,
+          "delta": -18.53,
           "status": "danger",
           "series": [
             {
@@ -423,12 +423,12 @@ window.PBA_DATA = {
               "volume": 5717
             }
           ],
-          "volume": 9988
+          "volume": 10759
         },
         "fv_pas": {
-          "value": 72.73,
+          "value": 72.29,
           "target": 90,
-          "delta": -17.27,
+          "delta": -17.71,
           "status": "danger",
           "series": [
             {
@@ -509,44 +509,37 @@ window.PBA_DATA = {
               "volume": 5717
             }
           ],
-          "volume": 9988
+          "volume": 10759
         },
         "sla_expreso": {
-          "value": 71.25,
+          "value": 70.68,
           "target": 95,
-          "volume": 2188,
+          "volume": 2326,
           "status": "danger",
-          "delta": -23.75
+          "delta": -24.32
         },
         "fv_expreso": {
-          "value": 88.13,
+          "value": 87.89,
           "target": 90,
-          "volume": 2188,
+          "volume": 2326,
           "status": "warning",
-          "delta": -1.87
+          "delta": -2.11
         },
-        "volume": 66295,
+        "volume": 71172,
         "q": {
-          "total": 66295,
-          "paq_ar": 56307,
-          "pas": 9988,
-          "expreso": 2188
+          "total": 71172,
+          "paq_ar": 60413,
+          "pas": 10759,
+          "expreso": 2326
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 96.99,
+          "value": 96.54,
           "target": 95,
-          "delta": 1.99,
+          "delta": 1.54,
           "status": "ok",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 97.53,
-              "target": 95,
-              "volume": 3720
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -592,7 +585,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 97.52,
+              "value": 97.54,
               "target": 95,
               "volume": 6495
             },
@@ -606,26 +599,26 @@ window.PBA_DATA = {
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 96.99,
+              "value": 97.01,
               "target": 95,
               "volume": 4351
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 96.54,
+              "target": 95,
+              "volume": 4106
             }
           ],
-          "volume": 4351
+          "volume": 4106
         },
         "fv_paqar": {
-          "value": 89.45,
+          "value": 88.79,
           "target": 90,
-          "delta": -0.55,
+          "delta": -1.21,
           "status": "warning",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 91.62,
-              "target": 90,
-              "volume": 3720
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -657,7 +650,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 89.6,
+              "value": 89.57,
               "target": 90,
               "volume": 4070
             },
@@ -671,40 +664,40 @@ window.PBA_DATA = {
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 90.12,
+              "value": 90.05,
               "target": 90,
               "volume": 6495
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 90.62,
+              "value": 90.48,
               "target": 90,
               "volume": 4798
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 89.45,
+              "value": 89.17,
               "target": 90,
               "volume": 4351
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 88.79,
+              "target": 90,
+              "volume": 4106
             }
           ],
-          "volume": 4351
+          "volume": 4106
         },
         "sla_pas": {
-          "value": 81.25,
+          "value": 92.22,
           "target": 95,
-          "delta": -13.75,
-          "status": "danger",
+          "delta": -2.78,
+          "status": "warning",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 76.09,
-              "target": 95,
-              "volume": 423
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -736,54 +729,54 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 68.16,
+              "value": 68.19,
               "target": 95,
-              "volume": 615
+              "volume": 622
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 87.93,
+              "value": 87.94,
               "target": 95,
-              "volume": 864
+              "volume": 876
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 88.07,
+              "value": 88.1,
               "target": 95,
-              "volume": 820
+              "volume": 825
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
               "value": 88.5,
               "target": 95,
-              "volume": 788
+              "volume": 789
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 81.25,
+              "value": 81.27,
               "target": 95,
-              "volume": 785
+              "volume": 788
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 92.22,
+              "target": 95,
+              "volume": 743
             }
           ],
-          "volume": 785
+          "volume": 743
         },
         "fv_pas": {
-          "value": 75.55,
+          "value": 65.03,
           "target": 90,
-          "delta": -14.45,
+          "delta": -24.97,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 70.16,
-              "target": 90,
-              "volume": 423
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -815,55 +808,55 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 73.41,
+              "value": 73.45,
               "target": 90,
-              "volume": 615
+              "volume": 622
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 81,
+              "value": 81.13,
               "target": 90,
-              "volume": 864
+              "volume": 876
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 76.86,
+              "value": 76.44,
               "target": 90,
-              "volume": 820
+              "volume": 825
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 75.8,
+              "value": 75.82,
               "target": 90,
-              "volume": 788
+              "volume": 789
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 75.55,
+              "value": 75.61,
               "target": 90,
-              "volume": 785
+              "volume": 788
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 65.03,
+              "target": 90,
+              "volume": 743
             }
           ],
-          "volume": 785
+          "volume": 743
         },
         "sla_expreso": {
-          "value": 66.94,
+          "value": 61.59,
           "target": 95,
-          "volume": 124,
+          "volume": 138,
           "status": "danger",
-          "delta": -28.06,
+          "delta": -33.41,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 79.53,
-              "target": 95,
-              "volume": 171
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -926,23 +919,23 @@ window.PBA_DATA = {
               "value": 66.94,
               "target": 95,
               "volume": 124
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 61.59,
+              "target": 95,
+              "volume": 138
             }
           ]
         },
         "fv_expreso": {
-          "value": 88,
+          "value": 86.67,
           "target": 90,
-          "volume": 124,
-          "status": "warning",
-          "delta": -2,
+          "volume": 138,
+          "status": "danger",
+          "delta": -3.33,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 88.99,
-              "target": 90,
-              "volume": 171
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -988,32 +981,39 @@ window.PBA_DATA = {
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 88.89,
+              "value": 88.57,
               "target": 90,
               "volume": 206
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 88.37,
+              "value": 87.37,
               "target": 90,
               "volume": 149
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 88,
+              "value": 86.15,
               "target": 90,
               "volume": 124
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 86.67,
+              "target": 90,
+              "volume": 138
             }
           ]
         },
-        "volume": 5136,
+        "volume": 4849,
         "q": {
-          "total": 5136,
-          "paq_ar": 4351,
-          "pas": 785,
-          "expreso": 124
+          "total": 4849,
+          "paq_ar": 4106,
+          "pas": 743,
+          "expreso": 138
         }
       }
     },
@@ -1024,9 +1024,9 @@ window.PBA_DATA = {
       "city": "La Plata",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 97.16,
+          "value": 97.19,
           "target": 95,
-          "delta": 2.16,
+          "delta": 2.19,
           "status": "ok",
           "series": [
             {
@@ -1107,12 +1107,12 @@ window.PBA_DATA = {
               "volume": 33660
             }
           ],
-          "volume": 67904
+          "volume": 72810
         },
         "fv_paqar": {
-          "value": 89.02,
+          "value": 89.06,
           "target": 90,
-          "delta": -0.98,
+          "delta": -0.94,
           "status": "warning",
           "series": [
             {
@@ -1193,12 +1193,12 @@ window.PBA_DATA = {
               "volume": 16372
             }
           ],
-          "volume": 67904
+          "volume": 72810
         },
         "sla_pas": {
-          "value": 91.37,
+          "value": 91.87,
           "target": 95,
-          "delta": -3.63,
+          "delta": -3.13,
           "status": "danger",
           "series": [
             {
@@ -1279,12 +1279,12 @@ window.PBA_DATA = {
               "volume": 9142
             }
           ],
-          "volume": 17993
+          "volume": 19846
         },
         "fv_pas": {
-          "value": 67.8,
+          "value": 67.57,
           "target": 90,
-          "delta": -22.2,
+          "delta": -22.43,
           "status": "danger",
           "series": [
             {
@@ -1365,44 +1365,37 @@ window.PBA_DATA = {
               "volume": 9142
             }
           ],
-          "volume": 17993
+          "volume": 19846
         },
         "sla_expreso": {
-          "value": 81.48,
+          "value": 81.25,
           "target": 95,
-          "volume": 3763,
+          "volume": 3974,
           "status": "danger",
-          "delta": -13.52
+          "delta": -13.75
         },
         "fv_expreso": {
-          "value": 90.48,
+          "value": 90.61,
           "target": 90,
-          "volume": 3763,
+          "volume": 3974,
           "status": "ok",
-          "delta": 0.48
+          "delta": 0.61
         },
-        "volume": 85897,
+        "volume": 92656,
         "q": {
-          "total": 85897,
-          "paq_ar": 67904,
-          "pas": 17993,
-          "expreso": 3763
+          "total": 92656,
+          "paq_ar": 72810,
+          "pas": 19846,
+          "expreso": 3974
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 96.71,
+          "value": 97.47,
           "target": 95,
-          "delta": 1.71,
+          "delta": 2.47,
           "status": "ok",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 95.63,
-              "target": 95,
-              "volume": 4552
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -1448,7 +1441,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 97.64,
+              "value": 97.68,
               "target": 95,
               "volume": 8106
             },
@@ -1465,23 +1458,23 @@ window.PBA_DATA = {
               "value": 96.71,
               "target": 95,
               "volume": 4991
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 97.47,
+              "target": 95,
+              "volume": 4906
             }
           ],
-          "volume": 4991
+          "volume": 4906
         },
         "fv_paqar": {
-          "value": 89.17,
+          "value": 89.71,
           "target": 90,
-          "delta": -0.83,
+          "delta": -0.29,
           "status": "warning",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 89.97,
-              "target": 90,
-              "volume": 4552
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -1492,14 +1485,14 @@ window.PBA_DATA = {
             {
               "dateLabel": "12 Nov",
               "isoDate": "2026-11-12",
-              "value": 88.86,
+              "value": 88.87,
               "target": 90,
               "volume": 5091
             },
             {
               "dateLabel": "13 Nov",
               "isoDate": "2026-11-13",
-              "value": 88.73,
+              "value": 88.7,
               "target": 90,
               "volume": 4941
             },
@@ -1513,54 +1506,54 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 87.01,
+              "value": 86.98,
               "target": 90,
               "volume": 5364
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 89.05,
+              "value": 89.06,
               "target": 90,
               "volume": 5306
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 89.04,
+              "value": 89.07,
               "target": 90,
               "volume": 8106
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 88.75,
+              "value": 88.71,
               "target": 90,
               "volume": 5934
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 89.17,
+              "value": 89.1,
               "target": 90,
               "volume": 4991
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 89.71,
+              "target": 90,
+              "volume": 4906
             }
           ],
-          "volume": 4991
+          "volume": 4906
         },
         "sla_pas": {
-          "value": 94.73,
+          "value": 98.52,
           "target": 95,
-          "delta": -0.27,
-          "status": "warning",
+          "delta": 3.52,
+          "status": "ok",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 89.61,
-              "target": 95,
-              "volume": 617
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -1587,28 +1580,28 @@ window.PBA_DATA = {
               "isoDate": "2026-11-16",
               "value": 96.48,
               "target": 95,
-              "volume": 1418
+              "volume": 1420
             },
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
               "value": 91.52,
               "target": 95,
-              "volume": 1323
+              "volume": 1330
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 93.48,
+              "value": 93.53,
               "target": 95,
-              "volume": 1448
+              "volume": 1484
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
               "value": 87.09,
               "target": 95,
-              "volume": 1733
+              "volume": 1734
             },
             {
               "dateLabel": "20 Nov",
@@ -1623,23 +1616,23 @@ window.PBA_DATA = {
               "value": 94.73,
               "target": 95,
               "volume": 1291
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 98.52,
+              "target": 95,
+              "volume": 1807
             }
           ],
-          "volume": 1291
+          "volume": 1807
         },
         "fv_pas": {
-          "value": 69.9,
+          "value": 63.91,
           "target": 90,
-          "delta": -20.1,
+          "delta": -26.09,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 65.32,
-              "target": 90,
-              "volume": 617
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -1650,7 +1643,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "12 Nov",
               "isoDate": "2026-11-12",
-              "value": 72.63,
+              "value": 72.64,
               "target": 90,
               "volume": 587
             },
@@ -1664,30 +1657,30 @@ window.PBA_DATA = {
             {
               "dateLabel": "16 Nov",
               "isoDate": "2026-11-16",
-              "value": 75.11,
+              "value": 75.1,
               "target": 90,
-              "volume": 1418
+              "volume": 1420
             },
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 68.74,
+              "value": 68.8,
               "target": 90,
-              "volume": 1323
+              "volume": 1330
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 70.77,
+              "value": 71.29,
               "target": 90,
-              "volume": 1448
+              "volume": 1484
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
               "value": 68.55,
               "target": 90,
-              "volume": 1733
+              "volume": 1734
             },
             {
               "dateLabel": "20 Nov",
@@ -1702,24 +1695,24 @@ window.PBA_DATA = {
               "value": 69.9,
               "target": 90,
               "volume": 1291
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 63.91,
+              "target": 90,
+              "volume": 1807
             }
           ],
-          "volume": 1291
+          "volume": 1807
         },
         "sla_expreso": {
-          "value": 76.92,
+          "value": 77.25,
           "target": 95,
-          "volume": 208,
+          "volume": 211,
           "status": "danger",
-          "delta": -18.08,
+          "delta": -17.75,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 67.27,
-              "target": 95,
-              "volume": 275
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -1782,23 +1775,23 @@ window.PBA_DATA = {
               "value": 76.92,
               "target": 95,
               "volume": 208
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 77.25,
+              "target": 95,
+              "volume": 211
             }
           ]
         },
         "fv_expreso": {
-          "value": 88.31,
+          "value": 92.79,
           "target": 90,
-          "volume": 208,
-          "status": "warning",
-          "delta": -1.69,
+          "volume": 211,
+          "status": "ok",
+          "delta": 2.79,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 90.51,
-              "target": 90,
-              "volume": 275
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -1809,7 +1802,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "12 Nov",
               "isoDate": "2026-11-12",
-              "value": 86.32,
+              "value": 86.44,
               "target": 90,
               "volume": 226
             },
@@ -1830,7 +1823,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 90.49,
+              "value": 90.53,
               "target": 90,
               "volume": 437
             },
@@ -1844,32 +1837,39 @@ window.PBA_DATA = {
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 93.07,
+              "value": 93.1,
               "target": 90,
               "volume": 347
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 88.52,
+              "value": 88.89,
               "target": 90,
               "volume": 233
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 88.31,
+              "value": 88.54,
               "target": 90,
               "volume": 208
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 92.79,
+              "target": 90,
+              "volume": 211
             }
           ]
         },
-        "volume": 6282,
+        "volume": 6713,
         "q": {
-          "total": 6282,
-          "paq_ar": 4991,
-          "pas": 1291,
-          "expreso": 208
+          "total": 6713,
+          "paq_ar": 4906,
+          "pas": 1807,
+          "expreso": 211
         }
       }
     },
@@ -1880,9 +1880,9 @@ window.PBA_DATA = {
       "city": "Mar del Plata",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 97.64,
+          "value": 97.57,
           "target": 95,
-          "delta": 2.64,
+          "delta": 2.57,
           "status": "ok",
           "series": [
             {
@@ -1963,12 +1963,12 @@ window.PBA_DATA = {
               "volume": 29144
             }
           ],
-          "volume": 59780
+          "volume": 64198
         },
         "fv_paqar": {
-          "value": 88.15,
+          "value": 88.09,
           "target": 90,
-          "delta": -1.85,
+          "delta": -1.91,
           "status": "warning",
           "series": [
             {
@@ -2049,12 +2049,12 @@ window.PBA_DATA = {
               "volume": 16768
             }
           ],
-          "volume": 59780
+          "volume": 64198
         },
         "sla_pas": {
-          "value": 76.38,
+          "value": 76.46,
           "target": 95,
-          "delta": -18.62,
+          "delta": -18.54,
           "status": "danger",
           "series": [
             {
@@ -2135,12 +2135,12 @@ window.PBA_DATA = {
               "volume": 8168
             }
           ],
-          "volume": 13696
+          "volume": 14908
         },
         "fv_pas": {
-          "value": 62.91,
+          "value": 63.43,
           "target": 90,
-          "delta": -27.09,
+          "delta": -26.57,
           "status": "danger",
           "series": [
             {
@@ -2221,44 +2221,37 @@ window.PBA_DATA = {
               "volume": 8168
             }
           ],
-          "volume": 13696
+          "volume": 14908
         },
         "sla_expreso": {
-          "value": 74.97,
+          "value": 74.56,
           "target": 95,
-          "volume": 2805,
+          "volume": 3015,
           "status": "danger",
-          "delta": -20.03
+          "delta": -20.44
         },
         "fv_expreso": {
-          "value": 82.42,
+          "value": 82.38,
           "target": 90,
-          "volume": 2805,
+          "volume": 3015,
           "status": "danger",
-          "delta": -7.58
+          "delta": -7.62
         },
-        "volume": 73476,
+        "volume": 79106,
         "q": {
-          "total": 73476,
-          "paq_ar": 59780,
-          "pas": 13696,
-          "expreso": 2805
+          "total": 79106,
+          "paq_ar": 64198,
+          "pas": 14908,
+          "expreso": 3015
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 97.6,
+          "value": 96.33,
           "target": 95,
-          "delta": 2.6,
+          "delta": 1.33,
           "status": "ok",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 97.46,
-              "target": 95,
-              "volume": 3855
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -2297,47 +2290,47 @@ window.PBA_DATA = {
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 97.92,
+              "value": 97.94,
               "target": 95,
               "volume": 5724
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 97.69,
+              "value": 97.7,
               "target": 95,
               "volume": 6620
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 98.17,
+              "value": 98.19,
               "target": 95,
               "volume": 5400
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 97.6,
+              "value": 97.87,
               "target": 95,
               "volume": 4372
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 96.33,
+              "target": 95,
+              "volume": 4418
             }
           ],
-          "volume": 4372
+          "volume": 4418
         },
         "fv_paqar": {
-          "value": 87.72,
+          "value": 87.55,
           "target": 90,
-          "delta": -2.28,
+          "delta": -2.45,
           "status": "warning",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 87.79,
-              "target": 90,
-              "volume": 3855
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -2355,7 +2348,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "13 Nov",
               "isoDate": "2026-11-13",
-              "value": 86.5,
+              "value": 86.47,
               "target": 90,
               "volume": 4134
             },
@@ -2369,54 +2362,54 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 86.24,
+              "value": 86.2,
               "target": 90,
               "volume": 4424
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 87.87,
+              "value": 87.88,
               "target": 90,
               "volume": 5724
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 87.93,
+              "value": 87.89,
               "target": 90,
               "volume": 6620
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 88.74,
+              "value": 88.64,
               "target": 90,
               "volume": 5400
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 87.72,
+              "value": 87.67,
               "target": 90,
               "volume": 4372
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 87.55,
+              "target": 90,
+              "volume": 4418
             }
           ],
-          "volume": 4372
+          "volume": 4418
         },
         "sla_pas": {
-          "value": 76.92,
+          "value": 77.6,
           "target": 95,
-          "delta": -18.08,
+          "delta": -17.4,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 61.47,
-              "target": 95,
-              "volume": 1059
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -2455,47 +2448,47 @@ window.PBA_DATA = {
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 79.94,
+              "value": 79.95,
               "target": 95,
-              "volume": 802
+              "volume": 805
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 83.93,
+              "value": 83.91,
               "target": 95,
-              "volume": 1413
+              "volume": 1422
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 76.24,
+              "value": 76.15,
               "target": 95,
-              "volume": 1395
+              "volume": 1405
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 76.92,
+              "value": 76.97,
               "target": 95,
-              "volume": 1205
+              "volume": 1215
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 77.6,
+              "target": 95,
+              "volume": 1180
             }
           ],
-          "volume": 1205
+          "volume": 1180
         },
         "fv_pas": {
-          "value": 66.86,
+          "value": 69.84,
           "target": 90,
-          "delta": -23.14,
+          "delta": -20.16,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 54.54,
-              "target": 90,
-              "volume": 1059
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -2534,48 +2527,48 @@ window.PBA_DATA = {
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 65.18,
+              "value": 65.24,
               "target": 90,
-              "volume": 802
+              "volume": 805
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 64.21,
+              "value": 64.27,
               "target": 90,
-              "volume": 1413
+              "volume": 1422
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 59.8,
+              "value": 59.84,
               "target": 90,
-              "volume": 1395
+              "volume": 1405
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 66.86,
+              "value": 66.85,
               "target": 90,
-              "volume": 1205
+              "volume": 1215
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 69.84,
+              "target": 90,
+              "volume": 1180
             }
           ],
-          "volume": 1205
+          "volume": 1180
         },
         "sla_expreso": {
-          "value": 80.13,
+          "value": 67.62,
           "target": 95,
-          "volume": 156,
+          "volume": 210,
           "status": "danger",
-          "delta": -14.87,
+          "delta": -27.38,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 69.23,
-              "target": 95,
-              "volume": 195
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -2628,33 +2621,33 @@ window.PBA_DATA = {
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 80.35,
+              "value": 80.92,
               "target": 95,
               "volume": 173
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 80.13,
+              "value": 81.41,
               "target": 95,
               "volume": 156
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 67.62,
+              "target": 95,
+              "volume": 210
             }
           ]
         },
         "fv_expreso": {
-          "value": 79.07,
+          "value": 81.58,
           "target": 90,
-          "volume": 156,
+          "volume": 210,
           "status": "danger",
-          "delta": -10.93,
+          "delta": -8.42,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 78.03,
-              "target": 90,
-              "volume": 195
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -2700,32 +2693,39 @@ window.PBA_DATA = {
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 83.23,
+              "value": 83.33,
               "target": 90,
               "volume": 235
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 80,
+              "value": 79.63,
               "target": 90,
               "volume": 173
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 79.07,
+              "value": 80,
               "target": 90,
               "volume": 156
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 81.58,
+              "target": 90,
+              "volume": 210
             }
           ]
         },
-        "volume": 5577,
+        "volume": 5598,
         "q": {
-          "total": 5577,
-          "paq_ar": 4372,
-          "pas": 1205,
-          "expreso": 156
+          "total": 5598,
+          "paq_ar": 4418,
+          "pas": 1180,
+          "expreso": 210
         }
       }
     },
@@ -2736,9 +2736,9 @@ window.PBA_DATA = {
       "city": "Mercedes",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 97.6,
+          "value": 97.7,
           "target": 95,
-          "delta": 2.6,
+          "delta": 2.7,
           "status": "ok",
           "series": [
             {
@@ -2819,12 +2819,12 @@ window.PBA_DATA = {
               "volume": 29676
             }
           ],
-          "volume": 59358
+          "volume": 63700
         },
         "fv_paqar": {
-          "value": 89.62,
+          "value": 89.65,
           "target": 90,
-          "delta": -0.38,
+          "delta": -0.35,
           "status": "warning",
           "series": [
             {
@@ -2905,12 +2905,12 @@ window.PBA_DATA = {
               "volume": 18495
             }
           ],
-          "volume": 59358
+          "volume": 63700
         },
         "sla_pas": {
-          "value": 86.59,
+          "value": 86.89,
           "target": 95,
-          "delta": -8.41,
+          "delta": -8.11,
           "status": "danger",
           "series": [
             {
@@ -2991,12 +2991,12 @@ window.PBA_DATA = {
               "volume": 6541
             }
           ],
-          "volume": 11995
+          "volume": 12892
         },
         "fv_pas": {
-          "value": 71.82,
+          "value": 71.52,
           "target": 90,
-          "delta": -18.18,
+          "delta": -18.48,
           "status": "danger",
           "series": [
             {
@@ -3077,44 +3077,37 @@ window.PBA_DATA = {
               "volume": 6541
             }
           ],
-          "volume": 11995
+          "volume": 12892
         },
         "sla_expreso": {
-          "value": 83.79,
+          "value": 83.96,
           "target": 95,
-          "volume": 2881,
+          "volume": 3062,
           "status": "danger",
-          "delta": -11.21
+          "delta": -11.04
         },
         "fv_expreso": {
-          "value": 85.63,
+          "value": 85.92,
           "target": 90,
-          "volume": 2881,
+          "volume": 3062,
           "status": "danger",
-          "delta": -4.37
+          "delta": -4.08
         },
-        "volume": 71353,
+        "volume": 76592,
         "q": {
-          "total": 71353,
-          "paq_ar": 59358,
-          "pas": 11995,
-          "expreso": 2881
+          "total": 76592,
+          "paq_ar": 63700,
+          "pas": 12892,
+          "expreso": 3062
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 96.87,
+          "value": 98,
           "target": 95,
-          "delta": 1.87,
+          "delta": 3,
           "status": "ok",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 96.14,
-              "target": 95,
-              "volume": 3784
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -3132,7 +3125,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "13 Nov",
               "isoDate": "2026-11-13",
-              "value": 97.98,
+              "value": 98,
               "target": 95,
               "volume": 4304
             },
@@ -3146,54 +3139,54 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 97.18,
+              "value": 97.21,
               "target": 95,
               "volume": 4368
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 97.39,
+              "value": 97.53,
               "target": 95,
               "volume": 5058
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 97.78,
+              "value": 97.89,
               "target": 95,
               "volume": 6720
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 96.85,
+              "value": 97.3,
               "target": 95,
               "volume": 4925
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 96.87,
+              "value": 97.04,
               "target": 95,
               "volume": 4594
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 98,
+              "target": 95,
+              "volume": 4342
             }
           ],
-          "volume": 4594
+          "volume": 4342
         },
         "fv_paqar": {
-          "value": 90.61,
+          "value": 90.55,
           "target": 90,
-          "delta": 0.61,
+          "delta": 0.55,
           "status": "ok",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 89.97,
-              "target": 90,
-              "volume": 3784
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -3211,7 +3204,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "13 Nov",
               "isoDate": "2026-11-13",
-              "value": 90.05,
+              "value": 90.06,
               "target": 90,
               "volume": 4304
             },
@@ -3225,7 +3218,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 87.87,
+              "value": 87.85,
               "target": 90,
               "volume": 4368
             },
@@ -3239,40 +3232,40 @@ window.PBA_DATA = {
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 89.83,
+              "value": 89.77,
               "target": 90,
               "volume": 6720
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 89.23,
+              "value": 89.32,
               "target": 90,
               "volume": 4925
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 90.61,
+              "value": 90.07,
               "target": 90,
               "volume": 4594
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 90.55,
+              "target": 90,
+              "volume": 4342
             }
           ],
-          "volume": 4594
+          "volume": 4342
         },
         "sla_pas": {
-          "value": 88.5,
+          "value": 91.19,
           "target": 95,
-          "delta": -6.5,
+          "delta": -3.81,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 79.17,
-              "target": 95,
-              "volume": 518
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -3299,59 +3292,59 @@ window.PBA_DATA = {
               "isoDate": "2026-11-16",
               "value": 85.23,
               "target": 95,
-              "volume": 488
+              "volume": 489
             },
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 93.37,
+              "value": 93.38,
               "target": 95,
-              "volume": 573
+              "volume": 576
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
               "value": 97.33,
               "target": 95,
-              "volume": 916
+              "volume": 927
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 85.68,
+              "value": 85.62,
               "target": 95,
-              "volume": 1176
+              "volume": 1181
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 94.15,
+              "value": 93.93,
               "target": 95,
-              "volume": 1196
+              "volume": 1212
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 88.5,
+              "value": 88.74,
               "target": 95,
-              "volume": 1082
+              "volume": 1101
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 91.19,
+              "target": 95,
+              "volume": 842
             }
           ],
-          "volume": 1082
+          "volume": 842
         },
         "fv_pas": {
-          "value": 72.19,
+          "value": 66.5,
           "target": 90,
-          "delta": -17.81,
+          "delta": -23.5,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 60.98,
-              "target": 90,
-              "volume": 518
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -3376,62 +3369,62 @@ window.PBA_DATA = {
             {
               "dateLabel": "16 Nov",
               "isoDate": "2026-11-16",
-              "value": 72.42,
+              "value": 72.43,
               "target": 90,
-              "volume": 488
+              "volume": 489
             },
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 75.56,
+              "value": 75.64,
               "target": 90,
-              "volume": 573
+              "volume": 576
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 65.99,
+              "value": 66.09,
               "target": 90,
-              "volume": 916
+              "volume": 927
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 75.49,
+              "value": 75.5,
               "target": 90,
-              "volume": 1176
+              "volume": 1181
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 74.63,
+              "value": 75.01,
               "target": 90,
-              "volume": 1196
+              "volume": 1212
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 72.19,
+              "value": 72.4,
               "target": 90,
-              "volume": 1082
+              "volume": 1101
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 66.5,
+              "target": 90,
+              "volume": 842
             }
           ],
-          "volume": 1082
+          "volume": 842
         },
         "sla_expreso": {
-          "value": 86.62,
+          "value": 82.87,
           "target": 95,
-          "volume": 157,
+          "volume": 181,
           "status": "danger",
-          "delta": -8.38,
+          "delta": -12.13,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 76.96,
-              "target": 95,
-              "volume": 204
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -3449,7 +3442,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "13 Nov",
               "isoDate": "2026-11-13",
-              "value": 80.79,
+              "value": 81.28,
               "target": 95,
               "volume": 203
             },
@@ -3463,14 +3456,14 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 86.24,
+              "value": 86.58,
               "target": 95,
               "volume": 298
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 76.67,
+              "value": 78.33,
               "target": 95,
               "volume": 180
             },
@@ -3484,7 +3477,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 82.84,
+              "value": 84.02,
               "target": 95,
               "volume": 169
             },
@@ -3494,23 +3487,23 @@ window.PBA_DATA = {
               "value": 86.62,
               "target": 95,
               "volume": 157
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 82.87,
+              "target": 95,
+              "volume": 181
             }
           ]
         },
         "fv_expreso": {
-          "value": 84.27,
+          "value": 89.42,
           "target": 90,
-          "volume": 157,
-          "status": "danger",
-          "delta": -5.73,
+          "volume": 181,
+          "status": "warning",
+          "delta": -0.58,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 84.4,
-              "target": 90,
-              "volume": 204
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -3528,7 +3521,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "13 Nov",
               "isoDate": "2026-11-13",
-              "value": 84.78,
+              "value": 85,
               "target": 90,
               "volume": 203
             },
@@ -3542,46 +3535,53 @@ window.PBA_DATA = {
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 83.74,
+              "value": 83.9,
               "target": 90,
               "volume": 298
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 85.71,
+              "value": 86.09,
               "target": 90,
               "volume": 180
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 89.58,
+              "value": 89.69,
               "target": 90,
               "volume": 275
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 82.3,
+              "value": 83.19,
               "target": 90,
               "volume": 169
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 84.27,
+              "value": 84.38,
               "target": 90,
               "volume": 157
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 89.42,
+              "target": 90,
+              "volume": 181
             }
           ]
         },
-        "volume": 5676,
+        "volume": 5184,
         "q": {
-          "total": 5676,
-          "paq_ar": 4594,
-          "pas": 1082,
-          "expreso": 157
+          "total": 5184,
+          "paq_ar": 4342,
+          "pas": 842,
+          "expreso": 181
         }
       }
     },
@@ -3592,9 +3592,9 @@ window.PBA_DATA = {
       "city": "Pergamino",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 97.72,
+          "value": 97.82,
           "target": 95,
-          "delta": 2.72,
+          "delta": 2.82,
           "status": "ok",
           "series": [
             {
@@ -3675,12 +3675,12 @@ window.PBA_DATA = {
               "volume": 34843
             }
           ],
-          "volume": 72372
+          "volume": 77791
         },
         "fv_paqar": {
-          "value": 88.84,
+          "value": 88.83,
           "target": 90,
-          "delta": -1.16,
+          "delta": -1.17,
           "status": "warning",
           "series": [
             {
@@ -3761,12 +3761,12 @@ window.PBA_DATA = {
               "volume": 23390
             }
           ],
-          "volume": 72372
+          "volume": 77791
         },
         "sla_pas": {
-          "value": 91.72,
+          "value": 91.77,
           "target": 95,
-          "delta": -3.28,
+          "delta": -3.23,
           "status": "danger",
           "series": [
             {
@@ -3847,12 +3847,12 @@ window.PBA_DATA = {
               "volume": 6517
             }
           ],
-          "volume": 12811
+          "volume": 13936
         },
         "fv_pas": {
-          "value": 68.22,
+          "value": 68.26,
           "target": 90,
-          "delta": -21.78,
+          "delta": -21.74,
           "status": "danger",
           "series": [
             {
@@ -3933,44 +3933,37 @@ window.PBA_DATA = {
               "volume": 6517
             }
           ],
-          "volume": 12811
+          "volume": 13936
         },
         "sla_expreso": {
-          "value": 86.58,
+          "value": 86.96,
           "target": 95,
-          "volume": 5434,
+          "volume": 5790,
           "status": "danger",
-          "delta": -8.42
+          "delta": -8.04
         },
         "fv_expreso": {
-          "value": 83.63,
+          "value": 83.59,
           "target": 90,
-          "volume": 5434,
+          "volume": 5790,
           "status": "danger",
-          "delta": -6.37
+          "delta": -6.41
         },
-        "volume": 85183,
+        "volume": 91727,
         "q": {
-          "total": 85183,
-          "paq_ar": 72372,
-          "pas": 12811,
-          "expreso": 5434
+          "total": 91727,
+          "paq_ar": 77791,
+          "pas": 13936,
+          "expreso": 5790
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 95.8,
+          "value": 97.14,
           "target": 95,
-          "delta": 0.8,
+          "delta": 2.14,
           "status": "ok",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 97.82,
-              "target": 95,
-              "volume": 4675
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -4009,47 +4002,47 @@ window.PBA_DATA = {
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 97.28,
+              "value": 97.31,
               "target": 95,
               "volume": 6130
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 98.21,
+              "value": 98.26,
               "target": 95,
               "volume": 8312
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 97.68,
+              "value": 97.87,
               "target": 95,
               "volume": 7101
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 95.8,
+              "value": 97.41,
               "target": 95,
               "volume": 5592
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 97.14,
+              "target": 95,
+              "volume": 5419
             }
           ],
-          "volume": 5592
+          "volume": 5419
         },
         "fv_paqar": {
-          "value": 90.19,
+          "value": 88.79,
           "target": 90,
-          "delta": 0.19,
-          "status": "ok",
+          "delta": -1.21,
+          "status": "warning",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 90.35,
-              "target": 90,
-              "volume": 4675
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -4067,7 +4060,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "13 Nov",
               "isoDate": "2026-11-13",
-              "value": 87.48,
+              "value": 87.49,
               "target": 90,
               "volume": 5019
             },
@@ -4088,21 +4081,21 @@ window.PBA_DATA = {
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 86.94,
+              "value": 86.9,
               "target": 90,
               "volume": 6130
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 87.43,
+              "value": 87.47,
               "target": 90,
               "volume": 8312
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 88.99,
+              "value": 88.89,
               "target": 90,
               "volume": 7101
             },
@@ -4112,23 +4105,23 @@ window.PBA_DATA = {
               "value": 90.19,
               "target": 90,
               "volume": 5592
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 88.79,
+              "target": 90,
+              "volume": 5419
             }
           ],
-          "volume": 5592
+          "volume": 5419
         },
         "sla_pas": {
-          "value": 85.89,
+          "value": 92.68,
           "target": 95,
-          "delta": -9.11,
-          "status": "danger",
+          "delta": -2.32,
+          "status": "warning",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 82.39,
-              "target": 95,
-              "volume": 705
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -4139,7 +4132,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "12 Nov",
               "isoDate": "2026-11-12",
-              "value": 94.8,
+              "value": 94.79,
               "target": 95,
               "volume": 524
             },
@@ -4153,30 +4146,30 @@ window.PBA_DATA = {
             {
               "dateLabel": "16 Nov",
               "isoDate": "2026-11-16",
-              "value": 94.84,
+              "value": 94.54,
               "target": 95,
-              "volume": 554
+              "volume": 558
             },
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
               "value": 90.59,
               "target": 95,
-              "volume": 797
+              "volume": 814
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
               "value": 98.29,
               "target": 95,
-              "volume": 1118
+              "volume": 1120
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 96.68,
+              "value": 96.67,
               "target": 95,
-              "volume": 1393
+              "volume": 1394
             },
             {
               "dateLabel": "20 Nov",
@@ -4190,24 +4183,24 @@ window.PBA_DATA = {
               "isoDate": "2026-11-24",
               "value": 85.89,
               "target": 95,
-              "volume": 1145
+              "volume": 1146
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 92.68,
+              "target": 95,
+              "volume": 1100
             }
           ],
-          "volume": 1145
+          "volume": 1100
         },
         "fv_pas": {
-          "value": 62.26,
+          "value": 68.72,
           "target": 90,
-          "delta": -27.74,
+          "delta": -21.28,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 54.21,
-              "target": 90,
-              "volume": 705
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -4232,30 +4225,30 @@ window.PBA_DATA = {
             {
               "dateLabel": "16 Nov",
               "isoDate": "2026-11-16",
-              "value": 69.96,
+              "value": 70.12,
               "target": 90,
-              "volume": 554
+              "volume": 558
             },
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 70.8,
+              "value": 70.91,
               "target": 90,
-              "volume": 797
+              "volume": 814
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 74.29,
+              "value": 74.28,
               "target": 90,
-              "volume": 1118
+              "volume": 1120
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 71.15,
+              "value": 71.16,
               "target": 90,
-              "volume": 1393
+              "volume": 1394
             },
             {
               "dateLabel": "20 Nov",
@@ -4267,27 +4260,27 @@ window.PBA_DATA = {
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 62.26,
+              "value": 62.12,
               "target": 90,
-              "volume": 1145
+              "volume": 1146
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 68.72,
+              "target": 90,
+              "volume": 1100
             }
           ],
-          "volume": 1145
+          "volume": 1100
         },
         "sla_expreso": {
-          "value": 79.35,
+          "value": 86.24,
           "target": 95,
-          "volume": 339,
+          "volume": 356,
           "status": "danger",
-          "delta": -15.65,
+          "delta": -8.76,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 86.26,
-              "target": 95,
-              "volume": 364
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -4340,33 +4333,33 @@ window.PBA_DATA = {
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 86.37,
+              "value": 88.32,
               "target": 95,
               "volume": 411
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 79.35,
+              "value": 83.78,
               "target": 95,
               "volume": 339
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 86.24,
+              "target": 95,
+              "volume": 356
             }
           ]
         },
         "fv_expreso": {
-          "value": 82.35,
+          "value": 82.26,
           "target": 90,
-          "volume": 339,
+          "volume": 356,
           "status": "danger",
-          "delta": -7.65,
+          "delta": -7.74,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 88.02,
-              "target": 90,
-              "volume": 364
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -4405,39 +4398,46 @@ window.PBA_DATA = {
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 67.87,
+              "value": 67.86,
               "target": 90,
               "volume": 381
             },
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 71.38,
+              "value": 71.68,
               "target": 90,
               "volume": 485
             },
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 73.66,
+              "value": 73.61,
               "target": 90,
               "volume": 411
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 82.35,
+              "value": 83.95,
               "target": 90,
               "volume": 339
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 82.26,
+              "target": 90,
+              "volume": 356
             }
           ]
         },
-        "volume": 6737,
+        "volume": 6519,
         "q": {
-          "total": 6737,
-          "paq_ar": 5592,
-          "pas": 1145,
-          "expreso": 339
+          "total": 6519,
+          "paq_ar": 5419,
+          "pas": 1100,
+          "expreso": 356
         }
       }
     },
@@ -4448,9 +4448,9 @@ window.PBA_DATA = {
       "city": "Santa Rosa",
       "mes_anterior": {
         "sla_paqar": {
-          "value": 96.95,
+          "value": 96.98,
           "target": 95,
-          "delta": 1.95,
+          "delta": 1.98,
           "status": "ok",
           "series": [
             {
@@ -4531,7 +4531,7 @@ window.PBA_DATA = {
               "volume": 15040
             }
           ],
-          "volume": 26742
+          "volume": 28705
         },
         "fv_paqar": {
           "value": 85,
@@ -4617,12 +4617,12 @@ window.PBA_DATA = {
               "volume": 8978
             }
           ],
-          "volume": 26742
+          "volume": 28705
         },
         "sla_pas": {
-          "value": 69.2,
+          "value": 68.82,
           "target": 95,
-          "delta": -25.8,
+          "delta": -26.18,
           "status": "danger",
           "series": [
             {
@@ -4703,12 +4703,12 @@ window.PBA_DATA = {
               "volume": 360
             }
           ],
-          "volume": 561
+          "volume": 587
         },
         "fv_pas": {
-          "value": 64.83,
+          "value": 64.57,
           "target": 90,
-          "delta": -25.17,
+          "delta": -25.43,
           "status": "danger",
           "series": [
             {
@@ -4789,44 +4789,37 @@ window.PBA_DATA = {
               "volume": 360
             }
           ],
-          "volume": 561
+          "volume": 587
         },
         "sla_expreso": {
-          "value": 61.99,
+          "value": 61.29,
           "target": 95,
-          "volume": 713,
+          "volume": 757,
           "status": "danger",
-          "delta": -33.01
+          "delta": -33.71
         },
         "fv_expreso": {
-          "value": 75.78,
+          "value": 75.25,
           "target": 90,
-          "volume": 713,
+          "volume": 757,
           "status": "danger",
-          "delta": -14.22
+          "delta": -14.75
         },
-        "volume": 27303,
+        "volume": 29292,
         "q": {
-          "total": 27303,
-          "paq_ar": 26742,
-          "pas": 561,
-          "expreso": 713
+          "total": 29292,
+          "paq_ar": 28705,
+          "pas": 587,
+          "expreso": 757
         }
       },
       "dia_puro": {
         "sla_paqar": {
-          "value": 97.21,
+          "value": 97.3,
           "target": 95,
-          "delta": 2.21,
+          "delta": 2.3,
           "status": "ok",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 97.39,
-              "target": 95,
-              "volume": 1799
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -4865,7 +4858,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 96.64,
+              "value": 96.69,
               "target": 95,
               "volume": 2082
             },
@@ -4886,26 +4879,26 @@ window.PBA_DATA = {
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 97.21,
+              "value": 97.26,
               "target": 95,
               "volume": 2046
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 97.3,
+              "target": 95,
+              "volume": 1963
             }
           ],
-          "volume": 2046
+          "volume": 1963
         },
         "fv_paqar": {
-          "value": 86.57,
+          "value": 85.79,
           "target": 90,
-          "delta": -3.43,
+          "delta": -4.21,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 87.68,
-              "target": 90,
-              "volume": 1799
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -4923,28 +4916,28 @@ window.PBA_DATA = {
             {
               "dateLabel": "13 Nov",
               "isoDate": "2026-11-13",
-              "value": 86.8,
+              "value": 86.72,
               "target": 90,
               "volume": 1787
             },
             {
               "dateLabel": "16 Nov",
               "isoDate": "2026-11-16",
-              "value": 85.45,
+              "value": 85.36,
               "target": 90,
               "volume": 1756
             },
             {
               "dateLabel": "17 Nov",
               "isoDate": "2026-11-17",
-              "value": 81.58,
+              "value": 81.62,
               "target": 90,
               "volume": 2239
             },
             {
               "dateLabel": "18 Nov",
               "isoDate": "2026-11-18",
-              "value": 81.03,
+              "value": 81.1,
               "target": 90,
               "volume": 2082
             },
@@ -4958,33 +4951,33 @@ window.PBA_DATA = {
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 82.59,
+              "value": 82.44,
               "target": 90,
               "volume": 1772
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 86.57,
+              "value": 86,
               "target": 90,
               "volume": 2046
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 85.79,
+              "target": 90,
+              "volume": 1963
             }
           ],
-          "volume": 2046
+          "volume": 1963
         },
         "sla_pas": {
-          "value": 75.83,
+          "value": 64.1,
           "target": 95,
-          "delta": -19.17,
+          "delta": -30.9,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 66.03,
-              "target": 95,
-              "volume": 25
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -5009,9 +5002,9 @@ window.PBA_DATA = {
             {
               "dateLabel": "16 Nov",
               "isoDate": "2026-11-16",
-              "value": 70,
+              "value": 66.67,
               "target": 95,
-              "volume": 11
+              "volume": 12
             },
             {
               "dateLabel": "17 Nov",
@@ -5030,7 +5023,7 @@ window.PBA_DATA = {
             {
               "dateLabel": "19 Nov",
               "isoDate": "2026-11-19",
-              "value": 95.4,
+              "value": 95.39,
               "target": 95,
               "volume": 47
             },
@@ -5044,26 +5037,26 @@ window.PBA_DATA = {
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 75.83,
+              "value": 76.67,
               "target": 95,
-              "volume": 23
+              "volume": 24
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 64.1,
+              "target": 95,
+              "volume": 24
             }
           ],
-          "volume": 23
+          "volume": 24
         },
         "fv_pas": {
-          "value": 50.67,
+          "value": 61.15,
           "target": 90,
-          "delta": -39.33,
+          "delta": -28.85,
           "status": "danger",
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 53.81,
-              "target": 90,
-              "volume": 25
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -5090,7 +5083,7 @@ window.PBA_DATA = {
               "isoDate": "2026-11-16",
               "value": 72,
               "target": 90,
-              "volume": 11
+              "volume": 12
             },
             {
               "dateLabel": "17 Nov",
@@ -5123,27 +5116,27 @@ window.PBA_DATA = {
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 50.67,
+              "value": 49,
               "target": 90,
-              "volume": 23
+              "volume": 24
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 61.15,
+              "target": 90,
+              "volume": 24
             }
           ],
-          "volume": 23
+          "volume": 24
         },
         "sla_expreso": {
-          "value": 63.16,
+          "value": 47.73,
           "target": 95,
-          "volume": 38,
+          "volume": 44,
           "status": "danger",
-          "delta": -31.84,
+          "delta": -47.27,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 62.5,
-              "target": 95,
-              "volume": 32
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -5203,26 +5196,26 @@ window.PBA_DATA = {
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 63.16,
+              "value": 65.79,
               "target": 95,
               "volume": 38
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 47.73,
+              "target": 95,
+              "volume": 44
             }
           ]
         },
         "fv_expreso": {
-          "value": 42.86,
+          "value": 69.23,
           "target": 90,
-          "volume": 38,
+          "volume": 44,
           "status": "danger",
-          "delta": -47.14,
+          "delta": -20.77,
           "series": [
-            {
-              "dateLabel": "10 Nov",
-              "isoDate": "2026-11-10",
-              "value": 88.89,
-              "target": 90,
-              "volume": 32
-            },
             {
               "dateLabel": "11 Nov",
               "isoDate": "2026-11-11",
@@ -5275,25 +5268,32 @@ window.PBA_DATA = {
             {
               "dateLabel": "20 Nov",
               "isoDate": "2026-11-20",
-              "value": 61.9,
+              "value": 58.33,
               "target": 90,
               "volume": 42
             },
             {
               "dateLabel": "24 Nov",
               "isoDate": "2026-11-24",
-              "value": 42.86,
+              "value": 50,
               "target": 90,
               "volume": 38
+            },
+            {
+              "dateLabel": "25 Nov",
+              "isoDate": "2026-11-25",
+              "value": 69.23,
+              "target": 90,
+              "volume": 44
             }
           ]
         },
-        "volume": 2069,
+        "volume": 1987,
         "q": {
-          "total": 2069,
-          "paq_ar": 2046,
-          "pas": 23,
-          "expreso": 38
+          "total": 1987,
+          "paq_ar": 1963,
+          "pas": 24,
+          "expreso": 44
         }
       }
     }
@@ -5301,11 +5301,6 @@ window.PBA_DATA = {
   "series": {
     "slaPaq": {
       "Último día operativo": [
-        [
-          "10 Nov",
-          96.94,
-          22385
-        ],
         [
           "11 Nov",
           96.53,
@@ -5333,23 +5328,28 @@ window.PBA_DATA = {
         ],
         [
           "18 Nov",
-          97.47,
+          97.5,
           29553
         ],
         [
           "19 Nov",
-          97.79,
+          97.83,
           38060
         ],
         [
           "20 Nov",
-          97.37,
+          97.49,
           29930
         ],
         [
           "24 Nov",
-          96.78,
+          97.21,
           25946
+        ],
+        [
+          "25 Nov",
+          97.13,
+          25154
         ]
       ],
       "Mes en curso": [
@@ -5413,11 +5413,6 @@ window.PBA_DATA = {
     "fvPaq": {
       "Último día operativo": [
         [
-          "10 Nov",
-          89.76,
-          22385
-        ],
-        [
           "11 Nov",
           85.5,
           2045
@@ -5429,17 +5424,17 @@ window.PBA_DATA = {
         ],
         [
           "13 Nov",
-          88.11,
+          88.09,
           24295
         ],
         [
           "16 Nov",
-          88.3,
+          88.29,
           23085
         ],
         [
           "17 Nov",
-          87.3,
+          87.28,
           25994
         ],
         [
@@ -5449,18 +5444,23 @@ window.PBA_DATA = {
         ],
         [
           "19 Nov",
-          88.48,
+          88.47,
           38060
         ],
         [
           "20 Nov",
-          88.82,
+          88.75,
           29930
         ],
         [
           "24 Nov",
-          89.28,
+          89.07,
           25946
+        ],
+        [
+          "25 Nov",
+          88.82,
+          25154
         ]
       ],
       "Mes en curso": [
@@ -5524,11 +5524,6 @@ window.PBA_DATA = {
     "slaPas": {
       "Último día operativo": [
         [
-          "10 Nov",
-          76.28,
-          3347
-        ],
-        [
           "11 Nov",
           59.66,
           88
@@ -5545,33 +5540,38 @@ window.PBA_DATA = {
         ],
         [
           "16 Nov",
-          81.72,
-          3388
+          81.45,
+          3396
         ],
         [
           "17 Nov",
-          82.27,
-          3464
+          82.28,
+          3498
         ],
         [
           "18 Nov",
-          89.72,
-          5182
+          89.73,
+          5246
         ],
         [
           "19 Nov",
-          89.1,
-          6582
+          89.09,
+          6603
         ],
         [
           "20 Nov",
-          89.7,
-          6251
+          89.65,
+          6278
         ],
         [
           "24 Nov",
-          84.7,
-          5531
+          84.82,
+          5565
+        ],
+        [
+          "25 Nov",
+          88.02,
+          5696
         ]
       ],
       "Mes en curso": [
@@ -5630,11 +5630,6 @@ window.PBA_DATA = {
     "fvPas": {
       "Último día operativo": [
         [
-          "10 Nov",
-          60.1,
-          3347
-        ],
-        [
           "11 Nov",
           64.22,
           88
@@ -5651,33 +5646,38 @@ window.PBA_DATA = {
         ],
         [
           "16 Nov",
-          71.08,
-          3388
+          71.11,
+          3396
         ],
         [
           "17 Nov",
-          67.79,
-          3464
+          67.84,
+          3498
         ],
         [
           "18 Nov",
-          70.14,
-          5182
+          70.29,
+          5246
         ],
         [
           "19 Nov",
-          69.34,
-          6582
+          69.29,
+          6603
         ],
         [
           "20 Nov",
-          68.12,
-          6251
+          68.2,
+          6278
         ],
         [
           "24 Nov",
-          68.23,
-          5531
+          68.14,
+          5565
+        ],
+        [
+          "25 Nov",
+          66.43,
+          5696
         ]
       ],
       "Mes en curso": [
@@ -5736,11 +5736,6 @@ window.PBA_DATA = {
     "slaExpreso": {
       "Último día operativo": [
         [
-          "10 Nov",
-          76.31,
-          1241
-        ],
-        [
           "11 Nov",
           46.15,
           39
@@ -5752,7 +5747,7 @@ window.PBA_DATA = {
         ],
         [
           "13 Nov",
-          78.67,
+          78.75,
           1313
         ],
         [
@@ -5762,12 +5757,12 @@ window.PBA_DATA = {
         ],
         [
           "17 Nov",
-          80.6,
+          80.65,
           2010
         ],
         [
           "18 Nov",
-          79.56,
+          79.8,
           1223
         ],
         [
@@ -5777,13 +5772,18 @@ window.PBA_DATA = {
         ],
         [
           "20 Nov",
-          81.05,
+          81.99,
           1177
         ],
         [
           "24 Nov",
-          77.98,
+          79.75,
           1022
+        ],
+        [
+          "25 Nov",
+          76.14,
+          1140
         ]
       ],
       "Mes en curso": [
@@ -5847,23 +5847,18 @@ window.PBA_DATA = {
     "fvExpreso": {
       "Último día operativo": [
         [
-          "10 Nov",
-          86.23,
-          1241
-        ],
-        [
           "11 Nov",
           75,
           39
         ],
         [
           "12 Nov",
-          83.85,
+          83.87,
           1132
         ],
         [
           "13 Nov",
-          84.57,
+          84.61,
           1313
         ],
         [
@@ -5873,28 +5868,33 @@ window.PBA_DATA = {
         ],
         [
           "17 Nov",
-          84.33,
+          84.37,
           2010
         ],
         [
           "18 Nov",
-          81.1,
+          81.11,
           1223
         ],
         [
           "19 Nov",
-          83.49,
+          83.59,
           1595
         ],
         [
           "20 Nov",
-          80.53,
+          80.38,
           1177
         ],
         [
           "24 Nov",
-          82.52,
+          83.27,
           1022
+        ],
+        [
+          "25 Nov",
+          85.54,
+          1140
         ]
       ],
       "Mes en curso": [
