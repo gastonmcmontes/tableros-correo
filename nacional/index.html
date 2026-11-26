@@ -2284,8 +2284,8 @@
       const ctx = document.getElementById('regionalTrendChart').getContext('2d');
       if (regionalChart) regionalChart.destroy();
 
-      const labels = series.map(pt => pt[0]);
-      const dataPoints = series.map(pt => pt[1]);
+      const labels = series.map(pt => Array.isArray(pt) ? pt[0] : (pt.dateLabel || pt.label || (pt.value && Array.isArray(pt.value) ? pt.value[0] : '')));
+      const dataPoints = series.map(pt => Array.isArray(pt) ? pt[1] : (pt.value !== undefined ? (Array.isArray(pt.value) ? pt.value[1] : pt.value) : null));
       const targetVal = targets[actualKey] || 95;
 
       const isDark = state.theme === 'dark';
@@ -2306,7 +2306,8 @@
               tension: 0.35,
               fill: true,
               pointBackgroundColor: '#38bdf8',
-              pointRadius: 3.5
+              pointRadius: 3.5,
+              spanGaps: true
             },
             {
               label: 'Objetivo',
@@ -2497,8 +2498,8 @@
       const ctx = document.getElementById('nodeTrendChart').getContext('2d');
       if (nodeChart) nodeChart.destroy();
 
-      const labels = series.map(pt => pt.dateLabel || pt.label || pt.date || (Array.isArray(pt) ? pt[0] : ''));
-      const dataPoints = series.map(pt => (pt.value !== undefined ? pt.value : (Array.isArray(pt) ? pt[1] : 0)));
+      const labels = series.map(pt => Array.isArray(pt) ? pt[0] : (pt.dateLabel || pt.label || pt.date || (pt.value && Array.isArray(pt.value) ? pt.value[0] : '')));
+      const dataPoints = series.map(pt => Array.isArray(pt) ? pt[1] : (pt.value !== undefined ? (Array.isArray(pt.value) ? pt.value[1] : pt.value) : null));
       const targetVal = targets[state.nodeChartKpi] || 95;
       const periodSub = state.period === 'mes_anterior' ? 'Ene-Nov 2026' : 'Día a Día';
 
@@ -2520,7 +2521,8 @@
               tension: 0.35,
               fill: true,
               pointBackgroundColor: '#10b981',
-              pointRadius: 3.5
+              pointRadius: 3.5,
+              spanGaps: true
             },
             {
               label: 'Objetivo',
@@ -2886,7 +2888,7 @@
       const d = window.NACIONAL_DATA;
       if (!d) return '';
 
-      const periodLabel = state.sharePeriod === 'mes_anterior' ? 'CONSOLIDADO ÚLTIMO MES (Octubre 2026)' : 'DÍA PURO ANTERIOR (4-5 Nov 2026)';
+      const periodLabel = state.sharePeriod === 'mes_anterior' ? (d.monthLabel || 'CONSOLIDADO ÚLTIMO MES') : (d.pureDayLabel || 'DÍA PURO ANTERIOR');
       const maestroCut = d.maestroLastUpload || '13/11/2026 12:14 hs';
       const syncTime = localStorage.getItem('NACIONAL_LAST_SYNC_MOMENT') || d.lastSyncMoment || getCurrentFormattedMoment();
 
@@ -3022,7 +3024,7 @@
 
       ctx.fillStyle = '#94a3b8';
       ctx.font = '24px "Plus Jakarta Sans", sans-serif';
-      const periodName = state.sharePeriod === 'mes_anterior' ? 'Consolidado Último Mes (Octubre 2026)' : 'Día Puro Anterior (4-5 Nov 2026)';
+      const periodName = state.sharePeriod === 'mes_anterior' ? (d.monthLabel || 'Consolidado Último Mes') : (d.pureDayLabel || 'Día Puro Anterior');
       ctx.fillText(periodName + ' • 35 Nodos Operativos', 60, 180);
 
       // KPI Cards Grid (2 cols x 3 rows)
@@ -3101,7 +3103,7 @@
     function initSyncEngine() {
       try {
         const embeddedDate = (window.NACIONAL_DATA && (window.NACIONAL_DATA.maestroLastUpload || window.NACIONAL_DATA.lastUpdate)) || '';
-        const CACHE_SCHEMA_VERSION = 'v2_expreso';
+        const CACHE_SCHEMA_VERSION = 'v5_10dias_puro';
         const cachedSchema = localStorage.getItem('NACIONAL_SCHEMA_VER');
         const cachedVer = localStorage.getItem('NACIONAL_MAESTRO_DATE');
 
@@ -3401,11 +3403,6 @@
         syncFromUrl(activeUrl, false);
       });
     }
-    });
-    document.getElementById('btnTriggerRemoteSync').addEventListener('click', () => {
-      const activeUrl = localStorage.getItem('NACIONAL_SYNC_URL') || DEFAULT_MAESTRO_URL;
-      syncFromUrl(activeUrl, false);
-    });
 
     // Bottom Navigation Handlers
     document.querySelectorAll('.nav-btn').forEach(btn => {

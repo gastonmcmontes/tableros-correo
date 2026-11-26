@@ -483,6 +483,39 @@ if (fs.existsSync(liveSummaryPath)) {
         }
       }
     });
+
+    // Incorporar series diarias reales de los últimos 10 días para Regiones y Nodos
+    if (liveSummary.daily_series_regions) {
+      const regKeys = ['NACIONAL', 'METRO', 'PBA', 'CENTRO_NEA', 'CUYO_NOA', 'SUR'];
+      const kpiList = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+      regKeys.forEach(rk => {
+        const targetCode = rk === 'METRO' ? 'METROPOLITANA' : rk;
+        const rObj = regionsData[targetCode];
+        if (!rObj) return;
+        const rSer = liveSummary.daily_series_regions[rk];
+        if (rSer) {
+          kpiList.forEach(k => {
+            if (rSer[k] && rSer[k].length > 0 && rObj.kpis.dia_puro[k]) {
+              rObj.kpis.dia_puro[k].series = rSer[k];
+            }
+          });
+        }
+      });
+    }
+
+    if (liveSummary.daily_series_nodes) {
+      allNodes.forEach(n => {
+        const nSer = liveSummary.daily_series_nodes[n.code];
+        if (nSer) {
+          const mapNodeKpis = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+          mapNodeKpis.forEach(mk => {
+            if (nSer[mk] && nSer[mk].length > 0 && n.kpis.dia_puro[mk]) {
+              n.kpis.dia_puro[mk].series = nSer[mk];
+            }
+          });
+        }
+      });
+    }
     if (liveSummary.maxDiaDateIso) {
       const parts = liveSummary.maxDiaDateIso.split('-');
       if (parts.length === 3) {
