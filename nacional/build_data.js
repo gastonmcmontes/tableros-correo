@@ -519,7 +519,13 @@ if (fs.existsSync(liveSummaryPath)) {
     if (liveSummary.maxDiaDateIso) {
       const parts = liveSummary.maxDiaDateIso.split('-');
       if (parts.length === 3) {
-        nationalData.pureDayLabel = `Día Hábil Anterior (${parts[2]}/${parts[1]}/${parts[0]})`;
+        const diaFormatted = `${parts[2]}/${parts[1]}/${parts[0]}`;
+        nationalData.pureDayLabel = `Día Hábil Anterior (${diaFormatted})`;
+        Object.keys(regionsData).forEach(rk => {
+          if (regionsData[rk] && regionsData[rk].kpis && regionsData[rk].kpis.dia_puro) {
+            regionsData[rk].kpis.dia_puro.periodDetail = `${diaFormatted} (Última jornada cerrada)`;
+          }
+        });
       }
     }
   } catch (e) {

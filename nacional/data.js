@@ -2,7 +2,7 @@ window.NACIONAL_DATA = {
   "title": "Tablero de Control Operativo Nacional",
   "scope": "República Argentina - Correo Argentino",
   "maestroLastUpload": "25/11/2026 12:30 hs",
-  "lastSyncMoment": "26/11/2026 01:04 hs",
+  "lastSyncMoment": "26/11/2026 01:37 hs",
   "lastUpdate": "25/11/2026 12:30 hs",
   "pureDayLabel": "Día Hábil Anterior (24/11/2026)",
   "monthLabel": "Mes en Curso Acumulado (Noviembre 2026)",
@@ -429,7 +429,7 @@ window.NACIONAL_DATA = {
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
-          "periodDetail": "Última jornada operativa hábil cerrada",
+          "periodDetail": "24/11/2026 (Última jornada cerrada)",
           "q": {
             "total": 25678,
             "paq_ar": 20029,
@@ -1175,7 +1175,7 @@ window.NACIONAL_DATA = {
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
-          "periodDetail": "Última jornada operativa hábil cerrada",
+          "periodDetail": "24/11/2026 (Última jornada cerrada)",
           "q": {
             "total": 22199,
             "paq_ar": 17316,
@@ -1921,7 +1921,7 @@ window.NACIONAL_DATA = {
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
-          "periodDetail": "Última jornada operativa hábil cerrada",
+          "periodDetail": "24/11/2026 (Última jornada cerrada)",
           "q": {
             "total": 30820,
             "paq_ar": 24039,
@@ -2667,7 +2667,7 @@ window.NACIONAL_DATA = {
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
-          "periodDetail": "Última jornada operativa hábil cerrada",
+          "periodDetail": "24/11/2026 (Última jornada cerrada)",
           "q": {
             "total": 13462,
             "paq_ar": 10499,
@@ -3413,7 +3413,7 @@ window.NACIONAL_DATA = {
         "dia_puro": {
           "periodName": "Día Puro Anterior",
           "periodCode": "dia_puro",
-          "periodDetail": "Última jornada operativa hábil cerrada",
+          "periodDetail": "24/11/2026 (Última jornada cerrada)",
           "q": {
             "total": 12676,
             "paq_ar": 9887,
@@ -4162,7 +4162,7 @@ window.NACIONAL_DATA = {
         "dia_puro": {
           "periodName": "Día Hábil Anterior",
           "periodCode": "dia_puro",
-          "periodDetail": "13/11/2026 (Última jornada cerrada)",
+          "periodDetail": "24/11/2026 (Última jornada cerrada)",
           "backlog": 8842,
           "a_vencer": 682450,
           "guarda_vencida": 6743,

@@ -2081,6 +2081,15 @@
 
     lucide.createIcons();
 
+    const targets = (window.NACIONAL_DATA && window.NACIONAL_DATA.targets) || {
+      sla_paqar: 95.0,
+      fv_paqar: 90.0,
+      sla_pas: 95.0,
+      fv_pas: 90.0,
+      sla_expreso: 95.0,
+      fv_expreso: 90.0
+    };
+
     // ==========================================
     // STATE - GESTIÓN DE ESTADO NACIONAL
     // ==========================================
