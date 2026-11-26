@@ -2770,9 +2770,11 @@
       const rawData = isPureDay ? seriesObj['Último día operativo'] : seriesObj['Mes en curso'];
       if (!rawData || !rawData.length) return;
 
-      const labels = rawData.map(d => d[0]);
-      const values = rawData.map(d => d[1]);
+      const labels = rawData.map(d => Array.isArray(d) ? d[0] : (d && d.value ? d.value[0] : d));
+      const values = rawData.map(d => Array.isArray(d) ? d[1] : (d && d.value ? d.value[1] : 0));
       const targetVal = state.regionalChartKpi.includes('fv') ? 90.0 : 95.0;
+      const validValues = values.filter(v => v !== null && v !== undefined && !isNaN(v));
+      const baseMin = validValues.length ? Math.min(...validValues, targetVal) : targetVal;
 
       if (regionalChart) regionalChart.destroy();
 
@@ -2794,7 +2796,8 @@
               tension: 0.35,
               borderWidth: 2.5,
               pointRadius: 4,
-              pointBackgroundColor: '#38bdf8'
+              pointBackgroundColor: '#38bdf8',
+              spanGaps: true
             },
             {
               label: 'Meta (' + targetVal + '%)',
@@ -2823,7 +2826,7 @@
           scales: {
             x: { grid: { display: false }, ticks: { color: textColor, font: { size: 10 } } },
             y: {
-              min: Math.min(...values, targetVal) > 60 ? Math.floor(Math.min(...values, targetVal) - 5) : 50,
+              min: baseMin > 60 ? Math.floor(baseMin - 5) : 50,
               max: 100,
               grid: { color: gridColor },
               ticks: { color: textColor, font: { size: 10 }, callback: v => v + '%' }
@@ -2854,12 +2857,15 @@
       let values = [];
 
       if (series.length > 0) {
-        labels = series.map(pt => pt.dateLabel || pt.isoDate || '');
-        values = series.map(pt => pt.value);
+        labels = series.map(pt => pt.dateLabel || pt.isoDate || (Array.isArray(pt) ? pt[0] : ''));
+        values = series.map(pt => pt.value !== undefined ? pt.value : (Array.isArray(pt) ? pt[1] : null));
       } else {
         labels = [state.period === 'mes_anterior' ? 'Octubre' : 'Día Puro'];
         values = [metricObj.value];
       }
+
+      const validValsNode = values.filter(v => v !== null && v !== undefined && !isNaN(v));
+      const baseMinNode = validValsNode.length ? Math.min(...validValsNode, targetVal) : targetVal;
 
       if (nodeChart) nodeChart.destroy();
 
@@ -2883,7 +2889,8 @@
               tension: 0.35,
               borderWidth: 2.5,
               pointRadius: 4,
-              pointBackgroundColor: '#facc15'
+              pointBackgroundColor: '#facc15',
+              spanGaps: true
             },
             {
               label: `Meta (${targetVal}%)`,
@@ -2912,7 +2919,7 @@
           scales: {
             x: { grid: { display: false }, ticks: { color: textColor, font: { size: 10 } } },
             y: {
-              min: Math.min(...values, targetVal) > 50 ? Math.floor(Math.min(...values, targetVal) - 6) : 40,
+              min: baseMinNode > 50 ? Math.floor(baseMinNode - 6) : 40,
               max: 100,
               grid: { color: gridColor },
               ticks: { color: textColor, font: { size: 10 }, callback: v => v + '%' }

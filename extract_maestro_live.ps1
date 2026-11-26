@@ -1,6 +1,6 @@
-param(
-    [string]$excelPath = "c:\Users\gmontes\OneDrive - Correo Argentino\Escritorio\app celu pba\downloaded_maestro.xlsx",
-    [string]$outJsonPath = "c:\Users\gmontes\OneDrive - Correo Argentino\Escritorio\app celu pba\live_maestro_summary.json"
+﻿param(
+    [string]$excelPath = "$PSScriptRoot\downloaded_maestro.xlsx",
+    [string]$outJsonPath = "$PSScriptRoot\live_maestro_summary.json"
 )
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
@@ -438,15 +438,156 @@ $sumDia = Build-SummaryObj $diaLatest $expDiaLatest $pasDia
 $nodesMes = Build-NodeMetrics $acumLatest $expAcumLatest $pasMes
 $nodesDia = Build-NodeMetrics $diaLatest $expDiaLatest $pasDia
 
+# 6. Generación de series diarias de los últimos 10 días operativos (para Regiones y Nodos)
+$last10Serials = $diaAll | Select-Object -ExpandProperty FechaSerial -Unique | Sort-Object -Descending | Select-Object -First 10 | Sort-Object
+$monthsEs = @{ 1="Ene"; 2="Feb"; 3="Mar"; 4="Abr"; 5="May"; 6="Jun"; 7="Jul"; 8="Ago"; 9="Sep"; 10="Oct"; 11="Nov"; 12="Dic" }
+
+$diaLookup = @{}
+foreach ($r in $diaAll) {
+    $diaLookup["$($r.Denominacion)_$($r.FechaSerial)_$($r.Producto)"] = $r
+}
+$expLookup = @{}
+foreach ($r in $expDiaAll) {
+    $expLookup["$($r.Denominacion)_$($r.FechaSerial)"] = $r
+}
+$pasRegLookup = @{}
+$pasNodoLookup = @{}
+foreach ($r in $pasAll) {
+    $kReg = "$($r.Region)_$($r.FechaSerial)"
+    if (-not $pasRegLookup.ContainsKey($kReg)) { $pasRegLookup[$kReg] = [System.Collections.Generic.List[object]]::new() }
+    $pasRegLookup[$kReg].Add($r)
+
+    $kNodo = "$($r.Nodo)_$($r.FechaSerial)"
+    if (-not $pasNodoLookup.ContainsKey($kNodo)) { $pasNodoLookup[$kNodo] = [System.Collections.Generic.List[object]]::new() }
+    $pasNodoLookup[$kNodo].Add($r)
+}
+
+$regionMap10 = @{
+    "NACIONAL"     = "NACIONAL";
+    "METRO"        = "METROPOLITANA";
+    "METROPOLITANA"= "METROPOLITANA";
+    "PBA"          = "PBA / La Pampa";
+    "CENTRO_NEA"   = "Centro - NEA";
+    "CUYO_NOA"     = "Cuyo - NOA";
+    "SUR"          = "SUR";
+}
+
+$nodeCodeToDenomAll = @{
+    "BHI" = "BAHIA BLANCA"; "LPG" = "LA PLATA"; "MDQ" = "MAR DEL PLATA"; "MER" = "MERCEDES";
+    "PER" = "PERGAMINO"; "RSA" = "SANTA ROSA"; "DP2" = "CENTRO PAQUETERIA CABA SUR";
+    "DP3" = "CENTRO PAQUETERIA LOMAS"; "DP4" = "CENTRO PAQUETERIA MORON"; "DP5" = "CENTRO PAQUETERIA QUILMES";
+    "DP6" = "PAQUETERIA VICENTE LOPEZ"; "COR" = "CORDOBA"; "CNQ" = "CORRIENTES"; "PRA" = "PARANA";
+    "PSS" = "POSADAS"; "RES" = "RESISTENCIA"; "RCU" = "RIO CUARTO"; "ROS" = "ROSARIO"; "SFN" = "SANTA FE";
+    "VMR" = "VILLA MARIA"; "CTC" = "CATAMARCA"; "JUJ" = "JUJUY"; "IRJ" = "LA RIOJA"; "MDZ" = "MENDOZA";
+    "SLA" = "SALTA"; "UAQ" = "SAN JUAN"; "LUQ" = "SAN LUIS"; "TUC" = "SAN MIGUEL DE TUCUMAN";
+    "SDE" = "SANTIAGO DEL ESTERO"; "BRC" = "BARILOCHE"; "CRD" = "COMODORO RIVADAVIA"; "NQN" = "NEUQUEN";
+    "RGL" = "RIO GALLEGOS"; "REL" = "TRELEW"; "USH" = "USHUAIA";
+}
+
+$dailySeriesRegions = [ordered]@{}
+foreach ($regKey in $regionMap10.Keys) {
+    $denom = $regionMap10[$regKey]
+    $slaPaqArr = @(); $fvPaqArr = @(); $slaPasArr = @(); $fvPasArr = @(); $slaExpArr = @(); $fvExpArr = @()
+
+    foreach ($s in $last10Serials) {
+        $dt = [DateTime]::FromOADate($s)
+        $dateLabel = "$($dt.Day) $($monthsEs[$dt.Month])"
+
+        $p = $diaLookup["${denom}_${s}_PAQ.AR"]
+        $paqSla = if ($p) { [math]::Round($p.Sla * 100, 2) } else { $null }
+        $paqFv  = if ($p) { [math]::Round($p.Fv * 100, 2) } else { $null }
+        $paqVol = if ($p) { [int]$p.Volumen } else { 0 }
+
+        $pPas = $pasRegLookup["${denom}_${s}"]
+        $pasVol = 0; $pasSla = $null; $pasFv = $null
+        if ($pPas) {
+            foreach ($it in $pPas) { $pasVol += $it.Envios }
+            if ($pasVol -gt 0) {
+                $sumSla = 0; $sumFv = 0
+                foreach ($it in $pPas) { $sumSla += $it.Sla; $sumFv += $it.Fv }
+                $pasSla = [math]::Round(($sumSla / $pPas.Count) * 100, 2)
+                $pasFv  = [math]::Round(($sumFv / $pPas.Count) * 100, 2)
+            }
+        }
+
+        $exp = $expLookup["${denom}_${s}"]
+        $expSla = if ($exp) { [math]::Round($exp.Sla * 100, 2) } else { $null }
+        $expFv  = if ($exp) { [math]::Round($exp.Fv * 100, 2) } else { $null }
+        $expVol = if ($exp) { [int]$exp.Q } else { 0 }
+
+        $slaPaqArr += ,@($dateLabel, $paqSla, $paqVol)
+        $fvPaqArr  += ,@($dateLabel, $paqFv, $paqVol)
+        $slaPasArr += ,@($dateLabel, $pasSla, $pasVol)
+        $fvPasArr  += ,@($dateLabel, $pasFv, $pasVol)
+        $slaExpArr += ,@($dateLabel, $expSla, $expVol)
+        $fvExpArr  += ,@($dateLabel, $expFv, $expVol)
+    }
+
+    $dailySeriesRegions[$regKey] = [ordered]@{
+        sla_paqar   = $slaPaqArr; fv_paqar    = $fvPaqArr;
+        sla_pas     = $slaPasArr; fv_pas      = $fvPasArr;
+        sla_expreso = $slaExpArr; fv_expreso  = $fvExpArr;
+    }
+}
+
+$dailySeriesNodes = [ordered]@{}
+foreach ($code in $nodeCodeToDenomAll.Keys) {
+    $denom = $nodeCodeToDenomAll[$code]
+    $slaPaqArr = @(); $fvPaqArr = @(); $slaPasArr = @(); $fvPasArr = @(); $slaExpArr = @(); $fvExpArr = @()
+
+    foreach ($s in $last10Serials) {
+        $dt = [DateTime]::FromOADate($s)
+        $dateLabel = "$($dt.Day) $($monthsEs[$dt.Month])"
+        $isoDate = $dt.ToString("yyyy-MM-dd")
+
+        $p = $diaLookup["${denom}_${s}_PAQ.AR"]
+        $paqSla = if ($p) { [math]::Round($p.Sla * 100, 2) } else { $null }
+        $paqFv  = if ($p) { [math]::Round($p.Fv * 100, 2) } else { $null }
+        $paqVol = if ($p) { [int]$p.Volumen } else { 0 }
+
+        $pPas = $pasNodoLookup["${denom}_${s}"]
+        $pasVol = 0; $pasSla = $null; $pasFv = $null
+        if ($pPas) {
+            foreach ($it in $pPas) { $pasVol += $it.Envios }
+            if ($pasVol -gt 0) {
+                $sumSla = 0; $sumFv = 0
+                foreach ($it in $pPas) { $sumSla += $it.Sla; $sumFv += $it.Fv }
+                $pasSla = [math]::Round(($sumSla / $pPas.Count) * 100, 2)
+                $pasFv  = [math]::Round(($sumFv / $pPas.Count) * 100, 2)
+            }
+        }
+
+        $exp = $expLookup["${denom}_${s}"]
+        $expSla = if ($exp) { [math]::Round($exp.Sla * 100, 2) } else { $null }
+        $expFv  = if ($exp) { [math]::Round($exp.Fv * 100, 2) } else { $null }
+        $expVol = if ($exp) { [int]$exp.Q } else { 0 }
+
+        $slaPaqArr += [ordered]@{ dateLabel = $dateLabel; isoDate = $isoDate; value = $paqSla; target = 95.0; volume = $paqVol }
+        $fvPaqArr  += [ordered]@{ dateLabel = $dateLabel; isoDate = $isoDate; value = $paqFv;  target = 90.0; volume = $paqVol }
+        $slaPasArr += [ordered]@{ dateLabel = $dateLabel; isoDate = $isoDate; value = $pasSla; target = 95.0; volume = $pasVol }
+        $fvPasArr  += [ordered]@{ dateLabel = $dateLabel; isoDate = $isoDate; value = $pasFv;  target = 90.0; volume = $pasVol }
+        $slaExpArr += [ordered]@{ dateLabel = $dateLabel; isoDate = $isoDate; value = $expSla; target = 95.0; volume = $expVol }
+        $fvExpArr  += [ordered]@{ dateLabel = $dateLabel; isoDate = $isoDate; value = $expFv;  target = 90.0; volume = $expVol }
+    }
+
+    $dailySeriesNodes[$code] = [ordered]@{
+        sla_paqar   = $slaPaqArr; fv_paqar    = $fvPaqArr;
+        sla_pas     = $slaPasArr; fv_pas      = $fvPasArr;
+        sla_expreso = $slaExpArr; fv_expreso  = $fvExpArr;
+    }
+}
+
 $payload = [ordered]@{
-    maxAcumDateSerial = $maxAcumDate;
-    maxAcumDateIso    = [DateTime]::FromOADate($maxAcumDate).ToString("yyyy-MM-dd");
-    maxDiaDateSerial  = $maxDiaDate;
-    maxDiaDateIso     = [DateTime]::FromOADate($maxDiaDate).ToString("yyyy-MM-dd");
-    mes               = $sumMes;
-    dia               = $sumDia;
-    nodes_mes         = $nodesMes;
-    nodes_dia         = $nodesDia;
+    maxAcumDateSerial    = $maxAcumDate;
+    maxAcumDateIso       = [DateTime]::FromOADate($maxAcumDate).ToString("yyyy-MM-dd");
+    maxDiaDateSerial     = $maxDiaDate;
+    maxDiaDateIso        = [DateTime]::FromOADate($maxDiaDate).ToString("yyyy-MM-dd");
+    mes                  = $sumMes;
+    dia                  = $sumDia;
+    nodes_mes            = $nodesMes;
+    nodes_dia            = $nodesDia;
+    daily_series_regions = $dailySeriesRegions;
+    daily_series_nodes   = $dailySeriesNodes;
 }
 
 $json = $payload | ConvertTo-Json -Depth 6

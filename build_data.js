@@ -402,6 +402,41 @@ if (fs.existsSync(liveSummaryPath)) {
         }
       });
     }
+
+    // Incorporar series diarias reales de los últimos 10 días para Regional y Nodos
+    if (liveSummary.daily_series_regions && liveSummary.daily_series_regions.PBA) {
+      const pbaSer = liveSummary.daily_series_regions.PBA;
+      if (!pbaData.series) pbaData.series = {};
+      const mapKeys = {
+        slaPaq: 'sla_paqar',
+        fvPaq: 'fv_paqar',
+        slaPas: 'sla_pas',
+        fvPas: 'fv_pas',
+        slaExpreso: 'sla_expreso',
+        fvExpreso: 'fv_expreso'
+      };
+      Object.keys(mapKeys).forEach(k => {
+        const liveKey = mapKeys[k];
+        if (pbaSer[liveKey] && pbaSer[liveKey].length > 0) {
+          if (!pbaData.series[k]) pbaData.series[k] = {};
+          pbaData.series[k]['Último día operativo'] = pbaSer[liveKey];
+        }
+      });
+    }
+
+    if (liveSummary.daily_series_nodes) {
+      pbaData.nodes.forEach(n => {
+        const nSer = liveSummary.daily_series_nodes[n.code];
+        if (nSer) {
+          const mapNodeKpis = ['sla_paqar', 'fv_paqar', 'sla_pas', 'fv_pas', 'sla_expreso', 'fv_expreso'];
+          mapNodeKpis.forEach(mk => {
+            if (nSer[mk] && nSer[mk].length > 0 && n.dia_puro[mk]) {
+              n.dia_puro[mk].series = nSer[mk];
+            }
+          });
+        }
+      });
+    }
     if (liveSummary.maxDiaDateIso) {
       const parts = liveSummary.maxDiaDateIso.split('-');
       if (parts.length === 3) {
