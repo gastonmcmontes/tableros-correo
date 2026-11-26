@@ -360,7 +360,7 @@ function Build-SummaryObj($rows, $expRows, $pasRows) {
         $cla = $rows | Where-Object { $_.Producto -eq 'Clásico' -and $_.Denominacion -eq $regName } | Select-Object -First 1
         $exp = $expRows | Where-Object { $_.Denominacion -eq $regName } | Select-Object -First 1
         
-        $pItems = $pasRows | Where-Object { $_.Region -eq $regName }
+        $pItems = if ($k -eq "NACIONAL") { $pasRows } else { $pasRows | Where-Object { $_.Region -eq $regName } }
         $totCartas = if ($pItems) { ($pItems | Measure-Object -Property Envios -Sum).Sum } else { 0 }
         $totPaq = if ($paq) { [int]$paq.Volumen } else { 0 }
         $totExp = if ($exp) { [int]$exp.Q } else { 0 }
@@ -368,8 +368,21 @@ function Build-SummaryObj($rows, $expRows, $pasRows) {
         # PAS SLA y FV ponderados si existen
         $pasSla = 0; $pasFv = 0
         if ($pItems -and $totCartas -gt 0) {
-            $pasSla = [math]::Round(($pItems | Measure-Object -Property Sla -Average).Average * 100, 2)
-            $pasFv  = [math]::Round(($pItems | Measure-Object -Property Fv -Average).Average * 100, 2)
+            $sumEnv = 0.0; $sumSla = 0.0; $sumFv = 0.0
+            foreach ($it in $pItems) {
+                if ($it.Envios -gt 0) {
+                    $sumEnv += $it.Envios
+                    $sumSla += ($it.Sla * $it.Envios)
+                    $sumFv  += ($it.Fv * $it.Envios)
+                }
+            }
+            if ($sumEnv -gt 0) {
+                $pasSla = [math]::Round(($sumSla / $sumEnv) * 100, 2)
+                $pasFv  = [math]::Round(($sumFv / $sumEnv) * 100, 2)
+            } else {
+                $pasSla = [math]::Round(($pItems | Measure-Object -Property Sla -Average).Average * 100, 2)
+                $pasFv  = [math]::Round(($pItems | Measure-Object -Property Fv -Average).Average * 100, 2)
+            }
         }
         
         $out[$k] = [ordered]@{
@@ -389,14 +402,19 @@ function Build-SummaryObj($rows, $expRows, $pasRows) {
     return $out
 }
 
-function Build-NodeMetrics($paqRows, $expRows, $pasRows) {
-    $nodeMap = @{
-        "BHI" = "BAHIA BLANCA";
-        "LPG" = "LA PLATA";
-        "MDQ" = "MAR DEL PLATA";
-        "MER" = "MERCEDES";
-        "PER" = "PERGAMINO";
-        "RSA" = "SANTA ROSA";
+function Build-NodeMetrics($paqRows, $expRows, $pasRows, $nodeMap = $null) {
+    if (-not $nodeMap) {
+        $nodeMap = @{
+            "BHI" = "BAHIA BLANCA"; "LPG" = "LA PLATA"; "MDQ" = "MAR DEL PLATA"; "MER" = "MERCEDES";
+            "PER" = "PERGAMINO"; "RSA" = "SANTA ROSA"; "DP2" = "CENTRO PAQUETERIA CABA SUR";
+            "DP3" = "CENTRO PAQUETERIA LOMAS"; "DP4" = "CENTRO PAQUETERIA MORON"; "DP5" = "CENTRO PAQUETERIA QUILMES";
+            "DP6" = "PAQUETERIA VICENTE LOPEZ"; "COR" = "CORDOBA"; "CNQ" = "CORRIENTES"; "PRA" = "PARANA";
+            "PSS" = "POSADAS"; "RES" = "RESISTENCIA"; "RCU" = "RIO CUARTO"; "ROS" = "ROSARIO"; "SFN" = "SANTA FE";
+            "VMR" = "VILLA MARIA"; "CTC" = "CATAMARCA"; "JUJ" = "JUJUY"; "IRJ" = "LA RIOJA"; "MDZ" = "MENDOZA";
+            "SLA" = "SALTA"; "UAQ" = "SAN JUAN"; "LUQ" = "SAN LUIS"; "TUC" = "SAN MIGUEL DE TUCUMAN";
+            "SDE" = "SANTIAGO DEL ESTERO"; "BRC" = "BARILOCHE"; "CRD" = "COMODORO RIVADAVIA"; "NQN" = "NEUQUEN";
+            "RGL" = "RIO GALLEGOS"; "REL" = "TRELEW"; "USH" = "USHUAIA";
+        }
     }
     $out = [ordered]@{}
     foreach ($code in $nodeMap.Keys) {
@@ -412,8 +430,21 @@ function Build-NodeMetrics($paqRows, $expRows, $pasRows) {
         
         $pasSla = 0; $pasFv = 0
         if ($pItems -and $totCartas -gt 0) {
-            $pasSla = [math]::Round(($pItems | Measure-Object -Property Sla -Average).Average * 100, 2)
-            $pasFv  = [math]::Round(($pItems | Measure-Object -Property Fv -Average).Average * 100, 2)
+            $sumEnv = 0.0; $sumSla = 0.0; $sumFv = 0.0
+            foreach ($it in $pItems) {
+                if ($it.Envios -gt 0) {
+                    $sumEnv += $it.Envios
+                    $sumSla += ($it.Sla * $it.Envios)
+                    $sumFv  += ($it.Fv * $it.Envios)
+                }
+            }
+            if ($sumEnv -gt 0) {
+                $pasSla = [math]::Round(($sumSla / $sumEnv) * 100, 2)
+                $pasFv  = [math]::Round(($sumFv / $sumEnv) * 100, 2)
+            } else {
+                $pasSla = [math]::Round(($pItems | Measure-Object -Property Sla -Average).Average * 100, 2)
+                $pasFv  = [math]::Round(($pItems | Measure-Object -Property Fv -Average).Average * 100, 2)
+            }
         }
         
         $out[$code] = [ordered]@{
@@ -452,6 +483,7 @@ foreach ($r in $expDiaAll) {
 }
 $pasRegLookup = @{}
 $pasNodoLookup = @{}
+$pasFechaLookup = @{}
 foreach ($r in $pasAll) {
     $kReg = "$($r.Region)_$($r.FechaSerial)"
     if (-not $pasRegLookup.ContainsKey($kReg)) { $pasRegLookup[$kReg] = [System.Collections.Generic.List[object]]::new() }
@@ -460,6 +492,10 @@ foreach ($r in $pasAll) {
     $kNodo = "$($r.Nodo)_$($r.FechaSerial)"
     if (-not $pasNodoLookup.ContainsKey($kNodo)) { $pasNodoLookup[$kNodo] = [System.Collections.Generic.List[object]]::new() }
     $pasNodoLookup[$kNodo].Add($r)
+
+    $kFecha = "$($r.FechaSerial)"
+    if (-not $pasFechaLookup.ContainsKey($kFecha)) { $pasFechaLookup[$kFecha] = [System.Collections.Generic.List[object]]::new() }
+    $pasFechaLookup[$kFecha].Add($r)
 }
 
 $regionMap10 = @{
@@ -498,15 +534,28 @@ foreach ($regKey in $regionMap10.Keys) {
         $paqFv  = if ($p) { [math]::Round($p.Fv * 100, 2) } else { $null }
         $paqVol = if ($p) { [int]$p.Volumen } else { 0 }
 
-        $pPas = $pasRegLookup["${denom}_${s}"]
+        $pPas = if ($regKey -eq "NACIONAL") {
+            if ($pasFechaLookup.ContainsKey("$s")) { $pasFechaLookup["$s"] } else { $null }
+        } else {
+            if ($pasRegLookup.ContainsKey("${denom}_${s}")) { $pasRegLookup["${denom}_${s}"] } else { $null }
+        }
         $pasVol = 0; $pasSla = $null; $pasFv = $null
         if ($pPas) {
-            foreach ($it in $pPas) { $pasVol += $it.Envios }
-            if ($pasVol -gt 0) {
-                $sumSla = 0; $sumFv = 0
-                foreach ($it in $pPas) { $sumSla += $it.Sla; $sumFv += $it.Fv }
-                $pasSla = [math]::Round(($sumSla / $pPas.Count) * 100, 2)
-                $pasFv  = [math]::Round(($sumFv / $pPas.Count) * 100, 2)
+            $sumEnv = 0.0; $sumSla = 0.0; $sumFv = 0.0
+            foreach ($it in $pPas) {
+                if ($it.Envios -gt 0) {
+                    $sumEnv += $it.Envios
+                    $sumSla += ($it.Sla * $it.Envios)
+                    $sumFv  += ($it.Fv * $it.Envios)
+                }
+            }
+            $pasVol = [int]$sumEnv
+            if ($sumEnv -gt 0) {
+                $pasSla = [math]::Round(($sumSla / $sumEnv) * 100, 2)
+                $pasFv  = [math]::Round(($sumFv / $sumEnv) * 100, 2)
+            } else {
+                $pasSla = [math]::Round(($pPas | Measure-Object -Property Sla -Average).Average * 100, 2)
+                $pasFv  = [math]::Round(($pPas | Measure-Object -Property Fv -Average).Average * 100, 2)
             }
         }
 

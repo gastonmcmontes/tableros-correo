@@ -11,11 +11,11 @@
                                    "expreso":  20023,
                                    "sla_paqar":  96.35,
                                    "fv_paqar":  87.07,
-                                   "sla_clasico":  0,
+                                   "sla_clasico":  97.71,
                                    "sla_expreso":  63.25,
                                    "fv_expreso":  88.34,
-                                   "sla_pas":  89.07,
-                                   "fv_pas":  63.26
+                                   "sla_pas":  91.17,
+                                   "fv_pas":  62.44
                                },
                 "SUR":  {
                             "total_piezas":  247681,
@@ -24,11 +24,11 @@
                             "expreso":  4194,
                             "sla_paqar":  92.84,
                             "fv_paqar":  84.02,
-                            "sla_clasico":  0,
+                            "sla_clasico":  93.65,
                             "sla_expreso":  48.95,
                             "fv_expreso":  88.44,
-                            "sla_pas":  84.23,
-                            "fv_pas":  64.57
+                            "sla_pas":  85.58,
+                            "fv_pas":  60.25
                         },
                 "PBA":  {
                             "total_piezas":  440545,
@@ -37,24 +37,24 @@
                             "expreso":  18924,
                             "sla_paqar":  97.45,
                             "fv_paqar":  88.78,
-                            "sla_clasico":  0,
+                            "sla_clasico":  98.38,
                             "sla_expreso":  80.27,
                             "fv_expreso":  85.46,
-                            "sla_pas":  82.96,
-                            "fv_pas":  68.34
+                            "sla_pas":  90.77,
+                            "fv_pas":  65.2
                         },
                 "NACIONAL":  {
-                                 "total_piezas":  1874226,
+                                 "total_piezas":  2111432,
                                  "paquetes":  1874226,
-                                 "cartas":  0,
+                                 "cartas":  237206,
                                  "expreso":  85731,
                                  "sla_paqar":  96.02,
                                  "fv_paqar":  87.72,
-                                 "sla_clasico":  0,
+                                 "sla_clasico":  97.41,
                                  "sla_expreso":  66.86,
                                  "fv_expreso":  85.93,
-                                 "sla_pas":  0,
-                                 "fv_pas":  0
+                                 "sla_pas":  93.3,
+                                 "fv_pas":  62.58
                              },
                 "METRO":  {
                               "total_piezas":  661659,
@@ -63,11 +63,11 @@
                               "expreso":  37704,
                               "sla_paqar":  96.05,
                               "fv_paqar":  88.43,
-                              "sla_clasico":  0,
+                              "sla_clasico":  98.41,
                               "sla_expreso":  64.71,
                               "fv_expreso":  84.24,
-                              "sla_pas":  91.57,
-                              "fv_pas":  64.27
+                              "sla_pas":  96.03,
+                              "fv_pas":  61.57
                           },
                 "CUYO_NOA":  {
                                  "total_piezas":  236689,
@@ -76,11 +76,11 @@
                                  "expreso":  4883,
                                  "sla_paqar":  96.09,
                                  "fv_paqar":  89.14,
-                                 "sla_clasico":  0,
+                                 "sla_clasico":  96.84,
                                  "sla_expreso":  61.77,
                                  "fv_expreso":  86.22,
-                                 "sla_pas":  93.23,
-                                 "fv_pas":  63.64
+                                 "sla_pas":  94.1,
+                                 "fv_pas":  60.16
                              }
             },
     "dia":  {
@@ -91,11 +91,11 @@
                                    "expreso":  1352,
                                    "sla_paqar":  95.3,
                                    "fv_paqar":  85.84,
-                                   "sla_clasico":  0,
+                                   "sla_clasico":  96.93,
                                    "sla_expreso":  55.1,
                                    "fv_expreso":  88.79,
-                                   "sla_pas":  91.85,
-                                   "fv_pas":  64.9
+                                   "sla_pas":  93.12,
+                                   "fv_pas":  61.83
                                },
                 "SUR":  {
                             "total_piezas":  17168,
@@ -104,11 +104,11 @@
                             "expreso":  252,
                             "sla_paqar":  88.45,
                             "fv_paqar":  84.39,
-                            "sla_clasico":  0,
+                            "sla_clasico":  89.19,
                             "sla_expreso":  43.25,
                             "fv_expreso":  92.65,
-                            "sla_pas":  89.04,
-                            "fv_pas":  63.81
+                            "sla_pas":  90.8,
+                            "fv_pas":  65.05
                         },
                 "PBA":  {
                             "total_piezas":  30850,
@@ -117,24 +117,24 @@
                             "expreso":  1140,
                             "sla_paqar":  97.13,
                             "fv_paqar":  88.82,
-                            "sla_clasico":  0,
+                            "sla_clasico":  98.12,
                             "sla_expreso":  76.14,
                             "fv_expreso":  85.54,
-                            "sla_pas":  88.02,
-                            "fv_pas":  66.43
+                            "sla_pas":  93.38,
+                            "fv_pas":  65.78
                         },
                 "NACIONAL":  {
-                                 "total_piezas":  120850,
+                                 "total_piezas":  140559,
                                  "paquetes":  120850,
-                                 "cartas":  0,
+                                 "cartas":  19709,
                                  "expreso":  6404,
                                  "sla_paqar":  94.67,
                                  "fv_paqar":  87.54,
-                                 "sla_clasico":  0,
+                                 "sla_clasico":  96.45,
                                  "sla_expreso":  62.98,
                                  "fv_expreso":  86.93,
-                                 "sla_pas":  0,
-                                 "fv_pas":  0
+                                 "sla_pas":  94.65,
+                                 "fv_pas":  61.61
                              },
                 "METRO":  {
                               "total_piezas":  40994,
@@ -143,11 +143,11 @@
                               "expreso":  3327,
                               "sla_paqar":  94.69,
                               "fv_paqar":  88.67,
-                              "sla_clasico":  0,
+                              "sla_clasico":  98.58,
                               "sla_expreso":  63,
                               "fv_expreso":  86.25,
-                              "sla_pas":  91.41,
-                              "fv_pas":  59.62
+                              "sla_pas":  96.31,
+                              "fv_pas":  59.08
                           },
                 "CUYO_NOA":  {
                                  "total_piezas":  15900,
@@ -156,52 +156,195 @@
                                  "expreso":  333,
                                  "sla_paqar":  95.52,
                                  "fv_paqar":  89.47,
-                                 "sla_clasico":  0,
+                                 "sla_clasico":  96.22,
                                  "sla_expreso":  64.56,
                                  "fv_expreso":  89.13,
-                                 "sla_pas":  95.3,
-                                 "fv_pas":  63.91
+                                 "sla_pas":  91.37,
+                                 "fv_pas":  57.68
                              }
             },
     "nodes_mes":  {
-                      "PER":  {
-                                  "total_piezas":  91727,
-                                  "paquetes":  77791,
-                                  "cartas":  13936,
-                                  "expreso":  5790,
-                                  "sla_paqar":  97.82,
-                                  "fv_paqar":  88.83,
-                                  "sla_clasico":  0,
-                                  "sla_expreso":  86.96,
-                                  "fv_expreso":  83.59,
-                                  "sla_pas":  91.77,
-                                  "fv_pas":  68.26
+                      "SDE":  {
+                                  "total_piezas":  26241,
+                                  "paquetes":  25865,
+                                  "cartas":  376,
+                                  "expreso":  379,
+                                  "sla_paqar":  97.69,
+                                  "fv_paqar":  93.27,
+                                  "sla_clasico":  98.23,
+                                  "sla_expreso":  61.48,
+                                  "fv_expreso":  95.27,
+                                  "sla_pas":  92.82,
+                                  "fv_pas":  61.44
                               },
-                      "MDQ":  {
-                                  "total_piezas":  79106,
-                                  "paquetes":  64198,
-                                  "cartas":  14908,
-                                  "expreso":  3015,
-                                  "sla_paqar":  97.57,
-                                  "fv_paqar":  88.09,
-                                  "sla_clasico":  0,
-                                  "sla_expreso":  74.56,
-                                  "fv_expreso":  82.38,
-                                  "sla_pas":  76.46,
-                                  "fv_pas":  63.43
+                      "PSS":  {
+                                  "total_piezas":  25335,
+                                  "paquetes":  24451,
+                                  "cartas":  884,
+                                  "expreso":  548,
+                                  "sla_paqar":  96.76,
+                                  "fv_paqar":  89.72,
+                                  "sla_clasico":  97.45,
+                                  "sla_expreso":  66.79,
+                                  "fv_expreso":  84.49,
+                                  "sla_pas":  96.83,
+                                  "fv_pas":  56.67
                               },
-                      "MER":  {
-                                  "total_piezas":  76592,
-                                  "paquetes":  63700,
-                                  "cartas":  12892,
-                                  "expreso":  3062,
-                                  "sla_paqar":  97.7,
-                                  "fv_paqar":  89.65,
-                                  "sla_clasico":  0,
-                                  "sla_expreso":  83.96,
-                                  "fv_expreso":  85.92,
-                                  "sla_pas":  86.89,
-                                  "fv_pas":  71.52
+                      "TUC":  {
+                                  "total_piezas":  35459,
+                                  "paquetes":  34315,
+                                  "cartas":  1144,
+                                  "expreso":  800,
+                                  "sla_paqar":  97.97,
+                                  "fv_paqar":  89.41,
+                                  "sla_clasico":  98.58,
+                                  "sla_expreso":  72.75,
+                                  "fv_expreso":  79.63,
+                                  "sla_pas":  95.8,
+                                  "fv_pas":  57.6
+                              },
+                      "RGL":  {
+                                  "total_piezas":  22121,
+                                  "paquetes":  20566,
+                                  "cartas":  1555,
+                                  "expreso":  322,
+                                  "sla_paqar":  90.61,
+                                  "fv_paqar":  90.51,
+                                  "sla_clasico":  91.48,
+                                  "sla_expreso":  35.71,
+                                  "fv_expreso":  93.12,
+                                  "sla_pas":  99.04,
+                                  "fv_pas":  69.65
+                              },
+                      "PRA":  {
+                                  "total_piezas":  61804,
+                                  "paquetes":  60174,
+                                  "cartas":  1630,
+                                  "expreso":  2330,
+                                  "sla_paqar":  98.4,
+                                  "fv_paqar":  88.88,
+                                  "sla_clasico":  98.94,
+                                  "sla_expreso":  84.89,
+                                  "fv_expreso":  91.87,
+                                  "sla_pas":  98.16,
+                                  "fv_pas":  70.06
+                              },
+                      "CRD":  {
+                                  "total_piezas":  33646,
+                                  "paquetes":  31496,
+                                  "cartas":  2150,
+                                  "expreso":  514,
+                                  "sla_paqar":  94.18,
+                                  "fv_paqar":  90.73,
+                                  "sla_clasico":  94.94,
+                                  "sla_expreso":  48.44,
+                                  "fv_expreso":  93.95,
+                                  "sla_pas":  98.6,
+                                  "fv_pas":  67.91
+                              },
+                      "UAQ":  {
+                                  "total_piezas":  21328,
+                                  "paquetes":  20680,
+                                  "cartas":  648,
+                                  "expreso":  399,
+                                  "sla_paqar":  96.18,
+                                  "fv_paqar":  89.44,
+                                  "sla_clasico":  97.2,
+                                  "sla_expreso":  44.36,
+                                  "fv_expreso":  90.94,
+                                  "sla_pas":  90.12,
+                                  "fv_pas":  60.8
+                              },
+                      "ROS":  {
+                                  "total_piezas":  99579,
+                                  "paquetes":  96406,
+                                  "cartas":  3173,
+                                  "expreso":  4467,
+                                  "sla_paqar":  94.69,
+                                  "fv_paqar":  81.56,
+                                  "sla_clasico":  96.62,
+                                  "sla_expreso":  55.05,
+                                  "fv_expreso":  83.72,
+                                  "sla_pas":  91.52,
+                                  "fv_pas":  59.94
+                              },
+                      "CTC":  {
+                                  "total_piezas":  6979,
+                                  "paquetes":  6497,
+                                  "cartas":  482,
+                                  "expreso":  178,
+                                  "sla_paqar":  84.16,
+                                  "fv_paqar":  91.11,
+                                  "sla_clasico":  85.8,
+                                  "sla_expreso":  25.84,
+                                  "fv_expreso":  87.95,
+                                  "sla_pas":  89.34,
+                                  "fv_pas":  57.68
+                              },
+                      "BRC":  {
+                                  "total_piezas":  28339,
+                                  "paquetes":  26314,
+                                  "cartas":  2025,
+                                  "expreso":  432,
+                                  "sla_paqar":  90.91,
+                                  "fv_paqar":  77.02,
+                                  "sla_clasico":  91.79,
+                                  "sla_expreso":  38.19,
+                                  "fv_expreso":  91.5,
+                                  "sla_pas":  94.32,
+                                  "fv_pas":  61.38
+                              },
+                      "DP3":  {
+                                  "total_piezas":  144467,
+                                  "paquetes":  119335,
+                                  "cartas":  25132,
+                                  "expreso":  6565,
+                                  "sla_paqar":  96.21,
+                                  "fv_paqar":  91.17,
+                                  "sla_clasico":  98.12,
+                                  "sla_expreso":  63.46,
+                                  "fv_expreso":  83.51,
+                                  "sla_pas":  95.91,
+                                  "fv_pas":  55.6
+                              },
+                      "RCU":  {
+                                  "total_piezas":  8872,
+                                  "paquetes":  8612,
+                                  "cartas":  260,
+                                  "expreso":  376,
+                                  "sla_paqar":  92.77,
+                                  "fv_paqar":  85.88,
+                                  "sla_clasico":  95.64,
+                                  "sla_expreso":  29.79,
+                                  "fv_expreso":  85.71,
+                                  "sla_pas":  69.62,
+                                  "fv_pas":  57.31
+                              },
+                      "JUJ":  {
+                                  "total_piezas":  8393,
+                                  "paquetes":  8232,
+                                  "cartas":  161,
+                                  "expreso":  181,
+                                  "sla_paqar":  95.12,
+                                  "fv_paqar":  86.13,
+                                  "sla_clasico":  96.45,
+                                  "sla_expreso":  35.91,
+                                  "fv_expreso":  92.31,
+                                  "sla_pas":  97.52,
+                                  "fv_pas":  52.17
+                              },
+                      "DP6":  {
+                                  "total_piezas":  87355,
+                                  "paquetes":  73539,
+                                  "cartas":  13816,
+                                  "expreso":  6689,
+                                  "sla_paqar":  95.94,
+                                  "fv_paqar":  90.71,
+                                  "sla_clasico":  98.88,
+                                  "sla_expreso":  66.63,
+                                  "fv_expreso":  90.62,
+                                  "sla_pas":  96.84,
+                                  "fv_pas":  66.31
                               },
                       "BHI":  {
                                   "total_piezas":  71172,
@@ -210,24 +353,37 @@
                                   "expreso":  2326,
                                   "sla_paqar":  97.09,
                                   "fv_paqar":  90.09,
-                                  "sla_clasico":  0,
+                                  "sla_clasico":  98.15,
                                   "sla_expreso":  70.68,
                                   "fv_expreso":  87.89,
-                                  "sla_pas":  76.47,
-                                  "fv_pas":  72.29
+                                  "sla_pas":  84.73,
+                                  "fv_pas":  68.5
                               },
-                      "RSA":  {
-                                  "total_piezas":  29292,
-                                  "paquetes":  28705,
-                                  "cartas":  587,
-                                  "expreso":  757,
-                                  "sla_paqar":  96.98,
-                                  "fv_paqar":  85,
-                                  "sla_clasico":  0,
-                                  "sla_expreso":  61.29,
-                                  "fv_expreso":  75.25,
-                                  "sla_pas":  68.82,
-                                  "fv_pas":  64.57
+                      "MER":  {
+                                  "total_piezas":  76592,
+                                  "paquetes":  63700,
+                                  "cartas":  12892,
+                                  "expreso":  3062,
+                                  "sla_paqar":  97.7,
+                                  "fv_paqar":  89.65,
+                                  "sla_clasico":  98.39,
+                                  "sla_expreso":  83.96,
+                                  "fv_expreso":  85.92,
+                                  "sla_pas":  92.8,
+                                  "fv_pas":  70.54
+                              },
+                      "RES":  {
+                                  "total_piezas":  46417,
+                                  "paquetes":  45367,
+                                  "cartas":  1050,
+                                  "expreso":  1015,
+                                  "sla_paqar":  96.55,
+                                  "fv_paqar":  81.55,
+                                  "sla_clasico":  97.08,
+                                  "sla_expreso":  73.3,
+                                  "fv_expreso":  85.82,
+                                  "sla_pas":  94,
+                                  "fv_pas":  55.9
                               },
                       "LPG":  {
                                   "total_piezas":  92656,
@@ -236,52 +392,416 @@
                                   "expreso":  3974,
                                   "sla_paqar":  97.19,
                                   "fv_paqar":  89.06,
-                                  "sla_clasico":  0,
+                                  "sla_clasico":  98.11,
                                   "sla_expreso":  81.25,
                                   "fv_expreso":  90.61,
-                                  "sla_pas":  91.87,
-                                  "fv_pas":  67.57
+                                  "sla_pas":  97.06,
+                                  "fv_pas":  65
+                              },
+                      "REL":  {
+                                  "total_piezas":  20773,
+                                  "paquetes":  19165,
+                                  "cartas":  1608,
+                                  "expreso":  347,
+                                  "sla_paqar":  96.69,
+                                  "fv_paqar":  89.01,
+                                  "sla_clasico":  97.3,
+                                  "sla_expreso":  63.98,
+                                  "fv_expreso":  90.38,
+                                  "sla_pas":  97.89,
+                                  "fv_pas":  67.91
+                              },
+                      "SLA":  {
+                                  "total_piezas":  37818,
+                                  "paquetes":  36800,
+                                  "cartas":  1018,
+                                  "expreso":  832,
+                                  "sla_paqar":  95.69,
+                                  "fv_paqar":  82.72,
+                                  "sla_clasico":  96.44,
+                                  "sla_expreso":  63.22,
+                                  "fv_expreso":  84.02,
+                                  "sla_pas":  94.99,
+                                  "fv_pas":  54.62
+                              },
+                      "DP4":  {
+                                  "total_piezas":  102862,
+                                  "paquetes":  78775,
+                                  "cartas":  24087,
+                                  "expreso":  5898,
+                                  "sla_paqar":  96.33,
+                                  "fv_paqar":  88.04,
+                                  "sla_clasico":  98.51,
+                                  "sla_expreso":  69.36,
+                                  "fv_expreso":  84.12,
+                                  "sla_pas":  96.8,
+                                  "fv_pas":  67.56
+                              },
+                      "COR":  {
+                                  "total_piezas":  139545,
+                                  "paquetes":  136133,
+                                  "cartas":  3412,
+                                  "expreso":  6371,
+                                  "sla_paqar":  95.9,
+                                  "fv_paqar":  88.64,
+                                  "sla_clasico":  97.83,
+                                  "sla_expreso":  56.44,
+                                  "fv_expreso":  89.06,
+                                  "sla_pas":  87.89,
+                                  "fv_pas":  60.17
+                              },
+                      "MDQ":  {
+                                  "total_piezas":  79106,
+                                  "paquetes":  64198,
+                                  "cartas":  14908,
+                                  "expreso":  3015,
+                                  "sla_paqar":  97.57,
+                                  "fv_paqar":  88.09,
+                                  "sla_clasico":  98.71,
+                                  "sla_expreso":  74.56,
+                                  "fv_expreso":  82.38,
+                                  "sla_pas":  80.46,
+                                  "fv_pas":  60.01
+                              },
+                      "PER":  {
+                                  "total_piezas":  91727,
+                                  "paquetes":  77791,
+                                  "cartas":  13936,
+                                  "expreso":  5790,
+                                  "sla_paqar":  97.82,
+                                  "fv_paqar":  88.83,
+                                  "sla_clasico":  98.69,
+                                  "sla_expreso":  86.96,
+                                  "fv_expreso":  83.59,
+                                  "sla_pas":  96.44,
+                                  "fv_pas":  63.46
+                              },
+                      "VMR":  {
+                                  "total_piezas":  27932,
+                                  "paquetes":  27001,
+                                  "cartas":  931,
+                                  "expreso":  1166,
+                                  "sla_paqar":  95.8,
+                                  "fv_paqar":  89.29,
+                                  "sla_clasico":  97.14,
+                                  "sla_expreso":  66.21,
+                                  "fv_expreso":  88.67,
+                                  "sla_pas":  72.18,
+                                  "fv_pas":  67.13
+                              },
+                      "IRJ":  {
+                                  "total_piezas":  22540,
+                                  "paquetes":  21739,
+                                  "cartas":  801,
+                                  "expreso":  367,
+                                  "sla_paqar":  91.52,
+                                  "fv_paqar":  88.55,
+                                  "sla_clasico":  92.12,
+                                  "sla_expreso":  56.68,
+                                  "fv_expreso":  76,
+                                  "sla_pas":  84.36,
+                                  "fv_pas":  71.16
+                              },
+                      "MDZ":  {
+                                  "total_piezas":  57295,
+                                  "paquetes":  53073,
+                                  "cartas":  4222,
+                                  "expreso":  1355,
+                                  "sla_paqar":  97.84,
+                                  "fv_paqar":  89.35,
+                                  "sla_clasico":  98.5,
+                                  "sla_expreso":  72.69,
+                                  "fv_expreso":  87.3,
+                                  "sla_pas":  96.42,
+                                  "fv_pas":  59.76
+                              },
+                      "RSA":  {
+                                  "total_piezas":  29292,
+                                  "paquetes":  28705,
+                                  "cartas":  587,
+                                  "expreso":  757,
+                                  "sla_paqar":  96.98,
+                                  "fv_paqar":  85,
+                                  "sla_clasico":  97.95,
+                                  "sla_expreso":  61.29,
+                                  "fv_expreso":  75.25,
+                                  "sla_pas":  71.89,
+                                  "fv_pas":  66.78
+                              },
+                      "CNQ":  {
+                                  "total_piezas":  35308,
+                                  "paquetes":  34384,
+                                  "cartas":  924,
+                                  "expreso":  731,
+                                  "sla_paqar":  98.16,
+                                  "fv_paqar":  89.63,
+                                  "sla_clasico":  98.83,
+                                  "sla_expreso":  67.31,
+                                  "fv_expreso":  91.75,
+                                  "sla_pas":  92.21,
+                                  "fv_pas":  59.31
+                              },
+                      "LUQ":  {
+                                  "total_piezas":  20636,
+                                  "paquetes":  19084,
+                                  "cartas":  1552,
+                                  "expreso":  392,
+                                  "sla_paqar":  95.98,
+                                  "fv_paqar":  94.73,
+                                  "sla_clasico":  96.96,
+                                  "sla_expreso":  49.49,
+                                  "fv_expreso":  92.44,
+                                  "sla_pas":  94.06,
+                                  "fv_pas":  62.11
+                              },
+                      "NQN":  {
+                                  "total_piezas":  127980,
+                                  "paquetes":  119886,
+                                  "cartas":  8094,
+                                  "expreso":  2358,
+                                  "sla_paqar":  94.39,
+                                  "fv_paqar":  82.02,
+                                  "sla_clasico":  95.2,
+                                  "sla_expreso":  54.28,
+                                  "fv_expreso":  85.55,
+                                  "sla_pas":  75.83,
+                                  "fv_pas":  55.7
+                              },
+                      "DP2":  {
+                                  "total_piezas":  213490,
+                                  "paquetes":  179088,
+                                  "cartas":  34402,
+                                  "expreso":  11557,
+                                  "sla_paqar":  95.62,
+                                  "fv_paqar":  86.39,
+                                  "sla_clasico":  98.07,
+                                  "sla_expreso":  60.21,
+                                  "fv_expreso":  82.7,
+                                  "sla_pas":  92.45,
+                                  "fv_pas":  56.12
+                              },
+                      "SFN":  {
+                                  "total_piezas":  80043,
+                                  "paquetes":  78162,
+                                  "cartas":  1881,
+                                  "expreso":  3019,
+                                  "sla_paqar":  97.24,
+                                  "fv_paqar":  91.15,
+                                  "sla_clasico":  98.29,
+                                  "sla_expreso":  71.08,
+                                  "fv_expreso":  91.86,
+                                  "sla_pas":  98.14,
+                                  "fv_pas":  70.44
+                              },
+                      "USH":  {
+                                  "total_piezas":  14822,
+                                  "paquetes":  13534,
+                                  "cartas":  1288,
+                                  "expreso":  221,
+                                  "sla_paqar":  77.64,
+                                  "fv_paqar":  86.91,
+                                  "sla_clasico":  78.77,
+                                  "sla_expreso":  9.95,
+                                  "fv_expreso":  90.18,
+                                  "sla_pas":  79.74,
+                                  "fv_pas":  53.42
+                              },
+                      "DP5":  {
+                                  "total_piezas":  113485,
+                                  "paquetes":  87913,
+                                  "cartas":  25572,
+                                  "expreso":  6995,
+                                  "sla_paqar":  96.54,
+                                  "fv_paqar":  86.29,
+                                  "sla_clasico":  99.04,
+                                  "sla_expreso":  67.53,
+                                  "fv_expreso":  81.93,
+                                  "sla_pas":  99.83,
+                                  "fv_pas":  66.55
                               }
                   },
     "nodes_dia":  {
-                      "PER":  {
-                                  "total_piezas":  6519,
-                                  "paquetes":  5419,
-                                  "cartas":  1100,
-                                  "expreso":  356,
-                                  "sla_paqar":  97.14,
-                                  "fv_paqar":  88.79,
-                                  "sla_clasico":  0,
-                                  "sla_expreso":  86.24,
-                                  "fv_expreso":  82.26,
-                                  "sla_pas":  92.68,
-                                  "fv_pas":  68.72
+                      "SDE":  {
+                                  "total_piezas":  1702,
+                                  "paquetes":  1683,
+                                  "cartas":  19,
+                                  "expreso":  28,
+                                  "sla_paqar":  97.33,
+                                  "fv_paqar":  90.69,
+                                  "sla_clasico":  97.7,
+                                  "sla_expreso":  75,
+                                  "fv_expreso":  90,
+                                  "sla_pas":  100,
+                                  "fv_pas":  78.95
                               },
-                      "MDQ":  {
-                                  "total_piezas":  5598,
-                                  "paquetes":  4418,
-                                  "cartas":  1180,
-                                  "expreso":  210,
-                                  "sla_paqar":  96.33,
-                                  "fv_paqar":  87.55,
-                                  "sla_clasico":  0,
-                                  "sla_expreso":  67.62,
-                                  "fv_expreso":  81.58,
-                                  "sla_pas":  77.6,
-                                  "fv_pas":  69.84
+                      "PSS":  {
+                                  "total_piezas":  1727,
+                                  "paquetes":  1646,
+                                  "cartas":  81,
+                                  "expreso":  42,
+                                  "sla_paqar":  97.02,
+                                  "fv_paqar":  90.41,
+                                  "sla_clasico":  98.19,
+                                  "sla_expreso":  52.38,
+                                  "fv_expreso":  90,
+                                  "sla_pas":  98.77,
+                                  "fv_pas":  55.56
                               },
-                      "MER":  {
-                                  "total_piezas":  5184,
-                                  "paquetes":  4342,
-                                  "cartas":  842,
-                                  "expreso":  181,
-                                  "sla_paqar":  98,
-                                  "fv_paqar":  90.55,
-                                  "sla_clasico":  0,
-                                  "sla_expreso":  82.87,
-                                  "fv_expreso":  89.42,
-                                  "sla_pas":  91.19,
-                                  "fv_pas":  66.5
+                      "TUC":  {
+                                  "total_piezas":  2409,
+                                  "paquetes":  2301,
+                                  "cartas":  108,
+                                  "expreso":  60,
+                                  "sla_paqar":  97.74,
+                                  "fv_paqar":  90.29,
+                                  "sla_clasico":  98.48,
+                                  "sla_expreso":  70,
+                                  "fv_expreso":  94.12,
+                                  "sla_pas":  98.15,
+                                  "fv_pas":  60.19
+                              },
+                      "RGL":  {
+                                  "total_piezas":  1544,
+                                  "paquetes":  1299,
+                                  "cartas":  245,
+                                  "expreso":  21,
+                                  "sla_paqar":  96.69,
+                                  "fv_paqar":  92.88,
+                                  "sla_clasico":  97.5,
+                                  "sla_expreso":  47.62,
+                                  "fv_expreso":  100,
+                                  "sla_pas":  100,
+                                  "fv_pas":  77.14
+                              },
+                      "PRA":  {
+                                  "total_piezas":  4232,
+                                  "paquetes":  4185,
+                                  "cartas":  47,
+                                  "expreso":  141,
+                                  "sla_paqar":  98.11,
+                                  "fv_paqar":  88.9,
+                                  "sla_clasico":  98.62,
+                                  "sla_expreso":  83.69,
+                                  "fv_expreso":  93.06,
+                                  "sla_pas":  95.74,
+                                  "fv_pas":  61.7
+                              },
+                      "CRD":  {
+                                  "total_piezas":  2451,
+                                  "paquetes":  2128,
+                                  "cartas":  323,
+                                  "expreso":  34,
+                                  "sla_paqar":  97.42,
+                                  "fv_paqar":  92.21,
+                                  "sla_clasico":  97.95,
+                                  "sla_expreso":  64.71,
+                                  "fv_expreso":  100,
+                                  "sla_pas":  100,
+                                  "fv_pas":  68.42
+                              },
+                      "UAQ":  {
+                                  "total_piezas":  1432,
+                                  "paquetes":  1374,
+                                  "cartas":  58,
+                                  "expreso":  28,
+                                  "sla_paqar":  95.56,
+                                  "fv_paqar":  90.37,
+                                  "sla_clasico":  96.81,
+                                  "sla_expreso":  35.71,
+                                  "fv_expreso":  87.5,
+                                  "sla_pas":  82.76,
+                                  "fv_pas":  65.52
+                              },
+                      "ROS":  {
+                                  "total_piezas":  6761,
+                                  "paquetes":  6406,
+                                  "cartas":  355,
+                                  "expreso":  331,
+                                  "sla_paqar":  93.35,
+                                  "fv_paqar":  82.02,
+                                  "sla_clasico":  95.87,
+                                  "sla_expreso":  47.13,
+                                  "fv_expreso":  90.57,
+                                  "sla_pas":  97.46,
+                                  "fv_pas":  57.75
+                              },
+                      "CTC":  {
+                                  "total_piezas":  461,
+                                  "paquetes":  383,
+                                  "cartas":  78,
+                                  "expreso":  9,
+                                  "sla_paqar":  95.04,
+                                  "fv_paqar":  89.5,
+                                  "sla_clasico":  96.52,
+                                  "sla_expreso":  33.33,
+                                  "fv_expreso":  100,
+                                  "sla_pas":  64.1,
+                                  "fv_pas":  61.54
+                              },
+                      "BRC":  {
+                                  "total_piezas":  1847,
+                                  "paquetes":  1771,
+                                  "cartas":  76,
+                                  "expreso":  32,
+                                  "sla_paqar":  82.04,
+                                  "fv_paqar":  79.78,
+                                  "sla_clasico":  83.15,
+                                  "sla_expreso":  21.88,
+                                  "fv_expreso":  100,
+                                  "sla_pas":  94.74,
+                                  "fv_pas":  61.84
+                              },
+                      "DP3":  {
+                                  "total_piezas":  8743,
+                                  "paquetes":  6694,
+                                  "cartas":  2049,
+                                  "expreso":  598,
+                                  "sla_paqar":  94.62,
+                                  "fv_paqar":  90.22,
+                                  "sla_clasico":  97.85,
+                                  "sla_expreso":  61.71,
+                                  "fv_expreso":  84.57,
+                                  "sla_pas":  95.45,
+                                  "fv_pas":  48.02
+                              },
+                      "RCU":  {
+                                  "total_piezas":  569,
+                                  "paquetes":  528,
+                                  "cartas":  41,
+                                  "expreso":  35,
+                                  "sla_paqar":  90.91,
+                                  "fv_paqar":  82.01,
+                                  "sla_clasico":  95.94,
+                                  "sla_expreso":  20,
+                                  "fv_expreso":  66.67,
+                                  "sla_pas":  63.41,
+                                  "fv_pas":  73.17
+                              },
+                      "JUJ":  {
+                                  "total_piezas":  494,
+                                  "paquetes":  488,
+                                  "cartas":  6,
+                                  "expreso":  12,
+                                  "sla_paqar":  88.11,
+                                  "fv_paqar":  87.16,
+                                  "sla_clasico":  89.5,
+                                  "sla_expreso":  33.33,
+                                  "fv_expreso":  0,
+                                  "sla_pas":  100,
+                                  "fv_pas":  66.67
+                              },
+                      "DP6":  {
+                                  "total_piezas":  5242,
+                                  "paquetes":  4178,
+                                  "cartas":  1064,
+                                  "expreso":  572,
+                                  "sla_paqar":  93.56,
+                                  "fv_paqar":  90.9,
+                                  "sla_clasico":  98.39,
+                                  "sla_expreso":  63.11,
+                                  "fv_expreso":  88.61,
+                                  "sla_pas":  96.78,
+                                  "fv_pas":  67.11
                               },
                       "BHI":  {
                                   "total_piezas":  4849,
@@ -290,24 +810,37 @@
                                   "expreso":  138,
                                   "sla_paqar":  96.54,
                                   "fv_paqar":  88.79,
-                                  "sla_clasico":  0,
+                                  "sla_clasico":  97.76,
                                   "sla_expreso":  61.59,
                                   "fv_expreso":  86.67,
-                                  "sla_pas":  92.22,
-                                  "fv_pas":  65.03
+                                  "sla_pas":  93.54,
+                                  "fv_pas":  70.39
                               },
-                      "RSA":  {
-                                  "total_piezas":  1987,
-                                  "paquetes":  1963,
-                                  "cartas":  24,
-                                  "expreso":  44,
-                                  "sla_paqar":  97.3,
-                                  "fv_paqar":  85.79,
-                                  "sla_clasico":  0,
-                                  "sla_expreso":  47.73,
-                                  "fv_expreso":  69.23,
-                                  "sla_pas":  64.1,
-                                  "fv_pas":  61.15
+                      "MER":  {
+                                  "total_piezas":  5184,
+                                  "paquetes":  4342,
+                                  "cartas":  842,
+                                  "expreso":  181,
+                                  "sla_paqar":  98,
+                                  "fv_paqar":  90.55,
+                                  "sla_clasico":  98.65,
+                                  "sla_expreso":  82.87,
+                                  "fv_expreso":  89.42,
+                                  "sla_pas":  89.43,
+                                  "fv_pas":  69.36
+                              },
+                      "RES":  {
+                                  "total_piezas":  3183,
+                                  "paquetes":  3080,
+                                  "cartas":  103,
+                                  "expreso":  68,
+                                  "sla_paqar":  97.18,
+                                  "fv_paqar":  80.66,
+                                  "sla_clasico":  97.38,
+                                  "sla_expreso":  88.24,
+                                  "fv_expreso":  87.5,
+                                  "sla_pas":  98.06,
+                                  "fv_pas":  61.17
                               },
                       "LPG":  {
                                   "total_piezas":  6713,
@@ -316,11 +849,232 @@
                                   "expreso":  211,
                                   "sla_paqar":  97.47,
                                   "fv_paqar":  89.71,
-                                  "sla_clasico":  0,
+                                  "sla_clasico":  98.38,
                                   "sla_expreso":  77.25,
                                   "fv_expreso":  92.79,
-                                  "sla_pas":  98.52,
-                                  "fv_pas":  63.91
+                                  "sla_pas":  98.89,
+                                  "fv_pas":  63.53
+                              },
+                      "REL":  {
+                                  "total_piezas":  1416,
+                                  "paquetes":  1388,
+                                  "cartas":  28,
+                                  "expreso":  24,
+                                  "sla_paqar":  91.79,
+                                  "fv_paqar":  90.02,
+                                  "sla_clasico":  92.6,
+                                  "sla_expreso":  45.83,
+                                  "fv_expreso":  75,
+                                  "sla_pas":  100,
+                                  "fv_pas":  64.29
+                              },
+                      "SLA":  {
+                                  "total_piezas":  2393,
+                                  "paquetes":  2370,
+                                  "cartas":  23,
+                                  "expreso":  56,
+                                  "sla_paqar":  92.07,
+                                  "fv_paqar":  83.38,
+                                  "sla_clasico":  92.7,
+                                  "sla_expreso":  66.07,
+                                  "fv_expreso":  89.47,
+                                  "sla_pas":  95.65,
+                                  "fv_pas":  52.17
+                              },
+                      "DP4":  {
+                                  "total_piezas":  6561,
+                                  "paquetes":  4549,
+                                  "cartas":  2012,
+                                  "expreso":  532,
+                                  "sla_paqar":  95.16,
+                                  "fv_paqar":  88.21,
+                                  "sla_clasico":  98.71,
+                                  "sla_expreso":  68.42,
+                                  "fv_expreso":  81.97,
+                                  "sla_pas":  99.34,
+                                  "fv_pas":  68.24
+                              },
+                      "COR":  {
+                                  "total_piezas":  9440,
+                                  "paquetes":  9231,
+                                  "cartas":  209,
+                                  "expreso":  440,
+                                  "sla_paqar":  92.99,
+                                  "fv_paqar":  84.02,
+                                  "sla_clasico":  95.69,
+                                  "sla_expreso":  39.09,
+                                  "fv_expreso":  82.42,
+                                  "sla_pas":  80.86,
+                                  "fv_pas":  68.9
+                              },
+                      "MDQ":  {
+                                  "total_piezas":  5598,
+                                  "paquetes":  4418,
+                                  "cartas":  1180,
+                                  "expreso":  210,
+                                  "sla_paqar":  96.33,
+                                  "fv_paqar":  87.55,
+                                  "sla_clasico":  97.77,
+                                  "sla_expreso":  67.62,
+                                  "fv_expreso":  81.58,
+                                  "sla_pas":  84.24,
+                                  "fv_pas":  64.15
+                              },
+                      "PER":  {
+                                  "total_piezas":  6519,
+                                  "paquetes":  5419,
+                                  "cartas":  1100,
+                                  "expreso":  356,
+                                  "sla_paqar":  97.14,
+                                  "fv_paqar":  88.79,
+                                  "sla_clasico":  97.91,
+                                  "sla_expreso":  86.24,
+                                  "fv_expreso":  82.26,
+                                  "sla_pas":  97.36,
+                                  "fv_pas":  65.36
+                              },
+                      "VMR":  {
+                                  "total_piezas":  1959,
+                                  "paquetes":  1905,
+                                  "cartas":  54,
+                                  "expreso":  77,
+                                  "sla_paqar":  94.07,
+                                  "fv_paqar":  88.36,
+                                  "sla_clasico":  95.57,
+                                  "sla_expreso":  58.44,
+                                  "fv_expreso":  83.33,
+                                  "sla_pas":  92.59,
+                                  "fv_pas":  59.26
+                              },
+                      "IRJ":  {
+                                  "total_piezas":  1534,
+                                  "paquetes":  1478,
+                                  "cartas":  56,
+                                  "expreso":  30,
+                                  "sla_paqar":  92.83,
+                                  "fv_paqar":  89.72,
+                                  "sla_clasico":  93.3,
+                                  "sla_expreso":  70,
+                                  "fv_expreso":  63.64,
+                                  "sla_pas":  92.86,
+                                  "fv_pas":  58.93
+                              },
+                      "MDZ":  {
+                                  "total_piezas":  4135,
+                                  "paquetes":  3777,
+                                  "cartas":  358,
+                                  "expreso":  86,
+                                  "sla_paqar":  97.72,
+                                  "fv_paqar":  89.39,
+                                  "sla_clasico":  98.24,
+                                  "sla_expreso":  75.58,
+                                  "fv_expreso":  90.91,
+                                  "sla_pas":  96.65,
+                                  "fv_pas":  53.91
+                              },
+                      "RSA":  {
+                                  "total_piezas":  1987,
+                                  "paquetes":  1963,
+                                  "cartas":  24,
+                                  "expreso":  44,
+                                  "sla_paqar":  97.3,
+                                  "fv_paqar":  85.79,
+                                  "sla_clasico":  98.44,
+                                  "sla_expreso":  47.73,
+                                  "fv_expreso":  69.23,
+                                  "sla_pas":  79.17,
+                                  "fv_pas":  66.67
+                              },
+                      "CNQ":  {
+                                  "total_piezas":  2496,
+                                  "paquetes":  2377,
+                                  "cartas":  119,
+                                  "expreso":  44,
+                                  "sla_paqar":  97.77,
+                                  "fv_paqar":  90.41,
+                                  "sla_clasico":  98.37,
+                                  "sla_expreso":  65.91,
+                                  "fv_expreso":  93.75,
+                                  "sla_pas":  98.32,
+                                  "fv_pas":  54.62
+                              },
+                      "LUQ":  {
+                                  "total_piezas":  1340,
+                                  "paquetes":  1304,
+                                  "cartas":  36,
+                                  "expreso":  24,
+                                  "sla_paqar":  95.09,
+                                  "fv_paqar":  94.99,
+                                  "sla_clasico":  95.94,
+                                  "sla_expreso":  50,
+                                  "fv_expreso":  90.91,
+                                  "sla_pas":  80.56,
+                                  "fv_pas":  55.56
+                              },
+                      "NQN":  {
+                                  "total_piezas":  8943,
+                                  "paquetes":  7993,
+                                  "cartas":  950,
+                                  "expreso":  127,
+                                  "sla_paqar":  91.92,
+                                  "fv_paqar":  81.19,
+                                  "sla_clasico":  92.66,
+                                  "sla_expreso":  45.67,
+                                  "fv_expreso":  89.19,
+                                  "sla_pas":  84.74,
+                                  "fv_pas":  61.26
+                              },
+                      "DP2":  {
+                                  "total_piezas":  13112,
+                                  "paquetes":  10201,
+                                  "cartas":  2911,
+                                  "expreso":  1010,
+                                  "sla_paqar":  94.85,
+                                  "fv_paqar":  87.56,
+                                  "sla_clasico":  98.79,
+                                  "sla_expreso":  59.01,
+                                  "fv_expreso":  87.89,
+                                  "sla_pas":  91.47,
+                                  "fv_pas":  54.41
+                              },
+                      "SFN":  {
+                                  "total_piezas":  5279,
+                                  "paquetes":  5198,
+                                  "cartas":  81,
+                                  "expreso":  174,
+                                  "sla_paqar":  97.63,
+                                  "fv_paqar":  90.84,
+                                  "sla_clasico":  98.31,
+                                  "sla_expreso":  78.16,
+                                  "fv_expreso":  92.39,
+                                  "sla_pas":  100,
+                                  "fv_pas":  75.31
+                              },
+                      "USH":  {
+                                  "total_piezas":  967,
+                                  "paquetes":  958,
+                                  "cartas":  9,
+                                  "expreso":  14,
+                                  "sla_paqar":  35.39,
+                                  "fv_paqar":  83.66,
+                                  "sla_clasico":  35.81,
+                                  "sla_expreso":  7.14,
+                                  "fv_expreso":  100,
+                                  "sla_pas":  88.89,
+                                  "fv_pas":  44.44
+                              },
+                      "DP5":  {
+                                  "total_piezas":  7336,
+                                  "paquetes":  4822,
+                                  "cartas":  2514,
+                                  "expreso":  615,
+                                  "sla_paqar":  94.96,
+                                  "fv_paqar":  86.93,
+                                  "sla_clasico":  99.19,
+                                  "sla_expreso":  66.02,
+                                  "fv_expreso":  87.2,
+                                  "sla_pas":  100,
+                                  "fv_pas":  62.77
                               }
                   },
     "daily_series_regions":  {
@@ -432,104 +1186,104 @@
                                                        "sla_pas":  [
                                                                        [
                                                                            "11 Nov",
-                                                                           71.38,
+                                                                           82.06,
                                                                            1176
                                                                        ],
                                                                        [
                                                                            "12 Nov",
-                                                                           87.02,
+                                                                           90.94,
                                                                            4659
                                                                        ],
                                                                        [
                                                                            "13 Nov",
-                                                                           85.69,
+                                                                           90.29,
                                                                            4647
                                                                        ],
                                                                        [
                                                                            "16 Nov",
-                                                                           94.88,
+                                                                           95.49,
                                                                            7751
                                                                        ],
                                                                        [
                                                                            "17 Nov",
-                                                                           93.51,
+                                                                           96.55,
                                                                            9852
                                                                        ],
                                                                        [
                                                                            "18 Nov",
-                                                                           96.93,
+                                                                           98.17,
                                                                            8477
                                                                        ],
                                                                        [
                                                                            "19 Nov",
-                                                                           95.95,
+                                                                           97.57,
                                                                            10123
                                                                        ],
                                                                        [
                                                                            "20 Nov",
-                                                                           96.26,
+                                                                           97.57,
                                                                            10591
                                                                        ],
                                                                        [
                                                                            "24 Nov",
-                                                                           91.75,
+                                                                           96.17,
                                                                            9418
                                                                        ],
                                                                        [
                                                                            "25 Nov",
-                                                                           91.41,
+                                                                           96.31,
                                                                            10550
                                                                        ]
                                                                    ],
                                                        "fv_pas":  [
                                                                       [
                                                                           "11 Nov",
-                                                                          57.73,
+                                                                          58.76,
                                                                           1176
                                                                       ],
                                                                       [
                                                                           "12 Nov",
-                                                                          65.84,
+                                                                          60.31,
                                                                           4659
                                                                       ],
                                                                       [
                                                                           "13 Nov",
-                                                                          61.51,
+                                                                          61.59,
                                                                           4647
                                                                       ],
                                                                       [
                                                                           "16 Nov",
-                                                                          68.32,
+                                                                          60.95,
                                                                           7751
                                                                       ],
                                                                       [
                                                                           "17 Nov",
-                                                                          62.6,
+                                                                          59.95,
                                                                           9852
                                                                       ],
                                                                       [
                                                                           "18 Nov",
-                                                                          67.03,
+                                                                          62.31,
                                                                           8477
                                                                       ],
                                                                       [
                                                                           "19 Nov",
-                                                                          67.77,
+                                                                          62.31,
                                                                           10123
                                                                       ],
                                                                       [
                                                                           "20 Nov",
-                                                                          68.2,
+                                                                          59.97,
                                                                           10591
                                                                       ],
                                                                       [
                                                                           "24 Nov",
-                                                                          65.64,
+                                                                          62.93,
                                                                           9418
                                                                       ],
                                                                       [
                                                                           "25 Nov",
-                                                                          59.62,
+                                                                          59.08,
                                                                           10550
                                                                       ]
                                                                   ],
@@ -746,104 +1500,104 @@
                                                     "sla_pas":  [
                                                                     [
                                                                         "11 Nov",
-                                                                        80.14,
+                                                                        89.7,
                                                                         728
                                                                     ],
                                                                     [
                                                                         "12 Nov",
-                                                                        80.24,
+                                                                        86.4,
                                                                         684
                                                                     ],
                                                                     [
                                                                         "13 Nov",
-                                                                        88.35,
+                                                                        90.8,
                                                                         609
                                                                     ],
                                                                     [
                                                                         "16 Nov",
-                                                                        89.43,
+                                                                        87.23,
                                                                         470
                                                                     ],
                                                                     [
                                                                         "17 Nov",
-                                                                        88.8,
+                                                                        95.63,
                                                                         1212
                                                                     ],
                                                                     [
                                                                         "18 Nov",
-                                                                        91.59,
+                                                                        95.98,
                                                                         996
                                                                     ],
                                                                     [
                                                                         "19 Nov",
-                                                                        92.73,
+                                                                        91.11,
                                                                         945
                                                                     ],
                                                                     [
                                                                         "20 Nov",
-                                                                        91.22,
+                                                                        91.3,
                                                                         977
                                                                     ],
                                                                     [
                                                                         "24 Nov",
-                                                                        87.93,
+                                                                        90.99,
                                                                         888
                                                                     ],
                                                                     [
                                                                         "25 Nov",
-                                                                        91.85,
+                                                                        93.12,
                                                                         1090
                                                                     ]
                                                                 ],
                                                     "fv_pas":  [
                                                                    [
                                                                        "11 Nov",
-                                                                       61.34,
+                                                                       65.8,
                                                                        728
                                                                    ],
                                                                    [
                                                                        "12 Nov",
-                                                                       65.85,
+                                                                       68.57,
                                                                        684
                                                                    ],
                                                                    [
                                                                        "13 Nov",
-                                                                       74.25,
+                                                                       67,
                                                                        609
                                                                    ],
                                                                    [
                                                                        "16 Nov",
-                                                                       69.23,
+                                                                       73.19,
                                                                        470
                                                                    ],
                                                                    [
                                                                        "17 Nov",
-                                                                       56.95,
+                                                                       63.53,
                                                                        1212
                                                                    ],
                                                                    [
                                                                        "18 Nov",
-                                                                       60.99,
+                                                                       60.74,
                                                                        996
                                                                    ],
                                                                    [
                                                                        "19 Nov",
-                                                                       71.31,
+                                                                       64.02,
                                                                        945
                                                                    ],
                                                                    [
                                                                        "20 Nov",
-                                                                       63.19,
+                                                                       59.26,
                                                                        977
                                                                    ],
                                                                    [
                                                                        "24 Nov",
-                                                                       58.5,
+                                                                       61.71,
                                                                        888
                                                                    ],
                                                                    [
                                                                        "25 Nov",
-                                                                       64.9,
+                                                                       61.83,
                                                                        1090
                                                                    ]
                                                                ],
@@ -1060,104 +1814,104 @@
                                              "sla_pas":  [
                                                              [
                                                                  "11 Nov",
-                                                                 84.57,
+                                                                 85.37,
                                                                  1080
                                                              ],
                                                              [
                                                                  "12 Nov",
-                                                                 84.81,
+                                                                 91.15,
                                                                  1040
                                                              ],
                                                              [
                                                                  "13 Nov",
-                                                                 84.94,
+                                                                 81.24,
                                                                  854
                                                              ],
                                                              [
                                                                  "16 Nov",
-                                                                 80.45,
+                                                                 77.72,
                                                                  570
                                                              ],
                                                              [
                                                                  "17 Nov",
-                                                                 80.88,
+                                                                 73.43,
                                                                  779
                                                              ],
                                                              [
                                                                  "18 Nov",
-                                                                 88.42,
+                                                                 87.18,
                                                                  1084
                                                              ],
                                                              [
                                                                  "19 Nov",
-                                                                 81.6,
+                                                                 83.2,
                                                                  1250
                                                              ],
                                                              [
                                                                  "20 Nov",
-                                                                 89.81,
+                                                                 84.31,
                                                                  1230
                                                              ],
                                                              [
                                                                  "24 Nov",
-                                                                 93.48,
+                                                                 91.74,
                                                                  920
                                                              ],
                                                              [
                                                                  "25 Nov",
-                                                                 89.04,
+                                                                 90.8,
                                                                  1631
                                                              ]
                                                          ],
                                              "fv_pas":  [
                                                             [
                                                                 "11 Nov",
-                                                                71.05,
+                                                                67.41,
                                                                 1080
                                                             ],
                                                             [
                                                                 "12 Nov",
-                                                                66.8,
+                                                                57.4,
                                                                 1040
                                                             ],
                                                             [
                                                                 "13 Nov",
-                                                                65.33,
+                                                                62.65,
                                                                 854
                                                             ],
                                                             [
                                                                 "16 Nov",
-                                                                72.12,
+                                                                68.07,
                                                                 570
                                                             ],
                                                             [
                                                                 "17 Nov",
-                                                                57.12,
+                                                                55.71,
                                                                 779
                                                             ],
                                                             [
                                                                 "18 Nov",
-                                                                73.09,
+                                                                67.71,
                                                                 1084
                                                             ],
                                                             [
                                                                 "19 Nov",
-                                                                63.16,
+                                                                55.12,
                                                                 1250
                                                             ],
                                                             [
                                                                 "20 Nov",
-                                                                71.04,
+                                                                61.14,
                                                                 1230
                                                             ],
                                                             [
                                                                 "24 Nov",
-                                                                71.49,
+                                                                58.59,
                                                                 920
                                                             ],
                                                             [
                                                                 "25 Nov",
-                                                                63.81,
+                                                                65.05,
                                                                 1631
                                                             ]
                                                         ],
@@ -1374,104 +2128,104 @@
                                              "sla_pas":  [
                                                              [
                                                                  "11 Nov",
-                                                                 59.66,
+                                                                 65.91,
                                                                  88
                                                              ],
                                                              [
                                                                  "12 Nov",
-                                                                 70.21,
+                                                                 80.07,
                                                                  3337
                                                              ],
                                                              [
                                                                  "13 Nov",
-                                                                 76.64,
+                                                                 79.12,
                                                                  2448
                                                              ],
                                                              [
                                                                  "16 Nov",
-                                                                 81.45,
+                                                                 90.37,
                                                                  3396
                                                              ],
                                                              [
                                                                  "17 Nov",
-                                                                 82.28,
+                                                                 92.32,
                                                                  3498
                                                              ],
                                                              [
                                                                  "18 Nov",
-                                                                 89.73,
+                                                                 95.35,
                                                                  5246
                                                              ],
                                                              [
                                                                  "19 Nov",
-                                                                 89.09,
+                                                                 94.78,
                                                                  6603
                                                              ],
                                                              [
                                                                  "20 Nov",
-                                                                 89.65,
+                                                                 91.73,
                                                                  6278
                                                              ],
                                                              [
                                                                  "24 Nov",
-                                                                 84.82,
+                                                                 91.12,
                                                                  5565
                                                              ],
                                                              [
                                                                  "25 Nov",
-                                                                 88.02,
+                                                                 93.38,
                                                                  5696
                                                              ]
                                                          ],
                                              "fv_pas":  [
                                                             [
                                                                 "11 Nov",
-                                                                64.22,
+                                                                70.45,
                                                                 88
                                                             ],
                                                             [
                                                                 "12 Nov",
-                                                                68.89,
+                                                                65.18,
                                                                 3337
                                                             ],
                                                             [
                                                                 "13 Nov",
-                                                                68.95,
+                                                                63.6,
                                                                 2448
                                                             ],
                                                             [
                                                                 "16 Nov",
-                                                                71.11,
+                                                                67.08,
                                                                 3396
                                                             ],
                                                             [
                                                                 "17 Nov",
-                                                                67.84,
+                                                                67.55,
                                                                 3498
                                                             ],
                                                             [
                                                                 "18 Nov",
-                                                                70.29,
+                                                                67.44,
                                                                 5246
                                                             ],
                                                             [
                                                                 "19 Nov",
-                                                                69.29,
+                                                                66.68,
                                                                 6603
                                                             ],
                                                             [
                                                                 "20 Nov",
-                                                                68.2,
+                                                                65.64,
                                                                 6278
                                                             ],
                                                             [
                                                                 "24 Nov",
-                                                                68.14,
+                                                                65.53,
                                                                 5565
                                                             ],
                                                             [
                                                                 "25 Nov",
-                                                                66.43,
+                                                                65.78,
                                                                 5696
                                                             ]
                                                         ],
@@ -1688,105 +2442,105 @@
                                                   "sla_pas":  [
                                                                   [
                                                                       "11 Nov",
-                                                                      null,
-                                                                      0
+                                                                      85.68,
+                                                                      3498
                                                                   ],
                                                                   [
                                                                       "12 Nov",
-                                                                      null,
-                                                                      0
+                                                                      87,
+                                                                      9974
                                                                   ],
                                                                   [
                                                                       "13 Nov",
-                                                                      null,
-                                                                      0
+                                                                      86.6,
+                                                                      9103
                                                                   ],
                                                                   [
                                                                       "16 Nov",
-                                                                      null,
-                                                                      0
+                                                                      92.96,
+                                                                      12523
                                                                   ],
                                                                   [
                                                                       "17 Nov",
-                                                                      null,
-                                                                      0
+                                                                      94.37,
+                                                                      16180
                                                                   ],
                                                                   [
                                                                       "18 Nov",
-                                                                      null,
-                                                                      0
+                                                                      96.39,
+                                                                      16596
                                                                   ],
                                                                   [
                                                                       "19 Nov",
-                                                                      null,
-                                                                      0
+                                                                      95.31,
+                                                                      19606
                                                                   ],
                                                                   [
                                                                       "20 Nov",
-                                                                      null,
-                                                                      0
+                                                                      94.49,
+                                                                      19738
                                                                   ],
                                                                   [
                                                                       "24 Nov",
-                                                                      null,
-                                                                      0
+                                                                      94.02,
+                                                                      17588
                                                                   ],
                                                                   [
                                                                       "25 Nov",
-                                                                      null,
-                                                                      0
+                                                                      94.65,
+                                                                      19709
                                                                   ]
                                                               ],
                                                   "fv_pas":  [
                                                                  [
                                                                      "11 Nov",
-                                                                     null,
-                                                                     0
+                                                                     63.75,
+                                                                     3498
                                                                  ],
                                                                  [
                                                                      "12 Nov",
-                                                                     null,
-                                                                     0
+                                                                     62.24,
+                                                                     9974
                                                                  ],
                                                                  [
                                                                      "13 Nov",
-                                                                     null,
-                                                                     0
+                                                                     62.51,
+                                                                     9103
                                                                  ],
                                                                  [
                                                                      "16 Nov",
-                                                                     null,
-                                                                     0
+                                                                     63.48,
+                                                                     12523
                                                                  ],
                                                                  [
                                                                      "17 Nov",
-                                                                     null,
-                                                                     0
+                                                                     61.85,
+                                                                     16180
                                                                  ],
                                                                  [
                                                                      "18 Nov",
-                                                                     null,
-                                                                     0
+                                                                     64.17,
+                                                                     16596
                                                                  ],
                                                                  [
                                                                      "19 Nov",
-                                                                     null,
-                                                                     0
+                                                                     63.55,
+                                                                     19606
                                                                  ],
                                                                  [
                                                                      "20 Nov",
-                                                                     null,
-                                                                     0
+                                                                     61.95,
+                                                                     19738
                                                                  ],
                                                                  [
                                                                      "24 Nov",
-                                                                     null,
-                                                                     0
+                                                                     63.3,
+                                                                     17588
                                                                  ],
                                                                  [
                                                                      "25 Nov",
-                                                                     null,
-                                                                     0
+                                                                     61.61,
+                                                                     19709
                                                                  ]
                                                              ],
                                                   "sla_expreso":  [
@@ -2002,104 +2756,104 @@
                                                "sla_pas":  [
                                                                [
                                                                    "11 Nov",
-                                                                   71.38,
+                                                                   82.06,
                                                                    1176
                                                                ],
                                                                [
                                                                    "12 Nov",
-                                                                   87.02,
+                                                                   90.94,
                                                                    4659
                                                                ],
                                                                [
                                                                    "13 Nov",
-                                                                   85.69,
+                                                                   90.29,
                                                                    4647
                                                                ],
                                                                [
                                                                    "16 Nov",
-                                                                   94.88,
+                                                                   95.49,
                                                                    7751
                                                                ],
                                                                [
                                                                    "17 Nov",
-                                                                   93.51,
+                                                                   96.55,
                                                                    9852
                                                                ],
                                                                [
                                                                    "18 Nov",
-                                                                   96.93,
+                                                                   98.17,
                                                                    8477
                                                                ],
                                                                [
                                                                    "19 Nov",
-                                                                   95.95,
+                                                                   97.57,
                                                                    10123
                                                                ],
                                                                [
                                                                    "20 Nov",
-                                                                   96.26,
+                                                                   97.57,
                                                                    10591
                                                                ],
                                                                [
                                                                    "24 Nov",
-                                                                   91.75,
+                                                                   96.17,
                                                                    9418
                                                                ],
                                                                [
                                                                    "25 Nov",
-                                                                   91.41,
+                                                                   96.31,
                                                                    10550
                                                                ]
                                                            ],
                                                "fv_pas":  [
                                                               [
                                                                   "11 Nov",
-                                                                  57.73,
+                                                                  58.76,
                                                                   1176
                                                               ],
                                                               [
                                                                   "12 Nov",
-                                                                  65.84,
+                                                                  60.31,
                                                                   4659
                                                               ],
                                                               [
                                                                   "13 Nov",
-                                                                  61.51,
+                                                                  61.59,
                                                                   4647
                                                               ],
                                                               [
                                                                   "16 Nov",
-                                                                  68.32,
+                                                                  60.95,
                                                                   7751
                                                               ],
                                                               [
                                                                   "17 Nov",
-                                                                  62.6,
+                                                                  59.95,
                                                                   9852
                                                               ],
                                                               [
                                                                   "18 Nov",
-                                                                  67.03,
+                                                                  62.31,
                                                                   8477
                                                               ],
                                                               [
                                                                   "19 Nov",
-                                                                  67.77,
+                                                                  62.31,
                                                                   10123
                                                               ],
                                                               [
                                                                   "20 Nov",
-                                                                  68.2,
+                                                                  59.97,
                                                                   10591
                                                               ],
                                                               [
                                                                   "24 Nov",
-                                                                  65.64,
+                                                                  62.93,
                                                                   9418
                                                               ],
                                                               [
                                                                   "25 Nov",
-                                                                  59.62,
+                                                                  59.08,
                                                                   10550
                                                               ]
                                                           ],
@@ -2316,104 +3070,104 @@
                                                   "sla_pas":  [
                                                                   [
                                                                       "11 Nov",
-                                                                      86.69,
+                                                                      93.66,
                                                                       426
                                                                   ],
                                                                   [
                                                                       "12 Nov",
-                                                                      83.47,
+                                                                      90.55,
                                                                       254
                                                                   ],
                                                                   [
                                                                       "13 Nov",
-                                                                      94.2,
+                                                                      92.48,
                                                                       545
                                                                   ],
                                                                   [
                                                                       "16 Nov",
-                                                                      90.36,
+                                                                      94.64,
                                                                       336
                                                                   ],
                                                                   [
                                                                       "17 Nov",
-                                                                      92.13,
+                                                                      94.87,
                                                                       839
                                                                   ],
                                                                   [
                                                                       "18 Nov",
-                                                                      98.46,
+                                                                      97.48,
                                                                       793
                                                                   ],
                                                                   [
                                                                       "19 Nov",
-                                                                      97.88,
+                                                                      94.89,
                                                                       685
                                                                   ],
                                                                   [
                                                                       "20 Nov",
-                                                                      93.49,
+                                                                      94.86,
                                                                       662
                                                                   ],
                                                                   [
                                                                       "24 Nov",
-                                                                      95.35,
+                                                                      94.98,
                                                                       797
                                                                   ],
                                                                   [
                                                                       "25 Nov",
-                                                                      95.3,
+                                                                      91.37,
                                                                       742
                                                                   ]
                                                               ],
                                                   "fv_pas":  [
                                                                  [
                                                                      "11 Nov",
-                                                                     61.15,
+                                                                     63.38,
                                                                      426
                                                                  ],
                                                                  [
                                                                      "12 Nov",
-                                                                     70.35,
+                                                                     61.81,
                                                                      254
                                                                  ],
                                                                  [
                                                                      "13 Nov",
-                                                                     59.29,
+                                                                     60.18,
                                                                      545
                                                                  ],
                                                                  [
                                                                      "16 Nov",
-                                                                     56.86,
+                                                                     64.29,
                                                                      336
                                                                  ],
                                                                  [
                                                                      "17 Nov",
-                                                                     73.51,
+                                                                     63.77,
                                                                      839
                                                                  ],
                                                                  [
                                                                      "18 Nov",
-                                                                     69.17,
+                                                                     61.92,
                                                                      793
                                                                  ],
                                                                  [
                                                                      "19 Nov",
-                                                                     68.3,
+                                                                     66.28,
                                                                      685
                                                                  ],
                                                                  [
                                                                      "20 Nov",
-                                                                     71.28,
+                                                                     64.2,
                                                                      662
                                                                  ],
                                                                  [
                                                                      "24 Nov",
-                                                                     64.09,
+                                                                     59.22,
                                                                      797
                                                                  ],
                                                                  [
                                                                      "25 Nov",
-                                                                     63.91,
+                                                                     57.68,
                                                                      742
                                                                  ]
                                                              ],

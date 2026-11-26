@@ -2,7 +2,7 @@
   "title": "Tablero de Control Operativo Nacional",
   "scope": "República Argentina - Correo Argentino",
   "maestroLastUpload": "26/11/2026 11:56 hs",
-  "lastSyncMoment": "26/11/2026 13:31 hs",
+  "lastSyncMoment": "26/11/2026 15:45 hs",
   "lastUpdate": "26/11/2026 11:56 hs",
   "pureDayLabel": "Día Hábil Anterior (25/11/2026)",
   "monthLabel": "Mes en Curso Acumulado (Noviembre 2026)",
@@ -185,10 +185,10 @@
             ]
           },
           "sla_pas": {
-            "value": 91.57,
+            "value": 96.03,
             "target": 95,
-            "delta": -3.43,
-            "status": "danger",
+            "delta": 1.03,
+            "status": "ok",
             "series": [
               [
                 "Feb",
@@ -243,9 +243,9 @@
             ]
           },
           "fv_pas": {
-            "value": 64.27,
+            "value": 61.57,
             "target": 90,
-            "delta": -25.73,
+            "delta": -28.43,
             "status": "danger",
             "series": [
               [
@@ -556,117 +556,117 @@
             ]
           },
           "sla_pas": {
-            "value": 91.41,
+            "value": 96.31,
             "target": 95,
-            "delta": -3.59,
-            "status": "danger",
+            "delta": 1.31,
+            "status": "ok",
             "series": [
               [
                 "11 Nov",
-                71.38,
+                82.06,
                 1176
               ],
               [
                 "12 Nov",
-                87.02,
+                90.94,
                 4659
               ],
               [
                 "13 Nov",
-                85.69,
+                90.29,
                 4647
               ],
               [
                 "16 Nov",
-                94.88,
+                95.49,
                 7751
               ],
               [
                 "17 Nov",
-                93.51,
+                96.55,
                 9852
               ],
               [
                 "18 Nov",
-                96.93,
+                98.17,
                 8477
               ],
               [
                 "19 Nov",
-                95.95,
+                97.57,
                 10123
               ],
               [
                 "20 Nov",
-                96.26,
+                97.57,
                 10591
               ],
               [
                 "24 Nov",
-                91.75,
+                96.17,
                 9418
               ],
               [
                 "25 Nov",
-                91.41,
+                96.31,
                 10550
               ]
             ]
           },
           "fv_pas": {
-            "value": 59.62,
+            "value": 59.08,
             "target": 90,
-            "delta": -30.38,
+            "delta": -30.92,
             "status": "danger",
             "series": [
               [
                 "11 Nov",
-                57.73,
+                58.76,
                 1176
               ],
               [
                 "12 Nov",
-                65.84,
+                60.31,
                 4659
               ],
               [
                 "13 Nov",
-                61.51,
+                61.59,
                 4647
               ],
               [
                 "16 Nov",
-                68.32,
+                60.95,
                 7751
               ],
               [
                 "17 Nov",
-                62.6,
+                59.95,
                 9852
               ],
               [
                 "18 Nov",
-                67.03,
+                62.31,
                 8477
               ],
               [
                 "19 Nov",
-                67.77,
+                62.31,
                 10123
               ],
               [
                 "20 Nov",
-                68.2,
+                59.97,
                 10591
               ],
               [
                 "24 Nov",
-                65.64,
+                62.93,
                 9418
               ],
               [
                 "25 Nov",
-                59.62,
+                59.08,
                 10550
               ]
             ]
@@ -935,9 +935,9 @@
             ]
           },
           "sla_pas": {
-            "value": 82.96,
+            "value": 90.77,
             "target": 95,
-            "delta": -12.04,
+            "delta": -4.23,
             "status": "danger",
             "series": [
               [
@@ -993,9 +993,9 @@
             ]
           },
           "fv_pas": {
-            "value": 68.34,
+            "value": 65.2,
             "target": 90,
-            "delta": -21.66,
+            "delta": -24.8,
             "status": "danger",
             "series": [
               [
@@ -1306,117 +1306,117 @@
             ]
           },
           "sla_pas": {
-            "value": 88.02,
+            "value": 93.38,
             "target": 95,
-            "delta": -6.98,
-            "status": "danger",
+            "delta": -1.62,
+            "status": "warning",
             "series": [
               [
                 "11 Nov",
-                59.66,
+                65.91,
                 88
               ],
               [
                 "12 Nov",
-                70.21,
+                80.07,
                 3337
               ],
               [
                 "13 Nov",
-                76.64,
+                79.12,
                 2448
               ],
               [
                 "16 Nov",
-                81.45,
+                90.37,
                 3396
               ],
               [
                 "17 Nov",
-                82.28,
+                92.32,
                 3498
               ],
               [
                 "18 Nov",
-                89.73,
+                95.35,
                 5246
               ],
               [
                 "19 Nov",
-                89.09,
+                94.78,
                 6603
               ],
               [
                 "20 Nov",
-                89.65,
+                91.73,
                 6278
               ],
               [
                 "24 Nov",
-                84.82,
+                91.12,
                 5565
               ],
               [
                 "25 Nov",
-                88.02,
+                93.38,
                 5696
               ]
             ]
           },
           "fv_pas": {
-            "value": 66.43,
+            "value": 65.78,
             "target": 90,
-            "delta": -23.57,
+            "delta": -24.22,
             "status": "danger",
             "series": [
               [
                 "11 Nov",
-                64.22,
+                70.45,
                 88
               ],
               [
                 "12 Nov",
-                68.89,
+                65.18,
                 3337
               ],
               [
                 "13 Nov",
-                68.95,
+                63.6,
                 2448
               ],
               [
                 "16 Nov",
-                71.11,
+                67.08,
                 3396
               ],
               [
                 "17 Nov",
-                67.84,
+                67.55,
                 3498
               ],
               [
                 "18 Nov",
-                70.29,
+                67.44,
                 5246
               ],
               [
                 "19 Nov",
-                69.29,
+                66.68,
                 6603
               ],
               [
                 "20 Nov",
-                68.2,
+                65.64,
                 6278
               ],
               [
                 "24 Nov",
-                68.14,
+                65.53,
                 5565
               ],
               [
                 "25 Nov",
-                66.43,
+                65.78,
                 5696
               ]
             ]
@@ -1685,9 +1685,9 @@
             ]
           },
           "sla_pas": {
-            "value": 89.07,
+            "value": 91.17,
             "target": 95,
-            "delta": -5.93,
+            "delta": -3.83,
             "status": "danger",
             "series": [
               [
@@ -1743,9 +1743,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.26,
+            "value": 62.44,
             "target": 90,
-            "delta": -26.74,
+            "delta": -27.56,
             "status": "danger",
             "series": [
               [
@@ -2056,117 +2056,117 @@
             ]
           },
           "sla_pas": {
-            "value": 91.85,
+            "value": 93.12,
             "target": 95,
-            "delta": -3.15,
-            "status": "danger",
+            "delta": -1.88,
+            "status": "warning",
             "series": [
               [
                 "11 Nov",
-                80.14,
+                89.7,
                 728
               ],
               [
                 "12 Nov",
-                80.24,
+                86.4,
                 684
               ],
               [
                 "13 Nov",
-                88.35,
+                90.8,
                 609
               ],
               [
                 "16 Nov",
-                89.43,
+                87.23,
                 470
               ],
               [
                 "17 Nov",
-                88.8,
+                95.63,
                 1212
               ],
               [
                 "18 Nov",
-                91.59,
+                95.98,
                 996
               ],
               [
                 "19 Nov",
-                92.73,
+                91.11,
                 945
               ],
               [
                 "20 Nov",
-                91.22,
+                91.3,
                 977
               ],
               [
                 "24 Nov",
-                87.93,
+                90.99,
                 888
               ],
               [
                 "25 Nov",
-                91.85,
+                93.12,
                 1090
               ]
             ]
           },
           "fv_pas": {
-            "value": 64.9,
+            "value": 61.83,
             "target": 90,
-            "delta": -25.1,
+            "delta": -28.17,
             "status": "danger",
             "series": [
               [
                 "11 Nov",
-                61.34,
+                65.8,
                 728
               ],
               [
                 "12 Nov",
-                65.85,
+                68.57,
                 684
               ],
               [
                 "13 Nov",
-                74.25,
+                67,
                 609
               ],
               [
                 "16 Nov",
-                69.23,
+                73.19,
                 470
               ],
               [
                 "17 Nov",
-                56.95,
+                63.53,
                 1212
               ],
               [
                 "18 Nov",
-                60.99,
+                60.74,
                 996
               ],
               [
                 "19 Nov",
-                71.31,
+                64.02,
                 945
               ],
               [
                 "20 Nov",
-                63.19,
+                59.26,
                 977
               ],
               [
                 "24 Nov",
-                58.5,
+                61.71,
                 888
               ],
               [
                 "25 Nov",
-                64.9,
+                61.83,
                 1090
               ]
             ]
@@ -2435,9 +2435,9 @@
             ]
           },
           "sla_pas": {
-            "value": 93.23,
+            "value": 94.1,
             "target": 95,
-            "delta": -1.77,
+            "delta": -0.9,
             "status": "warning",
             "series": [
               [
@@ -2493,9 +2493,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.64,
+            "value": 60.16,
             "target": 90,
-            "delta": -26.36,
+            "delta": -29.84,
             "status": "danger",
             "series": [
               [
@@ -2806,117 +2806,117 @@
             ]
           },
           "sla_pas": {
-            "value": 95.3,
+            "value": 91.37,
             "target": 95,
-            "delta": 0.3,
-            "status": "ok",
+            "delta": -3.63,
+            "status": "danger",
             "series": [
               [
                 "11 Nov",
-                86.69,
+                93.66,
                 426
               ],
               [
                 "12 Nov",
-                83.47,
+                90.55,
                 254
               ],
               [
                 "13 Nov",
-                94.2,
+                92.48,
                 545
               ],
               [
                 "16 Nov",
-                90.36,
+                94.64,
                 336
               ],
               [
                 "17 Nov",
-                92.13,
+                94.87,
                 839
               ],
               [
                 "18 Nov",
-                98.46,
+                97.48,
                 793
               ],
               [
                 "19 Nov",
-                97.88,
+                94.89,
                 685
               ],
               [
                 "20 Nov",
-                93.49,
+                94.86,
                 662
               ],
               [
                 "24 Nov",
-                95.35,
+                94.98,
                 797
               ],
               [
                 "25 Nov",
-                95.3,
+                91.37,
                 742
               ]
             ]
           },
           "fv_pas": {
-            "value": 63.91,
+            "value": 57.68,
             "target": 90,
-            "delta": -26.09,
+            "delta": -32.32,
             "status": "danger",
             "series": [
               [
                 "11 Nov",
-                61.15,
+                63.38,
                 426
               ],
               [
                 "12 Nov",
-                70.35,
+                61.81,
                 254
               ],
               [
                 "13 Nov",
-                59.29,
+                60.18,
                 545
               ],
               [
                 "16 Nov",
-                56.86,
+                64.29,
                 336
               ],
               [
                 "17 Nov",
-                73.51,
+                63.77,
                 839
               ],
               [
                 "18 Nov",
-                69.17,
+                61.92,
                 793
               ],
               [
                 "19 Nov",
-                68.3,
+                66.28,
                 685
               ],
               [
                 "20 Nov",
-                71.28,
+                64.2,
                 662
               ],
               [
                 "24 Nov",
-                64.09,
+                59.22,
                 797
               ],
               [
                 "25 Nov",
-                63.91,
+                57.68,
                 742
               ]
             ]
@@ -3185,9 +3185,9 @@
             ]
           },
           "sla_pas": {
-            "value": 84.23,
+            "value": 85.58,
             "target": 95,
-            "delta": -10.77,
+            "delta": -9.42,
             "status": "danger",
             "series": [
               [
@@ -3243,9 +3243,9 @@
             ]
           },
           "fv_pas": {
-            "value": 64.57,
+            "value": 60.25,
             "target": 90,
-            "delta": -25.43,
+            "delta": -29.75,
             "status": "danger",
             "series": [
               [
@@ -3556,117 +3556,117 @@
             ]
           },
           "sla_pas": {
-            "value": 89.04,
+            "value": 90.8,
             "target": 95,
-            "delta": -5.96,
+            "delta": -4.2,
             "status": "danger",
             "series": [
               [
                 "11 Nov",
-                84.57,
+                85.37,
                 1080
               ],
               [
                 "12 Nov",
-                84.81,
+                91.15,
                 1040
               ],
               [
                 "13 Nov",
-                84.94,
+                81.24,
                 854
               ],
               [
                 "16 Nov",
-                80.45,
+                77.72,
                 570
               ],
               [
                 "17 Nov",
-                80.88,
+                73.43,
                 779
               ],
               [
                 "18 Nov",
-                88.42,
+                87.18,
                 1084
               ],
               [
                 "19 Nov",
-                81.6,
+                83.2,
                 1250
               ],
               [
                 "20 Nov",
-                89.81,
+                84.31,
                 1230
               ],
               [
                 "24 Nov",
-                93.48,
+                91.74,
                 920
               ],
               [
                 "25 Nov",
-                89.04,
+                90.8,
                 1631
               ]
             ]
           },
           "fv_pas": {
-            "value": 63.81,
+            "value": 65.05,
             "target": 90,
-            "delta": -26.19,
+            "delta": -24.95,
             "status": "danger",
             "series": [
               [
                 "11 Nov",
-                71.05,
+                67.41,
                 1080
               ],
               [
                 "12 Nov",
-                66.8,
+                57.4,
                 1040
               ],
               [
                 "13 Nov",
-                65.33,
+                62.65,
                 854
               ],
               [
                 "16 Nov",
-                72.12,
+                68.07,
                 570
               ],
               [
                 "17 Nov",
-                57.12,
+                55.71,
                 779
               ],
               [
                 "18 Nov",
-                73.09,
+                67.71,
                 1084
               ],
               [
                 "19 Nov",
-                63.16,
+                55.12,
                 1250
               ],
               [
                 "20 Nov",
-                71.04,
+                61.14,
                 1230
               ],
               [
                 "24 Nov",
-                71.49,
+                58.59,
                 920
               ],
               [
                 "25 Nov",
-                63.81,
+                65.05,
                 1631
               ]
             ]
@@ -3801,15 +3801,15 @@
           "periodName": "Mes en Curso",
           "periodCode": "mes_anterior",
           "periodDetail": "Acumulado Noviembre 2026",
-          "totalVolume": 1874226,
-          "vencidos": 1874226,
+          "totalVolume": 2111432,
+          "vencidos": 2111432,
           "backlog": 8842,
           "a_vencer": 682450,
           "guarda_vencida": 6743,
           "q": {
-            "total": 1874226,
+            "total": 2111432,
             "paq_ar": 1874226,
-            "pas": 0,
+            "pas": 237206,
             "expreso": 85731
           },
           "sla_paqar": {
@@ -3939,10 +3939,10 @@
             ]
           },
           "sla_pas": {
-            "value": 0,
+            "value": 93.3,
             "target": 95,
-            "delta": -95,
-            "status": "danger",
+            "delta": -1.7,
+            "status": "warning",
             "series": [
               [
                 "Feb",
@@ -3997,9 +3997,9 @@
             ]
           },
           "fv_pas": {
-            "value": 0,
+            "value": 62.58,
             "target": 90,
-            "delta": -90,
+            "delta": -27.42,
             "status": "danger",
             "series": [
               [
@@ -4185,15 +4185,15 @@
           "periodName": "Día Hábil Anterior",
           "periodCode": "dia_puro",
           "periodDetail": "25/11/2026 (Última jornada cerrada)",
-          "totalVolume": 120850,
-          "vencidos": 120850,
+          "totalVolume": 140559,
+          "vencidos": 140559,
           "backlog": 8842,
           "a_vencer": 682450,
           "guarda_vencida": 6743,
           "q": {
-            "total": 120850,
+            "total": 140559,
             "paq_ar": 120850,
-            "pas": 0,
+            "pas": 19709,
             "expreso": 6404
           },
           "sla_paqar": {
@@ -4313,118 +4313,118 @@
             ]
           },
           "sla_pas": {
-            "value": 0,
+            "value": 94.65,
             "target": 95,
-            "delta": -95,
-            "status": "danger",
+            "delta": -0.35,
+            "status": "warning",
             "series": [
               [
                 "11 Nov",
-                null,
-                0
+                85.68,
+                3498
               ],
               [
                 "12 Nov",
-                null,
-                0
+                87,
+                9974
               ],
               [
                 "13 Nov",
-                null,
-                0
+                86.6,
+                9103
               ],
               [
                 "16 Nov",
-                null,
-                0
+                92.96,
+                12523
               ],
               [
                 "17 Nov",
-                null,
-                0
+                94.37,
+                16180
               ],
               [
                 "18 Nov",
-                null,
-                0
+                96.39,
+                16596
               ],
               [
                 "19 Nov",
-                null,
-                0
+                95.31,
+                19606
               ],
               [
                 "20 Nov",
-                null,
-                0
+                94.49,
+                19738
               ],
               [
                 "24 Nov",
-                null,
-                0
+                94.02,
+                17588
               ],
               [
                 "25 Nov",
-                null,
-                0
+                94.65,
+                19709
               ]
             ]
           },
           "fv_pas": {
-            "value": 0,
+            "value": 61.61,
             "target": 90,
-            "delta": -90,
+            "delta": -28.39,
             "status": "danger",
             "series": [
               [
                 "11 Nov",
-                null,
-                0
+                63.75,
+                3498
               ],
               [
                 "12 Nov",
-                null,
-                0
+                62.24,
+                9974
               ],
               [
                 "13 Nov",
-                null,
-                0
+                62.51,
+                9103
               ],
               [
                 "16 Nov",
-                null,
-                0
+                63.48,
+                12523
               ],
               [
                 "17 Nov",
-                null,
-                0
+                61.85,
+                16180
               ],
               [
                 "18 Nov",
-                null,
-                0
+                64.17,
+                16596
               ],
               [
                 "19 Nov",
-                null,
-                0
+                63.55,
+                19606
               ],
               [
                 "20 Nov",
-                null,
-                0
+                61.95,
+                19738
               ],
               [
                 "24 Nov",
-                null,
-                0
+                63.3,
+                17588
               ],
               [
                 "25 Nov",
-                null,
-                0
+                61.61,
+                19709
               ]
             ]
           },
@@ -4559,17 +4559,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 160915,
+          "totalVolume": 139545,
           "q": {
-            "total": 160915,
-            "paq_ar": 125514,
-            "pas": 27356,
-            "expreso": 8046
+            "total": 139545,
+            "paq_ar": 136133,
+            "pas": 3412,
+            "expreso": 6371
           },
           "sla_paqar": {
-            "value": 96.25,
+            "value": 95.9,
             "target": 95,
-            "delta": 1.25,
+            "delta": 0.9,
             "status": "ok",
             "series": [
               {
@@ -4652,10 +4652,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 92.17,
+            "value": 88.64,
             "target": 90,
-            "delta": 2.17,
-            "status": "ok",
+            "delta": -1.36,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -4737,9 +4737,9 @@
             ]
           },
           "sla_pas": {
-            "value": 91.58,
+            "value": 87.89,
             "target": 95,
-            "delta": -3.42,
+            "delta": -7.11,
             "status": "danger",
             "series": [
               {
@@ -4822,9 +4822,9 @@
             ]
           },
           "fv_pas": {
-            "value": 57.51,
+            "value": 60.17,
             "target": 90,
-            "delta": -32.49,
+            "delta": -29.83,
             "status": "danger",
             "series": [
               {
@@ -4907,9 +4907,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 56.24,
+            "value": 56.44,
             "target": 95,
-            "delta": -38.76,
+            "delta": -38.56,
             "status": "danger",
             "series": [
               {
@@ -4992,10 +4992,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 92.15,
+            "value": 89.06,
             "target": 90,
-            "delta": 2.15,
-            "status": "ok",
+            "delta": -0.94,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -5075,21 +5075,22 @@
                 "volume": 1840
               }
             ]
-          }
+          },
+          "vencidos": 139545
         },
         "dia_puro": {
-          "totalVolume": 8068,
+          "totalVolume": 9440,
           "q": {
-            "total": 8068,
-            "paq_ar": 6293,
-            "pas": 1372,
-            "expreso": 403
+            "total": 9440,
+            "paq_ar": 9231,
+            "pas": 209,
+            "expreso": 440
           },
           "sla_paqar": {
-            "value": 97.34,
+            "value": 92.99,
             "target": 95,
-            "delta": 2.34,
-            "status": "ok",
+            "delta": -2.01,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -5164,10 +5165,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.99,
+            "value": 84.02,
             "target": 90,
-            "delta": -0.01,
-            "status": "warning",
+            "delta": -5.98,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -5242,10 +5243,10 @@
             ]
           },
           "sla_pas": {
-            "value": 95.29,
+            "value": 80.86,
             "target": 95,
-            "delta": 0.29,
-            "status": "ok",
+            "delta": -14.14,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -5320,9 +5321,9 @@
             ]
           },
           "fv_pas": {
-            "value": 65.99,
+            "value": 68.9,
             "target": 90,
-            "delta": -24.01,
+            "delta": -21.1,
             "status": "danger",
             "series": [
               {
@@ -5398,9 +5399,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 50.77,
+            "value": 39.09,
             "target": 95,
-            "delta": -44.23,
+            "delta": -55.91,
             "status": "danger",
             "series": [
               {
@@ -5476,10 +5477,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 87.62,
+            "value": 82.42,
             "target": 90,
-            "delta": -2.38,
-            "status": "warning",
+            "delta": -7.58,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -5552,7 +5553,8 @@
                 "volume": 440
               }
             ]
-          }
+          },
+          "vencidos": 9440
         }
       }
     },
@@ -5566,17 +5568,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 40596,
+          "totalVolume": 35308,
           "q": {
-            "total": 40596,
-            "paq_ar": 31665,
-            "pas": 6901,
-            "expreso": 2030
+            "total": 35308,
+            "paq_ar": 34384,
+            "pas": 924,
+            "expreso": 731
           },
           "sla_paqar": {
-            "value": 98.6,
+            "value": 98.16,
             "target": 95,
-            "delta": 3.6,
+            "delta": 3.16,
             "status": "ok",
             "series": [
               {
@@ -5659,9 +5661,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.95,
+            "value": 89.63,
             "target": 90,
-            "delta": -0.05,
+            "delta": -0.37,
             "status": "warning",
             "series": [
               {
@@ -5744,10 +5746,10 @@
             ]
           },
           "sla_pas": {
-            "value": 97.48,
+            "value": 92.21,
             "target": 95,
-            "delta": 2.48,
-            "status": "ok",
+            "delta": -2.79,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -5829,9 +5831,9 @@
             ]
           },
           "fv_pas": {
-            "value": 55.81,
+            "value": 59.31,
             "target": 90,
-            "delta": -34.19,
+            "delta": -30.69,
             "status": "danger",
             "series": [
               {
@@ -5914,9 +5916,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 73.12,
+            "value": 67.31,
             "target": 95,
-            "delta": -21.88,
+            "delta": -27.69,
             "status": "danger",
             "series": [
               {
@@ -5999,10 +6001,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 89.46,
+            "value": 91.75,
             "target": 90,
-            "delta": -0.54,
-            "status": "warning",
+            "delta": 1.75,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -6082,20 +6084,21 @@
                 "volume": 234
               }
             ]
-          }
+          },
+          "vencidos": 35308
         },
         "dia_puro": {
-          "totalVolume": 2191,
+          "totalVolume": 2496,
           "q": {
-            "total": 2191,
-            "paq_ar": 1709,
-            "pas": 372,
-            "expreso": 110
+            "total": 2496,
+            "paq_ar": 2377,
+            "pas": 119,
+            "expreso": 44
           },
           "sla_paqar": {
-            "value": 98.59,
+            "value": 97.77,
             "target": 95,
-            "delta": 3.59,
+            "delta": 2.77,
             "status": "ok",
             "series": [
               {
@@ -6171,9 +6174,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 90.85,
+            "value": 90.41,
             "target": 90,
-            "delta": 0.85,
+            "delta": 0.41,
             "status": "ok",
             "series": [
               {
@@ -6249,9 +6252,9 @@
             ]
           },
           "sla_pas": {
-            "value": 97.67,
+            "value": 98.32,
             "target": 95,
-            "delta": 2.67,
+            "delta": 3.32,
             "status": "ok",
             "series": [
               {
@@ -6327,9 +6330,9 @@
             ]
           },
           "fv_pas": {
-            "value": 53.49,
+            "value": 54.62,
             "target": 90,
-            "delta": -36.51,
+            "delta": -35.38,
             "status": "danger",
             "series": [
               {
@@ -6405,9 +6408,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 71.05,
+            "value": 65.91,
             "target": 95,
-            "delta": -23.95,
+            "delta": -29.09,
             "status": "danger",
             "series": [
               {
@@ -6483,9 +6486,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 100,
+            "value": 93.75,
             "target": 90,
-            "delta": 10,
+            "delta": 3.75,
             "status": "ok",
             "series": [
               {
@@ -6559,7 +6562,8 @@
                 "volume": 44
               }
             ]
-          }
+          },
+          "vencidos": 2496
         }
       }
     },
@@ -6573,17 +6577,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 70115,
+          "totalVolume": 61804,
           "q": {
-            "total": 70115,
-            "paq_ar": 54690,
-            "pas": 11920,
-            "expreso": 3506
+            "total": 61804,
+            "paq_ar": 60174,
+            "pas": 1630,
+            "expreso": 2330
           },
           "sla_paqar": {
-            "value": 98.65,
+            "value": 98.4,
             "target": 95,
-            "delta": 3.65,
+            "delta": 3.4,
             "status": "ok",
             "series": [
               {
@@ -6666,9 +6670,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.22,
+            "value": 88.88,
             "target": 90,
-            "delta": -1.78,
+            "delta": -1.12,
             "status": "warning",
             "series": [
               {
@@ -6751,9 +6755,9 @@
             ]
           },
           "sla_pas": {
-            "value": 96.14,
+            "value": 98.16,
             "target": 95,
-            "delta": 1.14,
+            "delta": 3.16,
             "status": "ok",
             "series": [
               {
@@ -6836,9 +6840,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.63,
+            "value": 70.06,
             "target": 90,
-            "delta": -26.37,
+            "delta": -19.94,
             "status": "danger",
             "series": [
               {
@@ -6921,9 +6925,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 84.94,
+            "value": 84.89,
             "target": 95,
-            "delta": -10.06,
+            "delta": -10.11,
             "status": "danger",
             "series": [
               {
@@ -7006,9 +7010,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 90.29,
+            "value": 91.87,
             "target": 90,
-            "delta": 0.29,
+            "delta": 1.87,
             "status": "ok",
             "series": [
               {
@@ -7089,20 +7093,21 @@
                 "volume": 743
               }
             ]
-          }
+          },
+          "vencidos": 61804
         },
         "dia_puro": {
-          "totalVolume": 3726,
+          "totalVolume": 4232,
           "q": {
-            "total": 3726,
-            "paq_ar": 2906,
-            "pas": 633,
-            "expreso": 186
+            "total": 4232,
+            "paq_ar": 4185,
+            "pas": 47,
+            "expreso": 141
           },
           "sla_paqar": {
-            "value": 99.28,
+            "value": 98.11,
             "target": 95,
-            "delta": 4.28,
+            "delta": 3.11,
             "status": "ok",
             "series": [
               {
@@ -7178,9 +7183,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.39,
+            "value": 88.9,
             "target": 90,
-            "delta": -0.61,
+            "delta": -1.1,
             "status": "warning",
             "series": [
               {
@@ -7256,9 +7261,9 @@
             ]
           },
           "sla_pas": {
-            "value": 99.39,
+            "value": 95.74,
             "target": 95,
-            "delta": 4.39,
+            "delta": 0.74,
             "status": "ok",
             "series": [
               {
@@ -7334,9 +7339,9 @@
             ]
           },
           "fv_pas": {
-            "value": 68.48,
+            "value": 61.7,
             "target": 90,
-            "delta": -21.52,
+            "delta": -28.3,
             "status": "danger",
             "series": [
               {
@@ -7412,9 +7417,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 88.28,
+            "value": 83.69,
             "target": 95,
-            "delta": -6.72,
+            "delta": -11.31,
             "status": "danger",
             "series": [
               {
@@ -7490,9 +7495,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 91.67,
+            "value": 93.06,
             "target": 90,
-            "delta": 1.67,
+            "delta": 3.06,
             "status": "ok",
             "series": [
               {
@@ -7566,7 +7571,8 @@
                 "volume": 141
               }
             ]
-          }
+          },
+          "vencidos": 4232
         }
       }
     },
@@ -7580,17 +7586,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 28181,
+          "totalVolume": 25335,
           "q": {
-            "total": 28181,
-            "paq_ar": 21981,
-            "pas": 4791,
-            "expreso": 1409
+            "total": 25335,
+            "paq_ar": 24451,
+            "pas": 884,
+            "expreso": 548
           },
           "sla_paqar": {
-            "value": 97.46,
+            "value": 96.76,
             "target": 95,
-            "delta": 2.46,
+            "delta": 1.76,
             "status": "ok",
             "series": [
               {
@@ -7673,9 +7679,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.65,
+            "value": 89.72,
             "target": 90,
-            "delta": -1.35,
+            "delta": -0.28,
             "status": "warning",
             "series": [
               {
@@ -7758,9 +7764,9 @@
             ]
           },
           "sla_pas": {
-            "value": 98.93,
+            "value": 96.83,
             "target": 95,
-            "delta": 3.93,
+            "delta": 1.83,
             "status": "ok",
             "series": [
               {
@@ -7843,9 +7849,9 @@
             ]
           },
           "fv_pas": {
-            "value": 52.97,
+            "value": 56.67,
             "target": 90,
-            "delta": -37.03,
+            "delta": -33.33,
             "status": "danger",
             "series": [
               {
@@ -7928,9 +7934,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 66.17,
+            "value": 66.79,
             "target": 95,
-            "delta": -28.83,
+            "delta": -28.21,
             "status": "danger",
             "series": [
               {
@@ -8013,9 +8019,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 82.81,
+            "value": 84.49,
             "target": 90,
-            "delta": -7.19,
+            "delta": -5.51,
             "status": "danger",
             "series": [
               {
@@ -8096,20 +8102,21 @@
                 "volume": 178
               }
             ]
-          }
+          },
+          "vencidos": 25335
         },
         "dia_puro": {
-          "totalVolume": 1548,
+          "totalVolume": 1727,
           "q": {
-            "total": 1548,
-            "paq_ar": 1207,
-            "pas": 263,
-            "expreso": 77
+            "total": 1727,
+            "paq_ar": 1646,
+            "pas": 81,
+            "expreso": 42
           },
           "sla_paqar": {
-            "value": 96.45,
+            "value": 97.02,
             "target": 95,
-            "delta": 1.45,
+            "delta": 2.02,
             "status": "ok",
             "series": [
               {
@@ -8185,9 +8192,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 90.15,
+            "value": 90.41,
             "target": 90,
-            "delta": 0.15,
+            "delta": 0.41,
             "status": "ok",
             "series": [
               {
@@ -8263,9 +8270,9 @@
             ]
           },
           "sla_pas": {
-            "value": 100,
+            "value": 98.77,
             "target": 95,
-            "delta": 5,
+            "delta": 3.77,
             "status": "ok",
             "series": [
               {
@@ -8341,9 +8348,9 @@
             ]
           },
           "fv_pas": {
-            "value": 49.09,
+            "value": 55.56,
             "target": 90,
-            "delta": -40.91,
+            "delta": -34.44,
             "status": "danger",
             "series": [
               {
@@ -8419,9 +8426,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 62.86,
+            "value": 52.38,
             "target": 95,
-            "delta": -32.14,
+            "delta": -42.62,
             "status": "danger",
             "series": [
               {
@@ -8497,10 +8504,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 88.89,
+            "value": 90,
             "target": 90,
-            "delta": -1.11,
-            "status": "warning",
+            "delta": 0,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -8573,7 +8580,8 @@
                 "volume": 42
               }
             ]
-          }
+          },
+          "vencidos": 1727
         }
       }
     },
@@ -8587,17 +8595,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 54577,
+          "totalVolume": 46417,
           "q": {
-            "total": 54577,
-            "paq_ar": 42570,
-            "pas": 9278,
-            "expreso": 2729
+            "total": 46417,
+            "paq_ar": 45367,
+            "pas": 1050,
+            "expreso": 1015
           },
           "sla_paqar": {
-            "value": 97.7,
+            "value": 96.55,
             "target": 95,
-            "delta": 2.7,
+            "delta": 1.55,
             "status": "ok",
             "series": [
               {
@@ -8680,9 +8688,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 80.52,
+            "value": 81.55,
             "target": 90,
-            "delta": -9.48,
+            "delta": -8.45,
             "status": "danger",
             "series": [
               {
@@ -8765,10 +8773,10 @@
             ]
           },
           "sla_pas": {
-            "value": 95.16,
+            "value": 94,
             "target": 95,
-            "delta": 0.16,
-            "status": "ok",
+            "delta": -1,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -8850,9 +8858,9 @@
             ]
           },
           "fv_pas": {
-            "value": 53.6,
+            "value": 55.9,
             "target": 90,
-            "delta": -36.4,
+            "delta": -34.1,
             "status": "danger",
             "series": [
               {
@@ -8935,9 +8943,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 77.97,
+            "value": 73.3,
             "target": 95,
-            "delta": -17.03,
+            "delta": -21.7,
             "status": "danger",
             "series": [
               {
@@ -9020,10 +9028,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 88.98,
+            "value": 85.82,
             "target": 90,
-            "delta": -1.02,
-            "status": "warning",
+            "delta": -4.18,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -9103,20 +9111,21 @@
                 "volume": 261
               }
             ]
-          }
+          },
+          "vencidos": 46417
         },
         "dia_puro": {
-          "totalVolume": 2716,
+          "totalVolume": 3183,
           "q": {
-            "total": 2716,
-            "paq_ar": 2118,
-            "pas": 462,
-            "expreso": 136
+            "total": 3183,
+            "paq_ar": 3080,
+            "pas": 103,
+            "expreso": 68
           },
           "sla_paqar": {
-            "value": 98.34,
+            "value": 97.18,
             "target": 95,
-            "delta": 3.34,
+            "delta": 2.18,
             "status": "ok",
             "series": [
               {
@@ -9192,9 +9201,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 81.29,
+            "value": 80.66,
             "target": 90,
-            "delta": -8.71,
+            "delta": -9.34,
             "status": "danger",
             "series": [
               {
@@ -9270,9 +9279,9 @@
             ]
           },
           "sla_pas": {
-            "value": 97.87,
+            "value": 98.06,
             "target": 95,
-            "delta": 2.87,
+            "delta": 3.06,
             "status": "ok",
             "series": [
               {
@@ -9348,9 +9357,9 @@
             ]
           },
           "fv_pas": {
-            "value": 64.89,
+            "value": 61.17,
             "target": 90,
-            "delta": -25.11,
+            "delta": -28.83,
             "status": "danger",
             "series": [
               {
@@ -9426,9 +9435,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 77.14,
+            "value": 88.24,
             "target": 95,
-            "delta": -17.86,
+            "delta": -6.76,
             "status": "danger",
             "series": [
               {
@@ -9504,10 +9513,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 90.48,
+            "value": 87.5,
             "target": 90,
-            "delta": 0.48,
-            "status": "ok",
+            "delta": -2.5,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -9580,7 +9589,8 @@
                 "volume": 68
               }
             ]
-          }
+          },
+          "vencidos": 3183
         }
       }
     },
@@ -9594,18 +9604,18 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 10195,
+          "totalVolume": 8872,
           "q": {
-            "total": 10195,
-            "paq_ar": 7952,
-            "pas": 1733,
-            "expreso": 510
+            "total": 8872,
+            "paq_ar": 8612,
+            "pas": 260,
+            "expreso": 376
           },
           "sla_paqar": {
-            "value": 95.18,
+            "value": 92.77,
             "target": 95,
-            "delta": 0.18,
-            "status": "ok",
+            "delta": -2.23,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -9687,10 +9697,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.07,
+            "value": 85.88,
             "target": 90,
-            "delta": -1.93,
-            "status": "warning",
+            "delta": -4.12,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -9772,9 +9782,9 @@
             ]
           },
           "sla_pas": {
-            "value": 86.51,
+            "value": 69.62,
             "target": 95,
-            "delta": -8.49,
+            "delta": -25.38,
             "status": "danger",
             "series": [
               {
@@ -9857,9 +9867,9 @@
             ]
           },
           "fv_pas": {
-            "value": 52.95,
+            "value": 57.31,
             "target": 90,
-            "delta": -37.05,
+            "delta": -32.69,
             "status": "danger",
             "series": [
               {
@@ -9942,9 +9952,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 26.54,
+            "value": 29.79,
             "target": 95,
-            "delta": -68.46,
+            "delta": -65.21,
             "status": "danger",
             "series": [
               {
@@ -10027,10 +10037,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 90.23,
+            "value": 85.71,
             "target": 90,
-            "delta": 0.23,
-            "status": "ok",
+            "delta": -4.29,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -10110,21 +10120,22 @@
                 "volume": 100
               }
             ]
-          }
+          },
+          "vencidos": 8872
         },
         "dia_puro": {
-          "totalVolume": 501,
+          "totalVolume": 569,
           "q": {
-            "total": 501,
-            "paq_ar": 391,
-            "pas": 85,
-            "expreso": 25
+            "total": 569,
+            "paq_ar": 528,
+            "pas": 41,
+            "expreso": 35
           },
           "sla_paqar": {
-            "value": 96.21,
+            "value": 90.91,
             "target": 95,
-            "delta": 1.21,
-            "status": "ok",
+            "delta": -4.09,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -10199,10 +10210,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 87.76,
+            "value": 82.01,
             "target": 90,
-            "delta": -2.24,
-            "status": "warning",
+            "delta": -7.99,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -10277,10 +10288,10 @@
             ]
           },
           "sla_pas": {
-            "value": 100,
+            "value": 63.41,
             "target": 95,
-            "delta": 5,
-            "status": "ok",
+            "delta": -31.59,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -10355,9 +10366,9 @@
             ]
           },
           "fv_pas": {
-            "value": 68.42,
+            "value": 73.17,
             "target": 90,
-            "delta": -21.58,
+            "delta": -16.83,
             "status": "danger",
             "series": [
               {
@@ -10433,9 +10444,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 16.67,
+            "value": 20,
             "target": 95,
-            "delta": -78.33,
+            "delta": -75,
             "status": "danger",
             "series": [
               {
@@ -10511,10 +10522,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 100,
+            "value": 66.67,
             "target": 90,
-            "delta": 10,
-            "status": "ok",
+            "delta": -23.33,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -10587,7 +10598,8 @@
                 "volume": 35
               }
             ]
-          }
+          },
+          "vencidos": 569
         }
       }
     },
@@ -10601,18 +10613,18 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 111594,
+          "totalVolume": 99579,
           "q": {
-            "total": 111594,
-            "paq_ar": 87043,
-            "pas": 18971,
-            "expreso": 5580
+            "total": 99579,
+            "paq_ar": 96406,
+            "pas": 3173,
+            "expreso": 4467
           },
           "sla_paqar": {
-            "value": 95.88,
+            "value": 94.69,
             "target": 95,
-            "delta": 0.88,
-            "status": "ok",
+            "delta": -0.31,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -10694,9 +10706,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 80.3,
+            "value": 81.56,
             "target": 90,
-            "delta": -9.7,
+            "delta": -8.44,
             "status": "danger",
             "series": [
               {
@@ -10779,10 +10791,10 @@
             ]
           },
           "sla_pas": {
-            "value": 93.32,
+            "value": 91.52,
             "target": 95,
-            "delta": -1.68,
-            "status": "warning",
+            "delta": -3.48,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -10864,9 +10876,9 @@
             ]
           },
           "fv_pas": {
-            "value": 53.51,
+            "value": 59.94,
             "target": 90,
-            "delta": -36.49,
+            "delta": -30.06,
             "status": "danger",
             "series": [
               {
@@ -10949,9 +10961,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 59.86,
+            "value": 55.05,
             "target": 95,
-            "delta": -35.14,
+            "delta": -39.95,
             "status": "danger",
             "series": [
               {
@@ -11034,9 +11046,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 83.03,
+            "value": 83.72,
             "target": 90,
-            "delta": -6.97,
+            "delta": -6.28,
             "status": "danger",
             "series": [
               {
@@ -11117,21 +11129,22 @@
                 "volume": 1420
               }
             ]
-          }
+          },
+          "vencidos": 99579
         },
         "dia_puro": {
-          "totalVolume": 5638,
+          "totalVolume": 6761,
           "q": {
-            "total": 5638,
-            "paq_ar": 4398,
-            "pas": 958,
-            "expreso": 282
+            "total": 6761,
+            "paq_ar": 6406,
+            "pas": 355,
+            "expreso": 331
           },
           "sla_paqar": {
-            "value": 96.43,
+            "value": 93.35,
             "target": 95,
-            "delta": 1.43,
-            "status": "ok",
+            "delta": -1.65,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -11206,9 +11219,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 81.35,
+            "value": 82.02,
             "target": 90,
-            "delta": -8.65,
+            "delta": -7.98,
             "status": "danger",
             "series": [
               {
@@ -11284,10 +11297,10 @@
             ]
           },
           "sla_pas": {
-            "value": 94.3,
+            "value": 97.46,
             "target": 95,
-            "delta": -0.7,
-            "status": "warning",
+            "delta": 2.46,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -11362,9 +11375,9 @@
             ]
           },
           "fv_pas": {
-            "value": 62.72,
+            "value": 57.75,
             "target": 90,
-            "delta": -27.28,
+            "delta": -32.25,
             "status": "danger",
             "series": [
               {
@@ -11440,9 +11453,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 59.66,
+            "value": 47.13,
             "target": 95,
-            "delta": -35.34,
+            "delta": -47.87,
             "status": "danger",
             "series": [
               {
@@ -11518,10 +11531,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 84.51,
+            "value": 90.57,
             "target": 90,
-            "delta": -5.49,
-            "status": "danger",
+            "delta": 0.57,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -11594,7 +11607,8 @@
                 "volume": 331
               }
             ]
-          }
+          },
+          "vencidos": 6761
         }
       }
     },
@@ -11608,17 +11622,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 89883,
+          "totalVolume": 80043,
           "q": {
-            "total": 89883,
-            "paq_ar": 70109,
-            "pas": 15280,
-            "expreso": 4494
+            "total": 80043,
+            "paq_ar": 78162,
+            "pas": 1881,
+            "expreso": 3019
           },
           "sla_paqar": {
-            "value": 97.77,
+            "value": 97.24,
             "target": 95,
-            "delta": 2.77,
+            "delta": 2.24,
             "status": "ok",
             "series": [
               {
@@ -11701,10 +11715,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.2,
+            "value": 91.15,
             "target": 90,
-            "delta": -0.8,
-            "status": "warning",
+            "delta": 1.15,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -11786,9 +11800,9 @@
             ]
           },
           "sla_pas": {
-            "value": 97.53,
+            "value": 98.14,
             "target": 95,
-            "delta": 2.53,
+            "delta": 3.14,
             "status": "ok",
             "series": [
               {
@@ -11871,9 +11885,9 @@
             ]
           },
           "fv_pas": {
-            "value": 64.49,
+            "value": 70.44,
             "target": 90,
-            "delta": -25.51,
+            "delta": -19.56,
             "status": "danger",
             "series": [
               {
@@ -11956,9 +11970,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 72.41,
+            "value": 71.08,
             "target": 95,
-            "delta": -22.59,
+            "delta": -23.92,
             "status": "danger",
             "series": [
               {
@@ -12041,9 +12055,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 90.47,
+            "value": 91.86,
             "target": 90,
-            "delta": 0.47,
+            "delta": 1.86,
             "status": "ok",
             "series": [
               {
@@ -12124,20 +12138,21 @@
                 "volume": 955
               }
             ]
-          }
+          },
+          "vencidos": 80043
         },
         "dia_puro": {
-          "totalVolume": 4748,
+          "totalVolume": 5279,
           "q": {
-            "total": 4748,
-            "paq_ar": 3703,
-            "pas": 807,
-            "expreso": 237
+            "total": 5279,
+            "paq_ar": 5198,
+            "pas": 81,
+            "expreso": 174
           },
           "sla_paqar": {
-            "value": 98.23,
+            "value": 97.63,
             "target": 95,
-            "delta": 3.23,
+            "delta": 2.63,
             "status": "ok",
             "series": [
               {
@@ -12213,9 +12228,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 91.22,
+            "value": 90.84,
             "target": 90,
-            "delta": 1.22,
+            "delta": 0.84,
             "status": "ok",
             "series": [
               {
@@ -12291,9 +12306,9 @@
             ]
           },
           "sla_pas": {
-            "value": 99.01,
+            "value": 100,
             "target": 95,
-            "delta": 4.01,
+            "delta": 5,
             "status": "ok",
             "series": [
               {
@@ -12369,9 +12384,9 @@
             ]
           },
           "fv_pas": {
-            "value": 66.5,
+            "value": 75.31,
             "target": 90,
-            "delta": -23.5,
+            "delta": -14.69,
             "status": "danger",
             "series": [
               {
@@ -12447,9 +12462,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 67.31,
+            "value": 78.16,
             "target": 95,
-            "delta": -27.69,
+            "delta": -16.84,
             "status": "danger",
             "series": [
               {
@@ -12525,9 +12540,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 94.85,
+            "value": 92.39,
             "target": 90,
-            "delta": 4.85,
+            "delta": 2.39,
             "status": "ok",
             "series": [
               {
@@ -12601,7 +12616,8 @@
                 "volume": 174
               }
             ]
-          }
+          },
+          "vencidos": 5279
         }
       }
     },
@@ -12615,17 +12631,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 32387,
+          "totalVolume": 27932,
           "q": {
-            "total": 32387,
-            "paq_ar": 25262,
-            "pas": 5506,
-            "expreso": 1619
+            "total": 27932,
+            "paq_ar": 27001,
+            "pas": 931,
+            "expreso": 1166
           },
           "sla_paqar": {
-            "value": 96.97,
+            "value": 95.8,
             "target": 95,
-            "delta": 1.97,
+            "delta": 0.8,
             "status": "ok",
             "series": [
               {
@@ -12708,9 +12724,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 87.67,
+            "value": 89.29,
             "target": 90,
-            "delta": -2.33,
+            "delta": -0.71,
             "status": "warning",
             "series": [
               {
@@ -12793,9 +12809,9 @@
             ]
           },
           "sla_pas": {
-            "value": 86,
+            "value": 72.18,
             "target": 95,
-            "delta": -9,
+            "delta": -22.82,
             "status": "danger",
             "series": [
               {
@@ -12878,9 +12894,9 @@
             ]
           },
           "fv_pas": {
-            "value": 65.35,
+            "value": 67.13,
             "target": 90,
-            "delta": -24.65,
+            "delta": -22.87,
             "status": "danger",
             "series": [
               {
@@ -12963,9 +12979,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 70.47,
+            "value": 66.21,
             "target": 95,
-            "delta": -24.53,
+            "delta": -28.79,
             "status": "danger",
             "series": [
               {
@@ -13048,10 +13064,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 86.66,
+            "value": 88.67,
             "target": 90,
-            "delta": -3.34,
-            "status": "danger",
+            "delta": -1.33,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -13131,21 +13147,22 @@
                 "volume": 304
               }
             ]
-          }
+          },
+          "vencidos": 27932
         },
         "dia_puro": {
-          "totalVolume": 1684,
+          "totalVolume": 1959,
           "q": {
-            "total": 1684,
-            "paq_ar": 1314,
-            "pas": 286,
-            "expreso": 84
+            "total": 1959,
+            "paq_ar": 1905,
+            "pas": 54,
+            "expreso": 77
           },
           "sla_paqar": {
-            "value": 96.73,
+            "value": 94.07,
             "target": 95,
-            "delta": 1.73,
-            "status": "ok",
+            "delta": -0.93,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -13220,10 +13237,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 90.96,
+            "value": 88.36,
             "target": 90,
-            "delta": 0.96,
-            "status": "ok",
+            "delta": -1.64,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -13298,10 +13315,10 @@
             ]
           },
           "sla_pas": {
-            "value": 84.91,
+            "value": 92.59,
             "target": 95,
-            "delta": -10.09,
-            "status": "danger",
+            "delta": -2.41,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -13376,9 +13393,9 @@
             ]
           },
           "fv_pas": {
-            "value": 56.6,
+            "value": 59.26,
             "target": 90,
-            "delta": -33.4,
+            "delta": -30.74,
             "status": "danger",
             "series": [
               {
@@ -13454,9 +13471,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 70.97,
+            "value": 58.44,
             "target": 95,
-            "delta": -24.03,
+            "delta": -36.56,
             "status": "danger",
             "series": [
               {
@@ -13532,9 +13549,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 81.58,
+            "value": 83.33,
             "target": 90,
-            "delta": -8.42,
+            "delta": -6.67,
             "status": "danger",
             "series": [
               {
@@ -13608,7 +13625,8 @@
                 "volume": 77
               }
             ]
-          }
+          },
+          "vencidos": 1959
         }
       }
     },
@@ -13622,18 +13640,18 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 8348,
+          "totalVolume": 6979,
           "q": {
-            "total": 8348,
-            "paq_ar": 6511,
-            "pas": 1419,
-            "expreso": 417
+            "total": 6979,
+            "paq_ar": 6497,
+            "pas": 482,
+            "expreso": 178
           },
           "sla_paqar": {
-            "value": 93.48,
+            "value": 84.16,
             "target": 95,
-            "delta": -1.52,
-            "status": "warning",
+            "delta": -10.84,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -13715,9 +13733,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 92.85,
+            "value": 91.11,
             "target": 90,
-            "delta": 2.85,
+            "delta": 1.11,
             "status": "ok",
             "series": [
               {
@@ -13800,10 +13818,10 @@
             ]
           },
           "sla_pas": {
-            "value": 92.59,
+            "value": 89.34,
             "target": 95,
-            "delta": -2.41,
-            "status": "warning",
+            "delta": -5.66,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -13885,9 +13903,9 @@
             ]
           },
           "fv_pas": {
-            "value": 57.15,
+            "value": 57.68,
             "target": 90,
-            "delta": -32.85,
+            "delta": -32.32,
             "status": "danger",
             "series": [
               {
@@ -13970,9 +13988,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 32.23,
+            "value": 25.84,
             "target": 95,
-            "delta": -62.77,
+            "delta": -69.16,
             "status": "danger",
             "series": [
               {
@@ -14055,10 +14073,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 90.32,
+            "value": 87.95,
             "target": 90,
-            "delta": 0.32,
-            "status": "ok",
+            "delta": -2.05,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -14138,20 +14156,21 @@
                 "volume": 35
               }
             ]
-          }
+          },
+          "vencidos": 6979
         },
         "dia_puro": {
-          "totalVolume": 358,
+          "totalVolume": 461,
           "q": {
-            "total": 358,
-            "paq_ar": 279,
-            "pas": 61,
-            "expreso": 18
+            "total": 461,
+            "paq_ar": 383,
+            "pas": 78,
+            "expreso": 9
           },
           "sla_paqar": {
-            "value": 96.09,
+            "value": 95.04,
             "target": 95,
-            "delta": 1.09,
+            "delta": 0.04,
             "status": "ok",
             "series": [
               {
@@ -14227,9 +14246,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.84,
+            "value": 89.5,
             "target": 90,
-            "delta": -0.16,
+            "delta": -0.5,
             "status": "warning",
             "series": [
               {
@@ -14305,9 +14324,9 @@
             ]
           },
           "sla_pas": {
-            "value": 85.96,
+            "value": 64.1,
             "target": 95,
-            "delta": -9.04,
+            "delta": -30.9,
             "status": "danger",
             "series": [
               {
@@ -14383,9 +14402,9 @@
             ]
           },
           "fv_pas": {
-            "value": 75.44,
+            "value": 61.54,
             "target": 90,
-            "delta": -14.56,
+            "delta": -28.46,
             "status": "danger",
             "series": [
               {
@@ -14461,9 +14480,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 50,
+            "value": 33.33,
             "target": 95,
-            "delta": -45,
+            "delta": -61.67,
             "status": "danger",
             "series": [
               {
@@ -14539,10 +14558,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 66.67,
+            "value": 100,
             "target": 90,
-            "delta": -23.33,
-            "status": "danger",
+            "delta": 10,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -14615,7 +14634,8 @@
                 "volume": 9
               }
             ]
-          }
+          },
+          "vencidos": 461
         }
       }
     },
@@ -14629,17 +14649,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 9776,
+          "totalVolume": 8393,
           "q": {
-            "total": 9776,
-            "paq_ar": 7625,
-            "pas": 1662,
-            "expreso": 489
+            "total": 8393,
+            "paq_ar": 8232,
+            "pas": 161,
+            "expreso": 181
           },
           "sla_paqar": {
-            "value": 97.27,
+            "value": 95.12,
             "target": 95,
-            "delta": 2.27,
+            "delta": 0.12,
             "status": "ok",
             "series": [
               {
@@ -14722,9 +14742,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 82.46,
+            "value": 86.13,
             "target": 90,
-            "delta": -7.54,
+            "delta": -3.87,
             "status": "danger",
             "series": [
               {
@@ -14807,9 +14827,9 @@
             ]
           },
           "sla_pas": {
-            "value": 95.14,
+            "value": 97.52,
             "target": 95,
-            "delta": 0.14,
+            "delta": 2.52,
             "status": "ok",
             "series": [
               {
@@ -14892,9 +14912,9 @@
             ]
           },
           "fv_pas": {
-            "value": 58.49,
+            "value": 52.17,
             "target": 90,
-            "delta": -31.51,
+            "delta": -37.83,
             "status": "danger",
             "series": [
               {
@@ -14977,9 +14997,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 52.72,
+            "value": 35.91,
             "target": 95,
-            "delta": -42.28,
+            "delta": -59.09,
             "status": "danger",
             "series": [
               {
@@ -15062,10 +15082,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 60,
+            "value": 92.31,
             "target": 90,
-            "delta": -30,
-            "status": "danger",
+            "delta": 2.31,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -15145,21 +15165,22 @@
                 "volume": 55
               }
             ]
-          }
+          },
+          "vencidos": 8393
         },
         "dia_puro": {
-          "totalVolume": 459,
+          "totalVolume": 494,
           "q": {
-            "total": 459,
-            "paq_ar": 358,
-            "pas": 78,
-            "expreso": 23
+            "total": 494,
+            "paq_ar": 488,
+            "pas": 6,
+            "expreso": 12
           },
           "sla_paqar": {
-            "value": 97.6,
+            "value": 88.11,
             "target": 95,
-            "delta": 2.6,
-            "status": "ok",
+            "delta": -6.89,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -15234,10 +15255,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 85.46,
+            "value": 87.16,
             "target": 90,
-            "delta": -4.54,
-            "status": "danger",
+            "delta": -2.84,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -15390,9 +15411,9 @@
             ]
           },
           "fv_pas": {
-            "value": 61.54,
+            "value": 66.67,
             "target": 90,
-            "delta": -28.46,
+            "delta": -23.33,
             "status": "danger",
             "series": [
               {
@@ -15622,7 +15643,8 @@
                 "volume": 12
               }
             ]
-          }
+          },
+          "vencidos": 494
         }
       }
     },
@@ -15636,18 +15658,18 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 25644,
+          "totalVolume": 22540,
           "q": {
-            "total": 25644,
-            "paq_ar": 20002,
-            "pas": 4359,
-            "expreso": 1282
+            "total": 22540,
+            "paq_ar": 21739,
+            "pas": 801,
+            "expreso": 367
           },
           "sla_paqar": {
-            "value": 97,
+            "value": 91.52,
             "target": 95,
-            "delta": 2,
-            "status": "ok",
+            "delta": -3.48,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -15729,10 +15751,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 81.53,
+            "value": 88.55,
             "target": 90,
-            "delta": -8.47,
-            "status": "danger",
+            "delta": -1.45,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -15814,10 +15836,10 @@
             ]
           },
           "sla_pas": {
-            "value": 96.76,
+            "value": 84.36,
             "target": 95,
-            "delta": 1.76,
-            "status": "ok",
+            "delta": -10.64,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -15899,9 +15921,9 @@
             ]
           },
           "fv_pas": {
-            "value": 67.41,
+            "value": 71.16,
             "target": 90,
-            "delta": -22.59,
+            "delta": -18.84,
             "status": "danger",
             "series": [
               {
@@ -15984,9 +16006,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 56.9,
+            "value": 56.68,
             "target": 95,
-            "delta": -38.1,
+            "delta": -38.32,
             "status": "danger",
             "series": [
               {
@@ -16069,9 +16091,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 76.15,
+            "value": 76,
             "target": 90,
-            "delta": -13.85,
+            "delta": -14,
             "status": "danger",
             "series": [
               {
@@ -16152,21 +16174,22 @@
                 "volume": 85
               }
             ]
-          }
+          },
+          "vencidos": 22540
         },
         "dia_puro": {
-          "totalVolume": 1308,
+          "totalVolume": 1534,
           "q": {
-            "total": 1308,
-            "paq_ar": 1020,
-            "pas": 222,
-            "expreso": 65
+            "total": 1534,
+            "paq_ar": 1478,
+            "pas": 56,
+            "expreso": 30
           },
           "sla_paqar": {
-            "value": 98.32,
+            "value": 92.83,
             "target": 95,
-            "delta": 3.32,
-            "status": "ok",
+            "delta": -2.17,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -16241,10 +16264,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 79.73,
+            "value": 89.72,
             "target": 90,
-            "delta": -10.27,
-            "status": "danger",
+            "delta": -0.28,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -16319,10 +16342,10 @@
             ]
           },
           "sla_pas": {
-            "value": 62.5,
+            "value": 92.86,
             "target": 95,
-            "delta": -32.5,
-            "status": "danger",
+            "delta": -2.14,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -16397,9 +16420,9 @@
             ]
           },
           "fv_pas": {
-            "value": 62.5,
+            "value": 58.93,
             "target": 90,
-            "delta": -27.5,
+            "delta": -31.07,
             "status": "danger",
             "series": [
               {
@@ -16475,9 +16498,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 42.86,
+            "value": 70,
             "target": 95,
-            "delta": -52.14,
+            "delta": -25,
             "status": "danger",
             "series": [
               {
@@ -16553,10 +16576,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 100,
+            "value": 63.64,
             "target": 90,
-            "delta": 10,
-            "status": "ok",
+            "delta": -26.36,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -16629,7 +16652,8 @@
                 "volume": 30
               }
             ]
-          }
+          },
+          "vencidos": 1534
         }
       }
     },
@@ -16643,17 +16667,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 61229,
+          "totalVolume": 57295,
           "q": {
-            "total": 61229,
-            "paq_ar": 47759,
-            "pas": 10409,
-            "expreso": 3061
+            "total": 57295,
+            "paq_ar": 53073,
+            "pas": 4222,
+            "expreso": 1355
           },
           "sla_paqar": {
-            "value": 98.1,
+            "value": 97.84,
             "target": 95,
-            "delta": 3.1,
+            "delta": 2.84,
             "status": "ok",
             "series": [
               {
@@ -16736,9 +16760,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.23,
+            "value": 89.35,
             "target": 90,
-            "delta": -1.77,
+            "delta": -0.65,
             "status": "warning",
             "series": [
               {
@@ -16821,9 +16845,9 @@
             ]
           },
           "sla_pas": {
-            "value": 97.02,
+            "value": 96.42,
             "target": 95,
-            "delta": 2.02,
+            "delta": 1.42,
             "status": "ok",
             "series": [
               {
@@ -16906,9 +16930,9 @@
             ]
           },
           "fv_pas": {
-            "value": 56.15,
+            "value": 59.76,
             "target": 90,
-            "delta": -33.85,
+            "delta": -30.24,
             "status": "danger",
             "series": [
               {
@@ -16991,9 +17015,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 70.68,
+            "value": 72.69,
             "target": 95,
-            "delta": -24.32,
+            "delta": -22.31,
             "status": "danger",
             "series": [
               {
@@ -17076,10 +17100,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 86.75,
+            "value": 87.3,
             "target": 90,
-            "delta": -3.25,
-            "status": "danger",
+            "delta": -2.7,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -17159,20 +17183,21 @@
                 "volume": 455
               }
             ]
-          }
+          },
+          "vencidos": 57295
         },
         "dia_puro": {
-          "totalVolume": 3190,
+          "totalVolume": 4135,
           "q": {
-            "total": 3190,
-            "paq_ar": 2488,
-            "pas": 542,
-            "expreso": 160
+            "total": 4135,
+            "paq_ar": 3777,
+            "pas": 358,
+            "expreso": 86
           },
           "sla_paqar": {
-            "value": 99.03,
+            "value": 97.72,
             "target": 95,
-            "delta": 4.03,
+            "delta": 2.72,
             "status": "ok",
             "series": [
               {
@@ -17248,10 +17273,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 91.2,
+            "value": 89.39,
             "target": 90,
-            "delta": 1.2,
-            "status": "ok",
+            "delta": -0.61,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -17326,9 +17351,9 @@
             ]
           },
           "sla_pas": {
-            "value": 98.16,
+            "value": 96.65,
             "target": 95,
-            "delta": 3.16,
+            "delta": 1.65,
             "status": "ok",
             "series": [
               {
@@ -17404,9 +17429,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.3,
+            "value": 53.91,
             "target": 90,
-            "delta": -26.7,
+            "delta": -36.09,
             "status": "danger",
             "series": [
               {
@@ -17482,9 +17507,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 75,
+            "value": 75.58,
             "target": 95,
-            "delta": -20,
+            "delta": -19.42,
             "status": "danger",
             "series": [
               {
@@ -17560,10 +17585,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 85.71,
+            "value": 90.91,
             "target": 90,
-            "delta": -4.29,
-            "status": "danger",
+            "delta": 0.91,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -17636,7 +17661,8 @@
                 "volume": 86
               }
             ]
-          }
+          },
+          "vencidos": 4135
         }
       }
     },
@@ -17650,17 +17676,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 45109,
+          "totalVolume": 37818,
           "q": {
-            "total": 45109,
-            "paq_ar": 35185,
-            "pas": 7669,
-            "expreso": 2255
+            "total": 37818,
+            "paq_ar": 36800,
+            "pas": 1018,
+            "expreso": 832
           },
           "sla_paqar": {
-            "value": 96.9,
+            "value": 95.69,
             "target": 95,
-            "delta": 1.9,
+            "delta": 0.69,
             "status": "ok",
             "series": [
               {
@@ -17743,9 +17769,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 81.67,
+            "value": 82.72,
             "target": 90,
-            "delta": -8.33,
+            "delta": -7.28,
             "status": "danger",
             "series": [
               {
@@ -17913,9 +17939,9 @@
             ]
           },
           "fv_pas": {
-            "value": 51.51,
+            "value": 54.62,
             "target": 90,
-            "delta": -38.49,
+            "delta": -35.38,
             "status": "danger",
             "series": [
               {
@@ -17998,9 +18024,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 62.9,
+            "value": 63.22,
             "target": 95,
-            "delta": -32.1,
+            "delta": -31.78,
             "status": "danger",
             "series": [
               {
@@ -18083,9 +18109,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 81.24,
+            "value": 84.02,
             "target": 90,
-            "delta": -8.76,
+            "delta": -5.98,
             "status": "danger",
             "series": [
               {
@@ -18166,21 +18192,22 @@
                 "volume": 205
               }
             ]
-          }
+          },
+          "vencidos": 37818
         },
         "dia_puro": {
-          "totalVolume": 2226,
+          "totalVolume": 2393,
           "q": {
-            "total": 2226,
-            "paq_ar": 1736,
-            "pas": 378,
-            "expreso": 111
+            "total": 2393,
+            "paq_ar": 2370,
+            "pas": 23,
+            "expreso": 56
           },
           "sla_paqar": {
-            "value": 96.54,
+            "value": 92.07,
             "target": 95,
-            "delta": 1.54,
-            "status": "ok",
+            "delta": -2.93,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -18255,9 +18282,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 82.03,
+            "value": 83.38,
             "target": 90,
-            "delta": -7.97,
+            "delta": -6.62,
             "status": "danger",
             "series": [
               {
@@ -18333,9 +18360,9 @@
             ]
           },
           "sla_pas": {
-            "value": 98.48,
+            "value": 95.65,
             "target": 95,
-            "delta": 3.48,
+            "delta": 0.65,
             "status": "ok",
             "series": [
               {
@@ -18411,9 +18438,9 @@
             ]
           },
           "fv_pas": {
-            "value": 56.06,
+            "value": 52.17,
             "target": 90,
-            "delta": -33.94,
+            "delta": -37.83,
             "status": "danger",
             "series": [
               {
@@ -18489,9 +18516,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 47.37,
+            "value": 66.07,
             "target": 95,
-            "delta": -47.63,
+            "delta": -28.93,
             "status": "danger",
             "series": [
               {
@@ -18567,10 +18594,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 75,
+            "value": 89.47,
             "target": 90,
-            "delta": -15,
-            "status": "danger",
+            "delta": -0.53,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -18643,7 +18670,8 @@
                 "volume": 56
               }
             ]
-          }
+          },
+          "vencidos": 2393
         }
       }
     },
@@ -18657,17 +18685,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 23422,
+          "totalVolume": 21328,
           "q": {
-            "total": 23422,
-            "paq_ar": 18269,
-            "pas": 3982,
-            "expreso": 1171
+            "total": 21328,
+            "paq_ar": 20680,
+            "pas": 648,
+            "expreso": 399
           },
           "sla_paqar": {
-            "value": 97.98,
+            "value": 96.18,
             "target": 95,
-            "delta": 2.98,
+            "delta": 1.18,
             "status": "ok",
             "series": [
               {
@@ -18750,10 +18778,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 84.65,
+            "value": 89.44,
             "target": 90,
-            "delta": -5.35,
-            "status": "danger",
+            "delta": -0.56,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -18835,10 +18863,10 @@
             ]
           },
           "sla_pas": {
-            "value": 95.33,
+            "value": 90.12,
             "target": 95,
-            "delta": 0.33,
-            "status": "ok",
+            "delta": -4.88,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -18920,9 +18948,9 @@
             ]
           },
           "fv_pas": {
-            "value": 59.67,
+            "value": 60.8,
             "target": 90,
-            "delta": -30.33,
+            "delta": -29.2,
             "status": "danger",
             "series": [
               {
@@ -19005,9 +19033,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 60.39,
+            "value": 44.36,
             "target": 95,
-            "delta": -34.61,
+            "delta": -50.64,
             "status": "danger",
             "series": [
               {
@@ -19090,10 +19118,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 70,
+            "value": 90.94,
             "target": 90,
-            "delta": -20,
-            "status": "danger",
+            "delta": 0.94,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -19173,20 +19201,21 @@
                 "volume": 139
               }
             ]
-          }
+          },
+          "vencidos": 21328
         },
         "dia_puro": {
-          "totalVolume": 1144,
+          "totalVolume": 1432,
           "q": {
-            "total": 1144,
-            "paq_ar": 892,
-            "pas": 194,
-            "expreso": 57
+            "total": 1432,
+            "paq_ar": 1374,
+            "pas": 58,
+            "expreso": 28
           },
           "sla_paqar": {
-            "value": 98.69,
+            "value": 95.56,
             "target": 95,
-            "delta": 3.69,
+            "delta": 0.56,
             "status": "ok",
             "series": [
               {
@@ -19262,9 +19291,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 90.45,
+            "value": 90.37,
             "target": 90,
-            "delta": 0.45,
+            "delta": 0.37,
             "status": "ok",
             "series": [
               {
@@ -19340,9 +19369,9 @@
             ]
           },
           "sla_pas": {
-            "value": 87.5,
+            "value": 82.76,
             "target": 95,
-            "delta": -7.5,
+            "delta": -12.24,
             "status": "danger",
             "series": [
               {
@@ -19418,9 +19447,9 @@
             ]
           },
           "fv_pas": {
-            "value": 85.42,
+            "value": 65.52,
             "target": 90,
-            "delta": -4.58,
+            "delta": -24.48,
             "status": "danger",
             "series": [
               {
@@ -19496,9 +19525,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 62.07,
+            "value": 35.71,
             "target": 95,
-            "delta": -32.93,
+            "delta": -59.29,
             "status": "danger",
             "series": [
               {
@@ -19574,10 +19603,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 75,
+            "value": 87.5,
             "target": 90,
-            "delta": -15,
-            "status": "danger",
+            "delta": -2.5,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -19650,7 +19679,8 @@
                 "volume": 28
               }
             ]
-          }
+          },
+          "vencidos": 1432
         }
       }
     },
@@ -19664,17 +19694,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 22036,
+          "totalVolume": 20636,
           "q": {
-            "total": 22036,
-            "paq_ar": 17188,
-            "pas": 3746,
-            "expreso": 1102
+            "total": 20636,
+            "paq_ar": 19084,
+            "pas": 1552,
+            "expreso": 392
           },
           "sla_paqar": {
-            "value": 98.56,
+            "value": 95.98,
             "target": 95,
-            "delta": 3.56,
+            "delta": 0.98,
             "status": "ok",
             "series": [
               {
@@ -19757,9 +19787,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 93.42,
+            "value": 94.73,
             "target": 90,
-            "delta": 3.42,
+            "delta": 4.73,
             "status": "ok",
             "series": [
               {
@@ -19842,9 +19872,9 @@
             ]
           },
           "sla_pas": {
-            "value": 94.74,
+            "value": 94.06,
             "target": 95,
-            "delta": -0.26,
+            "delta": -0.94,
             "status": "warning",
             "series": [
               {
@@ -19927,9 +19957,9 @@
             ]
           },
           "fv_pas": {
-            "value": 56.23,
+            "value": 62.11,
             "target": 90,
-            "delta": -33.77,
+            "delta": -27.89,
             "status": "danger",
             "series": [
               {
@@ -20012,9 +20042,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 81.8,
+            "value": 49.49,
             "target": 95,
-            "delta": -13.2,
+            "delta": -45.51,
             "status": "danger",
             "series": [
               {
@@ -20097,10 +20127,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 61.39,
+            "value": 92.44,
             "target": 90,
-            "delta": -28.61,
-            "status": "danger",
+            "delta": 2.44,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -20180,20 +20210,21 @@
                 "volume": 112
               }
             ]
-          }
+          },
+          "vencidos": 20636
         },
         "dia_puro": {
-          "totalVolume": 1092,
+          "totalVolume": 1340,
           "q": {
-            "total": 1092,
-            "paq_ar": 852,
-            "pas": 186,
-            "expreso": 55
+            "total": 1340,
+            "paq_ar": 1304,
+            "pas": 36,
+            "expreso": 24
           },
           "sla_paqar": {
-            "value": 98.08,
+            "value": 95.09,
             "target": 95,
-            "delta": 3.08,
+            "delta": 0.09,
             "status": "ok",
             "series": [
               {
@@ -20269,9 +20300,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 95.03,
+            "value": 94.99,
             "target": 90,
-            "delta": 5.03,
+            "delta": 4.99,
             "status": "ok",
             "series": [
               {
@@ -20347,10 +20378,10 @@
             ]
           },
           "sla_pas": {
-            "value": 100,
+            "value": 80.56,
             "target": 95,
-            "delta": 5,
-            "status": "ok",
+            "delta": -14.44,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -20425,9 +20456,9 @@
             ]
           },
           "fv_pas": {
-            "value": 60,
+            "value": 55.56,
             "target": 90,
-            "delta": -30,
+            "delta": -34.44,
             "status": "danger",
             "series": [
               {
@@ -20503,9 +20534,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 33.33,
+            "value": 50,
             "target": 95,
-            "delta": -61.67,
+            "delta": -45,
             "status": "danger",
             "series": [
               {
@@ -20581,9 +20612,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 100,
+            "value": 90.91,
             "target": 90,
-            "delta": 10,
+            "delta": 0.91,
             "status": "ok",
             "series": [
               {
@@ -20657,7 +20688,8 @@
                 "volume": 24
               }
             ]
-          }
+          },
+          "vencidos": 1340
         }
       }
     },
@@ -20671,17 +20703,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 39701,
+          "totalVolume": 35459,
           "q": {
-            "total": 39701,
-            "paq_ar": 30967,
-            "pas": 6749,
-            "expreso": 1985
+            "total": 35459,
+            "paq_ar": 34315,
+            "pas": 1144,
+            "expreso": 800
           },
           "sla_paqar": {
-            "value": 98.14,
+            "value": 97.97,
             "target": 95,
-            "delta": 3.14,
+            "delta": 2.97,
             "status": "ok",
             "series": [
               {
@@ -20764,10 +20796,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 86.61,
+            "value": 89.41,
             "target": 90,
-            "delta": -3.39,
-            "status": "danger",
+            "delta": -0.59,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -20849,10 +20881,10 @@
             ]
           },
           "sla_pas": {
-            "value": 92.56,
+            "value": 95.8,
             "target": 95,
-            "delta": -2.44,
-            "status": "warning",
+            "delta": 0.8,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -20934,9 +20966,9 @@
             ]
           },
           "fv_pas": {
-            "value": 53.41,
+            "value": 57.6,
             "target": 90,
-            "delta": -36.59,
+            "delta": -32.4,
             "status": "danger",
             "series": [
               {
@@ -21019,9 +21051,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 79.48,
+            "value": 72.75,
             "target": 95,
-            "delta": -15.52,
+            "delta": -22.25,
             "status": "danger",
             "series": [
               {
@@ -21104,9 +21136,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 77.01,
+            "value": 79.63,
             "target": 90,
-            "delta": -12.99,
+            "delta": -10.37,
             "status": "danger",
             "series": [
               {
@@ -21187,20 +21219,21 @@
                 "volume": 239
               }
             ]
-          }
+          },
+          "vencidos": 35459
         },
         "dia_puro": {
-          "totalVolume": 1995,
+          "totalVolume": 2409,
           "q": {
-            "total": 1995,
-            "paq_ar": 1556,
-            "pas": 339,
-            "expreso": 100
+            "total": 2409,
+            "paq_ar": 2301,
+            "pas": 108,
+            "expreso": 60
           },
           "sla_paqar": {
-            "value": 98.45,
+            "value": 97.74,
             "target": 95,
-            "delta": 3.45,
+            "delta": 2.74,
             "status": "ok",
             "series": [
               {
@@ -21276,10 +21309,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.34,
+            "value": 90.29,
             "target": 90,
-            "delta": -0.66,
-            "status": "warning",
+            "delta": 0.29,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -21354,10 +21387,10 @@
             ]
           },
           "sla_pas": {
-            "value": 93.75,
+            "value": 98.15,
             "target": 95,
-            "delta": -1.25,
-            "status": "warning",
+            "delta": 3.15,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -21432,9 +21465,9 @@
             ]
           },
           "fv_pas": {
-            "value": 42.86,
+            "value": 60.19,
             "target": 90,
-            "delta": -47.14,
+            "delta": -29.81,
             "status": "danger",
             "series": [
               {
@@ -21510,9 +21543,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 75.51,
+            "value": 70,
             "target": 95,
-            "delta": -19.49,
+            "delta": -25,
             "status": "danger",
             "series": [
               {
@@ -21588,10 +21621,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 81.82,
+            "value": 94.12,
             "target": 90,
-            "delta": -8.18,
-            "status": "danger",
+            "delta": 4.12,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -21664,7 +21697,8 @@
                 "volume": 60
               }
             ]
-          }
+          },
+          "vencidos": 2409
         }
       }
     },
@@ -21678,17 +21712,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 31395,
+          "totalVolume": 26241,
           "q": {
-            "total": 31395,
-            "paq_ar": 24488,
-            "pas": 5337,
-            "expreso": 1570
+            "total": 26241,
+            "paq_ar": 25865,
+            "pas": 376,
+            "expreso": 379
           },
           "sla_paqar": {
-            "value": 98.52,
+            "value": 97.69,
             "target": 95,
-            "delta": 3.52,
+            "delta": 2.69,
             "status": "ok",
             "series": [
               {
@@ -21771,9 +21805,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 93.94,
+            "value": 93.27,
             "target": 90,
-            "delta": 3.94,
+            "delta": 3.27,
             "status": "ok",
             "series": [
               {
@@ -21856,9 +21890,9 @@
             ]
           },
           "sla_pas": {
-            "value": 92.7,
+            "value": 92.82,
             "target": 95,
-            "delta": -2.3,
+            "delta": -2.18,
             "status": "warning",
             "series": [
               {
@@ -21941,9 +21975,9 @@
             ]
           },
           "fv_pas": {
-            "value": 58.2,
+            "value": 61.44,
             "target": 90,
-            "delta": -31.8,
+            "delta": -28.56,
             "status": "danger",
             "series": [
               {
@@ -22026,9 +22060,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 63.61,
+            "value": 61.48,
             "target": 95,
-            "delta": -31.39,
+            "delta": -33.52,
             "status": "danger",
             "series": [
               {
@@ -22111,10 +22145,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 89.09,
+            "value": 95.27,
             "target": 90,
-            "delta": -0.91,
-            "status": "warning",
+            "delta": 5.27,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -22194,20 +22228,21 @@
                 "volume": 85
               }
             ]
-          }
+          },
+          "vencidos": 26241
         },
         "dia_puro": {
-          "totalVolume": 1690,
+          "totalVolume": 1702,
           "q": {
-            "total": 1690,
-            "paq_ar": 1318,
-            "pas": 287,
-            "expreso": 85
+            "total": 1702,
+            "paq_ar": 1683,
+            "pas": 19,
+            "expreso": 28
           },
           "sla_paqar": {
-            "value": 99.29,
+            "value": 97.33,
             "target": 95,
-            "delta": 4.29,
+            "delta": 2.33,
             "status": "ok",
             "series": [
               {
@@ -22283,9 +22318,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 94.93,
+            "value": 90.69,
             "target": 90,
-            "delta": 4.93,
+            "delta": 0.69,
             "status": "ok",
             "series": [
               {
@@ -22361,9 +22396,9 @@
             ]
           },
           "sla_pas": {
-            "value": 96.83,
+            "value": 100,
             "target": 95,
-            "delta": 1.83,
+            "delta": 5,
             "status": "ok",
             "series": [
               {
@@ -22439,9 +22474,9 @@
             ]
           },
           "fv_pas": {
-            "value": 65.08,
+            "value": 78.95,
             "target": 90,
-            "delta": -24.92,
+            "delta": -11.05,
             "status": "danger",
             "series": [
               {
@@ -22517,9 +22552,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 64.71,
+            "value": 75,
             "target": 95,
-            "delta": -30.29,
+            "delta": -20,
             "status": "danger",
             "series": [
               {
@@ -22595,9 +22630,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 100,
+            "value": 90,
             "target": 90,
-            "delta": 10,
+            "delta": 0,
             "status": "ok",
             "series": [
               {
@@ -22671,7 +22706,8 @@
                 "volume": 28
               }
             ]
-          }
+          },
+          "vencidos": 1702
         }
       }
     },
@@ -22685,17 +22721,17 @@
       "tipoNodo": "CTP",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 209075,
+          "totalVolume": 213490,
           "q": {
-            "total": 209075,
-            "paq_ar": 163079,
-            "pas": 35543,
-            "expreso": 10454
+            "total": 213490,
+            "paq_ar": 179088,
+            "pas": 34402,
+            "expreso": 11557
           },
           "sla_paqar": {
-            "value": 96.42,
+            "value": 95.62,
             "target": 95,
-            "delta": 1.42,
+            "delta": 0.62,
             "status": "ok",
             "series": [
               {
@@ -22778,10 +22814,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 87.06,
+            "value": 86.39,
             "target": 90,
-            "delta": -2.94,
-            "status": "warning",
+            "delta": -3.61,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -22863,10 +22899,10 @@
             ]
           },
           "sla_pas": {
-            "value": 98.52,
+            "value": 92.45,
             "target": 95,
-            "delta": 3.52,
-            "status": "ok",
+            "delta": -2.55,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -22948,9 +22984,9 @@
             ]
           },
           "fv_pas": {
-            "value": 55.71,
+            "value": 56.12,
             "target": 90,
-            "delta": -34.29,
+            "delta": -33.88,
             "status": "danger",
             "series": [
               {
@@ -23033,9 +23069,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 67.15,
+            "value": 60.21,
             "target": 95,
-            "delta": -27.85,
+            "delta": -34.79,
             "status": "danger",
             "series": [
               {
@@ -23118,9 +23154,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 84.04,
+            "value": 82.7,
             "target": 90,
-            "delta": -5.96,
+            "delta": -7.3,
             "status": "danger",
             "series": [
               {
@@ -23201,21 +23237,22 @@
                 "volume": 2888
               }
             ]
-          }
+          },
+          "vencidos": 213490
         },
         "dia_puro": {
-          "totalVolume": 8422,
+          "totalVolume": 13112,
           "q": {
-            "total": 8422,
-            "paq_ar": 6569,
-            "pas": 1432,
-            "expreso": 421
+            "total": 13112,
+            "paq_ar": 10201,
+            "pas": 2911,
+            "expreso": 1010
           },
           "sla_paqar": {
-            "value": 95.76,
+            "value": 94.85,
             "target": 95,
-            "delta": 0.76,
-            "status": "ok",
+            "delta": -0.15,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -23290,9 +23327,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.07,
+            "value": 87.56,
             "target": 90,
-            "delta": -1.93,
+            "delta": -2.44,
             "status": "warning",
             "series": [
               {
@@ -23368,10 +23405,10 @@
             ]
           },
           "sla_pas": {
-            "value": 93.15,
+            "value": 91.47,
             "target": 95,
-            "delta": -1.85,
-            "status": "warning",
+            "delta": -3.53,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -23446,9 +23483,9 @@
             ]
           },
           "fv_pas": {
-            "value": 61.46,
+            "value": 54.41,
             "target": 90,
-            "delta": -28.54,
+            "delta": -35.59,
             "status": "danger",
             "series": [
               {
@@ -23524,9 +23561,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 63.56,
+            "value": 59.01,
             "target": 95,
-            "delta": -31.44,
+            "delta": -35.99,
             "status": "danger",
             "series": [
               {
@@ -23602,9 +23639,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 87.83,
+            "value": 87.89,
             "target": 90,
-            "delta": -2.17,
+            "delta": -2.11,
             "status": "warning",
             "series": [
               {
@@ -23678,7 +23715,8 @@
                 "volume": 1010
               }
             ]
-          }
+          },
+          "vencidos": 13112
         }
       }
     },
@@ -23692,17 +23730,17 @@
       "tipoNodo": "CTP",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 158486,
+          "totalVolume": 144467,
           "q": {
-            "total": 158486,
-            "paq_ar": 123619,
-            "pas": 26943,
-            "expreso": 7924
+            "total": 144467,
+            "paq_ar": 119335,
+            "pas": 25132,
+            "expreso": 6565
           },
           "sla_paqar": {
-            "value": 96.7,
+            "value": 96.21,
             "target": 95,
-            "delta": 1.7,
+            "delta": 1.21,
             "status": "ok",
             "series": [
               {
@@ -23785,9 +23823,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 92.67,
+            "value": 91.17,
             "target": 90,
-            "delta": 2.67,
+            "delta": 1.17,
             "status": "ok",
             "series": [
               {
@@ -23870,10 +23908,10 @@
             ]
           },
           "sla_pas": {
-            "value": 94.19,
+            "value": 95.91,
             "target": 95,
-            "delta": -0.81,
-            "status": "warning",
+            "delta": 0.91,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -23955,9 +23993,9 @@
             ]
           },
           "fv_pas": {
-            "value": 56.67,
+            "value": 55.6,
             "target": 90,
-            "delta": -33.33,
+            "delta": -34.4,
             "status": "danger",
             "series": [
               {
@@ -24040,9 +24078,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 64.34,
+            "value": 63.46,
             "target": 95,
-            "delta": -30.66,
+            "delta": -31.54,
             "status": "danger",
             "series": [
               {
@@ -24125,9 +24163,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 83.3,
+            "value": 83.51,
             "target": 90,
-            "delta": -6.7,
+            "delta": -6.49,
             "status": "danger",
             "series": [
               {
@@ -24208,21 +24246,22 @@
                 "volume": 1590
               }
             ]
-          }
+          },
+          "vencidos": 144467
         },
         "dia_puro": {
-          "totalVolume": 6359,
+          "totalVolume": 8743,
           "q": {
-            "total": 6359,
-            "paq_ar": 4960,
-            "pas": 1081,
-            "expreso": 318
+            "total": 8743,
+            "paq_ar": 6694,
+            "pas": 2049,
+            "expreso": 598
           },
           "sla_paqar": {
-            "value": 96.26,
+            "value": 94.62,
             "target": 95,
-            "delta": 1.26,
-            "status": "ok",
+            "delta": -0.38,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -24297,9 +24336,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 93.36,
+            "value": 90.22,
             "target": 90,
-            "delta": 3.36,
+            "delta": 0.22,
             "status": "ok",
             "series": [
               {
@@ -24375,10 +24414,10 @@
             ]
           },
           "sla_pas": {
-            "value": 93.95,
+            "value": 95.45,
             "target": 95,
-            "delta": -1.05,
-            "status": "warning",
+            "delta": 0.45,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -24453,9 +24492,9 @@
             ]
           },
           "fv_pas": {
-            "value": 57.18,
+            "value": 48.02,
             "target": 90,
-            "delta": -32.82,
+            "delta": -41.98,
             "status": "danger",
             "series": [
               {
@@ -24531,9 +24570,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 57.76,
+            "value": 61.71,
             "target": 95,
-            "delta": -37.24,
+            "delta": -33.29,
             "status": "danger",
             "series": [
               {
@@ -24609,10 +24648,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 88,
+            "value": 84.57,
             "target": 90,
-            "delta": -2,
-            "status": "warning",
+            "delta": -5.43,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -24685,7 +24724,8 @@
                 "volume": 598
               }
             ]
-          }
+          },
+          "vencidos": 8743
         }
       }
     },
@@ -24699,17 +24739,17 @@
       "tipoNodo": "CTP",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 94593,
+          "totalVolume": 102862,
           "q": {
-            "total": 94593,
-            "paq_ar": 73783,
-            "pas": 16081,
-            "expreso": 4730
+            "total": 102862,
+            "paq_ar": 78775,
+            "pas": 24087,
+            "expreso": 5898
           },
           "sla_paqar": {
-            "value": 96.2,
+            "value": 96.33,
             "target": 95,
-            "delta": 1.2,
+            "delta": 1.33,
             "status": "ok",
             "series": [
               {
@@ -24877,10 +24917,10 @@
             ]
           },
           "sla_pas": {
-            "value": 94.92,
+            "value": 96.8,
             "target": 95,
-            "delta": -0.08,
-            "status": "warning",
+            "delta": 1.8,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -24962,9 +25002,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.81,
+            "value": 67.56,
             "target": 90,
-            "delta": -26.19,
+            "delta": -22.44,
             "status": "danger",
             "series": [
               {
@@ -25047,9 +25087,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 68.12,
+            "value": 69.36,
             "target": 95,
-            "delta": -26.88,
+            "delta": -25.64,
             "status": "danger",
             "series": [
               {
@@ -25132,9 +25172,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 83.03,
+            "value": 84.12,
             "target": 90,
-            "delta": -6.97,
+            "delta": -5.88,
             "status": "danger",
             "series": [
               {
@@ -25215,20 +25255,21 @@
                 "volume": 1485
               }
             ]
-          }
+          },
+          "vencidos": 102862
         },
         "dia_puro": {
-          "totalVolume": 3620,
+          "totalVolume": 6561,
           "q": {
-            "total": 3620,
-            "paq_ar": 2824,
-            "pas": 615,
-            "expreso": 181
+            "total": 6561,
+            "paq_ar": 4549,
+            "pas": 2012,
+            "expreso": 532
           },
           "sla_paqar": {
-            "value": 95.3,
+            "value": 95.16,
             "target": 95,
-            "delta": 0.3,
+            "delta": 0.16,
             "status": "ok",
             "series": [
               {
@@ -25304,9 +25345,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.24,
+            "value": 88.21,
             "target": 90,
-            "delta": -0.76,
+            "delta": -1.79,
             "status": "warning",
             "series": [
               {
@@ -25382,9 +25423,9 @@
             ]
           },
           "sla_pas": {
-            "value": 95.4,
+            "value": 99.34,
             "target": 95,
-            "delta": 0.4,
+            "delta": 4.34,
             "status": "ok",
             "series": [
               {
@@ -25460,9 +25501,9 @@
             ]
           },
           "fv_pas": {
-            "value": 68.14,
+            "value": 68.24,
             "target": 90,
-            "delta": -21.86,
+            "delta": -21.76,
             "status": "danger",
             "series": [
               {
@@ -25538,9 +25579,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 66.75,
+            "value": 68.42,
             "target": 95,
-            "delta": -28.25,
+            "delta": -26.58,
             "status": "danger",
             "series": [
               {
@@ -25616,9 +25657,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 86.82,
+            "value": 81.97,
             "target": 90,
-            "delta": -3.18,
+            "delta": -8.03,
             "status": "danger",
             "series": [
               {
@@ -25692,7 +25733,8 @@
                 "volume": 532
               }
             ]
-          }
+          },
+          "vencidos": 6561
         }
       }
     },
@@ -25706,17 +25748,17 @@
       "tipoNodo": "CTP",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 106680,
+          "totalVolume": 113485,
           "q": {
-            "total": 106680,
-            "paq_ar": 83210,
-            "pas": 18136,
-            "expreso": 5334
+            "total": 113485,
+            "paq_ar": 87913,
+            "pas": 25572,
+            "expreso": 6995
           },
           "sla_paqar": {
-            "value": 96.45,
+            "value": 96.54,
             "target": 95,
-            "delta": 1.45,
+            "delta": 1.54,
             "status": "ok",
             "series": [
               {
@@ -25799,9 +25841,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 86.76,
+            "value": 86.29,
             "target": 90,
-            "delta": -3.24,
+            "delta": -3.71,
             "status": "danger",
             "series": [
               {
@@ -25884,9 +25926,9 @@
             ]
           },
           "sla_pas": {
-            "value": 99.84,
+            "value": 99.83,
             "target": 95,
-            "delta": 4.84,
+            "delta": 4.83,
             "status": "ok",
             "series": [
               {
@@ -25969,9 +26011,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.37,
+            "value": 66.55,
             "target": 90,
-            "delta": -26.63,
+            "delta": -23.45,
             "status": "danger",
             "series": [
               {
@@ -26054,9 +26096,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 68.49,
+            "value": 67.53,
             "target": 95,
-            "delta": -26.51,
+            "delta": -27.47,
             "status": "danger",
             "series": [
               {
@@ -26139,9 +26181,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 83.22,
+            "value": 81.93,
             "target": 90,
-            "delta": -6.78,
+            "delta": -8.07,
             "status": "danger",
             "series": [
               {
@@ -26222,21 +26264,22 @@
                 "volume": 1677
               }
             ]
-          }
+          },
+          "vencidos": 113485
         },
         "dia_puro": {
-          "totalVolume": 3980,
+          "totalVolume": 7336,
           "q": {
-            "total": 3980,
-            "paq_ar": 3104,
-            "pas": 677,
-            "expreso": 199
+            "total": 7336,
+            "paq_ar": 4822,
+            "pas": 2514,
+            "expreso": 615
           },
           "sla_paqar": {
-            "value": 95.5,
+            "value": 94.96,
             "target": 95,
-            "delta": 0.5,
-            "status": "ok",
+            "delta": -0.04,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -26311,10 +26354,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 87.91,
+            "value": 86.93,
             "target": 90,
-            "delta": -2.09,
-            "status": "warning",
+            "delta": -3.07,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -26389,9 +26432,9 @@
             ]
           },
           "sla_pas": {
-            "value": 99.92,
+            "value": 100,
             "target": 95,
-            "delta": 4.92,
+            "delta": 5,
             "status": "ok",
             "series": [
               {
@@ -26467,9 +26510,9 @@
             ]
           },
           "fv_pas": {
-            "value": 69.92,
+            "value": 62.77,
             "target": 90,
-            "delta": -20.08,
+            "delta": -27.23,
             "status": "danger",
             "series": [
               {
@@ -26545,9 +26588,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 66.27,
+            "value": 66.02,
             "target": 95,
-            "delta": -28.73,
+            "delta": -28.98,
             "status": "danger",
             "series": [
               {
@@ -26623,10 +26666,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 82.27,
+            "value": 87.2,
             "target": 90,
-            "delta": -7.73,
-            "status": "danger",
+            "delta": -2.8,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -26699,7 +26742,8 @@
                 "volume": 615
               }
             ]
-          }
+          },
+          "vencidos": 7336
         }
       }
     },
@@ -26713,17 +26757,17 @@
       "tipoNodo": "CTP",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 86522,
+          "totalVolume": 87355,
           "q": {
-            "total": 86522,
-            "paq_ar": 67487,
-            "pas": 14709,
-            "expreso": 4326
+            "total": 87355,
+            "paq_ar": 73539,
+            "pas": 13816,
+            "expreso": 6689
           },
           "sla_paqar": {
-            "value": 95.63,
+            "value": 95.94,
             "target": 95,
-            "delta": 0.63,
+            "delta": 0.94,
             "status": "ok",
             "series": [
               {
@@ -26806,9 +26850,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 91.07,
+            "value": 90.71,
             "target": 90,
-            "delta": 1.07,
+            "delta": 0.71,
             "status": "ok",
             "series": [
               {
@@ -26891,9 +26935,9 @@
             ]
           },
           "sla_pas": {
-            "value": 95.99,
+            "value": 96.84,
             "target": 95,
-            "delta": 0.99,
+            "delta": 1.84,
             "status": "ok",
             "series": [
               {
@@ -26976,9 +27020,9 @@
             ]
           },
           "fv_pas": {
-            "value": 65.87,
+            "value": 66.31,
             "target": 90,
-            "delta": -24.13,
+            "delta": -23.69,
             "status": "danger",
             "series": [
               {
@@ -27061,9 +27105,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 66.07,
+            "value": 66.63,
             "target": 95,
-            "delta": -28.93,
+            "delta": -28.37,
             "status": "danger",
             "series": [
               {
@@ -27146,9 +27190,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 91.75,
+            "value": 90.62,
             "target": 90,
-            "delta": 1.75,
+            "delta": 0.62,
             "status": "ok",
             "series": [
               {
@@ -27229,20 +27273,21 @@
                 "volume": 1522
               }
             ]
-          }
+          },
+          "vencidos": 87355
         },
         "dia_puro": {
-          "totalVolume": 3297,
+          "totalVolume": 5242,
           "q": {
-            "total": 3297,
-            "paq_ar": 2572,
-            "pas": 560,
-            "expreso": 165
+            "total": 5242,
+            "paq_ar": 4178,
+            "pas": 1064,
+            "expreso": 572
           },
           "sla_paqar": {
-            "value": 94.21,
+            "value": 93.56,
             "target": 95,
-            "delta": -0.79,
+            "delta": -1.44,
             "status": "warning",
             "series": [
               {
@@ -27318,10 +27363,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.52,
+            "value": 90.9,
             "target": 90,
-            "delta": -0.48,
-            "status": "warning",
+            "delta": 0.9,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -27396,9 +27441,9 @@
             ]
           },
           "sla_pas": {
-            "value": 96.67,
+            "value": 96.78,
             "target": 95,
-            "delta": 1.67,
+            "delta": 1.78,
             "status": "ok",
             "series": [
               {
@@ -27474,9 +27519,9 @@
             ]
           },
           "fv_pas": {
-            "value": 67.36,
+            "value": 67.11,
             "target": 90,
-            "delta": -22.64,
+            "delta": -22.89,
             "status": "danger",
             "series": [
               {
@@ -27552,9 +27597,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 59.81,
+            "value": 63.11,
             "target": 95,
-            "delta": -35.19,
+            "delta": -31.89,
             "status": "danger",
             "series": [
               {
@@ -27630,10 +27675,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 94.36,
+            "value": 88.61,
             "target": 90,
-            "delta": 4.36,
-            "status": "ok",
+            "delta": -1.39,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -27706,7 +27751,8 @@
                 "volume": 572
               }
             ]
-          }
+          },
+          "vencidos": 5242
         }
       }
     },
@@ -27720,17 +27766,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 69386,
+          "totalVolume": 71172,
           "q": {
-            "total": 69386,
-            "paq_ar": 54121,
-            "pas": 11796,
-            "expreso": 3469
+            "total": 71172,
+            "paq_ar": 60413,
+            "pas": 10759,
+            "expreso": 2326
           },
           "sla_paqar": {
-            "value": 95.96,
+            "value": 97.09,
             "target": 95,
-            "delta": 0.96,
+            "delta": 2.09,
             "status": "ok",
             "series": [
               {
@@ -27813,10 +27859,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.34,
+            "value": 90.09,
             "target": 90,
-            "delta": -0.66,
-            "status": "warning",
+            "delta": 0.09,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -27898,9 +27944,9 @@
             ]
           },
           "sla_pas": {
-            "value": 88.17,
+            "value": 84.73,
             "target": 95,
-            "delta": -6.83,
+            "delta": -10.27,
             "status": "danger",
             "series": [
               {
@@ -27983,9 +28029,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.78,
+            "value": 68.5,
             "target": 90,
-            "delta": -26.22,
+            "delta": -21.5,
             "status": "danger",
             "series": [
               {
@@ -28068,9 +28114,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 59.29,
+            "value": 70.68,
             "target": 95,
-            "delta": -35.71,
+            "delta": -24.32,
             "status": "danger",
             "series": [
               {
@@ -28153,10 +28199,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 90.73,
+            "value": 87.89,
             "target": 90,
-            "delta": 0.73,
-            "status": "ok",
+            "delta": -2.11,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -28236,20 +28282,21 @@
                 "volume": 697
               }
             ]
-          }
+          },
+          "vencidos": 71172
         },
         "dia_puro": {
-          "totalVolume": 3606,
+          "totalVolume": 4849,
           "q": {
-            "total": 3606,
-            "paq_ar": 2813,
-            "pas": 613,
-            "expreso": 180
+            "total": 4849,
+            "paq_ar": 4106,
+            "pas": 743,
+            "expreso": 138
           },
           "sla_paqar": {
-            "value": 96.37,
+            "value": 96.54,
             "target": 95,
-            "delta": 1.37,
+            "delta": 1.54,
             "status": "ok",
             "series": [
               {
@@ -28325,10 +28372,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 91.27,
+            "value": 88.79,
             "target": 90,
-            "delta": 1.27,
-            "status": "ok",
+            "delta": -1.21,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -28403,10 +28450,10 @@
             ]
           },
           "sla_pas": {
-            "value": 81.7,
+            "value": 93.54,
             "target": 95,
-            "delta": -13.3,
-            "status": "danger",
+            "delta": -1.46,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -28481,9 +28528,9 @@
             ]
           },
           "fv_pas": {
-            "value": 66.81,
+            "value": 70.39,
             "target": 90,
-            "delta": -23.19,
+            "delta": -19.61,
             "status": "danger",
             "series": [
               {
@@ -28559,9 +28606,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 58.4,
+            "value": 61.59,
             "target": 95,
-            "delta": -36.6,
+            "delta": -33.41,
             "status": "danger",
             "series": [
               {
@@ -28637,10 +28684,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 91.36,
+            "value": 86.67,
             "target": 90,
-            "delta": 1.36,
-            "status": "ok",
+            "delta": -3.33,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -28713,7 +28760,8 @@
                 "volume": 138
               }
             ]
-          }
+          },
+          "vencidos": 4849
         }
       }
     },
@@ -28727,17 +28775,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 85428,
+          "totalVolume": 92656,
           "q": {
-            "total": 85428,
-            "paq_ar": 66634,
-            "pas": 14523,
-            "expreso": 4271
+            "total": 92656,
+            "paq_ar": 72810,
+            "pas": 19846,
+            "expreso": 3974
           },
           "sla_paqar": {
-            "value": 97.37,
+            "value": 97.19,
             "target": 95,
-            "delta": 2.37,
+            "delta": 2.19,
             "status": "ok",
             "series": [
               {
@@ -28820,9 +28868,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 87.97,
+            "value": 89.06,
             "target": 90,
-            "delta": -2.03,
+            "delta": -0.94,
             "status": "warning",
             "series": [
               {
@@ -28905,9 +28953,9 @@
             ]
           },
           "sla_pas": {
-            "value": 95.12,
+            "value": 97.06,
             "target": 95,
-            "delta": 0.12,
+            "delta": 2.06,
             "status": "ok",
             "series": [
               {
@@ -28990,9 +29038,9 @@
             ]
           },
           "fv_pas": {
-            "value": 62.76,
+            "value": 65,
             "target": 90,
-            "delta": -27.24,
+            "delta": -25,
             "status": "danger",
             "series": [
               {
@@ -29075,9 +29123,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 81.1,
+            "value": 81.25,
             "target": 95,
-            "delta": -13.9,
+            "delta": -13.75,
             "status": "danger",
             "series": [
               {
@@ -29160,9 +29208,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 90.93,
+            "value": 90.61,
             "target": 90,
-            "delta": 0.93,
+            "delta": 0.61,
             "status": "ok",
             "series": [
               {
@@ -29243,20 +29291,21 @@
                 "volume": 1082
               }
             ]
-          }
+          },
+          "vencidos": 92656
         },
         "dia_puro": {
-          "totalVolume": 4367,
+          "totalVolume": 6713,
           "q": {
-            "total": 4367,
-            "paq_ar": 3406,
-            "pas": 742,
-            "expreso": 218
+            "total": 6713,
+            "paq_ar": 4906,
+            "pas": 1807,
+            "expreso": 211
           },
           "sla_paqar": {
-            "value": 98.21,
+            "value": 97.47,
             "target": 95,
-            "delta": 3.21,
+            "delta": 2.47,
             "status": "ok",
             "series": [
               {
@@ -29332,9 +29381,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.41,
+            "value": 89.71,
             "target": 90,
-            "delta": -0.59,
+            "delta": -0.29,
             "status": "warning",
             "series": [
               {
@@ -29410,10 +29459,10 @@
             ]
           },
           "sla_pas": {
-            "value": 94.68,
+            "value": 98.89,
             "target": 95,
-            "delta": -0.32,
-            "status": "warning",
+            "delta": 3.89,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -29488,9 +29537,9 @@
             ]
           },
           "fv_pas": {
-            "value": 66.36,
+            "value": 63.53,
             "target": 90,
-            "delta": -23.64,
+            "delta": -26.47,
             "status": "danger",
             "series": [
               {
@@ -29566,9 +29615,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 79.69,
+            "value": 77.25,
             "target": 95,
-            "delta": -15.31,
+            "delta": -17.75,
             "status": "danger",
             "series": [
               {
@@ -29644,9 +29693,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 91.8,
+            "value": 92.79,
             "target": 90,
-            "delta": 1.8,
+            "delta": 2.79,
             "status": "ok",
             "series": [
               {
@@ -29720,7 +29769,8 @@
                 "volume": 211
               }
             ]
-          }
+          },
+          "vencidos": 6713
         }
       }
     },
@@ -29734,17 +29784,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 75025,
+          "totalVolume": 79106,
           "q": {
-            "total": 75025,
-            "paq_ar": 58520,
-            "pas": 12754,
-            "expreso": 3751
+            "total": 79106,
+            "paq_ar": 64198,
+            "pas": 14908,
+            "expreso": 3015
           },
           "sla_paqar": {
-            "value": 96.58,
+            "value": 97.57,
             "target": 95,
-            "delta": 1.58,
+            "delta": 2.57,
             "status": "ok",
             "series": [
               {
@@ -29827,10 +29877,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 91.17,
+            "value": 88.09,
             "target": 90,
-            "delta": 1.17,
-            "status": "ok",
+            "delta": -1.91,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -29912,10 +29962,10 @@
             ]
           },
           "sla_pas": {
-            "value": 93.68,
+            "value": 80.46,
             "target": 95,
-            "delta": -1.32,
-            "status": "warning",
+            "delta": -14.54,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -29997,9 +30047,9 @@
             ]
           },
           "fv_pas": {
-            "value": 55.59,
+            "value": 60.01,
             "target": 90,
-            "delta": -34.41,
+            "delta": -29.99,
             "status": "danger",
             "series": [
               {
@@ -30082,9 +30132,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 69.51,
+            "value": 74.56,
             "target": 95,
-            "delta": -25.49,
+            "delta": -20.44,
             "status": "danger",
             "series": [
               {
@@ -30167,10 +30217,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 88.7,
+            "value": 82.38,
             "target": 90,
-            "delta": -1.3,
-            "status": "warning",
+            "delta": -7.62,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -30250,20 +30300,21 @@
                 "volume": 943
               }
             ]
-          }
+          },
+          "vencidos": 79106
         },
         "dia_puro": {
-          "totalVolume": 3811,
+          "totalVolume": 5598,
           "q": {
-            "total": 3811,
-            "paq_ar": 2973,
-            "pas": 648,
-            "expreso": 191
+            "total": 5598,
+            "paq_ar": 4418,
+            "pas": 1180,
+            "expreso": 210
           },
           "sla_paqar": {
-            "value": 96.93,
+            "value": 96.33,
             "target": 95,
-            "delta": 1.93,
+            "delta": 1.33,
             "status": "ok",
             "series": [
               {
@@ -30339,10 +30390,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 90.04,
+            "value": 87.55,
             "target": 90,
-            "delta": 0.04,
-            "status": "ok",
+            "delta": -2.45,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -30417,9 +30468,9 @@
             ]
           },
           "sla_pas": {
-            "value": 89.44,
+            "value": 84.24,
             "target": 95,
-            "delta": -5.56,
+            "delta": -10.76,
             "status": "danger",
             "series": [
               {
@@ -30495,9 +30546,9 @@
             ]
           },
           "fv_pas": {
-            "value": 60.06,
+            "value": 64.15,
             "target": 90,
-            "delta": -29.94,
+            "delta": -25.85,
             "status": "danger",
             "series": [
               {
@@ -30573,9 +30624,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 65.64,
+            "value": 67.62,
             "target": 95,
-            "delta": -29.36,
+            "delta": -27.38,
             "status": "danger",
             "series": [
               {
@@ -30651,10 +30702,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 90,
+            "value": 81.58,
             "target": 90,
-            "delta": 0,
-            "status": "ok",
+            "delta": -8.42,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -30727,7 +30778,8 @@
                 "volume": 210
               }
             ]
-          }
+          },
+          "vencidos": 5598
         }
       }
     },
@@ -30741,17 +30793,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 74312,
+          "totalVolume": 76592,
           "q": {
-            "total": 74312,
-            "paq_ar": 57963,
-            "pas": 12633,
-            "expreso": 3716
+            "total": 76592,
+            "paq_ar": 63700,
+            "pas": 12892,
+            "expreso": 3062
           },
           "sla_paqar": {
-            "value": 97.77,
+            "value": 97.7,
             "target": 95,
-            "delta": 2.77,
+            "delta": 2.7,
             "status": "ok",
             "series": [
               {
@@ -30834,10 +30886,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 86.9,
+            "value": 89.65,
             "target": 90,
-            "delta": -3.1,
-            "status": "danger",
+            "delta": -0.35,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -30919,9 +30971,9 @@
             ]
           },
           "sla_pas": {
-            "value": 94.75,
+            "value": 92.8,
             "target": 95,
-            "delta": -0.25,
+            "delta": -2.2,
             "status": "warning",
             "series": [
               {
@@ -31004,9 +31056,9 @@
             ]
           },
           "fv_pas": {
-            "value": 62.02,
+            "value": 70.54,
             "target": 90,
-            "delta": -27.98,
+            "delta": -19.46,
             "status": "danger",
             "series": [
               {
@@ -31089,9 +31141,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 85.1,
+            "value": 83.96,
             "target": 95,
-            "delta": -9.9,
+            "delta": -11.04,
             "status": "danger",
             "series": [
               {
@@ -31174,10 +31226,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 88.17,
+            "value": 85.92,
             "target": 90,
-            "delta": -1.83,
-            "status": "warning",
+            "delta": -4.08,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -31257,20 +31309,21 @@
                 "volume": 1017
               }
             ]
-          }
+          },
+          "vencidos": 76592
         },
         "dia_puro": {
-          "totalVolume": 4047,
+          "totalVolume": 5184,
           "q": {
-            "total": 4047,
-            "paq_ar": 3157,
-            "pas": 688,
-            "expreso": 202
+            "total": 5184,
+            "paq_ar": 4342,
+            "pas": 842,
+            "expreso": 181
           },
           "sla_paqar": {
-            "value": 98.34,
+            "value": 98,
             "target": 95,
-            "delta": 3.34,
+            "delta": 3,
             "status": "ok",
             "series": [
               {
@@ -31346,10 +31399,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.94,
+            "value": 90.55,
             "target": 90,
-            "delta": -1.06,
-            "status": "warning",
+            "delta": 0.55,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -31424,10 +31477,10 @@
             ]
           },
           "sla_pas": {
-            "value": 93.91,
+            "value": 89.43,
             "target": 95,
-            "delta": -1.09,
-            "status": "warning",
+            "delta": -5.57,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -31502,9 +31555,9 @@
             ]
           },
           "fv_pas": {
-            "value": 72.1,
+            "value": 69.36,
             "target": 90,
-            "delta": -17.9,
+            "delta": -20.64,
             "status": "danger",
             "series": [
               {
@@ -31580,9 +31633,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 84.57,
+            "value": 82.87,
             "target": 95,
-            "delta": -10.43,
+            "delta": -12.13,
             "status": "danger",
             "series": [
               {
@@ -31658,10 +31711,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 80.53,
+            "value": 89.42,
             "target": 90,
-            "delta": -9.47,
-            "status": "danger",
+            "delta": -0.58,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -31734,7 +31787,8 @@
                 "volume": 181
               }
             ]
-          }
+          },
+          "vencidos": 5184
         }
       }
     },
@@ -31748,17 +31802,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 90547,
+          "totalVolume": 91727,
           "q": {
-            "total": 90547,
-            "paq_ar": 70627,
-            "pas": 15393,
-            "expreso": 4527
+            "total": 91727,
+            "paq_ar": 77791,
+            "pas": 13936,
+            "expreso": 5790
           },
           "sla_paqar": {
-            "value": 98.31,
+            "value": 97.82,
             "target": 95,
-            "delta": 3.31,
+            "delta": 2.82,
             "status": "ok",
             "series": [
               {
@@ -31841,9 +31895,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.28,
+            "value": 88.83,
             "target": 90,
-            "delta": -0.72,
+            "delta": -1.17,
             "status": "warning",
             "series": [
               {
@@ -31926,9 +31980,9 @@
             ]
           },
           "sla_pas": {
-            "value": 95.73,
+            "value": 96.44,
             "target": 95,
-            "delta": 0.73,
+            "delta": 1.44,
             "status": "ok",
             "series": [
               {
@@ -32011,9 +32065,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.14,
+            "value": 63.46,
             "target": 90,
-            "delta": -26.86,
+            "delta": -26.54,
             "status": "danger",
             "series": [
               {
@@ -32096,9 +32150,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 90.66,
+            "value": 86.96,
             "target": 95,
-            "delta": -4.34,
+            "delta": -8.04,
             "status": "danger",
             "series": [
               {
@@ -32181,10 +32235,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 88.61,
+            "value": 83.59,
             "target": 90,
-            "delta": -1.39,
-            "status": "warning",
+            "delta": -6.41,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -32264,20 +32318,21 @@
                 "volume": 1621
               }
             ]
-          }
+          },
+          "vencidos": 91727
         },
         "dia_puro": {
-          "totalVolume": 4515,
+          "totalVolume": 6519,
           "q": {
-            "total": 4515,
-            "paq_ar": 3522,
-            "pas": 768,
-            "expreso": 226
+            "total": 6519,
+            "paq_ar": 5419,
+            "pas": 1100,
+            "expreso": 356
           },
           "sla_paqar": {
-            "value": 99.18,
+            "value": 97.14,
             "target": 95,
-            "delta": 4.18,
+            "delta": 2.14,
             "status": "ok",
             "series": [
               {
@@ -32353,10 +32408,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 90.37,
+            "value": 88.79,
             "target": 90,
-            "delta": 0.37,
-            "status": "ok",
+            "delta": -1.21,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -32431,10 +32486,10 @@
             ]
           },
           "sla_pas": {
-            "value": 93.38,
+            "value": 97.36,
             "target": 95,
-            "delta": -1.62,
-            "status": "warning",
+            "delta": 2.36,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -32509,9 +32564,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.3,
+            "value": 65.36,
             "target": 90,
-            "delta": -26.7,
+            "delta": -24.64,
             "status": "danger",
             "series": [
               {
@@ -32587,10 +32642,10 @@
             ]
           },
           "sla_expreso": {
-            "value": 93.23,
+            "value": 86.24,
             "target": 95,
-            "delta": -1.77,
-            "status": "warning",
+            "delta": -8.76,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -32665,10 +32720,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 91.98,
+            "value": 82.26,
             "target": 90,
-            "delta": 1.98,
-            "status": "ok",
+            "delta": -7.74,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -32741,7 +32796,8 @@
                 "volume": 356
               }
             ]
-          }
+          },
+          "vencidos": 6519
         }
       }
     },
@@ -32755,17 +32811,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 33251,
+          "totalVolume": 29292,
           "q": {
-            "total": 33251,
-            "paq_ar": 25936,
-            "pas": 5653,
-            "expreso": 1663
+            "total": 29292,
+            "paq_ar": 28705,
+            "pas": 587,
+            "expreso": 757
           },
           "sla_paqar": {
-            "value": 96.75,
+            "value": 96.98,
             "target": 95,
-            "delta": 1.75,
+            "delta": 1.98,
             "status": "ok",
             "series": [
               {
@@ -32848,9 +32904,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 83.14,
+            "value": 85,
             "target": 90,
-            "delta": -6.86,
+            "delta": -5,
             "status": "danger",
             "series": [
               {
@@ -32933,9 +32989,9 @@
             ]
           },
           "sla_pas": {
-            "value": 78.21,
+            "value": 71.89,
             "target": 95,
-            "delta": -16.79,
+            "delta": -23.11,
             "status": "danger",
             "series": [
               {
@@ -33018,9 +33074,9 @@
             ]
           },
           "fv_pas": {
-            "value": 60.55,
+            "value": 66.78,
             "target": 90,
-            "delta": -29.45,
+            "delta": -23.22,
             "status": "danger",
             "series": [
               {
@@ -33103,9 +33159,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 60.75,
+            "value": 61.29,
             "target": 95,
-            "delta": -34.25,
+            "delta": -33.71,
             "status": "danger",
             "series": [
               {
@@ -33188,9 +33244,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 83.44,
+            "value": 75.25,
             "target": 90,
-            "delta": -6.56,
+            "delta": -14.75,
             "status": "danger",
             "series": [
               {
@@ -33271,20 +33327,21 @@
                 "volume": 202
               }
             ]
-          }
+          },
+          "vencidos": 29292
         },
         "dia_puro": {
-          "totalVolume": 1853,
+          "totalVolume": 1987,
           "q": {
-            "total": 1853,
-            "paq_ar": 1445,
-            "pas": 315,
-            "expreso": 93
+            "total": 1987,
+            "paq_ar": 1963,
+            "pas": 24,
+            "expreso": 44
           },
           "sla_paqar": {
-            "value": 96.98,
+            "value": 97.3,
             "target": 95,
-            "delta": 1.98,
+            "delta": 2.3,
             "status": "ok",
             "series": [
               {
@@ -33360,9 +33417,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 86.14,
+            "value": 85.79,
             "target": 90,
-            "delta": -3.86,
+            "delta": -4.21,
             "status": "danger",
             "series": [
               {
@@ -33438,9 +33495,9 @@
             ]
           },
           "sla_pas": {
-            "value": 85,
+            "value": 79.17,
             "target": 95,
-            "delta": -10,
+            "delta": -15.83,
             "status": "danger",
             "series": [
               {
@@ -33516,9 +33573,9 @@
             ]
           },
           "fv_pas": {
-            "value": 75,
+            "value": 66.67,
             "target": 90,
-            "delta": -15,
+            "delta": -23.33,
             "status": "danger",
             "series": [
               {
@@ -33594,9 +33651,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 52.63,
+            "value": 47.73,
             "target": 95,
-            "delta": -42.37,
+            "delta": -47.27,
             "status": "danger",
             "series": [
               {
@@ -33672,9 +33729,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 85.71,
+            "value": 69.23,
             "target": 90,
-            "delta": -4.29,
+            "delta": -20.77,
             "status": "danger",
             "series": [
               {
@@ -33748,7 +33805,8 @@
                 "volume": 44
               }
             ]
-          }
+          },
+          "vencidos": 1987
         }
       }
     },
@@ -33762,18 +33820,18 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 29924,
+          "totalVolume": 28339,
           "q": {
-            "total": 29924,
-            "paq_ar": 23341,
-            "pas": 5087,
-            "expreso": 1496
+            "total": 28339,
+            "paq_ar": 26314,
+            "pas": 2025,
+            "expreso": 432
           },
           "sla_paqar": {
-            "value": 94.11,
+            "value": 90.91,
             "target": 95,
-            "delta": -0.89,
-            "status": "warning",
+            "delta": -4.09,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -33855,9 +33913,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 76.74,
+            "value": 77.02,
             "target": 90,
-            "delta": -13.26,
+            "delta": -12.98,
             "status": "danger",
             "series": [
               {
@@ -33940,10 +33998,10 @@
             ]
           },
           "sla_pas": {
-            "value": 91.8,
+            "value": 94.32,
             "target": 95,
-            "delta": -3.2,
-            "status": "danger",
+            "delta": -0.68,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -34025,9 +34083,9 @@
             ]
           },
           "fv_pas": {
-            "value": 59.87,
+            "value": 61.38,
             "target": 90,
-            "delta": -30.13,
+            "delta": -28.62,
             "status": "danger",
             "series": [
               {
@@ -34110,9 +34168,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 36.61,
+            "value": 38.19,
             "target": 95,
-            "delta": -58.39,
+            "delta": -56.81,
             "status": "danger",
             "series": [
               {
@@ -34195,10 +34253,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 89.18,
+            "value": 91.5,
             "target": 90,
-            "delta": -0.82,
-            "status": "warning",
+            "delta": 1.5,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -34278,21 +34336,22 @@
                 "volume": 131
               }
             ]
-          }
+          },
+          "vencidos": 28339
         },
         "dia_puro": {
-          "totalVolume": 1496,
+          "totalVolume": 1847,
           "q": {
-            "total": 1496,
-            "paq_ar": 1167,
-            "pas": 254,
-            "expreso": 75
+            "total": 1847,
+            "paq_ar": 1771,
+            "pas": 76,
+            "expreso": 32
           },
           "sla_paqar": {
-            "value": 93.65,
+            "value": 82.04,
             "target": 95,
-            "delta": -1.35,
-            "status": "warning",
+            "delta": -12.96,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -34367,9 +34426,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 75.63,
+            "value": 79.78,
             "target": 90,
-            "delta": -14.37,
+            "delta": -10.22,
             "status": "danger",
             "series": [
               {
@@ -34445,10 +34504,10 @@
             ]
           },
           "sla_pas": {
-            "value": 88.71,
+            "value": 94.74,
             "target": 95,
-            "delta": -6.29,
-            "status": "danger",
+            "delta": -0.26,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -34523,9 +34582,9 @@
             ]
           },
           "fv_pas": {
-            "value": 59.68,
+            "value": 61.84,
             "target": 90,
-            "delta": -30.32,
+            "delta": -28.16,
             "status": "danger",
             "series": [
               {
@@ -34601,9 +34660,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 27.27,
+            "value": 21.88,
             "target": 95,
-            "delta": -67.73,
+            "delta": -73.12,
             "status": "danger",
             "series": [
               {
@@ -34755,7 +34814,8 @@
                 "volume": 32
               }
             ]
-          }
+          },
+          "vencidos": 1847
         }
       }
     },
@@ -34769,18 +34829,18 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 35441,
+          "totalVolume": 33646,
           "q": {
-            "total": 35441,
-            "paq_ar": 27644,
-            "pas": 6025,
-            "expreso": 1772
+            "total": 33646,
+            "paq_ar": 31496,
+            "pas": 2150,
+            "expreso": 514
           },
           "sla_paqar": {
-            "value": 95.27,
+            "value": 94.18,
             "target": 95,
-            "delta": 0.27,
-            "status": "ok",
+            "delta": -0.82,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -34862,9 +34922,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 91.49,
+            "value": 90.73,
             "target": 90,
-            "delta": 1.49,
+            "delta": 0.73,
             "status": "ok",
             "series": [
               {
@@ -34947,9 +35007,9 @@
             ]
           },
           "sla_pas": {
-            "value": 96.9,
+            "value": 98.6,
             "target": 95,
-            "delta": 1.9,
+            "delta": 3.6,
             "status": "ok",
             "series": [
               {
@@ -35032,9 +35092,9 @@
             ]
           },
           "fv_pas": {
-            "value": 66.08,
+            "value": 67.91,
             "target": 90,
-            "delta": -23.92,
+            "delta": -22.09,
             "status": "danger",
             "series": [
               {
@@ -35117,9 +35177,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 44.32,
+            "value": 48.44,
             "target": 95,
-            "delta": -50.68,
+            "delta": -46.56,
             "status": "danger",
             "series": [
               {
@@ -35202,9 +35262,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 91.95,
+            "value": 93.95,
             "target": 90,
-            "delta": 1.95,
+            "delta": 3.95,
             "status": "ok",
             "series": [
               {
@@ -35285,20 +35345,21 @@
                 "volume": 169
               }
             ]
-          }
+          },
+          "vencidos": 33646
         },
         "dia_puro": {
-          "totalVolume": 1698,
+          "totalVolume": 2451,
           "q": {
-            "total": 1698,
-            "paq_ar": 1324,
-            "pas": 289,
-            "expreso": 85
+            "total": 2451,
+            "paq_ar": 2128,
+            "pas": 323,
+            "expreso": 34
           },
           "sla_paqar": {
-            "value": 98.06,
+            "value": 97.42,
             "target": 95,
-            "delta": 3.06,
+            "delta": 2.42,
             "status": "ok",
             "series": [
               {
@@ -35374,9 +35435,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 90.88,
+            "value": 92.21,
             "target": 90,
-            "delta": 0.88,
+            "delta": 2.21,
             "status": "ok",
             "series": [
               {
@@ -35452,9 +35513,9 @@
             ]
           },
           "sla_pas": {
-            "value": 99.22,
+            "value": 100,
             "target": 95,
-            "delta": 4.22,
+            "delta": 5,
             "status": "ok",
             "series": [
               {
@@ -35530,9 +35591,9 @@
             ]
           },
           "fv_pas": {
-            "value": 55.69,
+            "value": 68.42,
             "target": 90,
-            "delta": -34.31,
+            "delta": -21.58,
             "status": "danger",
             "series": [
               {
@@ -35608,9 +35669,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 48.65,
+            "value": 64.71,
             "target": 95,
-            "delta": -46.35,
+            "delta": -30.29,
             "status": "danger",
             "series": [
               {
@@ -35762,7 +35823,8 @@
                 "volume": 34
               }
             ]
-          }
+          },
+          "vencidos": 2451
         }
       }
     },
@@ -35776,18 +35838,18 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 135052,
+          "totalVolume": 127980,
           "q": {
-            "total": 135052,
-            "paq_ar": 105341,
-            "pas": 22959,
-            "expreso": 6753
+            "total": 127980,
+            "paq_ar": 119886,
+            "pas": 8094,
+            "expreso": 2358
           },
           "sla_paqar": {
-            "value": 95.47,
+            "value": 94.39,
             "target": 95,
-            "delta": 0.47,
-            "status": "ok",
+            "delta": -0.61,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "Ene",
@@ -35869,9 +35931,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 81.32,
+            "value": 82.02,
             "target": 90,
-            "delta": -8.68,
+            "delta": -7.98,
             "status": "danger",
             "series": [
               {
@@ -35954,9 +36016,9 @@
             ]
           },
           "sla_pas": {
-            "value": 69.64,
+            "value": 75.83,
             "target": 95,
-            "delta": -25.36,
+            "delta": -19.17,
             "status": "danger",
             "series": [
               {
@@ -36039,9 +36101,9 @@
             ]
           },
           "fv_pas": {
-            "value": 47.92,
+            "value": 55.7,
             "target": 90,
-            "delta": -42.08,
+            "delta": -34.3,
             "status": "danger",
             "series": [
               {
@@ -36124,9 +36186,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 57.48,
+            "value": 54.28,
             "target": 95,
-            "delta": -37.52,
+            "delta": -40.72,
             "status": "danger",
             "series": [
               {
@@ -36209,9 +36271,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 84.36,
+            "value": 85.55,
             "target": 90,
-            "delta": -5.64,
+            "delta": -4.45,
             "status": "danger",
             "series": [
               {
@@ -36292,21 +36354,22 @@
                 "volume": 731
               }
             ]
-          }
+          },
+          "vencidos": 127980
         },
         "dia_puro": {
-          "totalVolume": 6578,
+          "totalVolume": 8943,
           "q": {
-            "total": 6578,
-            "paq_ar": 5131,
-            "pas": 1118,
-            "expreso": 329
+            "total": 8943,
+            "paq_ar": 7993,
+            "pas": 950,
+            "expreso": 127
           },
           "sla_paqar": {
-            "value": 95.96,
+            "value": 91.92,
             "target": 95,
-            "delta": 0.96,
-            "status": "ok",
+            "delta": -3.08,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -36381,9 +36444,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 82.28,
+            "value": 81.19,
             "target": 90,
-            "delta": -7.72,
+            "delta": -8.81,
             "status": "danger",
             "series": [
               {
@@ -36459,9 +36522,9 @@
             ]
           },
           "sla_pas": {
-            "value": 81.84,
+            "value": 84.74,
             "target": 95,
-            "delta": -13.16,
+            "delta": -10.26,
             "status": "danger",
             "series": [
               {
@@ -36537,9 +36600,9 @@
             ]
           },
           "fv_pas": {
-            "value": 63.4,
+            "value": 61.26,
             "target": 90,
-            "delta": -26.6,
+            "delta": -28.74,
             "status": "danger",
             "series": [
               {
@@ -36615,9 +36678,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 52.07,
+            "value": 45.67,
             "target": 95,
-            "delta": -42.93,
+            "delta": -49.33,
             "status": "danger",
             "series": [
               {
@@ -36693,10 +36756,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 86.96,
+            "value": 89.19,
             "target": 90,
-            "delta": -3.04,
-            "status": "danger",
+            "delta": -0.81,
+            "status": "warning",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -36769,7 +36832,8 @@
                 "volume": 127
               }
             ]
-          }
+          },
+          "vencidos": 8943
         }
       }
     },
@@ -36783,17 +36847,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 22743,
+          "totalVolume": 22121,
           "q": {
-            "total": 22743,
-            "paq_ar": 17740,
-            "pas": 3866,
-            "expreso": 1137
+            "total": 22121,
+            "paq_ar": 20566,
+            "pas": 1555,
+            "expreso": 322
           },
           "sla_paqar": {
-            "value": 91.28,
+            "value": 90.61,
             "target": 95,
-            "delta": -3.72,
+            "delta": -4.39,
             "status": "danger",
             "series": [
               {
@@ -36876,9 +36940,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 91.06,
+            "value": 90.51,
             "target": 90,
-            "delta": 1.06,
+            "delta": 0.51,
             "status": "ok",
             "series": [
               {
@@ -36961,9 +37025,9 @@
             ]
           },
           "sla_pas": {
-            "value": 98.04,
+            "value": 99.04,
             "target": 95,
-            "delta": 3.04,
+            "delta": 4.04,
             "status": "ok",
             "series": [
               {
@@ -37046,9 +37110,9 @@
             ]
           },
           "fv_pas": {
-            "value": 62.46,
+            "value": 69.65,
             "target": 90,
-            "delta": -27.54,
+            "delta": -20.35,
             "status": "danger",
             "series": [
               {
@@ -37131,9 +37195,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 32.3,
+            "value": 35.71,
             "target": 95,
-            "delta": -62.7,
+            "delta": -59.29,
             "status": "danger",
             "series": [
               {
@@ -37216,9 +37280,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 90.34,
+            "value": 93.12,
             "target": 90,
-            "delta": 0.34,
+            "delta": 3.12,
             "status": "ok",
             "series": [
               {
@@ -37299,20 +37363,21 @@
                 "volume": 83
               }
             ]
-          }
+          },
+          "vencidos": 22121
         },
         "dia_puro": {
-          "totalVolume": 1131,
+          "totalVolume": 1544,
           "q": {
-            "total": 1131,
-            "paq_ar": 882,
-            "pas": 192,
-            "expreso": 57
+            "total": 1544,
+            "paq_ar": 1299,
+            "pas": 245,
+            "expreso": 21
           },
           "sla_paqar": {
-            "value": 96.2,
+            "value": 96.69,
             "target": 95,
-            "delta": 1.2,
+            "delta": 1.69,
             "status": "ok",
             "series": [
               {
@@ -37388,10 +37453,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.67,
+            "value": 92.88,
             "target": 90,
-            "delta": -1.33,
-            "status": "warning",
+            "delta": 2.88,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -37544,9 +37609,9 @@
             ]
           },
           "fv_pas": {
-            "value": 84.21,
+            "value": 77.14,
             "target": 90,
-            "delta": -5.79,
+            "delta": -12.86,
             "status": "danger",
             "series": [
               {
@@ -37622,9 +37687,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 36.84,
+            "value": 47.62,
             "target": 95,
-            "delta": -58.16,
+            "delta": -47.38,
             "status": "danger",
             "series": [
               {
@@ -37700,10 +37765,10 @@
             ]
           },
           "fv_expreso": {
-            "value": 87.5,
+            "value": 100,
             "target": 90,
-            "delta": -2.5,
-            "status": "warning",
+            "delta": 10,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -37776,7 +37841,8 @@
                 "volume": 21
               }
             ]
-          }
+          },
+          "vencidos": 1544
         }
       }
     },
@@ -37790,17 +37856,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 22534,
+          "totalVolume": 20773,
           "q": {
-            "total": 22534,
-            "paq_ar": 17577,
-            "pas": 3831,
-            "expreso": 1127
+            "total": 20773,
+            "paq_ar": 19165,
+            "pas": 1608,
+            "expreso": 347
           },
           "sla_paqar": {
-            "value": 96.15,
+            "value": 96.69,
             "target": 95,
-            "delta": 1.15,
+            "delta": 1.69,
             "status": "ok",
             "series": [
               {
@@ -37883,9 +37949,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 89.74,
+            "value": 89.01,
             "target": 90,
-            "delta": -0.26,
+            "delta": -0.99,
             "status": "warning",
             "series": [
               {
@@ -37968,9 +38034,9 @@
             ]
           },
           "sla_pas": {
-            "value": 97.57,
+            "value": 97.89,
             "target": 95,
-            "delta": 2.57,
+            "delta": 2.89,
             "status": "ok",
             "series": [
               {
@@ -38053,9 +38119,9 @@
             ]
           },
           "fv_pas": {
-            "value": 64.76,
+            "value": 67.91,
             "target": 90,
-            "delta": -25.24,
+            "delta": -22.09,
             "status": "danger",
             "series": [
               {
@@ -38138,9 +38204,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 63.58,
+            "value": 63.98,
             "target": 95,
-            "delta": -31.42,
+            "delta": -31.02,
             "status": "danger",
             "series": [
               {
@@ -38223,9 +38289,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 93.45,
+            "value": 90.38,
             "target": 90,
-            "delta": 3.45,
+            "delta": 0.38,
             "status": "ok",
             "series": [
               {
@@ -38306,21 +38372,22 @@
                 "volume": 120
               }
             ]
-          }
+          },
+          "vencidos": 20773
         },
         "dia_puro": {
-          "totalVolume": 1064,
+          "totalVolume": 1416,
           "q": {
-            "total": 1064,
-            "paq_ar": 830,
-            "pas": 181,
-            "expreso": 53
+            "total": 1416,
+            "paq_ar": 1388,
+            "pas": 28,
+            "expreso": 24
           },
           "sla_paqar": {
-            "value": 94.92,
+            "value": 91.79,
             "target": 95,
-            "delta": -0.08,
-            "status": "warning",
+            "delta": -3.21,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -38395,10 +38462,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.16,
+            "value": 90.02,
             "target": 90,
-            "delta": -1.84,
-            "status": "warning",
+            "delta": 0.02,
+            "status": "ok",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -38551,9 +38618,9 @@
             ]
           },
           "fv_pas": {
-            "value": 77.24,
+            "value": 64.29,
             "target": 90,
-            "delta": -12.76,
+            "delta": -25.71,
             "status": "danger",
             "series": [
               {
@@ -38629,9 +38696,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 43.48,
+            "value": 45.83,
             "target": 95,
-            "delta": -51.52,
+            "delta": -49.17,
             "status": "danger",
             "series": [
               {
@@ -38707,9 +38774,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 85.71,
+            "value": 75,
             "target": 90,
-            "delta": -4.29,
+            "delta": -15,
             "status": "danger",
             "series": [
               {
@@ -38783,7 +38850,8 @@
                 "volume": 24
               }
             ]
-          }
+          },
+          "vencidos": 1416
         }
       }
     },
@@ -38797,17 +38865,17 @@
       "tipoNodo": "CDD",
       "kpis": {
         "mes_anterior": {
-          "totalVolume": 15265,
+          "totalVolume": 14822,
           "q": {
-            "total": 15265,
-            "paq_ar": 11907,
-            "pas": 2595,
-            "expreso": 763
+            "total": 14822,
+            "paq_ar": 13534,
+            "pas": 1288,
+            "expreso": 221
           },
           "sla_paqar": {
-            "value": 78.81,
+            "value": 77.64,
             "target": 95,
-            "delta": -16.19,
+            "delta": -17.36,
             "status": "danger",
             "series": [
               {
@@ -38890,9 +38958,9 @@
             ]
           },
           "fv_paqar": {
-            "value": 86.73,
+            "value": 86.91,
             "target": 90,
-            "delta": -3.27,
+            "delta": -3.09,
             "status": "danger",
             "series": [
               {
@@ -38975,9 +39043,9 @@
             ]
           },
           "sla_pas": {
-            "value": 81.7,
+            "value": 79.74,
             "target": 95,
-            "delta": -13.3,
+            "delta": -15.26,
             "status": "danger",
             "series": [
               {
@@ -39060,9 +39128,9 @@
             ]
           },
           "fv_pas": {
-            "value": 49.84,
+            "value": 53.42,
             "target": 90,
-            "delta": -40.16,
+            "delta": -36.58,
             "status": "danger",
             "series": [
               {
@@ -39145,9 +39213,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 7.22,
+            "value": 9.95,
             "target": 95,
-            "delta": -87.78,
+            "delta": -85.05,
             "status": "danger",
             "series": [
               {
@@ -39230,9 +39298,9 @@
             ]
           },
           "fv_expreso": {
-            "value": 91.14,
+            "value": 90.18,
             "target": 90,
-            "delta": 1.14,
+            "delta": 0.18,
             "status": "ok",
             "series": [
               {
@@ -39313,20 +39381,21 @@
                 "volume": 49
               }
             ]
-          }
+          },
+          "vencidos": 14822
         },
         "dia_puro": {
-          "totalVolume": 709,
+          "totalVolume": 967,
           "q": {
-            "total": 709,
-            "paq_ar": 553,
-            "pas": 121,
-            "expreso": 35
+            "total": 967,
+            "paq_ar": 958,
+            "pas": 9,
+            "expreso": 14
           },
           "sla_paqar": {
-            "value": 88.43,
+            "value": 35.39,
             "target": 95,
-            "delta": -6.57,
+            "delta": -59.61,
             "status": "danger",
             "series": [
               {
@@ -39402,10 +39471,10 @@
             ]
           },
           "fv_paqar": {
-            "value": 88.02,
+            "value": 83.66,
             "target": 90,
-            "delta": -1.98,
-            "status": "warning",
+            "delta": -6.34,
+            "status": "danger",
             "series": [
               {
                 "dateLabel": "11 Nov",
@@ -39480,9 +39549,9 @@
             ]
           },
           "sla_pas": {
-            "value": 50,
+            "value": 88.89,
             "target": 95,
-            "delta": -45,
+            "delta": -6.11,
             "status": "danger",
             "series": [
               {
@@ -39558,9 +39627,9 @@
             ]
           },
           "fv_pas": {
-            "value": 59.38,
+            "value": 44.44,
             "target": 90,
-            "delta": -30.62,
+            "delta": -45.56,
             "status": "danger",
             "series": [
               {
@@ -39636,9 +39705,9 @@
             ]
           },
           "sla_expreso": {
-            "value": 0,
+            "value": 7.14,
             "target": 95,
-            "delta": -95,
+            "delta": -87.86,
             "status": "danger",
             "series": [
               {
@@ -39790,7 +39859,8 @@
                 "volume": 14
               }
             ]
-          }
+          },
+          "vencidos": 967
         }
       }
     }
